@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <title>
+    Misc/Rounded Checkbox
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="11" cy="11" r="11" fill="#8DD168"/>
+    <path stroke="#FFF" d="M5 11.5L8.5 15l8-8"/>
+  </g>
+</svg>

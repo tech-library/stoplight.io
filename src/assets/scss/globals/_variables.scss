@@ -1,0 +1,38 @@
+// Colors
+$purple: #9B59B6;
+$green: #1BBB9B;
+$light-green: #38C171;
+$light-gray: #777;
+$lighter-gray: #DADADA;
+$blue: #9B1FB9;
+$medium-blue: #4587DE;
+$light-blue: #F8FAFC;
+
+// Text colors
+$text-color: #4A4A4A;
+
+// Gradients
+$image-overlay-gradient: linear-gradient(to right, rgba(154,89,181,0.85) 0%,rgba(109,117,238,0.85) 100%);
+
+// Font Sizes
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-base: 14px;
+$font-size-base2: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 30px;
+$font-size-3xl: 34px;
+$font-size-4xl: 40px;
+$font-size-5xl: 45px;
+
+// Breakpoints
+$breakpoints: (
+    'sm': '576px',
+    'md': '768px',
+    'lg': '1008px',
+    'xl': '1200px',
+);
+
+$skew-degree: -4deg;

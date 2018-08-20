@@ -1,0 +1,9 @@
+.h-diagonal-stripes {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(53, 53, 53, .05),
+        rgba(53, 53, 53, .05) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+}
