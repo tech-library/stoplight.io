@@ -1,0 +1,10 @@
+@import "globals/variables";
+@import "globals/mixins";
+
+@import "helpers/font-size";
+
+.main {
+  height: 660px;
+  background-color: $green;
+  margin-bottom: -150px;
+}

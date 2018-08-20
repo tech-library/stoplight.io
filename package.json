@@ -1,52 +1,53 @@
 {
-  "name": "stoplight",
-  "version": "1.0.0",
-  "description": "A simple boilerplate with webpack 4, eslint (airbnb), babel, scss.",
-  "main": "index.js",
-  "private": true,
-  "directories": {
-    "test": "test"
+  "version": "0.0.1",
+  "name": "stoplight.io",
+  "description": "The Stoplight Next static website.",
+  "license": "MIT",
+  "author": "Stoplight, Inc <support@stoplight.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoplightio/stoplight.io.git"
+  },
+  "engines": {
+    "node": "8.x.x"
   },
   "scripts": {
-    "start": "npm run dev",
-    "babel": {
-      "presets": [
-        "env"
-      ]
-    },
-    "build": "webpack && node-sass src/assets/scss -o dist/assets/css",
-    "build:prod": " -p",
-    "dev": "webpack-dev-server --mode development",
-    "watch": "webpack --watch"
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "serve": "serve dist -p 3000",
+    "format": "prettier --single-quote --trailing-comma es5 --print-width 100 --write \"src/**/*.js\""
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@stoplight/ui": "^0.0.36",
+    "lodash": "^4.17.10",
+    "react": "^16.4.2",
+    "react-static": "^5.9.7",
     "tailwindcss": "^0.5.3"
   },
   "devDependencies": {
+    "autoprefixer": "^9.1.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
-    "ejs": "^2.6.1",
-    "ejs-html-loader": "^3.1.0",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "file-loader": "^1.1.11",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.0.6",
+    "eslint": "4.x.x",
+    "eslint-config-google": "0.x.x",
+    "eslint-config-prettier": "2.x.x",
+    "eslint-config-stoplight": "2.x.x",
+    "eslint-plugin-prettier": "2.x.x",
+    "eslint-plugin-react": "7.x.x",
+    "extract-text-webpack-plugin": "^3.0.2",
     "node-sass": "^4.7.2",
     "postcss": "^6.0.22",
+    "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^2.1.5",
+    "prettier": "^1.14.2",
     "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.2",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.1.0"
+    "serve": "^9.6.0",
+    "style-loader": "^0.20.2"
   }
 }

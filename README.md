@@ -1,26 +1,29 @@
-# Features
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Webpack 4, eslint (airbnb), babel, scss.
-
-## Build Setup
+## Scripts
 
 ``` bash
 # install dependencies
-npm install || yarn install
+yarn install
 
 # serve with hot reload at localhost:3000
-npm run dev || yarn run dev
+yarn start
 
-# build
-npm run build || yarn run build
+# build for staging
+yarn stage
 
 # build for production
-npm run build:p || yarn run build:p
+yarn build
 
+# serve production build
+yarn serve
+
+# format using prettier
+yarn format
 ```
 
 ## Installation
 
-1. Run `npm install` or `yarn install`
-2. Run `npm start`
-3. Go to http://localhost:8000/
+1. Run `yarn install`
+2. Run `yarn start`
+3. Go to http://localhost:3000/
