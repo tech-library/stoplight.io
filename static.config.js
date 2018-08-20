@@ -1,3 +1,4 @@
+import React from 'react';
 import path from 'path';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
@@ -119,6 +120,16 @@ export default {
     //   component: 'src/containers/Case-Study',
     // },
   ],
+
+  Document: ({ Html, Head, Body, children }) => (
+    <Html lang="en-US">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
 
   webpack: (config, { stage, defaultLoaders }) => {
     config.module.rules = [
