@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import { Link } from 'react-static';
 
 import '../../styles/product-page.scss';
 
@@ -22,13 +22,12 @@ class Product extends React.Component {
                     Because your customers deserve beautiful + functional technical documentation. Check out our help portal, which is 100% powered by this Hosted Docs product.
                   </p>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/join"
                     title="Signup"
-                    className="product-hero__button inline-block h-button text-white font-bold py-2 px-8"
-                  >
+                    className="product-hero__button inline-block h-button text-white font-bold py-2 px-8">
                     Signup
-                  </a>
+                  </Link>
                 </section>
               </div>
             </div>
@@ -78,9 +77,12 @@ class Product extends React.Component {
               <p className="mb-8">Basic plan is free for life. Test the complete documention plan for free for the first 14 days.</p>
 
               <div className="text-center">
-                <a href="#" className="inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
-                  Signup
-                </a>
+                <Link
+                  to="/join"
+                  className="inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white"
+                  title="Singup">
+                  Singup
+                </Link>
               </div>
             </div>
           </div>
@@ -91,7 +93,9 @@ class Product extends React.Component {
             <div className="features__col max-w-md p-8">
               <h1 className="mb-8">Layout &amp; Theming</h1>
               <p className="mb-8">Choose between a large or constrained layout and simply pick your colors and we will generate the rest.  Use the CSS editor for further customization.</p>
-              <a href="#" className="h-bottom-border-link" title="Create your free account">Create your free account</a>
+              <Link to="/join" className="h-bottom-border-link" title="Create your free account">
+                Create your free account
+              </Link>
             </div>
 
             <div className="features__col p-8">
@@ -107,7 +111,9 @@ class Product extends React.Component {
             <div className="features__col max-w-md p-8">
               <h1 className="mb-8">Add Some Basic Options</h1>
               <p className="mb-8">Enhance your docs with a gif as a logo and enable mocked responses in the Try it out section.</p>
-              <a href="#" className="h-bottom-border-link" title="Create your free account">Create your free account</a>
+              <Link to="/join" className="h-bottom-border-link" title="Create your free account">
+                Create your free account
+              </Link>
             </div>
           </section>
 
@@ -115,7 +121,9 @@ class Product extends React.Component {
             <div className="features__col max-w-md p-8">
               <h1 className="mb-8">Put It All Together</h1>
               <p className="mb-8">Easily protect your docs with a username and password. Turn on Segment, Intercom, or Google Analytics. Then Request user input variables such an API key to be used across your docs.</p>
-              <a href="#" className="h-bottom-border-link" title="Create your free account">Create your free account</a>
+              <Link to="/join" className="h-bottom-border-link" title="Create your free account">
+                Create your free account
+              </Link>
             </div>
 
             <div className="features__col p-8">
@@ -131,7 +139,9 @@ class Product extends React.Component {
             <div className="features__col max-w-md p-8">
               <h1 className="mb-8">Preview and Publish</h1>
               <p className="mb-8">View your docs before publishing. Then implement it either by hosting on our domain, your own custom domain, or embed to another website.</p>
-              <a href="#" className="h-bottom-border-link" title="Create your free account">Create your free account</a>
+              <Link to="/join" className="h-bottom-border-link" title="Create your free account">
+                Create your free account
+              </Link>
             </div>
           </section>
         </div>
@@ -250,7 +260,9 @@ class Product extends React.Component {
               </tr>
               <tr className="pricing__last-row">
                 <td colSpan="5">
-                  <a href="#" className="pricing__action-button">Create Your First Docs Hub &rarr;</a>
+                  <Link to="#" className="pricing__action-button">
+                    Create Your First Docs Hub &rarr;
+                  </Link>
                 </td>
               </tr>
             </tbody>
@@ -265,9 +277,9 @@ class Product extends React.Component {
           </p>
 
           <div className="text-center py-8">
-            <a href="#" className="inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
+            <Link to="/join" className="inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
               Signup
-            </a>
+            </Link>
           </div>
         </div>
       </div>

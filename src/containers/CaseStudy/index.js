@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import { Link } from 'react-static';
 
 import '../../styles/case-study.scss';
 
@@ -37,7 +37,13 @@ class CaseStudy extends React.Component {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
                 </p>
 
-                <a className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded" href="#">Button</a>
+                <Link
+                  to="#"
+                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
+                  title="Button"
+                >
+                  Button
+                </Link>
               </div>
             </div>
           </section>
@@ -55,7 +61,13 @@ class CaseStudy extends React.Component {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
                 </p>
 
-                <a className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded" href="#">Button</a>
+                <Link
+                  to="#"
+                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
+                  title="Button"
+                >
+                  Button
+                </Link>
               </div>
             </div>
           </section>
@@ -73,7 +85,13 @@ class CaseStudy extends React.Component {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
                 </p>
 
-                <a className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded" href="#">Button</a>
+                <Link
+                  to="#"
+                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
+                  title="Button"
+                >
+                  Button
+                </Link>
               </div>
             </div>
           </section>
@@ -91,7 +109,13 @@ class CaseStudy extends React.Component {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
                 </p>
 
-                <a className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded" href="#">Button</a>
+                <Link
+                  to="#"
+                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
+                  title="Button"
+                >
+                  Button
+                </Link>
               </div>
             </div>
           </section>
@@ -103,9 +127,13 @@ class CaseStudy extends React.Component {
           </p>
 
           <div className="text-center py-8">
-            <a href="#" className="h-button inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
+            <Link
+              to="/join"
+              title="Signup"
+              className="h-button inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white"
+            >
               Signup
-            </a>
+            </Link>
           </div>
         </div>
       </div>

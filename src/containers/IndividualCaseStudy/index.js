@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import { Link } from 'react-static';
 
 import '../../styles/individual-case-study.scss';
 
@@ -95,9 +95,13 @@ class IndividualCaseStudy extends React.Component {
           <h1 className="max-w-lg mx-auto text-center my-8 px-4">Some kind of clever call to action that drives people to this button.</h1>
 
           <div className="text-center">
-            <a href="#" className="inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
+            <Link
+              to="/join"
+              title="Signup"
+              className="h-button inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white"
+            >
               Signup
-            </a>
+            </Link>
           </div>
         </section>
       </div>

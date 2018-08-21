@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import { Link } from 'react-static';
 
 import '../../styles/about.scss';
 
@@ -237,7 +237,7 @@ class About extends React.Component {
           <div className="meet-our-team__col meet-our-team__col--2 p-8">
             <h1 className="mb-6">Meet Our Winning Team</h1>
             <p className="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#" className="h-bottom-border-link">Meet the Team</a>
+            <Link to="#" className="h-bottom-border-link">Meet the Team</Link>
           </div>
         </section>
 
@@ -309,9 +309,12 @@ class About extends React.Component {
           <div className="text-center">
             <p className="max-w-lg text-lg h-text-md mx-auto py-8 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 
-            <a href="#" className="h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
+            <Link
+              to="/join"
+              title="Signup"
+              className="h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white">
               Signup
-            </a>
+            </Link>
           </div>
         </section>
 
