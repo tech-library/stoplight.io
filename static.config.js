@@ -111,10 +111,10 @@ export default {
     //   path: '/home',
     //   component: 'src/containers/Home',
     // },
-    // {
-    //   path: '/about',
-    //   component: 'src/containers/About',
-    // },
+    {
+      path: '/about',
+      component: 'src/containers/About',
+    },
     // {
     //   path: '/case-study',
     //   component: 'src/containers/Case-Study',
