@@ -120,10 +120,10 @@ export default {
       path: '/product',
       component: 'src/containers/Product',
     },
-    // {
-    //   path: '/case-study',
-    //   component: 'src/containers/Case-Study',
-    // },
+    {
+      path: '/case-study',
+      component: 'src/containers/CaseStudy',
+    },
   ],
 
   Document: ({ Html, Head, Body, children }) => (
