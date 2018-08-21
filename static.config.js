@@ -124,6 +124,10 @@ export default {
       path: '/case-study',
       component: 'src/containers/CaseStudy',
     },
+    {
+      path: '/individual-case-study',
+      component: 'src/containers/IndividualCaseStudy',
+    },
   ],
 
   Document: ({ Html, Head, Body, children }) => (
