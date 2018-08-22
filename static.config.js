@@ -107,15 +107,10 @@ export default {
       path: '/pricing',
       component: 'src/containers/Pricing',
     },
-    // {
-    //   path: '/home',
-    //   component: 'src/containers/Home',
-    // },
     {
       path: '/about',
       component: 'src/containers/About',
     },
-    // },
     {
       path: '/product',
       component: 'src/containers/Product',
@@ -130,15 +125,44 @@ export default {
     },
   ],
 
-  Document: ({ Html, Head, Body, children }) => (
-    <Html lang="en-US">
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Body>{children}</Body>
-    </Html>
-  ),
+  Document: ({ Html, Head, Body, children }) => {
+    return (
+      <Html lang="en-US">
+        <Head>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <title>Stoplight</title>
+          <meta
+            name="description"
+            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+          />
+
+          <meta property="og:title" content="Stoplight" />
+          <meta
+            property="og:description"
+            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+          />
+          <meta property="og:url" content="https://stoplight.io" />
+          <meta property="og:site_name" content="Stoplight" />
+          <meta property="og:image" content="/images/home-hero.png" />
+
+          <meta name="twitter:title" content="Hosted Docs" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@stoplight" />
+          <meta name="twitter:creator" content="@stoplight" />
+          <meta
+            name="twitter:description"
+            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+          />
+          <meta name="twitter:image" content="/images/home-hero.png" />
+
+          <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+        </Head>
+        <Body>{children}</Body>
+      </Html>
+    );
+  },
 
   webpack: (config, { stage, defaultLoaders }) => {
     config.module.rules = [
