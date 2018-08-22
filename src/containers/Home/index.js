@@ -265,7 +265,7 @@ class HomePage extends React.Component {
                 <div className="flex items-center justify-end py-4">
                   <div className="flex-1">
                     <div className="text-xl font-medium">Visual OpenAPI (Swagger) Designer</div>
-                    <div className="opacity-85 mt-1/2ml-a">
+                    <div className="opacity-85 mt-1/2 ml-auto">
                       Create specs{' '}
                       {/* <Modal
                         key="a"
@@ -307,7 +307,7 @@ class HomePage extends React.Component {
                 <div className="flex items-center justify-end py-4">
                   <div className="flex-1">
                     <div className="text-xl font-medium">Instant Documentation</div>
-                    <div className="opacity-85 mt-1/2 ml-a">
+                    <div className="opacity-85 mt-1/2 ml-auto">
                       Combine OpenAPI files with Markdown to create beautiful documentation for
                       internal and external stakeholders.
                     </div>
@@ -320,7 +320,7 @@ class HomePage extends React.Component {
                 <div className="flex items-center justify-end py-4">
                   <div className="flex-1">
                     <div className="text-xl font-medium">One Click Mock Servers</div>
-                    <div className="opacity-85 mt-1/2 ml-a">
+                    <div className="opacity-85 mt-1/2 ml-auto">
                       Instantly turn any OpenAPI file into a mock server.
                     </div>
                   </div>
@@ -332,7 +332,7 @@ class HomePage extends React.Component {
                 <div className="flex items-center justify-end py-4">
                   <div className="flex-1">
                     <div className="text-xl font-medium">Contract Testing</div>
-                    <div className="opacity-85 mt-1/2 w-3/5 ml-a">
+                    <div className="opacity-85 mt-1/2 w-3/5 ml-auto">
                       Ensure your single source of truth (OpenAPI) accurately reflects your API.
                     </div>
                   </div>
