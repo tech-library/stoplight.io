@@ -25,26 +25,23 @@ class CaseStudy extends React.Component {
                       <img src={logo} alt={title} />
                     </div>
 
-                    {features.length ? (
-                      <div className="p-8">
-                        <div className="h-text-xl font-bold mb-4">Featured Highlights</div>
-                        <ul>
-                          {features.map((feature, index) => {
-                            return <li key={index}>{feature}</li>;
-                          })}
-                        </ul>
-                      </div>
-                    ) : null}
+                    {features &&
+                      features.length > 0 && (
+                        <div className="p-8">
+                          <div className="h-text-xl font-bold mb-4">Featured Highlights</div>
+                          <ul>
+                            {features.map((feature, index) => {
+                              return <li key={index}>{feature}</li>;
+                            })}
+                          </ul>
+                        </div>
+                      )}
                   </div>
 
                   <nav className="study__navigation flex justify-between">
-                    {prev && (
-                      <Link to={`/case-studies/${prev.data.slug}`}>&larr; {prev.data.title}</Link>
-                    )}
+                    {prev && <Link to={`/case-studies/${prev.slug}`}>&larr; {prev.title}</Link>}
 
-                    {next && (
-                      <Link to={`/case-studies/${next.data.slug}`}>&rarr; {next.data.title}</Link>
-                    )}
+                    {next && <Link to={`/case-studies/${next.slug}`}>&rarr; {next.title}</Link>}
                   </nav>
                 </section>
               </div>
@@ -59,29 +56,35 @@ class CaseStudy extends React.Component {
           </div>
         )}
 
-        <div className="solution flex items-center">
-          <div className="container m-auto">
-            <div className="solution__col">
-              <div className="mb-4 solution__heading">
-                <h1>The Solution</h1>
-                <div className="h-text-md">{solution.title}</div>
+        {solution && (
+          <div className="solution flex items-center">
+            <div className="container m-auto">
+              <div className="solution__col">
+                <div className="mb-4 solution__heading">
+                  <h1>The Solution</h1>
+                  <div className="h-text-md">{solution.title}</div>
+                </div>
+
+                <p>{solution.body}</p>
               </div>
 
-              <p>{solution.body}</p>
-            </div>
-
-            <div className="solution__col">
-              <img src={solution.image} alt={solution.title} />
+              <div className="solution__col">
+                <img src={solution.image} alt={solution.title} />
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        <div className="h-gap">
-          <h1 className="text-center mb-2">The Results</h1>
-          <p className="px-6 max-w-lg text-lg mx-auto text-center leading-loose">{results.body}</p>
+        {results && (
+          <div className="h-gap">
+            <h1 className="text-center mb-2">The Results</h1>
+            <p className="px-6 max-w-lg text-lg mx-auto text-center leading-loose">
+              {results.body}
+            </p>
 
-          <img src={results.image} alt={results.title} />
-        </div>
+            <img src={results.image} alt={results.title} />
+          </div>
+        )}
 
         <section className="h-gap">
           <h1 className="max-w-lg mx-auto text-center my-8 px-4">
