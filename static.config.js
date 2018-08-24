@@ -3,9 +3,15 @@ import fs from 'fs';
 import klaw from 'klaw';
 import path from 'path';
 import matter from 'gray-matter';
+import chokidar from 'chokidar';
+import { reloadRoutes } from 'react-static/node';
 
 import cssLoader from './webpack/cssLoader';
 import sassLoader from './webpack/sassLoader';
+
+const NETLIFY_PATH = './netlify-cms';
+
+chokidar.watch(NETLIFY_PATH).on('all', () => reloadRoutes());
 
 const slugify = title => {
   return title
@@ -14,28 +20,32 @@ const slugify = title => {
     .replace(/[^\w-]+/g, '');
 };
 
+const getFile = async srcPath => {
+  const file = fs.readFileSync(srcPath, 'utf8');
+  const { data } = matter(file);
+
+  return {
+    slug: slugify(data.title || path.basename(srcPath, 'md')),
+    ...data,
+  };
+};
+
 const getFiles = async srcPath => {
   const files = [];
 
-  const pathToFiles = `./src/cms-files/${srcPath}`;
-
   return new Promise((resolve, reject) => {
-    if (!fs.existsSync(pathToFiles)) {
+    if (!fs.existsSync(srcPath)) {
       resolve(files);
       return;
     }
 
-    klaw(pathToFiles)
+    klaw(srcPath)
       .on('data', item => {
         if (path.extname(item.path) !== '.md') {
           return;
         }
 
-        const data = fs.readFileSync(item.path, 'utf8');
-        const dataObj = matter(data);
-        dataObj.data.slug = slugify(dataObj.data.title);
-        delete dataObj.orig;
-        files.push(dataObj);
+        files.push(getFile(item.path));
       })
       .on('error', e => {
         console.error(e);
@@ -49,23 +59,30 @@ const getFiles = async srcPath => {
 
 export default {
   getRoutes: async () => {
-    const [products, caseStudies] = await Promise.all([
-      getFiles('products'),
-      getFiles('case-studies'),
+    const [home, pricing, about, products, caseStudies] = await Promise.all([
+      getFile(`${NETLIFY_PATH}/home.md`),
+      getFile(`${NETLIFY_PATH}/pricing.md`),
+      getFile(`${NETLIFY_PATH}/about.md`),
+
+      getFiles(`${NETLIFY_PATH}/products`),
+      getFiles(`${NETLIFY_PATH}/case-studies`),
     ]);
 
     const routes = [
       {
         path: '/',
         component: 'src/containers/Home',
+        getData: () => home,
       },
       {
         path: '/pricing',
         component: 'src/containers/Pricing',
+        getData: () => pricing,
       },
       {
         path: '/about',
         component: 'src/containers/About',
+        getData: () => about,
       },
       {
         path: '/case-studies',
@@ -73,20 +90,20 @@ export default {
         getData: () => ({
           caseStudies: caseStudies.map(caseStudy => {
             return {
-              title: caseStudy.data.title,
-              description: caseStudy.data.description,
-              logo: caseStudy.data.logo,
-              slug: caseStudy.data.slug,
+              title: caseStudy.title,
+              description: caseStudy.description,
+              logo: caseStudy.logo,
+              slug: caseStudy.slug,
             };
           }),
         }),
       },
       ...caseStudies.map((caseStudy, index) => {
         return {
-          path: `/case-studies/${caseStudy.data.slug}`,
+          path: `/case-studies/${caseStudy.slug}`,
           component: 'src/containers/CaseStudy',
           getData: () => ({
-            ...caseStudy.data,
+            ...caseStudy,
             next: caseStudies[index + 1 >= caseStudies.length ? 0 : index + 1],
             prev: caseStudies[index - 1 <= caseStudies.length ? caseStudies.length - 1 : index - 1],
           }),
@@ -96,11 +113,9 @@ export default {
 
     products.forEach(product => {
       routes.push({
-        path: product.data.slug,
+        path: product.slug,
         component: 'src/containers/Product',
-        getData: () => ({
-          ...product,
-        }),
+        getData: () => product,
       });
     });
 

@@ -33,6 +33,7 @@
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "chokidar": "^2.0.4",
     "css-loader": "^0.28.10",
     "eslint": "4.x.x",
     "eslint-config-google": "0.x.x",

@@ -7,9 +7,143 @@ media_folder: "images/uploads" # Media files will be stored in the repo under im
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "case-studies" # Used in routes, e.g., /admin/collections/blog
+  - name: "home"
+    label: "Home"
+    file: "src/netlify-cms/home"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Heading", name: "heading", widget: "text"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Platform"
+        name: "platform"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+      - label: "Customers"
+        name: "customers"
+        widget: "list"
+        field: "image"
+      - label: "Products"
+        name: "products"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Link", name: "link", widget: "string"}
+      - label: "Quotes"
+        name: "quotes"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Quote", name: "quote", widget: "text"}
+          - {label: "Company", name: "company", widget: "string"}
+          - {label: "Author", name: "author", widget: "strin"}
+          - {label: "Role", name: "role", widget: "string"}
+
+  - name: "pricing"
+    label: "Pricing"
+    file: "src/netlify-cms/pricing"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Plans"
+        name: "plans"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Price", name: "price", widget: "string"}
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            field: "string"
+      - label: "Docs"
+        name: "docs"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Plans"
+                name: "plans"
+                widget: "list"
+                field: "string"
+          - label: "Plans"
+            name: "plans"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+              - {label: "Domains", name: "domains", widget: "string"}
+
+  - name: "about" # Used in routes, e.g., /admin/collections/case-studies
+    label: "About" # Used in the UI
+    file: "src/netlify-cms/about" # The path to the folder where the documents are stored
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter.
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Background Image", name: "backgroundImage", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Mission", name: "mission", widget: "text"}
+      - label: "Quotes"
+        name: "quotes"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Quote", name: "quote", widget: "text"}
+          - {label: "Company", name: "company", widget: "string"}
+          - {label: "Author", name: "author", widget: "strin"}
+          - {label: "Role", name: "role", widget: "string"}
+      - label: "Team"
+        name: "team"
+        widget: "object"
+        fields:
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+      - label: "Press"
+        name: "press"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Publication", name: "publication", widget: "string"}
+      - label: "Investors"
+        name: "investors"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Name", name: "name", widget: "string"}
+      - label: "Career Description"
+        name: "career"
+        widget: "text"
+
+  - name: "case-studies" # Used in routes, e.g., /admin/collections/case-studies
     label: "Case Study" # Used in the UI
-    folder: "src/cms-files/case-studies" # The path to the folder where the documents are stored
+    folder: "src/netlify-cms/case-studies" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter.
@@ -37,14 +171,14 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Image", name: "image", widget: "image"}
 
-  - name: "products" # Used in routes, e.g., /admin/collections/blog
-    label: "Products" # Used in the UI
-    folder: "src/cms-files/products" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., title.md
-    fields: # The fields for each document, usually in front matter.
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  # - name: "products" # Used in routes, e.g., /admin/collections/products
+  #   label: "Products" # Used in the UI
+  #   folder: "src/netlify-cms/products" # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: "{{slug}}" # Filename template, e.g., title.md
+  #   fields: # The fields for each document, usually in front matter.
+  #     - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Publish Date", name: "date", widget: "datetime"}
+  #     - {label: "Featured Image", name: "thumbnail", widget: "image"}
+  #     - {label: "Body", name: "body", widget: "markdown"}
