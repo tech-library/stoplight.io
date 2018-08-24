@@ -1,132 +1,94 @@
 import React from 'react';
-import { Link } from 'react-static';
+import { withRouteData, Link } from 'react-static';
 
-import '../../styles/case-study.scss';
+import '../../styles/individual-case-study.scss';
 
 class CaseStudy extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
+    const { title, description, logo, features, solution, goal, results, next, prev } = this.props;
+
     return (
       <div>
-        <div className="main flex items-stretch">
+        <div className="study flex items-stretch">
           <div className="h-diagonal-stripes flex w-full">
-            <div className="h-skewed-bg h-skewed-bg--bordered flex items-center w-full">
-              <section className="container mx-auto text-center text-white">
-                <h1 className="h-text-5xl mb-8">Case Studies</h1>
+            <div className="h-skewed-bg h-skewed-bg--bordered flex items-end w-full">
+              <div className="container mx-auto">
+                <section className="study__col-1 text-white">
+                  <h1 className="h-text-5xl mb-8">{title}</h1>
 
-                <p className="max-w-lg mx-auto h-text-md font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.</p>
-              </section>
+                  <p className="max-w-lg h-text-md font-semibold">{description}</p>
+                </section>
+
+                <section className="study__col-2 study__card shadow-lg bg-white flex items-center justify-center">
+                  <div className="p-8">
+                    <div className="p-8">
+                      <img src={logo} alt={title} />
+                    </div>
+
+                    {features.length ? (
+                      <div className="p-8">
+                        <div className="h-text-xl font-bold mb-4">Featured Highlights</div>
+                        <ul>
+                          {features.map((feature, index) => {
+                            return <li key={index}>{feature}</li>;
+                          })}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <nav className="study__navigation flex justify-between">
+                    {prev && (
+                      <Link to={`/case-studies/${prev.data.slug}`}>&larr; {prev.data.title}</Link>
+                    )}
+
+                    {next && (
+                      <Link to={`/case-studies/${next.data.slug}`}>&rarr; {next.data.title}</Link>
+                    )}
+                  </nav>
+                </section>
+              </div>
             </div>
           </div>
         </div>
 
-        <section className="container mx-auto py-4 flex flex-wrap space-between relative z-10">
-          <section className="w-full sm:p-3 md:p-4 lg:p-6 flex">
-            <div className="w-full sm:p-2 md:p-8 overflow-hidden shadow-lg bg-white flex flex-wrap items-center">
-              <div className="w-full lg:w-1/2 flex lg:justify-center items-start p-8">
-                <img src="/images/deutsche-bank-logo.png" alt="Deutsche Bank" />
+        {goal && (
+          <div className="h-gap">
+            <h1 className="text-center mb-8">The Goal</h1>
+            <p className="px-6 max-w-lg text-lg mx-auto text-center leading-loose">{goal.body}</p>
+          </div>
+        )}
+
+        <div className="solution flex items-center">
+          <div className="container m-auto">
+            <div className="solution__col">
+              <div className="mb-4 solution__heading">
+                <h1>The Solution</h1>
+                <div className="h-text-md">{solution.title}</div>
               </div>
 
-              <div className="w-full lg:w-1/2 p-8">
-                <h1 className="h-text-2xl mb-6">Deutsche Bank</h1>
-
-                <p className="mb-8 max-w-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
-                </p>
-
-                <Link
-                  to="#"
-                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
-                  title="Button"
-                >
-                  Button
-                </Link>
-              </div>
+              <p>{solution.body}</p>
             </div>
-          </section>
 
-          <section className="w-full sm:p-3 md:p-4 lg:p-6 flex">
-            <div className="w-full sm:p-2 md:p-8 overflow-hidden shadow-lg bg-white flex flex-wrap items-center">
-              <div className="w-full lg:w-1/2 flex lg:justify-center items-start p-8">
-                <img src="/images/chargify-logo.png" alt="Chargify" />
-              </div>
-
-              <div className="w-full lg:w-1/2 p-8">
-                <h1 className="h-text-2xl mb-6">Chargify</h1>
-
-                <p className="mb-8 max-w-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
-                </p>
-
-                <Link
-                  to="#"
-                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
-                  title="Button"
-                >
-                  Button
-                </Link>
-              </div>
+            <div className="solution__col">
+              <img src={solution.image} alt={solution.title} />
             </div>
-          </section>
-
-          <section className="w-full sm:p-3 md:p-4 lg:p-6 flex">
-            <div className="w-full sm:p-2 md:p-8 overflow-hidden shadow-lg bg-white flex flex-wrap items-center">
-              <div className="w-full lg:w-1/2 flex lg:justify-center items-start p-8">
-                <img src="/images/zendesk-logo.png" alt="Zendesk" />
-              </div>
-
-              <div className="w-full lg:w-1/2 p-8">
-                <h1 className="h-text-2xl mb-6">Zendesk</h1>
-
-                <p className="mb-8 max-w-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
-                </p>
-
-                <Link
-                  to="#"
-                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
-                  title="Button"
-                >
-                  Button
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="w-full sm:p-3 md:p-4 lg:p-6 flex">
-            <div className="w-full sm:p-2 md:p-8 overflow-hidden shadow-lg bg-white flex flex-wrap items-center">
-              <div className="w-full lg:w-1/2 flex lg:justify-center items-start p-8">
-                <img src="/images/batteries911-logo.png" alt="Batteries911" />
-              </div>
-
-              <div className="w-full lg:w-1/2 p-8">
-                <h1 className="h-text-2xl mb-6">Batteries911</h1>
-
-                <p className="mb-8 max-w-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.
-                </p>
-
-                <Link
-                  to="#"
-                  className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
-                  title="Button"
-                >
-                  Button
-                </Link>
-              </div>
-            </div>
-          </section>
-        </section>
+          </div>
+        </div>
 
         <div className="h-gap">
-          <p className="max-w-lg mx-auto h-text-2xl font-semibold font-bold text-center mb-8 px-4">
-            Some kind of clever call to action that drives people to this button.
-          </p>
+          <h1 className="text-center mb-2">The Results</h1>
+          <p className="px-6 max-w-lg text-lg mx-auto text-center leading-loose">{results.body}</p>
 
-          <div className="text-center py-8">
+          <img src={results.image} alt={results.title} />
+        </div>
+
+        <section className="h-gap">
+          <h1 className="max-w-lg mx-auto text-center my-8 px-4">
+            Some kind of clever call to action that drives people to this button.
+          </h1>
+
+          <div className="text-center">
             <Link
               to="/join"
               title="Signup"
@@ -135,10 +97,10 @@ class CaseStudy extends React.Component {
               Signup
             </Link>
           </div>
-        </div>
+        </section>
       </div>
     );
   }
 }
 
-export default CaseStudy;
+export default withRouteData(CaseStudy);

@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: next
+
+publish_mode: editorial_workflow # adds an interface for drafting, reviewing, and approving posts
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "case-studies" # Used in routes, e.g., /admin/collections/blog
+    label: "Case Study" # Used in the UI
+    folder: "src/cms-files/case-studies" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter.
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Logo", name: "logo", widget: "image"}
+      - {label: "Featured Highlights", name: "features", widget: "list"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "The Goal"
+        name: "goal"
+        widget: "object"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "The Solution"
+        name: "solution"
+        widget: "object"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Image", name: "image", widget: "image"}
+      - label: "The Results"
+        name: "results"
+        widget: "object"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Image", name: "image", widget: "image"}
+
+  - name: "products" # Used in routes, e.g., /admin/collections/blog
+    label: "Products" # Used in the UI
+    folder: "src/cms-files/products" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter.
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}

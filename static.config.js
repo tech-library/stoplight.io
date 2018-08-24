@@ -1,129 +1,111 @@
 import React from 'react';
+import fs from 'fs';
+import klaw from 'klaw';
 import path from 'path';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
-import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import matter from 'gray-matter';
 
-const sassLoader = stage => {
-  let loaders = [
-    {
-      loader: require.resolve('css-loader'),
-      options: {
-        importLoaders: 1,
-        minimize: stage === 'prod',
-        sourceMap: false,
-      },
-    },
-    {
-      loader: require.resolve('sass-loader'),
-      options: { includePaths: ['src/'] },
-    },
-  ];
+import cssLoader from './webpack/cssLoader';
+import sassLoader from './webpack/sassLoader';
 
-  if (stage === 'dev') {
-    loaders.unshift({ loader: require.resolve('style-loader') });
-  } else if (stage === 'prod') {
-    loaders = ExtractTextPlugin.extract({
-      fallback: {
-        loader: require.resolve('style-loader'),
-        options: {
-          sourceMap: false,
-          hmr: false,
-        },
-      },
-      use: loaders,
-    });
-  }
-
-  return {
-    test: /\.s(a|c)ss$/,
-    use: loaders,
-  };
+const slugify = title => {
+  return title
+    .toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]+/g, '');
 };
 
-const cssLoader = stage => {
-  let loaders = [
-    {
-      loader: require.resolve('css-loader'),
-      options: {
-        minimize: stage !== 'dev',
-        sourceMap: stage === 'dev',
-        importLoaders: 1,
-      },
-    },
-    {
-      loader: require.resolve('postcss-loader'),
-      options: {
-        // Necessary for external CSS imports to work
-        // https://github.com/facebookincubator/create-react-app/issues/2677
-        sourceMap: true,
-        ident: 'postcss',
-        plugins: () => [
-          postcssFlexbugsFixes,
-          autoprefixer({
-            browsers: [
-              '>1%',
-              'last 4 versions',
-              'Firefox ESR',
-              'not ie < 9', // React doesn't support IE8 anyway
-            ],
-            flexbox: 'no-2009',
-          }),
-          tailwindcss(path.resolve(__dirname, './tailwind.config.js')),
-        ],
-      },
-    },
-  ];
+const getFiles = async srcPath => {
+  const files = [];
 
-  if (stage === 'dev') {
-    loaders = [require.resolve('style-loader')].concat(loaders);
-  } else if (stage === 'prod') {
-    loaders = ExtractTextPlugin.extract({
-      fallback: {
-        loader: require.resolve('style-loader'),
-        options: {
-          sourceMap: false,
-          hmr: false,
-        },
-      },
-      use: loaders,
-    });
-  }
+  const pathToFiles = `./src/cms-files/${srcPath}`;
 
-  return {
-    test: /\.css$/,
-    use: loaders,
-  };
+  return new Promise((resolve, reject) => {
+    if (!fs.existsSync(pathToFiles)) {
+      resolve(files);
+      return;
+    }
+
+    klaw(pathToFiles)
+      .on('data', item => {
+        if (path.extname(item.path) !== '.md') {
+          return;
+        }
+
+        const data = fs.readFileSync(item.path, 'utf8');
+        const dataObj = matter(data);
+        dataObj.data.slug = slugify(dataObj.data.title);
+        delete dataObj.orig;
+        files.push(dataObj);
+      })
+      .on('error', e => {
+        console.error(e);
+        reject(e);
+      })
+      .on('end', () => {
+        resolve(files);
+      });
+  });
 };
 
 export default {
-  getRoutes: () => [
-    {
-      path: '/',
-      component: 'src/containers/Home',
-    },
-    {
-      path: '/pricing',
-      component: 'src/containers/Pricing',
-    },
-    {
-      path: '/about',
-      component: 'src/containers/About',
-    },
-    {
-      path: '/product',
-      component: 'src/containers/Product',
-    },
-    {
-      path: '/case-study',
-      component: 'src/containers/CaseStudy',
-    },
-    {
-      path: '/individual-case-study',
-      component: 'src/containers/IndividualCaseStudy',
-    },
-  ],
+  getRoutes: async () => {
+    const [products, caseStudies] = await Promise.all([
+      getFiles('products'),
+      getFiles('case-studies'),
+    ]);
+
+    const routes = [
+      {
+        path: '/',
+        component: 'src/containers/Home',
+      },
+      {
+        path: '/pricing',
+        component: 'src/containers/Pricing',
+      },
+      {
+        path: '/about',
+        component: 'src/containers/About',
+      },
+      {
+        path: '/case-studies',
+        component: 'src/containers/CaseStudies',
+        getData: () => ({
+          caseStudies: caseStudies.map(caseStudy => {
+            return {
+              title: caseStudy.data.title,
+              description: caseStudy.data.description,
+              logo: caseStudy.data.logo,
+              slug: caseStudy.data.slug,
+            };
+          }),
+        }),
+      },
+      ...caseStudies.map((caseStudy, index) => {
+        return {
+          path: `/case-studies/${caseStudy.data.slug}`,
+          component: 'src/containers/CaseStudy',
+          getData: () => ({
+            ...caseStudy.data,
+            next: caseStudies[index + 1 >= caseStudies.length ? 0 : index + 1],
+            prev: caseStudies[index - 1 <= caseStudies.length ? caseStudies.length - 1 : index - 1],
+          }),
+        };
+      }),
+    ];
+
+    products.forEach(product => {
+      routes.push({
+        path: product.data.slug,
+        component: 'src/containers/Product',
+        getData: () => ({
+          ...product,
+        }),
+      });
+    });
+
+    return routes;
+  },
 
   Document: ({ Html, Head, Body, children }) => {
     return (
