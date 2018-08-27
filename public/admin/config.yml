@@ -32,7 +32,8 @@ collections:
           - label: "Customers"
             name: "customers"
             widget: "list"
-            field: "image"
+            field:
+              - {label: Image, name: image, widget: image}
           - label: "Products"
             name: "products"
             widget: "list"
@@ -48,7 +49,7 @@ collections:
               - {label: "Image", name: "image", widget: "image"}
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Company", name: "company", widget: "string"}
-              - {label: "Author", name: "author", widget: "strin"}
+              - {label: "Author", name: "author", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
 
       - label: "Pricing"
@@ -74,7 +75,8 @@ collections:
               - label: "Features"
                 name: "features"
                 widget: "list"
-                field: "string"
+                field:
+                  - {label: Features, name: feature, widget: string}
           - label: "Docs"
             name: "docs"
             widget: "object"
@@ -89,7 +91,8 @@ collections:
                   - label: "Plans"
                     name: "plans"
                     widget: "list"
-                    field: "string"
+                    field:
+                      - {label: Features, name: feature, widget: string}
               - label: "Plans"
                 name: "plans"
                 widget: "list"
@@ -113,7 +116,7 @@ collections:
               - {label: "Image", name: "image", widget: "image"}
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Company", name: "company", widget: "string"}
-              - {label: "Author", name: "author", widget: "strin"}
+              - {label: "Author", name: "author", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
           - label: "Team"
             name: "team"

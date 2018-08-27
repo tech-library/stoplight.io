@@ -13,7 +13,6 @@ platform:
       description: "Instantly turn any OpenAPI file into a mock server."
     - title: "Contract Testing"
       description: "Ensure your single source of truth (OpenAPI) accurately reflects your API."
-
 customers:
   - "/images/customer_logos/ea.png"
 products:
