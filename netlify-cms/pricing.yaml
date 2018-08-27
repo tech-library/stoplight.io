@@ -9,7 +9,7 @@ plans:
       - "5 members"
   - title: "Team"
     price: "$24"
-    priceMeta: "per member"
+    unit: "per member"
     features:
       - "Unlimited private projects"
       - "Up to 25 members"

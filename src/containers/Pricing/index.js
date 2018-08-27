@@ -7,7 +7,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
 import { colors, sizes, Icon } from '@stoplight/ui';
 
 const Plan = props => {
-  const { title, price, priceMeta, features, button, darken } = props;
+  const { title, price, unit, features, button, darken } = props;
 
   return (
     <div className="flex-1 flex flex-col">
@@ -26,7 +26,7 @@ const Plan = props => {
           ) : (
             <div className="font-bold">
               {price}
-              {priceMeta && <span className="text-sm"> per member</span>}
+              {unit && <span className="text-sm"> per member</span>}
             </div>
           )}
         </div>
