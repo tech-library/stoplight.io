@@ -2,7 +2,7 @@ import React from 'react';
 import fs from 'fs';
 import klaw from 'klaw';
 import path from 'path';
-import matter from 'gray-matter';
+import yaml from 'js-yaml';
 import chokidar from 'chokidar';
 import { reloadRoutes } from 'react-static/node';
 
@@ -21,11 +21,16 @@ const slugify = title => {
 };
 
 const getFile = async srcPath => {
-  const file = fs.readFileSync(srcPath, 'utf8');
-  const { data } = matter(file);
+  let data;
+
+  try {
+    data = yaml.safeLoad(fs.readFileSync(srcPath, 'utf8'));
+  } catch (e) {
+    console.error(e);
+  }
 
   return {
-    slug: slugify(data.title || path.basename(srcPath, 'md')),
+    slug: slugify(data.title || path.basename(srcPath, 'yaml')),
     ...data,
   };
 };
@@ -41,7 +46,7 @@ const getFiles = async srcPath => {
 
     klaw(srcPath)
       .on('data', item => {
-        if (path.extname(item.path) !== '.md') {
+        if (path.extname(item.path) !== '.yaml') {
           return;
         }
 
@@ -60,9 +65,9 @@ const getFiles = async srcPath => {
 export default {
   getRoutes: async () => {
     const [home, pricing, about, products, caseStudies] = await Promise.all([
-      getFile(`${NETLIFY_PATH}/home.md`),
-      getFile(`${NETLIFY_PATH}/pricing.md`),
-      getFile(`${NETLIFY_PATH}/about.md`),
+      getFile(`${NETLIFY_PATH}/home.yaml`),
+      getFile(`${NETLIFY_PATH}/pricing.yaml`),
+      getFile(`${NETLIFY_PATH}/about.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
       getFiles(`${NETLIFY_PATH}/case-studies`),

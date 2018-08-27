@@ -13,9 +13,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "netlify-cms/home.md"
-        format: "yaml-frontmatter"
-        extension: "md"
+        file: "netlify-cms/home.yaml"
         fields:
           - {label: "Heading", name: "heading", widget: "text"}
           - {label: "Description", name: "description", widget: "text"}
@@ -55,9 +53,7 @@ collections:
 
       - label: "Pricing"
         name: "pricing"
-        file: "netlify-cms/pricing.md"
-        format: "yaml-frontmatter"
-        extension: "md"
+        file: "netlify-cms/pricing.yaml"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
@@ -103,9 +99,7 @@ collections:
 
       - label: "About"
         name: "about"
-        file: "netlify-cms/about.md"
-        format: "yaml-frontmatter"
-        extension: "md"
+        file: "netlify-cms/about.yaml"
         fields:
           - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Background Image", name: "backgroundImage", widget: "image"}
@@ -154,8 +148,7 @@ collections:
     folder: "netlify-cms/case-studies"
     create: true
     slug: "{{slug}}"
-    format: "yaml-frontmatter"
-    extension: "md"
+    extension: "yaml"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}

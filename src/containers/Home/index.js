@@ -22,7 +22,7 @@ const Feature = ({ title, description }, key) => {
   );
 };
 
-const Testimonial = ({ image, quote, name, company, role }, key) => {
+const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
     <div key={key} className="w-1/2 pr-10 pb-10">
       <div className="testimonial-card max-w-lg w-full lg:flex shadow-lg mx-auto items-stretch bg-white">
@@ -34,7 +34,7 @@ const Testimonial = ({ image, quote, name, company, role }, key) => {
               height: '150px',
               width: '150px',
             }}
-            alt={name}
+            alt={author}
           />
         </div>
 
@@ -42,7 +42,7 @@ const Testimonial = ({ image, quote, name, company, role }, key) => {
           <p className="text-grey-darker leading-loose">{quote}</p>
 
           <p className="font-bold mt-4">
-            {name}
+            {author}
             {company && `, ${company}`}
             {role && `, ${role}`}
           </p>
