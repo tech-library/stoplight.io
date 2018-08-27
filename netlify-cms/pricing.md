@@ -1,6 +1,6 @@
 ---
 title: "Simple, Flexible Pricing"
-description: "All plans include the entire Stoplight platform: \n\n API Modeling, Testing, Mocking, and Documentation"
+description: "All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation"
 plans:
   - title: "Open Source"
     price: "Free"
@@ -92,5 +92,4 @@ docs:
     - title: "Pro"
       price: "$349 / mo"
       domains: "Unlimited"
-
 ---

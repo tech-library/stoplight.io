@@ -66,10 +66,11 @@ collections:
             widget: "list"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Price", name: "price", widget: "string"}
+              - {label: "Price", name: "price", widget: "string", required: false}
               - label: "Button"
                 name: "button"
                 widget: "object"
+                required: false
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Link", name: "link", widget: "string"}
@@ -98,7 +99,7 @@ collections:
                 fields:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Price", name: "price", widget: "string"}
-                  - {label: "Domains", name: "domains", widget: "string"}
+                  - {label: "# of Domains", name: "domains", widget: "string", required: false}
 
       - label: "About"
         name: "about"

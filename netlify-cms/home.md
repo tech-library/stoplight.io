@@ -7,12 +7,12 @@ platform:
   features:
     - title: "Visual OpenAPI (Swagger) Designer"
       description: "Create specs no specialized knowledge required."
-    - title: Instant Documentation
-      description: Combine OpenAPI files with Markdown to create beautiful documentation for internal and external stakeholders.
-    - title: One Click Mock Servers
-      description: Instantly turn any OpenAPI file into a mock server.
-    - title: Contract Testing
-      description: Ensure your single source of truth (OpenAPI) accurately reflects your API.
+    - title: "Instant Documentation"
+      description: "Combine OpenAPI files with Markdown to create beautiful documentation for internal and external stakeholders."
+    - title: "One Click Mock Servers"
+      description: "Instantly turn any OpenAPI file into a mock server."
+    - title: "Contract Testing"
+      description: "Ensure your single source of truth (OpenAPI) accurately reflects your API."
 
 customers:
   - "/images/customer_logos/ea.png"
