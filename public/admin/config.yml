@@ -177,3 +177,29 @@ collections:
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Image", name: "image", widget: "image"}
+
+  - label: "Product"
+    name: "products"
+    folder: "netlify-cms/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "yaml"
+    fields:
+      - {label: "title", name: "title", widget: "string"}
+      - {label: "slogan", name: "slogan", widget: "text"}
+      - {label: "description", name: "description", widget: "text"}
+      - {label: "callToAction", name: "callToAction", widget: "text"}
+      - {label: "signupText", name: "signupText", widget: "text"}
+      - {label: "image", name: "image", widget: "image"}
+      - label: "Feature List"
+        name: "featureList"
+        widget: "list"
+        field:
+          - {label: "title", name: "title", widget: "string"}
+      - label: "Features"
+        name: "features"
+        widget: "list"
+        fields:
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "description", name: "description", widget: "text"}
+          - {label: "image", name: "image", widget: "image"}

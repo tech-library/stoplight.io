@@ -1,0 +1,25 @@
+title: 'Hosted Docs'
+slogan: 'Because your customers deserve beautiful + functional technical documentation. Check out our help portal, which is 100% powered by this Hosted Docs product.'
+description: 'Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere.'
+image: '/images/product-page/docs-hero.png'
+callToAction: "Some kind of clever call to action that drives people to this button."
+signupText: 'Basic plan is free for life. Test the complete documention plan for free for the first 14 days.'
+featureList:
+  - 'Custom Themes'
+  - 'API Playground'
+  - 'Basic Auth'
+  - 'Integrations'
+  - 'Domains + Embedding'
+features:
+  - title: 'Layout & Theming'
+    description: 'Choose between a large or constrained layout and simply pick your colors and we will generate the rest. Use the CSS editor for further customization.'
+    image: '/images/product-page/layout-and-theming.png'
+  - title: 'Add Some Basic Options'
+    description: 'Enhance your docs with a gif as a logo and enable mocked responses in the Try it out section.'
+    image: '/images/product-page/add-some-basic-options.png'
+  - title: 'Put It All Together'
+    description: 'Easily protect your docs with a username and password. Turn on Segment, Intercom, or Google Analytics. Then Request user input variables such an API key to be used across your docs.'
+    image: "/images/product-page/put-it-all-together.png"
+  - title: 'Preview and Publish'
+    description: 'View your docs before publishing. Then implement it either by hosting on our domain, your own custom domain, or embed to another website.'
+    image: "/images/product-page/preview-and-publish.png"
