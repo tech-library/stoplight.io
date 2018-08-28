@@ -20,7 +20,7 @@ const slugify = title => {
     .replace(/[^\w-]+/g, '');
 };
 
-const getFile = async srcPath => {
+const getFile = srcPath => {
   let data;
 
   try {
@@ -102,18 +102,19 @@ export default {
             };
           }),
         }),
+        children: caseStudies.map((caseStudy, index) => {
+          return {
+            path: `/${caseStudy.slug}`,
+            component: 'src/containers/CaseStudy',
+            getData: () => ({
+              ...caseStudy,
+              next: caseStudies[index + 1 >= caseStudies.length ? 0 : index + 1],
+              prev:
+                caseStudies[index - 1 <= caseStudies.length ? caseStudies.length - 1 : index - 1],
+            }),
+          };
+        }),
       },
-      ...caseStudies.map((caseStudy, index) => {
-        return {
-          path: `/case-studies/${caseStudy.slug}`,
-          component: 'src/containers/CaseStudy',
-          getData: () => ({
-            ...caseStudy,
-            next: caseStudies[index + 1 >= caseStudies.length ? 0 : index + 1],
-            prev: caseStudies[index - 1 <= caseStudies.length ? caseStudies.length - 1 : index - 1],
-          }),
-        };
-      }),
     ];
 
     products.forEach(product => {
