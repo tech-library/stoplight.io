@@ -1,10 +1,10 @@
 title: Documentation
 slogan: Automatically generate customizable API documentation
 description: >-
-  Create a new or import an existing OpenAPI Specification document (formerly
-  known as Swagger) and combine it with Markdown to create robust, internal and
-  external API documentation for your organization. One-click cloud deployment
-  with Stoplight or download the static assets to host anywhere.
+  Use OpenAPI Specification (formerly known as Swagger) and Markdown to create
+  robust, internal and external API documentation for your organization.
+  One-click cloud deployment with Stoplight or download the static assets to
+  host anywhere.
 callToAction: Some kind of clever call to action that drives people to this button.
 signupText: >-
   The basic plan is **free**. 14 day trial for all features for **free**. No
