@@ -1,10 +1,7 @@
 title: Documentation
 slogan: >-
-  Automatically generate customizable API documentation.
-
-
-  Because your API consumers deserve beautiful + functional technical
-  documentation.
+  Automatically generate customizable API documentation. Because your API
+  consumers deserve beautiful and interactive technical documentation.
 description: >-
   Use OpenAPI Specification (formerly known as Swagger) and Markdown to create
   robust, internal and external API documentation for your organization.
