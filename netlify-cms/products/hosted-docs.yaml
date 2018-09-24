@@ -38,14 +38,19 @@ features:
       customizable site structure allows you to describe multiple APIs and
       resources in the same documentation with support for versioning. 
     image: /images/product-page/add-some-basic-options.png
-  - title: Put It All Together
+  - title: Automated API Documentation
     description: >-
-      Easily protect your docs with a username and password. Turn on Segment,
-      Intercom, or Google Analytics. Then Request user input variables such an
-      API key to be used across your docs.
+      Never have out-of-date documentation. Reference your OpenAPI Specification
+      document to automatically generated API reference documentation. Use the
+      Stoplight API to automate your documentation process by integrating it
+      into your existing CI/CD workflow. 
     image: /images/product-page/put-it-all-together.png
-  - title: Preview and Publish
+  - title: 'Simple, Flexible Deployment'
     description: >-
-      View your docs before publishing. Then implement it either by hosting on
-      our domain, your own custom domain, or embed to another website.
+      With flexible and secure deployment options, you can find a hosting
+      solution that works for you. Allow Stoplight to host your documentation
+      for you, so you never have to worry about managing servers for your
+      documentation ever again. Manage access control and measure analytics with
+      integrations. Or download the static assets or use our on-premise
+      solutions behind your firewall to host your documentation from anywhere. 
     image: /images/product-page/preview-and-publish.png
