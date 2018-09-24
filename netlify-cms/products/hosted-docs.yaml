@@ -19,11 +19,15 @@ featureList:
   - Access Control
   - Integrations
 features:
-  - title: Layout & Theming
+  - title: Interactive API Documentation
     description: >-
-      Choose between a large or constrained layout and simply pick your colors
-      and we will generate the rest. Use the CSS editor for further
-      customization.
+      You can no longer get by with static API documentation. That’s why
+      Stoplight offers multiple ways for your API consumers to try out your API.
+      Test Requests within your documentation allows consumers to understand how
+      your API works. Code Examples generated from dozens of languages such as
+      JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy and
+      paste right into their own code. Built-in search directs consumers to the
+      content they need.
     image: /images/product-page/layout-and-theming.png
   - title: Add Some Basic Options
     description: >-
