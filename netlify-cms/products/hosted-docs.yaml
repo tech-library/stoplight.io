@@ -29,10 +29,14 @@ features:
       paste right into their own code. Built-in search directs consumers to the
       content they need.
     image: /images/product-page/layout-and-theming.png
-  - title: Add Some Basic Options
+  - title: 'Powerful, Visual Editor'
     description: >-
-      Enhance your docs with a gif as a logo and enable mocked responses in the
-      Try it out section.
+      With Themes, Custom CSS, Pages, and Domains, you control your
+      documentation’s branding. With Custom Pages, you decide the page layout
+      with our Markdown-based Editor. Giving you the freedom to add rich content
+      and resources alongside your API reference documentation. Fully
+      customizable site structure allows you to describe multiple APIs and
+      resources in the same documentation with support for versioning. 
     image: /images/product-page/add-some-basic-options.png
   - title: Put It All Together
     description: >-
