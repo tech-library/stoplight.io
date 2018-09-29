@@ -1,22 +1,23 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Project Structure
-* `static.config.js`: react-static config file
-* `tailwind.config.js`: tailwind config file
-* `dist`: Production build folder
-* `tmp`: Dev build folder
-* `public`: Static files that will be copied into dist
-* `old`: Old static HTML files that need to be converted to React
-* `src/components`: React components
-* `src/containers`: React pages
-* `src/styles`: SASS/CSS files
-* `src/utils`: Utility functions
-* `src/App.js`: Website layout
-* `src/index.js`: Entry point for React
+
+- `static.config.js`: react-static config file
+- `tailwind.config.js`: tailwind config file
+- `dist`: Production build folder
+- `tmp`: Dev build folder
+- `public`: Static files that will be copied into dist
+- `old`: Old static HTML files that need to be converted to React
+- `src/components`: React components
+- `src/containers`: React pages
+- `src/styles`: SASS/CSS files
+- `src/utils`: Utility functions
+- `src/App.js`: Website layout
+- `src/index.js`: Entry point for React
 
 ## Scripts
 
-``` bash
+```bash
 # install dependencies
 yarn install
 
@@ -58,5 +59,5 @@ yarn format
 
 ## Helpful links
 
-* [React Static](https://react-static.js.org/docs/) - build system
-* [Tailwind](https://tailwindcss.com/docs/what-is-tailwind) - CSS framework
+- [React Static](https://react-static.js.org/docs/) - build system
+- [Tailwind](https://tailwindcss.com/docs/what-is-tailwind) - CSS framework

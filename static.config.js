@@ -138,13 +138,13 @@ export default {
           <title>Stoplight</title>
           <meta
             name="description"
-            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+            content="Stoplight, providing engineering teams with the best way to document, test, and build web APIs."
           />
 
           <meta property="og:title" content="Stoplight" />
           <meta
             property="og:description"
-            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+            content="Stoplight, providing engineering teams with the best way to document, test, and build web APIs."
           />
           <meta property="og:url" content="https://stoplight.io" />
           <meta property="og:site_name" content="Stoplight" />
@@ -156,7 +156,7 @@ export default {
           <meta name="twitter:creator" content="@stoplight" />
           <meta
             name="twitter:description"
-            content="StopLight, providing engineering teams with the best way to document, test, and build web APIs."
+            content="Stoplight, providing engineering teams with the best way to document, test, and build web APIs."
           />
           <meta name="twitter:image" content="/images/home-hero.png" />
 
