@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-static';
+import cn from 'classnames';
 
 import { faRss } from '@fortawesome/free-solid-svg-icons/faRss';
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook';
@@ -11,15 +12,14 @@ import { sizes, colors, Icon, Popup } from '@stoplight/ui';
 
 import Intercom from '../../utils/intercom';
 
+export const headerHeightClass = 'h-20';
+
 const Header = () => {
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">
       <div className="container mx-auto">
-        <nav className="flex">
-          <Link
-            to="/"
-            className="text-white hover:opacity-75 hover:text-white py-6 text-3xl font-bold"
-          >
+        <nav className={cn(headerHeightClass, 'flex items-center')}>
+          <Link to="/" className="text-white hover:opacity-75 hover:text-white text-3xl font-bold">
             Stoplight
           </Link>
 

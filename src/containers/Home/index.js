@@ -8,6 +8,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
+import { Hero } from '../../components/Hero';
+
 const Feature = ({ title, description }, key) => {
   return (
     <div key={key} className="flex items-center justify-end py-4">
@@ -124,6 +126,8 @@ class HomePage extends React.Component {
 
   render() {
     const { heading, description, platform, customers, testimonials } = this.props;
+
+    return [<Hero key="1" title={heading} subtitle={description} rootClassName="bg-black" />];
 
     return (
       <div>

@@ -22,6 +22,7 @@
     "@fortawesome/free-brands-svg-icons": "5.3.x",
     "@fortawesome/free-solid-svg-icons": "5.3.x",
     "@stoplight/ui": "0.0.36",
+    "classnames": "2.2.x",
     "lodash": "4.17.x",
     "react": "16.5.x",
     "react-static": "5.9.x",

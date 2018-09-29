@@ -11,6 +11,10 @@ import './styles/app.css';
 import './styles/app.scss';
 import './styles/static-page.scss';
 
+const AppContent = () => {
+  return [<Header key="1" />, <Routes key="2" />, <Footer key="3" />];
+};
+
 class App extends React.Component {
   componentDidMount() {
     if (Intercom.sdk()) {
@@ -27,15 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="StaticPage bg-white">
-          <Header />
-
-          <div className="relative z-0">
-            <Routes />
-          </div>
-
-          <Footer />
-        </div>
+        <AppContent />
       </Router>
     );
   }
