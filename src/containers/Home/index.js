@@ -127,7 +127,44 @@ class HomePage extends React.Component {
   render() {
     const { heading, description, platform, customers, testimonials } = this.props;
 
-    return [<Hero key="1" title={heading} subtitle={description} rootClassName="bg-black" />];
+    return [
+      <Hero
+        key="1"
+        title={heading}
+        subtitle={description}
+        rootClassName="bg-black"
+        cards={[
+          {
+            index: 'one',
+            title: 'Visual OpenAPI',
+            subtitle: 'Use our visual designer to manage OpenAPI (Swagger) 10x faster.',
+            href: '/openapi-design',
+            color: 'blue',
+          },
+          {
+            index: 'two',
+            title: 'Technical Docs',
+            subtitle: 'Increase customer adoption with beautiful, functional documentation.',
+            href: '/openapi-documentation',
+            color: 'green',
+          },
+          {
+            index: 'three',
+            title: 'Contract Testing',
+            subtitle: 'Leverage OpenAPI to test, automate, and debug web APIs.',
+            href: '/openapi-testing',
+            color: 'orange',
+          },
+          {
+            index: 'four',
+            title: 'Mocking',
+            subtitle: 'Parallelize development with one click mock servers, powered by OpenAPI.',
+            href: '/platform/design',
+            color: 'grey-darkest',
+          },
+        ]}
+      />,
+    ];
 
     return (
       <div>

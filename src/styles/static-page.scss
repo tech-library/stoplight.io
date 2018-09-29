@@ -1,14 +1,5 @@
-@import "globals/variables";
-@import "globals/mixins";
-
-.container {
-  padding: 0 10px;
-}
-@media (min-width: 1100px) {
-  .container {
-    max-width: 1150px;
-  }
-}
+@import 'globals/variables';
+@import 'globals/mixins';
 
 .static-gradient {
   width: 100%;
@@ -17,7 +8,7 @@
   transform: skewY(-7deg);
   background: linear-gradient(to right, #ad27f0, #ca86fe);
   transform-origin: 0;
-  border-bottom: 2px solid rgba(0,0,0,0.5);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   bottom: 0;
 }
 .static-gradient.purple {
@@ -27,7 +18,7 @@
   background: linear-gradient(to right, #2769f0, #86dafe);
 }
 .static-gradient-bg {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfBAMAAADtgAsKAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMVGRsSHUz7Vs0AAAErSURBVCjPHY+BDeUgDEPttAM4wACk/QMEdYHSu/1nOjghQIodPxnRfuPnfWQO0F240K5TvRLKdYXvdAIH8ej+0yTEsh1CUYplr+j91ouhCl3WhEnpNuACvW3vUAgic8woHoA/ojO5MN6uN9EPdIJpRu7IBfTN5+I4aIAowPxSu74OAV7gfFuLJVQeAKS41Kes5k4H6tW8uML0yJcjHTE3WepIAfx+8JhJ6aCeRMRK7EQs9RjPxhheOhZL+P//zh8TW4gKArKGY2m3H1xZgq0ykzzdh9vrWPu4c1eNc0bs+suKQAKmtg4gT4kqleFxCzT1zftKUzmYi0CqWynyr4YSwhq2q/s8pf9l+oD9nbeZAXRAlJ0wFMd43ICcpTanOIQXEDTjdK54eqlV+Q9M1SO8F3P79wAAAABJRU5ErkJggg==");
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfBAMAAADtgAsKAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMVGRsSHUz7Vs0AAAErSURBVCjPHY+BDeUgDEPttAM4wACk/QMEdYHSu/1nOjghQIodPxnRfuPnfWQO0F240K5TvRLKdYXvdAIH8ej+0yTEsh1CUYplr+j91ouhCl3WhEnpNuACvW3vUAgic8woHoA/ojO5MN6uN9EPdIJpRu7IBfTN5+I4aIAowPxSu74OAV7gfFuLJVQeAKS41Kes5k4H6tW8uML0yJcjHTE3WepIAfx+8JhJ6aCeRMRK7EQs9RjPxhheOhZL+P//zh8TW4gKArKGY2m3H1xZgq0ykzzdh9vrWPu4c1eNc0bs+suKQAKmtg4gT4kqleFxCzT1zftKUzmYi0CqWynyr4YSwhq2q/s8pf9l+oD9nbeZAXRAlJ0wFMd43ICcpTanOIQXEDTjdK54eqlV+Q9M1SO8F3P79wAAAABJRU5ErkJggg==');
   width: 100%;
   height: 100%;
 }
@@ -50,12 +41,13 @@
   }
 }
 #pitch {
-  .container {
-    padding-right: 450px;
-  }
+  // .container {
+  //   padding-right: 450px;
+  // }
+
   a {
     color: #000;
-    border-bottom: 1px dotted rgba(0,0,0,0.5);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
   }
 }
 #section-gradient {
@@ -64,7 +56,7 @@
   overflow: hidden;
   transform: skewY(-7deg);
   background-color: $lighter-gray;
-  box-shadow: 0 0px 4px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
 }
 #customers {
   height: 650px;
@@ -74,7 +66,7 @@
   background: #eff8ff;
   .static-gradient {
     background: #eff8ff;
-    border-top: 2px solid rgba(0,0,0,0.1);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
     border-bottom: 0 none;
   }
 }
@@ -118,7 +110,7 @@
     border: 1px solid $light-gray;
     padding: 20px;
     font-weight: normal;
-    &:nth-child(n+2) {
+    &:nth-child(n + 2) {
       width: 20%;
       text-align: center;
     }
@@ -127,7 +119,7 @@
     border: 1px solid $light-gray;
     padding: 20px;
     font-weight: normal;
-    &:nth-child(n+2) {
+    &:nth-child(n + 2) {
       width: 20%;
       text-align: center;
     }

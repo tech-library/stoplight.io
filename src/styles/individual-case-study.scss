@@ -1,39 +1,39 @@
-@import "globals/variables";
-@import "globals/mixins";
+@import 'globals/variables';
+@import 'globals/mixins';
 
-@import "helpers/font-size";
+@import 'helpers/font-size';
 
 .study {
   height: 600px;
   background-color: $green;
   margin-bottom: 200px;
 
-  .container {
-    padding: 0 10px;
-  }
+  // .container {
+  //   padding: 0 10px;
+  // }
 
   &__col-1 {
     margin-bottom: 60px;
   }
 
-  @include mq("md") {
+  @include mq('md') {
     height: 660px;
 
-    .container {
-      padding: 0 50px;
-    }
+    // .container {
+    //   padding: 0 50px;
+    // }
 
     &__col-1 {
     }
   }
 
-  @include mq("lg") {
+  @include mq('lg') {
     padding: 0;
     margin-bottom: 0;
 
-    .container {
-      display: flex;
-    }
+    // .container {
+    //   display: flex;
+    // }
 
     &__col-1 {
       width: 60%;
@@ -49,7 +49,7 @@
     position: relative;
     margin-bottom: -300px;
 
-    @include mq("lg") {
+    @include mq('lg') {
       margin-bottom: -70px;
     }
   }
@@ -69,7 +69,7 @@
   justify-content: center;
   align-items: center;
 
-  @include mq("md") {
+  @include mq('md') {
     justify-content: space-between;
     flex-direction: row;
   }
@@ -86,7 +86,7 @@
     justify-content: center;
     margin-bottom: 50px;
 
-    @include mq("md") {
+    @include mq('md') {
       margin-bottom: 0;
     }
 
@@ -115,12 +115,12 @@
   padding-top: 50px;
   overflow: hidden;
 
-  @include mq("sm") {
+  @include mq('sm') {
     overflow: visible;
   }
 
   &:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -135,7 +135,7 @@
   }
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -148,15 +148,15 @@
     background-color: #fff;
     transform: skew(0, $skew-degree);
 
-    @include mq("sm") {
+    @include mq('sm') {
       bottom: -100px;
     }
   }
 
-  .container {
-    position: relative;
-    z-index: 5;
-  }
+  // .container {
+  //   position: relative;
+  //   z-index: 5;
+  // }
 
   p {
     line-height: 2;
@@ -173,27 +173,27 @@
     &:first-child {
       padding: 0 10px 20px;
 
-      @include mq("md") {
+      @include mq('md') {
         padding: 0 50px 20px;
       }
     }
   }
 
   &__heading {
-    @include mq("md") {
+    @include mq('md') {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
   }
 
-  @include mq("lg") {
+  @include mq('lg') {
     padding-top: 0;
 
-    .container {
-      display: flex;
-      align-items: center;
-    }
+    // .container {
+    //   display: flex;
+    //   align-items: center;
+    // }
 
     img {
       max-height: none;

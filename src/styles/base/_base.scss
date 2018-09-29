@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: $text-color;
   line-height: 1.5;
@@ -38,11 +38,6 @@ a,
   -ms-user-select: none;
   user-select: none;
   outline: none;
-
-  &:hover {
-    color: $link-hover;
-    text-decoration: underline;
-  }
 }
 
 ol,

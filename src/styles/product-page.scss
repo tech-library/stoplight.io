@@ -1,5 +1,5 @@
-@import "globals/variables";
-@import "globals/mixins";
+@import 'globals/variables';
+@import 'globals/mixins';
 
 .product-hero {
   height: 600px;
@@ -21,7 +21,7 @@
   &__info {
     margin-bottom: 30px;
 
-    @include mq("lg") {
+    @include mq('lg') {
       max-width: 680px;
     }
   }
@@ -30,12 +30,12 @@
 .docs-info {
   margin: -150px 0 50px;
 
-  .container {
-    position: relative;
-    z-index: 10;
-  }
+  // .container {
+  //   position: relative;
+  //   z-index: 10;
+  // }
 
-  @include mq("lg") {
+  @include mq('lg') {
     margin-top: 0;
 
     &__col {
@@ -75,7 +75,7 @@
     max-width: 440px;
     margin: 50px auto 0;
 
-    @include mq("lg") {
+    @include mq('lg') {
       margin: 0;
     }
 
@@ -90,12 +90,12 @@
   min-height: 400px;
   z-index: 30;
 
-  @include mq("md") {
+  @include mq('md') {
     min-height: 550px;
   }
 
   &:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -109,9 +109,9 @@
     transform: skew(0, $skew-degree);
   }
 
-  @include mq("md") {
+  @include mq('md') {
     &:after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       bottom: -100px;
@@ -124,10 +124,10 @@
     }
   }
 
-  .container {
-    position: relative;
-    z-index: 5;
-  }
+  // .container {
+  //   position: relative;
+  //   z-index: 5;
+  // }
 
   p {
     line-height: 2;
@@ -144,27 +144,27 @@
     &:first-child {
       padding: 0 10px 20px;
 
-      @include mq("md") {
+      @include mq('md') {
         padding: 0 50px 20px;
       }
     }
   }
 
   &__heading {
-    @include mq("md") {
+    @include mq('md') {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
   }
 
-  @include mq("lg") {
+  @include mq('lg') {
     padding-top: 0;
 
-    .container {
-      display: flex;
-      align-items: center;
-    }
+    // .container {
+    //   display: flex;
+    //   align-items: center;
+    // }
 
     img {
       max-height: none;
@@ -196,7 +196,7 @@
       flex-direction: column-reverse;
     }
 
-    @include mq("lg") {
+    @include mq('lg') {
       justify-content: space-between;
 
       &--reverse {
@@ -206,7 +206,7 @@
   }
 
   &__col {
-    @include mq("lg") {
+    @include mq('lg') {
       width: 50%;
     }
   }
