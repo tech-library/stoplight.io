@@ -25,6 +25,7 @@
     "classnames": "2.2.x",
     "lodash": "4.17.x",
     "react": "16.5.x",
+    "react-particles-js": "2.4.0-beta.8",
     "react-static": "5.9.x",
     "tailwindcss": "0.6.x"
   },
