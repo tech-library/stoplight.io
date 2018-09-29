@@ -1,5 +1,6 @@
 ---
-title: 'Deutche Bank'
+title: 'Deutsche Bank'
+path: 'deutsche-bank'
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex."
 logo: /images/deutsche-bank-logo.png
 features:
@@ -16,3 +17,17 @@ solution:
 results:
   title: 'Results title'
   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.'
+meta:
+  favicon: "/favicons/favicon.ico"
+  title: Stoplight
+  siteName: Stoplight
+  description: Stoplight, providing engineering teams with the best way to document,
+    test, and build web APIs.
+  url: https://stoplight.io
+  image: "/images/home-hero.png"
+  twitter:
+    title: Stoplight
+    description: Stoplight, providing engineering teams with the best way to document,
+      test, and build web APIs.
+    image: "/images/home-hero.png"
+    username: "@stoplight"

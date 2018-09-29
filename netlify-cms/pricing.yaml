@@ -1,5 +1,6 @@
 ---
 title: "Simple, Flexible Pricing"
+path: "pricing"
 description: "All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation"
 plans:
   - title: "Open Source"
@@ -92,3 +93,17 @@ docs:
     - title: "Pro"
       price: "$349 / mo"
       domains: "Unlimited"
+meta:
+  favicon: "/favicons/favicon.ico"
+  title: Stoplight
+  siteName: Stoplight
+  description: Stoplight, providing engineering teams with the best way to document,
+    test, and build web APIs.
+  url: https://stoplight.io
+  image: "/images/home-hero.png"
+  twitter:
+    title: Stoplight
+    description: Stoplight, providing engineering teams with the best way to document,
+      test, and build web APIs.
+    image: "/images/home-hero.png"
+    username: "@stoplight"

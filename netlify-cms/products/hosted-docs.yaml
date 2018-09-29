@@ -1,56 +1,162 @@
-title: Documentation
-slogan: >-
-  Automatically generate customizable API documentation. Because your API
-  consumers deserve beautiful and interactive technical documentation.
-description: >-
-  Use OpenAPI Specification (formerly known as Swagger) and Markdown to create
-  robust, internal and external API documentation for your organization.
-  One-click cloud deployment with Stoplight or download the static assets to
-  host anywhere.
-callToAction: Some kind of clever call to action that drives people to this button.
-signupText: >-
-  The basic plan is **free**. 14 day trial for all features for **free**. No
-  credit card required.
-image: /images/product-page/docs-hero.png
-featureList:
-  - Interactive Documentation
-  - Fully Customizable Pages
-  - Versioning
-  - Access Control
-  - Integrations
-features:
-  - title: Interactive API Documentation
-    description: >-
-      You can no longer get by with static API documentation. That’s why
-      Stoplight offers multiple ways for your API consumers to try out your API.
-      Test Requests within your documentation allows consumers to understand how
-      your API works. Code Examples generated from dozens of languages such as
-      JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy and
-      paste right into their own code. Built-in search directs consumers to the
-      content they need.
-    image: /images/product-page/layout-and-theming.png
-  - title: 'Powerful, Visual Editor'
-    description: >-
-      With Themes, Custom CSS, Pages, and Domains, you control your
-      documentation’s branding. With Custom Pages, you decide the page layout
-      with our Markdown-based Editor. Giving you the freedom to add rich content
-      and resources alongside your API reference documentation. Fully
-      customizable site structure allows you to describe multiple APIs and
-      resources in the same documentation with support for versioning. 
-    image: /images/product-page/add-some-basic-options.png
-  - title: Automated API Documentation
-    description: >-
-      Never have out-of-date documentation. Reference your OpenAPI Specification
-      document to automatically generated API reference documentation. Use the
-      Stoplight API to automate your documentation process by integrating it
-      into your existing CI/CD workflow. 
-    image: /images/product-page/put-it-all-together.png
-  - title: 'Simple, Flexible Deployment'
-    description: >-
-      With flexible and secure deployment options, you can find a hosting
-      solution that works for you. Allow Stoplight to host your documentation
-      for you, so you never have to worry about managing servers for your
-      documentation ever again. Manage access control and measure analytics with
-      integrations. Or download the static assets or use our on-premise
-      solutions behind your firewall to host your documentation from anywhere. 
-    image: /images/product-page/preview-and-publish.png
+---
+path: documentation
+topSection:
+  heading: Stoplight Documentation
+  subheading: >-
+    Automatically generate customizable API documentation. Because your API
+    consumers deserve beautiful and interactive technical documentation.
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join
+productSection:
+  image: /images/product-page/docs-hero.png
+  description: >-
+    Use OpenAPI Specification (formerly known as Swagger) and Markdown to create
+    robust, internal and external API documentation for your organization.
+    One-click cloud deployment with Stoplight or download the static assets to
+    host anywhere.
+  features:
+    - Interactive Documentation
+    - Fully Customizable Pages
+    - Versioning
+    - Access Control
+    - Integrations
+signupSection:
+  heading: Interested in Documentation?
+  subheading: The basic plan is free. 14 day trial for all features for free. No credit card required.
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join
+featureSection:
+  features:
+    - title: Interactive API Documentation
+      description: >-
+        You can no longer get by with static API documentation. That’s why
+        Stoplight offers multiple ways for your API consumers to try out your API.
+        Test Requests within your documentation allows consumers to understand how
+        your API works. Code Examples generated from dozens of languages such as
+        JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy and
+        paste right into their own code. Built-in search directs consumers to the
+        content they need.
+      image: /images/product-page/layout-and-theming.png
+      linkText: Create your free account
+      linkUrl: https://next.stoplight.io/join
+    - title: 'Powerful, Visual Editor'
+      description: >-
+        With Themes, Custom CSS, Pages, and Domains, you control your
+        documentation’s branding. With Custom Pages, you decide the page layout
+        with our Markdown-based Editor. Giving you the freedom to add rich content
+        and resources alongside your API reference documentation. Fully
+        customizable site structure allows you to describe multiple APIs and
+        resources in the same documentation with support for versioning.
+      image: /images/product-page/add-some-basic-options.png
+      linkText: Create your free account
+      linkUrl: https://next.stoplight.io/join
+    - title: Automated API Documentation
+      description: >-
+        Never have out-of-date documentation. Reference your OpenAPI Specification
+        document to automatically generated API reference documentation. Use the
+        Stoplight API to automate your documentation process by integrating it
+        into your existing CI/CD workflow.
+      image: /images/product-page/put-it-all-together.png
+      linkText: Create your free account
+      linkUrl: https://next.stoplight.io/join
+    - title: 'Simple, Flexible Deployment'
+      description: >-
+        With flexible and secure deployment options, you can find a hosting
+        solution that works for you. Allow Stoplight to host your documentation
+        for you, so you never have to worry about managing servers for your
+        documentation ever again. Manage access control and measure analytics with
+        integrations. Or download the static assets or use our on-premise
+        solutions behind your firewall to host your documentation from anywhere.
+      image: /images/product-page/preview-and-publish.png
+      linkText: Create your free account
+      linkUrl: https://next.stoplight.io/join
+docsPlanSection:
+  title: "Documentation Plans"
+  description: "Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere."
+  buttonText: CREATE YOUR FIRST DOCS HUB
+  buttonUrl: https://next.stoplight.io/join
+  features:
+    - title: "OpenAPI, Markdown, Request Maker"
+      plans:
+        - "Basic"
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Unlimited Visits"
+      plans:
+        - "Basic"
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Publish to docs.stoplight.io"
+      plans:
+        - "Basic"
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Publish to your domain"
+      plans:
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Theming"
+      plans:
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Build history & instant rollbacks"
+      plans:
+        - "Essential"
+        - "Standard"
+        - "Pro"
+    - title: "Custom CSS"
+      plans:
+        - "Standard"
+        - "Pro"
+    - title: "White label"
+      plans:
+        - "Standard"
+        - "Pro"
+    - title: "Basic auth & Auth0 integrations"
+      plans:
+        - "Standard"
+        - "Pro"
+    - title: "Download static HTML/CSS"
+      plans:
+        - "Pro"
+    - title: "SAML single sign-on"
+      plans:
+        - "Pro"
+    - title: "HTTP request OAuth token manager"
+      plans:
+        - "Pro"
+  plans:
+    - title: "Basic"
+      price: "Free"
+    - title: "Essential"
+      price: "$69 / mo"
+      domains: "1"
+    - title: "Standard"
+      price: "$159 / mo"
+      domains: "10"
+    - title: "Pro"
+      price: "$349 / mo"
+      domains: "Unlimited"
+callToActionSection:
+  heading: Some clever call to action
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join
+meta:
+  favicon: /favicons/favicon.ico
+  title: Stoplight Hosted Documentation
+  siteName: Stoplight
+  description: Stoplight, providing engineering teams with the best way to document,
+    test, and build web APIs.
+  url: https://stoplight.io
+  image: /images/home-hero.png
+  twitter:
+    title: Stoplight
+    description: Stoplight, providing engineering teams with the best way to document,
+      test, and build web APIs.
+    image: /images/home-hero.png
+    username: "@stoplight"

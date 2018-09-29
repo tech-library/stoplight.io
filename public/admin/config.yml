@@ -5,201 +5,439 @@ backend:
     - admin
     - editor
 publish_mode: editorial_workflow
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: images/uploads
+display_url: 'https://stoplight.io'
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: Pages
+    label_singular: Page
+    name: pages
+    delete: false
     files:
-      - label: "Home"
-        name: "home"
-        file: "netlify-cms/home.yaml"
+      - label: Home
+        name: home
+        file: netlify-cms/home.yaml
         fields:
-          - {label: "Heading", name: "heading", widget: "text"}
-          - {label: "Description", name: "description", widget: "text"}
-          - label: "Platform"
-            name: "platform"
-            widget: "object"
+          - label: Heading
+            name: heading
+            widget: text
+          - label: Description
+            name: description
+            widget: text
+          - label: Platform
+            name: platform
+            widget: object
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Image", name: "image", widget: "image"}
-              - label: "Features"
-                name: "features"
-                widget: "list"
+              - label: Title
+                name: title
+                widget: string
+              - label: Image
+                name: image
+                widget: image
+              - label: Features
+                name: features
+                widget: list
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
-          - label: "Customers"
-            name: "customers"
-            widget: "list"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Description
+                    name: description
+                    widget: text
+          - label: Customers
+            name: customers
+            widget: list
             field:
-              - {label: Image, name: image, widget: image}
-          - label: "Products"
-            name: "products"
-            widget: "list"
+              - label: Image
+                name: image
+                widget: image
+          - label: Products
+            name: products
+            widget: list
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Link", name: "link", widget: "string"}
-          - label: "Quotes"
-            name: "quotes"
-            widget: "list"
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Image
+                name: image
+                widget: image
+              - label: Link
+                name: link
+                widget: string
+          - label: Quotes
+            name: quotes
+            widget: list
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Quote", name: "quote", widget: "text"}
-              - {label: "Company", name: "company", widget: "string"}
-              - {label: "Author", name: "author", widget: "string"}
-              - {label: "Role", name: "role", widget: "string"}
-
-      - label: "Pricing"
-        name: "pricing"
-        file: "netlify-cms/pricing.yaml"
+              - label: Image
+                name: image
+                widget: image
+              - label: Quote
+                name: quote
+                widget: text
+              - label: Company
+                name: company
+                widget: string
+              - label: Author
+                name: author
+                widget: string
+              - label: Role
+                name: role
+                widget: string
+      - label: Pricing
+        name: pricing
+        file: netlify-cms/pricing.yaml
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - label: "Plans"
-            name: "plans"
-            widget: "list"
+          - label: path
+            name: path
+            widget: string
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Plans
+            name: plans
+            widget: list
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Price", name: "price", widget: "string", required: false}
-              - {label: "Price Unit", name: "unit", widget: "string", required: false}
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: Title
+                name: title
+                widget: string
+              - label: Price
+                name: price
+                widget: string
+                required: false
+              - label: Price Unit
+                name: unit
+                widget: string
+                required: false
+              - label: Button
+                name: button
+                widget: object
                 required: false
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Link", name: "link", widget: "string"}
-              - label: "Features"
-                name: "features"
-                widget: "list"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Link
+                    name: link
+                    widget: string
+              - label: Features
+                name: features
+                widget: list
                 field:
-                  - {label: Features, name: feature, widget: string}
-          - label: "Docs"
-            name: "docs"
-            widget: "object"
+                  - label: Features
+                    name: feature
+                    widget: string
+          - label: Docs
+            name: docs
+            widget: object
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "text"}
-              - label: "Features"
-                name: "features"
-                widget: "list"
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Features
+                name: features
+                widget: list
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - label: "Plans"
-                    name: "plans"
-                    widget: "list"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Plans
+                    name: plans
+                    widget: list
                     field:
-                      - {label: Features, name: feature, widget: string}
-              - label: "Plans"
-                name: "plans"
-                widget: "list"
+                      - label: Features
+                        name: feature
+                        widget: string
+              - label: Plans
+                name: plans
+                widget: list
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Price", name: "price", widget: "string"}
-                  - {label: "# of Domains", name: "domains", widget: "string", required: false}
-
-      - label: "About"
-        name: "about"
-        file: "netlify-cms/about.yaml"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Price
+                    name: price
+                    widget: string
+                  - label: '# of Domains'
+                    name: domains
+                    widget: string
+                    required: false
+      - label: About
+        name: about
+        file: netlify-cms/about.yaml
         fields:
-          - {label: "Logo", name: "logo", widget: "image"}
-          - {label: "Background Image", name: "backgroundImage", widget: "image"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "Mission", name: "mission", widget: "text"}
-          - label: "Quotes"
-            name: "quotes"
-            widget: "list"
+          - label: path
+            name: path
+            widget: string
+          - label: Logo
+            name: logo
+            widget: image
+          - label: Background Image
+            name: backgroundImage
+            widget: image
+          - label: Description
+            name: description
+            widget: text
+          - label: Mission
+            name: mission
+            widget: text
+          - label: Quotes
+            name: quotes
+            widget: list
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Quote", name: "quote", widget: "text"}
-              - {label: "Company", name: "company", widget: "string"}
-              - {label: "Author", name: "author", widget: "string"}
-              - {label: "Role", name: "role", widget: "string"}
-          - label: "Team"
-            name: "team"
-            widget: "object"
+              - label: Image
+                name: image
+                widget: image
+              - label: Quote
+                name: quote
+                widget: text
+              - label: Company
+                name: company
+                widget: string
+              - label: Author
+                name: author
+                widget: string
+              - label: Role
+                name: role
+                widget: string
+          - label: Team
+            name: team
+            widget: object
             fields:
-              - {label: "Description", name: "description", widget: "text"}
-              - label: "Members"
-                name: "members"
-                widget: "list"
+              - label: Description
+                name: description
+                widget: text
+              - label: Members
+                name: members
+                widget: list
                 fields:
-                  - {label: "Image", name: "image", widget: "image"}
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Role", name: "role", widget: "string"}
-          - label: "Press"
-            name: "press"
-            widget: "list"
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Role
+                    name: role
+                    widget: string
+          - label: Press
+            name: press
+            widget: list
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Description", name: "description", widget: "text"}
-              - {label: "Publication", name: "publication", widget: "string"}
-          - label: "Investors"
-            name: "investors"
-            widget: "list"
+              - label: Image
+                name: image
+                widget: image
+              - label: Description
+                name: description
+                widget: text
+              - label: Publication
+                name: publication
+                widget: string
+          - label: Investors
+            name: investors
+            widget: list
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Name", name: "name", widget: "string"}
-          - label: "Career Description"
-            name: "career"
-            widget: "text"
-
-  - label: "Case Study"
-    name: "case-studies"
-    folder: "netlify-cms/case-studies"
+              - label: Image
+                name: image
+                widget: image
+              - label: Name
+                name: name
+                widget: string
+          - label: Career Description
+            name: career
+            widget: text
+  - label: Case Studies
+    label_singular: Case Study
+    name: case-studies
+    folder: netlify-cms/case-studies
     create: true
-    slug: "{{slug}}"
-    extension: "yaml"
+    delete: false
+    slug: '{{slug}}'
+    extension: yaml
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Featured Highlights", name: "features", widget: "list"}
-      - {label: "Description", name: "description", widget: "text"}
-      - label: "The Goal"
-        name: "goal"
-        widget: "object"
+      - label: path
+        name: path
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Logo
+        name: logo
+        widget: image
+      - label: Featured Highlights
+        name: features
+        widget: list
+      - label: Description
+        name: description
+        widget: text
+      - label: The Goal
+        name: goal
+        widget: object
         fields:
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "The Solution"
-        name: "solution"
-        widget: "object"
+          - label: Body
+            name: body
+            widget: markdown
+      - label: The Solution
+        name: solution
+        widget: object
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Image", name: "image", widget: "image"}
-      - label: "The Results"
-        name: "results"
-        widget: "object"
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+          - label: Image
+            name: image
+            widget: image
+      - label: The Results
+        name: results
+        widget: object
         fields:
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "Image", name: "image", widget: "image"}
-
-  - label: "Product"
-    name: "products"
-    folder: "netlify-cms/products"
+          - label: Body
+            name: body
+            widget: markdown
+          - label: Image
+            name: image
+            widget: image
+  - label: Products
+    label_singular: Product
+    name: products
+    folder: netlify-cms/products
     create: true
-    slug: "{{slug}}"
-    extension: "yaml"
+    delete: false
+    slug: '{{slug}}'
+    extension: yaml
     fields:
-      - {label: "title", name: "title", widget: "string"}
-      - {label: "slogan", name: "slogan", widget: "text"}
-      - {label: "description", name: "description", widget: "text"}
-      - {label: "callToAction", name: "callToAction", widget: "text"}
-      - {label: "signupText", name: "signupText", widget: "text"}
-      - {label: "image", name: "image", widget: "image"}
-      - label: "Feature List"
-        name: "featureList"
-        widget: "list"
-        field:
-          - {label: "title", name: "title", widget: "string"}
-      - label: "Features"
-        name: "features"
-        widget: "list"
+      - label: URL path
+        name: path
+        widget: string
+      - label: Top Section
+        name: topSection
+        widget: object
         fields:
-          - {label: "title", name: "title", widget: "string"}
-          - {label: "description", name: "description", widget: "text"}
-          - {label: "image", name: "image", widget: "image"}
+          - label: heading
+            name: heading
+            widget: string
+          - label: subheading
+            name: subheading
+            widget: string
+          - label: Button Text
+            name: buttonText
+            widget: string
+          - label: Button URL
+            name: buttonUrl
+            widget: string
+      - label: Product Section
+        name: productSection
+        widget: object
+        fields:
+          - name: image
+            widget: image
+          - name: description
+            widget: string
+          - name: features
+            widget: list
+            field:
+              - name: title
+                widget: string
+      - label: Signup Section
+        name: signupSection
+        widget: object
+        fields:
+          - name: heading
+            widget: string
+          - name: subheading
+            widget: string
+          - label: Button Text
+            name: buttonText
+            widget: string
+          - label: Button URL
+            name: buttonUrl
+            widget: string
+      - label: Docs Plan Section
+        name: docsPlanSection
+        widget: object
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Features
+            name: features
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Plans
+                name: plans
+                widget: list
+                field:
+                  - label: Features
+                    name: feature
+                    widget: string
+          - label: Plans
+            name: plans
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Price
+                name: price
+                widget: string
+              - label: '# of Domains'
+                name: domains
+                widget: string
+                required: false
+      - label: Call to action Section
+        name: callToActionSection
+        widget: object
+        fields:
+          - name: heading
+            widget: string
+          - label: Button Text
+            name: buttonText
+            widget: string
+          - label: Button URL
+            name: buttonUrl
+            widget: string
+      - label: Meta Tags
+        name: meta
+        widget: object
+        fields:
+          - name: favicon
+            widget: image
+          - name: siteName
+            label: Site Name
+            widget: string
+          - name: description
+            widget: string
+          - name: url
+            widget: string
+          - name: image
+            widget: image
+          - name: twitter
+            widget: object
+            fields:
+              - name: title
+                widget: string
+              - name: description
+                widget: string
+              - name: image
+                widget: image
+              - name: username
+                widget: string
