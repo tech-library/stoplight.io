@@ -45,19 +45,23 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      productTab: props.products[0].title,
-    };
+    const { features = [] } = props;
+
+    this.state = {};
+
+    if (features.length) {
+      this.state.featureTab = features[0].title;
+    }
   }
 
-  renderProductTabs() {
-    const { products } = this.props;
-    const { productTab } = this.state;
+  renderFeatureTabs() {
+    const { features } = this.props;
+    const { featureTab } = this.state;
 
     return (
       <ul className="list-reset">
-        {_.map(products, (product, index) => {
-          const isActive = product.title === productTab;
+        {_.map(features, (feature, index) => {
+          const isActive = feature.title === featureTab;
 
           return (
             <li
@@ -67,7 +71,7 @@ class HomePage extends React.Component {
                 'hover:opacity-85': !isActive,
                 'mt-20': index !== 0,
               })}
-              onClick={() => this.setState({ productTab: product.title })}
+              onClick={() => this.setState({ featureTab: feature.title })}
             >
               <div
                 className={cn(
@@ -80,7 +84,7 @@ class HomePage extends React.Component {
               >
                 <Icon icon={faCheck} size={sizes.xl} />
               </div>
-              <div className="text-2xl font-bold leading-loose">{product.title}</div>
+              <div className="text-2xl font-bold leading-loose">{feature.title}</div>
             </li>
           );
         })}
@@ -88,10 +92,10 @@ class HomePage extends React.Component {
     );
   }
 
-  renderProduct() {
-    const { products } = this.props;
-    const { image, link, description, title } = products.find(
-      product => product.title === this.state.productTab
+  renderFeature() {
+    const { features } = this.props;
+    const { image, href, description, title } = features.find(
+      feature => feature.title === this.state.featureTab
     );
 
     return (
@@ -101,7 +105,7 @@ class HomePage extends React.Component {
 
         <p className="mt-8 text-xl text-right">
           <a
-            href={link}
+            href={href}
             className="text-grey-darkest border-b-2 border-accent-dark pb-2 font-bold text-lg hover:border-transparent hover:text-grey-dark"
           >
             Learn more about the {title}
@@ -112,7 +116,7 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { hero, platform, customers, testimonials } = this.props;
+    const { hero, product, customers = [], testimonials = [], features = [] } = this.props;
 
     const elems = [];
 
@@ -120,18 +124,11 @@ class HomePage extends React.Component {
       elems.push(<Hero key="hero" {...hero} />);
     }
 
-    if (platform) {
-      elems.push(
-        <ImageSection
-          key="product"
-          title={platform.title}
-          body={platform.description}
-          image={platform.image}
-        />
-      );
+    if (product) {
+      elems.push(<ImageSection key="product" {...product} />);
     }
 
-    if (customers && customers.length > 0) {
+    if (customers.length) {
       elems.push(
         <Section key="customers" bgClassName="bg-grey-lightest">
           <div className="container">
@@ -155,20 +152,22 @@ class HomePage extends React.Component {
       );
     }
 
-    elems.push(
-      <Section key="features">
-        <div className="container">
-          <h2 className="text-center mb-20">Key Features</h2>
+    if (features.length) {
+      elems.push(
+        <Section key="features">
+          <div className="container">
+            <h2 className="text-center mb-20">Key Features</h2>
 
-          <div className="flex">
-            <div className="flex-0 w-96 mr-12">{this.renderProductTabs()}</div>
-            <div className="flex-1">{this.renderProduct()}</div>
+            <div className="flex">
+              <div className="flex-0 w-96 mr-12">{this.renderFeatureTabs()}</div>
+              <div className="flex-1">{this.renderFeature()}</div>
+            </div>
           </div>
-        </div>
-      </Section>
-    );
+        </Section>
+      );
+    }
 
-    if (testimonials && testimonials.length > 0) {
+    if (testimonials.length) {
       elems.push(
         <Section key="testimonials" bgClassName="bg-grey-lightest">
           <div className="container flex flex-wrap items-center">
