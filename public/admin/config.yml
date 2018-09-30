@@ -85,6 +85,32 @@ collections:
               - label: Role
                 name: role
                 widget: string
+          - label: Meta Tags
+            name: meta
+            widget: object
+            fields:
+              - name: favicon
+                widget: image
+              - name: siteName
+                label: Site Name
+                widget: string
+              - name: description
+                widget: string
+              - name: url
+                widget: string
+              - name: image
+                widget: image
+              - name: twitter
+                widget: object
+                fields:
+                  - name: title
+                    widget: string
+                  - name: description
+                    widget: string
+                  - name: image
+                    widget: image
+                  - name: username
+                    widget: string
       - label: Pricing
         name: pricing
         file: netlify-cms/pricing.yaml
@@ -169,6 +195,32 @@ collections:
                     name: domains
                     widget: string
                     required: false
+          - label: Meta Tags
+            name: meta
+            widget: object
+            fields:
+              - name: favicon
+                widget: image
+              - name: siteName
+                label: Site Name
+                widget: string
+              - name: description
+                widget: string
+              - name: url
+                widget: string
+              - name: image
+                widget: image
+              - name: twitter
+                widget: object
+                fields:
+                  - name: title
+                    widget: string
+                  - name: description
+                    widget: string
+                  - name: image
+                    widget: image
+                  - name: username
+                    widget: string
       - label: About
         name: about
         file: netlify-cms/about.yaml
@@ -253,6 +305,32 @@ collections:
           - label: Career Description
             name: career
             widget: text
+          - label: Meta Tags
+            name: meta
+            widget: object
+            fields:
+              - name: favicon
+                widget: image
+              - name: siteName
+                label: Site Name
+                widget: string
+              - name: description
+                widget: string
+              - name: url
+                widget: string
+              - name: image
+                widget: image
+              - name: twitter
+                widget: object
+                fields:
+                  - name: title
+                    widget: string
+                  - name: description
+                    widget: string
+                  - name: image
+                    widget: image
+                  - name: username
+                    widget: string
   - label: Case Studies
     label_singular: Case Study
     name: case-studies
@@ -310,6 +388,32 @@ collections:
           - label: Image
             name: image
             widget: image
+      - label: Meta Tags
+        name: meta
+        widget: object
+        fields:
+          - name: favicon
+            widget: image
+          - name: siteName
+            label: Site Name
+            widget: string
+          - name: description
+            widget: string
+          - name: url
+            widget: string
+          - name: image
+            widget: image
+          - name: twitter
+            widget: object
+            fields:
+              - name: title
+                widget: string
+              - name: description
+                widget: string
+              - name: image
+                widget: image
+              - name: username
+                widget: string
   - label: Products
     label_singular: Product
     name: products
