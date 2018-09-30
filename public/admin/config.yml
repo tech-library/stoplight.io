@@ -5,7 +5,7 @@ backend:
     - admin
     - editor
 publish_mode: editorial_workflow
-media_folder: images/uploads
+media_folder: public/images
 display_url: 'https://stoplight.io'
 collections:
   - label: Pages
@@ -453,7 +453,7 @@ collections:
           - name: features
             widget: list
             field:
-              - name: title
+              - name: feature
                 widget: string
       - label: Signup Section
         name: signupSection

@@ -147,16 +147,16 @@ callToActionSection:
   buttonText: Signup
   buttonUrl: https://next.stoplight.io/join
 meta:
-  favicon: /favicons/favicon.ico
-  title: Stoplight Hosted Documentation
+  favicon: "/favicons/favicon.ico"
+  title: Stoplight
   siteName: Stoplight
   description: Stoplight, providing engineering teams with the best way to document,
     test, and build web APIs.
   url: https://stoplight.io
-  image: /images/home-hero.png
+  image: "/images/home-hero.png"
   twitter:
     title: Stoplight
     description: Stoplight, providing engineering teams with the best way to document,
       test, and build web APIs.
-    image: /images/home-hero.png
+    image: "/images/home-hero.png"
     username: "@stoplight"
