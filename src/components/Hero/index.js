@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-static';
 import cn from 'classnames';
-import Particles from 'react-particles-js';
 
 import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
 import { headerHeightClass } from '../Header';
+
+let Particles;
+if (typeof window !== 'undefined') {
+  Particles = require('react-particles-js').default;
+}
 
 const indexMap = {
   1: 'one',
@@ -35,7 +39,7 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
   );
 };
 
-export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
+const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
   return (
     <div className="relative">
       <div className="relative overflow-hidden">
@@ -62,38 +66,40 @@ export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
         </div>
 
         <div className="absolute z-1" style={{ left: -100, top: -100, right: -100, bottom: -100 }}>
-          <Particles
-            style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
-            params={{
-              fps_limit: 15,
-              retina_detect: false, // possible performance issues when true
-              particles: {
-                number: {
-                  value: 160,
-                  density: {
+          {Particles && (
+            <Particles
+              style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
+              params={{
+                fps_limit: 15,
+                retina_detect: false, // possible performance issues when true
+                particles: {
+                  number: {
+                    value: 160,
+                    density: {
+                      enable: false,
+                    },
+                  },
+                  size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                      speed: 4,
+                      size_min: 0.3,
+                    },
+                  },
+                  line_linked: {
                     enable: false,
                   },
-                },
-                size: {
-                  value: 3,
-                  random: true,
-                  anim: {
-                    speed: 4,
-                    size_min: 0.3,
+                  move: {
+                    random: true,
+                    speed: 1,
+                    direction: 'top',
+                    out_mode: 'out',
                   },
                 },
-                line_linked: {
-                  enable: false,
-                },
-                move: {
-                  random: true,
-                  speed: 1,
-                  direction: 'top',
-                  out_mode: 'out',
-                },
-              },
-            }}
-          />
+              }}
+            />
+          )}
         </div>
       </div>
 
@@ -111,3 +117,5 @@ export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
     </div>
   );
 };
+
+export default Hero;
