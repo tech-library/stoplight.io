@@ -1,0 +1,8 @@
+path: /api-mocking
+color: grey-darkest
+topSection:
+  heading: OpenAPI Powered Mock Servers
+  subheading: >-
+    The subtitle
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join

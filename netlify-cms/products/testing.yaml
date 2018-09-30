@@ -1,0 +1,8 @@
+path: /api-testing
+color: orange
+topSection:
+  heading: OpenAPI Contract Testing
+  subheading: >-
+    The subtitle
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join

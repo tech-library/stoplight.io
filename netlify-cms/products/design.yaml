@@ -1,0 +1,8 @@
+path: /api-design
+color: blue
+topSection:
+  heading: Visual OpenAPI Designer
+  subheading: >-
+    The subtitle
+  buttonText: Signup
+  buttonUrl: https://next.stoplight.io/join

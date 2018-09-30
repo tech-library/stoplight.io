@@ -9,20 +9,6 @@ import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
 import { Hero } from '../../components/Hero';
 
-const Feature = ({ title, description }, key) => {
-  return (
-    <div key={key} className="flex items-center justify-end py-4">
-      <div className="flex-1">
-        <div className="text-xl font-medium">{title}</div>
-        <div className="opacity-85 mt-1/2 ml-auto">{description}</div>
-      </div>
-      <div className="text-green ml-6 mr-2 text-2xl">
-        <Icon icon={faCheck} />
-      </div>
-    </div>
-  );
-};
-
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
     <div key={key} className="w-1/2 pr-10 pb-10">
@@ -124,7 +110,7 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { heading, description, platform, customers, testimonials } = this.props;
+    const { heading, cards, description, platform, customers, testimonials } = this.props;
 
     const elems = [
       <Hero
@@ -132,36 +118,7 @@ class HomePage extends React.Component {
         title={heading}
         subtitle={description}
         rootClassName="bg-black"
-        cards={[
-          {
-            index: 'one',
-            title: 'Visual OpenAPI',
-            subtitle: 'Use our visual designer to manage OpenAPI (Swagger) 10x faster.',
-            href: '/openapi-design',
-            color: 'blue',
-          },
-          {
-            index: 'two',
-            title: 'Technical Docs',
-            subtitle: 'Increase customer adoption with beautiful, functional documentation.',
-            href: '/openapi-documentation',
-            color: 'green',
-          },
-          {
-            index: 'three',
-            title: 'Contract Testing',
-            subtitle: 'Leverage OpenAPI to test, automate, and debug web APIs.',
-            href: '/openapi-testing',
-            color: 'orange',
-          },
-          {
-            index: 'four',
-            title: 'Mocking',
-            subtitle: 'Parallelize development with one click mock servers, powered by OpenAPI.',
-            href: '/platform/design',
-            color: 'grey-darkest',
-          },
-        ]}
+        cards={cards}
       />,
     ];
 
@@ -242,7 +199,7 @@ class HomePage extends React.Component {
 
             <div className="flex items-center mt-40 mb-12 w-full">
               <div className="flex-1 text-center">
-                <Link href="/join">
+                <Link to="/join">
                   <Button color={colors.accent} size={sizes.xl} shadow className="w-full max-w-xs">
                     Get Started
                   </Button>

@@ -1,5 +1,4 @@
----
-path: 'about'
+path: /about
 logo: /images/robot-dude.svg
 backgroundImage: /images/hero-bg.jpg
 description: >-
@@ -40,16 +39,16 @@ investors:
     name: NextGen Venture Partners
 career: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
 meta:
-  favicon: "/favicons/favicon.ico"
+  favicon: '/favicons/favicon.ico'
   title: Stoplight
   siteName: Stoplight
   description: Stoplight, providing engineering teams with the best way to document,
     test, and build web APIs.
   url: https://stoplight.io
-  image: "/images/home-hero.png"
+  image: '/images/home-hero.png'
   twitter:
     title: Stoplight
     description: Stoplight, providing engineering teams with the best way to document,
       test, and build web APIs.
-    image: "/images/home-hero.png"
-    username: "@stoplight"
+    image: '/images/home-hero.png'
+    username: '@stoplight'

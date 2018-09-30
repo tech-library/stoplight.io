@@ -1,109 +1,108 @@
----
-title: "Simple, Flexible Pricing"
-path: "pricing"
-description: "All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation"
+title: 'Simple, Flexible Pricing'
+path: /pricing
+description: 'All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation'
 plans:
-  - title: "Open Source"
-    price: "Free"
+  - title: 'Open Source'
+    price: 'Free'
     features:
-      - "Unlimited public projects"
-      - "5 members"
-  - title: "Team"
-    price: "$24"
-    unit: "per member"
+      - 'Unlimited public projects'
+      - '5 members'
+  - title: 'Team'
+    price: '$24'
+    unit: 'per member'
     features:
-      - "Unlimited private projects"
-      - "Up to 25 members"
-  - title: "Enterprise"
+      - 'Unlimited private projects'
+      - 'Up to 25 members'
+  - title: 'Enterprise'
     button:
-      title: "Contact Us"
-      link: "mailto:sales@stoplight.io"
+      title: 'Contact Us'
+      link: 'mailto:sales@stoplight.io'
     features:
-      - "Hosted or On-Premise"
-      - "Unlimited members"
-      - "SAML single sign-on"
-      - "Dedicated Support"
+      - 'Hosted or On-Premise'
+      - 'Unlimited members'
+      - 'SAML single sign-on'
+      - 'Dedicated Support'
 docs:
-  title: "Documentation Add-ons"
-  description: "Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere."
+  title: 'Documentation Add-ons'
+  description: 'Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere.'
   features:
-    - title: "OpenAPI, Markdown, Request Maker"
+    - title: 'OpenAPI, Markdown, Request Maker'
       plans:
-        - "Basic"
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Unlimited Visits"
+        - 'Basic'
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Unlimited Visits'
       plans:
-        - "Basic"
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Publish to docs.stoplight.io"
+        - 'Basic'
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Publish to docs.stoplight.io'
       plans:
-        - "Basic"
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Publish to your domain"
+        - 'Basic'
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Publish to your domain'
       plans:
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Theming"
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Theming'
       plans:
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Build history & instant rollbacks"
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Build history & instant rollbacks'
       plans:
-        - "Essential"
-        - "Standard"
-        - "Pro"
-    - title: "Custom CSS"
+        - 'Essential'
+        - 'Standard'
+        - 'Pro'
+    - title: 'Custom CSS'
       plans:
-        - "Standard"
-        - "Pro"
-    - title: "White label"
+        - 'Standard'
+        - 'Pro'
+    - title: 'White label'
       plans:
-        - "Standard"
-        - "Pro"
-    - title: "Basic auth & Auth0 integrations"
+        - 'Standard'
+        - 'Pro'
+    - title: 'Basic auth & Auth0 integrations'
       plans:
-        - "Standard"
-        - "Pro"
-    - title: "Download static HTML/CSS"
+        - 'Standard'
+        - 'Pro'
+    - title: 'Download static HTML/CSS'
       plans:
-        - "Pro"
-    - title: "SAML single sign-on"
+        - 'Pro'
+    - title: 'SAML single sign-on'
       plans:
-        - "Pro"
-    - title: "HTTP request OAuth token manager"
+        - 'Pro'
+    - title: 'HTTP request OAuth token manager'
       plans:
-        - "Pro"
+        - 'Pro'
   plans:
-    - title: "Basic"
-      price: "Free"
-    - title: "Essential"
-      price: "$69 / mo"
-      domains: "1"
-    - title: "Standard"
-      price: "$159 / mo"
-      domains: "10"
-    - title: "Pro"
-      price: "$349 / mo"
-      domains: "Unlimited"
+    - title: 'Basic'
+      price: 'Free'
+    - title: 'Essential'
+      price: '$69 / mo'
+      domains: '1'
+    - title: 'Standard'
+      price: '$159 / mo'
+      domains: '10'
+    - title: 'Pro'
+      price: '$349 / mo'
+      domains: 'Unlimited'
 meta:
-  favicon: "/favicons/favicon.ico"
+  favicon: '/favicons/favicon.ico'
   title: Stoplight
   siteName: Stoplight
   description: Stoplight, providing engineering teams with the best way to document,
     test, and build web APIs.
   url: https://stoplight.io
-  image: "/images/home-hero.png"
+  image: '/images/home-hero.png'
   twitter:
     title: Stoplight
     description: Stoplight, providing engineering teams with the best way to document,
       test, and build web APIs.
-    image: "/images/home-hero.png"
-    username: "@stoplight"
+    image: '/images/home-hero.png'
+    username: '@stoplight'
