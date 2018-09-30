@@ -71,23 +71,12 @@ const resolveMeta = (defaultMeta = {}, meta = {}) => {
   return {
     ...defaultMeta,
     ...meta,
-    twitter: {
-      ...defaultMeta.twitter,
-      ...meta.twitter,
-    },
+    twitter: Object.assign({}, defaultMeta.twitter, meta.twitter),
   };
 };
 
 export default {
-  getSiteData: async () => {
-    const headerProps = await getFile(`${NETLIFY_PATH}/other/header.yaml`);
-    const footerProps = await getFile(`${NETLIFY_PATH}/other/footer.yaml`);
-
-    return {
-      headerProps,
-      footerProps,
-    };
-  },
+  getSiteData: () => getFile(`${NETLIFY_PATH}/settings.yaml`),
 
   getRoutes: async () => {
     const [home, pricing, about, products, caseStudies] = await Promise.all([
@@ -99,8 +88,6 @@ export default {
       getFiles(`${NETLIFY_PATH}/case-studies`),
     ]);
 
-    const defaultMeta = home.meta;
-
     const routes = [
       {
         path: '/',
@@ -110,18 +97,12 @@ export default {
       {
         path: pricing.path,
         component: 'src/containers/Pricing',
-        getData: () => ({
-          ...pricing,
-          meta: resolveMeta(defaultMeta, pricing.meta),
-        }),
+        getData: () => pricing,
       },
       {
         path: about.path,
         component: 'src/containers/About',
-        getData: () => ({
-          ...about,
-          meta: resolveMeta(defaultMeta, about.meta),
-        }),
+        getData: () => about,
       },
       {
         path: '/case-studies',
@@ -135,7 +116,6 @@ export default {
                 description: caseStudy.description,
                 logo: caseStudy.logo,
                 path: caseStudy.path,
-                meta: resolveMeta(defaultMeta, caseStudy.meta),
               };
             })
             .filter(Boolean),
@@ -148,7 +128,6 @@ export default {
               component: 'src/containers/CaseStudy',
               getData: () => ({
                 ...caseStudy,
-                meta: resolveMeta(defaultMeta, caseStudy.meta),
                 next: caseStudies[index + 1 >= caseStudies.length ? 0 : index + 1],
                 prev:
                   caseStudies[index - 1 <= caseStudies.length ? caseStudies.length - 1 : index - 1],
@@ -165,18 +144,15 @@ export default {
       routes.push({
         path: product.path,
         component: 'src/containers/Product',
-        getData: () => ({
-          ...product,
-          meta: resolveMeta(defaultMeta, product.meta),
-        }),
+        getData: () => product,
       });
     });
 
     return routes;
   },
 
-  Document: ({ Html, Head, Body, children, routeInfo }) => {
-    const meta = (routeInfo && routeInfo.allProps.meta) || { twitter: {} };
+  Document: ({ Html, Head, Body, children, routeInfo, siteData }) => {
+    const meta = resolveMeta(siteData.meta, routeInfo && routeInfo.allProps.meta);
 
     return (
       <Html lang="en-US">

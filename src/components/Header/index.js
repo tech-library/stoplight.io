@@ -15,8 +15,8 @@ import Intercom from '@utils/intercom';
 
 export const headerHeightClass = 'h-20';
 
-const Header = ({ headerProps }) => {
-  const { products } = headerProps || {};
+const Header = ({ header }) => {
+  const { products } = header || {};
 
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">

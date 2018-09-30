@@ -1,0 +1,24 @@
+header:
+  products:
+    - title: Design
+      description: Easy visual modeling
+      icon: paint-brush
+      path: /api-design
+footer:
+  rightLinks:
+    - title: Home
+      path: /
+meta:
+  favicon: /favicons/favicon.ico
+  title: Stoplight
+  siteName: Stoplight
+  description: Stoplight, providing engineering teams with the best way to document,
+    test, and build web APIs.
+  url: https://stoplight.io
+  image: /images/home-hero.png
+  twitter:
+    title: Stoplight
+    description: Stoplight, providing engineering teams with the best way to document,
+      test, and build web APIs.
+    image: /images/home-hero.png
+    username: '@stoplight'
