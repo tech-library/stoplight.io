@@ -30,63 +30,77 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
 
 export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
   return (
-    <div className={cn(rootClassName, 'relative overflow-hidden')}>
-      <div className={cn(headerHeightClass, 'w-100')} />
-      <div className="container text-center text-white flex flex-col py-28 relative z-1">
-        <div className="pb-24">
-          <h1 className="text-4xl">{title}</h1>
-          {subtitle && <h2 className="font-default opacity-75 mt-4 text-2xl">{subtitle}</h2>}
+    <div className="relative">
+      <div className="relative overflow-hidden">
+        <div className={cn(headerHeightClass, 'w-100')} />
+        <div className="container text-center text-white flex flex-col pt-32 pb-40 relative z-5">
+          <div className="pb-24">
+            <h1 className="text-4xl">{title}</h1>
+            {subtitle && <h2 className="font-default opacity-75 mt-4 text-2xl">{subtitle}</h2>}
+          </div>
+
+          <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
+            <Button color={colors.purple} size={sizes.xl} className="rounded-md shadow-dark">
+              Get Started Now <Icon icon={faRocket} className="ml-3" />
+            </Button>
+          </a>
+
+          {cards.length && (
+            <div className="flex">
+              {cards.map((card, i) => (
+                <HeroCard key={i} {...card} />
+              ))}
+            </div>
+          )}
         </div>
 
-        <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
-          <Button color={colors.purple} size={sizes.xl} className="rounded-md shadow-dark">
-            Get Started Now <Icon icon={faRocket} className="ml-3" />
-          </Button>
-        </a>
-
-        {cards.length && (
-          <div className="flex">
-            {cards.map((card, i) => (
-              <HeroCard key={i} {...card} />
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="absolute z-0" style={{ left: -100, top: -100, right: -100, bottom: -100 }}>
-        <Particles
-          style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
-          params={{
-            fps_limit: 15,
-            retina_detect: false, // possible performance issues when true
-            particles: {
-              number: {
-                value: 160,
-                density: {
+        <div className="absolute z-1" style={{ left: -100, top: -100, right: -100, bottom: -100 }}>
+          <Particles
+            style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
+            params={{
+              fps_limit: 15,
+              retina_detect: false, // possible performance issues when true
+              particles: {
+                number: {
+                  value: 160,
+                  density: {
+                    enable: false,
+                  },
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: {
+                    speed: 4,
+                    size_min: 0.3,
+                  },
+                },
+                line_linked: {
                   enable: false,
                 },
-              },
-              size: {
-                value: 3,
-                random: true,
-                anim: {
-                  speed: 4,
-                  size_min: 0.3,
+                move: {
+                  random: true,
+                  speed: 1,
+                  direction: 'top',
+                  out_mode: 'out',
                 },
               },
-              line_linked: {
-                enable: false,
-              },
-              move: {
-                random: true,
-                speed: 1,
-                direction: 'top',
-                out_mode: 'out',
-              },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
       </div>
+
+      <div
+        className={cn(rootClassName, 'absolute z-0 border-4 border-lighten-200')}
+        style={{
+          width: 8000,
+          height: 8000,
+          left: '50%',
+          bottom: 0,
+          marginLeft: -4000,
+          borderRadius: '50%',
+        }}
+      />
     </div>
   );
 };

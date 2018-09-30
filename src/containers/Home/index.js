@@ -167,7 +167,7 @@ class HomePage extends React.Component {
 
     if (platform) {
       elems.push(
-        <section key="platform" className="relative z-1 mt-40 mb-32 md:px-4 flex">
+        <section key="platform" className="relative z-1 mt-48 mb-40 md:px-4 flex">
           <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-14">
             <h2 className="max-w-xs text-secondary text-right uppercase mb-10">{platform.title}</h2>
 
