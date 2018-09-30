@@ -1,12 +1,10 @@
 path: /api-documentation
 color: green
-topSection:
-  heading: Stoplight Documentation
-  subheading: >-
-    Automatically generate customizable API documentation. Because your API
-    consumers deserve beautiful and interactive technical documentation.
-  buttonText: Signup
-  buttonUrl: https://next.stoplight.io/join
+hero:
+  title: Hosted API Documentation
+  subtitle: >-
+    Automatically generate customizable API documentation from your OpenAPI documents.
+  cta: Get Started Now
 productSection:
   image: /images/product-page/docs-hero.png
   description: >-

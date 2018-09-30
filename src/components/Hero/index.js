@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-static';
 import cn from 'classnames';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
@@ -20,7 +21,7 @@ const indexMap = {
   4: 'four',
 };
 
-const HeroCard = ({ index, title, subtitle, href, color }) => {
+const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
   return (
     <Link
       to={href}
@@ -28,17 +29,21 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
         'HeroBlock',
         'shadow cursor-pointer relative flex flex-col flex-1 h-48 overflow-hidden rounded-md p-6 mx-3 text-left z-10 text-white',
         `block-${indexMap[index]}`,
-        `bg-${color}`
+        {
+          [`bg-${bgColor}`]: bgColor,
+        }
       )}
     >
-      <h3>{title}</h3>
+      <div className="flex items-center">
+        {icon && <FontAwesomeIcon icon={['fas', icon.name]} className="mr-3" />} <h3>{title}</h3>
+      </div>
       <div className="mt-4 leading-loose">{subtitle}</div>
       <div className={cn(`triangle-${indexMap[index]}`, 'platform-block-triangle')} />
     </Link>
   );
 };
 
-const Hero = ({ title, subtitle, image, rootClassName = '', cards = [] }) => {
+const Hero = ({ title, subtitle, cta, bgColor, cards = [] }) => {
   return (
     <div className="relative">
       <div className="relative">
@@ -51,11 +56,13 @@ const Hero = ({ title, subtitle, image, rootClassName = '', cards = [] }) => {
             )}
           </div>
 
-          <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
-            <Button color={colors.purple} size={sizes.xl} className="rounded-md shadow-dark">
-              Get Started Now <Icon icon={faRocket} className="ml-3" />
-            </Button>
-          </a>
+          {cta && (
+            <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
+              <Button color={colors.purple} size={sizes.xl} className="rounded-md shadow-dark">
+                {cta}
+              </Button>
+            </a>
+          )}
 
           {cards.length ? (
             <div className="flex">
@@ -105,7 +112,9 @@ const Hero = ({ title, subtitle, image, rootClassName = '', cards = [] }) => {
       </div>
 
       <div
-        className={cn(rootClassName, 'absolute z-0 border-4 border-lighten-300 overflow-hidden')}
+        className={cn('absolute z-0 border-4 border-lighten-300 overflow-hidden', {
+          [`bg-${bgColor}`]: bgColor,
+        })}
         style={{
           width: 8000,
           height: 8000,
@@ -114,14 +123,7 @@ const Hero = ({ title, subtitle, image, rootClassName = '', cards = [] }) => {
           marginLeft: -4000,
           borderRadius: '50%',
         }}
-      >
-        {image && (
-          <div
-            className="absolute pin bg-center bg-cover bg-no-repeat z-1"
-            style={{ backgroundImage: `url(${image})`, bottom: -60 }}
-          />
-        )}
-      </div>
+      />
     </div>
   );
 };

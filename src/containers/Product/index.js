@@ -4,6 +4,7 @@ import { withRouteData, Link } from 'react-static';
 import '../../styles/product-page.scss';
 import DocPlans from '../../components/DocPlans';
 import Hero from '../../components/Hero';
+import ImageSection from '../../components/ImageSection';
 
 const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
   const img = (
@@ -41,7 +42,7 @@ const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
 class Product extends React.Component {
   render() {
     const {
-      topSection,
+      hero,
       productSection = {},
       signupSection,
       featureSection,
@@ -49,15 +50,22 @@ class Product extends React.Component {
       callToActionSection,
     } = this.props;
 
-    const elems = [
-      <Hero
-        key="1"
-        title={topSection.heading}
-        subtitle={topSection.subheading}
-        image={productSection.image}
-        rootClassName="bg-green-darkest"
-      />,
-    ];
+    const elems = [];
+
+    if (hero) {
+      elems.push(<Hero key="hero" {...hero} />);
+    }
+
+    if (productSection) {
+      elems.push(
+        <ImageSection
+          key="product"
+          title={productSection.title}
+          body={productSection.description}
+          image={productSection.image}
+        />
+      );
+    }
 
     return elems;
 

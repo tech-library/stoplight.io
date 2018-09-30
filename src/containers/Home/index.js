@@ -112,26 +112,21 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { heading, cards, description, platform, customers, testimonials } = this.props;
+    const { hero, platform, customers, testimonials } = this.props;
 
-    const elems = [
-      <Hero
-        key="1"
-        title={heading}
-        subtitle={description}
-        rootClassName="bg-black"
-        cards={cards}
-      />,
-    ];
+    const elems = [];
+
+    if (hero) {
+      elems.push(<Hero key="hero" {...hero} />);
+    }
 
     if (platform) {
       elems.push(
         <ImageSection
-          key="openapi"
+          key="product"
           title={platform.title}
           body={platform.description}
           image={platform.image}
-          paddingClassName="pt-48 pb-40"
         />
       );
     }
@@ -175,7 +170,7 @@ class HomePage extends React.Component {
 
     if (testimonials && testimonials.length > 0) {
       elems.push(
-        <Section key="customers" bgClassName="bg-grey-lightest">
+        <Section key="testimonials" bgClassName="bg-grey-lightest">
           <div className="container flex flex-wrap items-center">
             {testimonials.map(Testimonial)}
 

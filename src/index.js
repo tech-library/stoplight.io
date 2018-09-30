@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
+import { init as initIcons } from './utils/fontawesome';
+
 // Your top level component
 import App from './App';
 
-// Export your top level component as JSX (for static rendering)
-export default App;
+// TODO: dynamically build this list by extracting used icons from yaml data files.
+// might be unreliable to scan all data file structures and extract used icon names, so perhaps another data file where all used icons must be defined?
+// or a util function to recurse through object and pull out all "icon" properties (JSON.stringify?)
+initIcons({
+  icons: [{ name: 'paint-brush' }, { name: 'book' }, { name: 'flask' }, { name: 'server' }],
+});
 
 // Render your app
 if (typeof document !== 'undefined') {
@@ -27,3 +33,6 @@ if (typeof document !== 'undefined') {
     module.hot.accept('./App', () => render(require('./App').default));
   }
 }
+
+// Export your top level component as JSX (for static rendering)
+export default App;

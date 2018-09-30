@@ -5,9 +5,9 @@ import Section from '../Section';
 
 import { colors, sizes, Button } from '@stoplight/ui';
 
-const ImageSection = ({ title, body, image, rootClassName, paddingClassName }) => {
+const ImageSection = ({ title, body, image, rootClassName }) => {
   return (
-    <Section rootClassName={cn(rootClassName, 'flex')} paddingClassName={paddingClassName}>
+    <Section rootClassName={cn(rootClassName, 'flex')} paddingClassName={'pt-48 pb-40'}>
       <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-20">
         <h2 className="max-w-xs text-secondary text-right mb-10">{title}</h2>
 
