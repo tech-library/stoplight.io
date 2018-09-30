@@ -450,10 +450,12 @@ collections:
             widget: image
           - name: description
             widget: string
-          - name: features
+          - label: features
+            name: features
             widget: list
             field:
-              - name: feature
+              - label: feature
+                name: feature
                 widget: string
       - label: Signup Section
         name: signupSection
