@@ -124,7 +124,7 @@ class HomePage extends React.Component {
 
     if (platform) {
       elems.push(
-        <section key="platform" className="relative z-1 mt-48 mb-40 md:px-4 flex">
+        <section key="platform" className="relative z-1 mt-48 mb-32 md:px-4 flex">
           <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-14">
             <h2 className="max-w-xs text-secondary text-right mb-10">{platform.title}</h2>
 
@@ -153,7 +153,7 @@ class HomePage extends React.Component {
       elems.push(
         <section key="customers" className="relative z-5">
           <div id="section-gradient" className="absolute z-0" aria-hidden />
-          <section className="relative z-5 flex items-center py-48 pb-40">
+          <section className="relative z-5 flex items-center py-32">
             <div className="container">
               <h2 className="text-center mb-20">
                 Thousands of companies use Stoplight to streamline
@@ -177,7 +177,7 @@ class HomePage extends React.Component {
     }
 
     elems.push(
-      <section key="features" className="relative z-5 flex items-center py-48 pb-40">
+      <section key="features" className="relative z-5 flex items-center py-32">
         <div className="container">
           <h2 className="text-center mb-20">Key Features</h2>
 
@@ -191,22 +191,29 @@ class HomePage extends React.Component {
 
     if (testimonials && testimonials.length > 0) {
       elems.push(
-        <section key="testimonials" id="testimonial" className="mt-48 pb-16 pt-16 relative">
-          <div className="static-gradient purple absolute z-0" aria-hidden />
+        <section key="testimonials" className="relative z-5">
+          <div id="section-gradient" className="absolute z-0" aria-hidden />
 
-          <div className="container mx-auto relative z-5 flex flex-wrap items-center">
-            {testimonials.map(Testimonial)}
+          <section className="relative z-5 flex items-center py-32">
+            <div className="container flex flex-wrap items-center">
+              {testimonials.map(Testimonial)}
 
-            <div className="flex items-center mt-40 mb-12 w-full">
-              <div className="flex-1 text-center">
-                <Link to="/join">
-                  <Button color={colors.accent} size={sizes.xl} shadow className="w-full max-w-xs">
-                    Get Started
-                  </Button>
-                </Link>
+              <div className="flex items-center mt-40 mb-12 w-full">
+                <div className="flex-1 text-center">
+                  <Link to="/join">
+                    <Button
+                      color={colors.accent}
+                      size={sizes.xl}
+                      shadow
+                      className="w-full max-w-xs"
+                    >
+                      Get Started
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
       );
     }

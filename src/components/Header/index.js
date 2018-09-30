@@ -18,7 +18,7 @@ export const headerHeightClass = 'h-20';
 const Header = () => {
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">
-      <div className="container border-b-2 border-lighten-100">
+      <div className="container">
         <nav className={cn(headerHeightClass, 'flex items-center')}>
           <Link to="/" className="text-white hover:opacity-75 hover:text-white text-2xl font-bold">
             Stoplight
