@@ -8,6 +8,8 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
 import Hero from '../../components/Hero';
+import ImageSection from '../../components/ImageSection';
+import Section from '../../components/Section';
 
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
@@ -124,60 +126,42 @@ class HomePage extends React.Component {
 
     if (platform) {
       elems.push(
-        <section key="platform" className="relative z-1 mt-48 mb-32 md:px-4 flex">
-          <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-14">
-            <h2 className="max-w-xs text-secondary text-right mb-10">{platform.title}</h2>
-
-            <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50">
-              {platform.description}
-            </div>
-
-            <a href="https://next.stoplight.io/join">
-              <Button color={colors.purple} size={sizes.lg} className="rounded-md shadow">
-                Get Started Now
-              </Button>
-            </a>
-          </div>
-
-          <div className="flex flex-col flex-1 w-1/2 md:hidden relative">
-            <div
-              className="absolute pin bg-left-top bg-cover bg-no-repeat"
-              style={{ backgroundImage: `url(${platform.image})`, top: -60, bottom: -200 }}
-            />
-          </div>
-        </section>
+        <ImageSection
+          key="openapi"
+          title={platform.title}
+          body={platform.description}
+          image={platform.image}
+          paddingClassName="pt-48 pb-40"
+        />
       );
     }
 
     if (customers && customers.length > 0) {
       elems.push(
-        <section key="customers" className="relative z-5">
-          <div id="section-gradient" className="absolute z-0" aria-hidden />
-          <section className="relative z-5 flex items-center py-32">
-            <div className="container">
-              <h2 className="text-center mb-20">
-                Thousands of companies use Stoplight to streamline
-                <br />
-                their API &amp; Microservices workflows
-              </h2>
+        <Section key="customers" bgClassName="bg-grey-lightest">
+          <div className="container">
+            <h2 className="text-center mb-20">
+              Thousands of companies use Stoplight to streamline
+              <br />
+              their API &amp; Microservices workflow
+            </h2>
 
-              <div className="flex justify-center flex-wrap items-center">
-                {customers.map((customer, key) => {
-                  return (
-                    <div key={key} className="p-8 text-center">
-                      <img className="h-14" src={customer} alt="" />
-                    </div>
-                  );
-                })}
-              </div>
+            <div className="flex justify-center flex-wrap items-center">
+              {customers.map((customer, key) => {
+                return (
+                  <div key={key} className="p-8 text-center">
+                    <img className="h-14" src={customer} alt="" />
+                  </div>
+                );
+              })}
             </div>
-          </section>
-        </section>
+          </div>
+        </Section>
       );
     }
 
     elems.push(
-      <section key="features" className="relative z-5 flex items-center py-32">
+      <Section key="features">
         <div className="container">
           <h2 className="text-center mb-20">Key Features</h2>
 
@@ -186,35 +170,26 @@ class HomePage extends React.Component {
             <div className="flex-1">{this.renderProduct()}</div>
           </div>
         </div>
-      </section>
+      </Section>
     );
 
     if (testimonials && testimonials.length > 0) {
       elems.push(
-        <section key="testimonials" className="relative z-5">
-          <div id="section-gradient" className="absolute z-0" aria-hidden />
+        <Section key="customers" bgClassName="bg-grey-lightest">
+          <div className="container flex flex-wrap items-center">
+            {testimonials.map(Testimonial)}
 
-          <section className="relative z-5 flex items-center py-32">
-            <div className="container flex flex-wrap items-center">
-              {testimonials.map(Testimonial)}
-
-              <div className="flex items-center mt-40 mb-12 w-full">
-                <div className="flex-1 text-center">
-                  <Link to="/join">
-                    <Button
-                      color={colors.accent}
-                      size={sizes.xl}
-                      shadow
-                      className="w-full max-w-xs"
-                    >
-                      Get Started
-                    </Button>
-                  </Link>
-                </div>
+            <div className="flex items-center mt-40 mb-12 w-full">
+              <div className="flex-1 text-center">
+                <Link to="/join">
+                  <Button color={colors.accent} size={sizes.xl} shadow className="w-full max-w-xs">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
-          </section>
-        </section>
+          </div>
+        </Section>
       );
     }
 

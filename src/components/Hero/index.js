@@ -26,7 +26,7 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
       to={href}
       className={cn(
         'HeroBlock',
-        'cursor-pointer relative flex flex-col flex-1 h-48 overflow-hidden rounded-md p-6 mx-3 text-left z-10 text-white',
+        'shadow cursor-pointer relative flex flex-col flex-1 h-48 overflow-hidden rounded-md p-6 mx-3 text-left z-10 text-white',
         `block-${indexMap[index]}`,
         `bg-${color}`
       )}
