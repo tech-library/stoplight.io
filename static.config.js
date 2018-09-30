@@ -26,8 +26,9 @@ const getFile = srcPath => {
   let data;
 
   try {
-    data = yaml.safeLoad(fs.readFileSync(srcPath, 'utf8'));
+    data = yaml.safeLoad(fs.readFileSync(srcPath, 'utf8')) || {};
   } catch (e) {
+    data = {};
     console.error(e);
   }
 
@@ -78,6 +79,16 @@ const resolveMeta = (defaultMeta = {}, meta = {}) => {
 };
 
 export default {
+  getSiteData: async () => {
+    const headerProps = await getFile(`${NETLIFY_PATH}/other/header.yaml`);
+    const footerProps = await getFile(`${NETLIFY_PATH}/other/footer.yaml`);
+
+    return {
+      headerProps,
+      footerProps,
+    };
+  },
+
   getRoutes: async () => {
     const [home, pricing, about, products, caseStudies] = await Promise.all([
       getFile(`${NETLIFY_PATH}/home.yaml`),

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-static';
 import cn from 'classnames';
+import { withSiteData, Link } from 'react-static';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faRss } from '@fortawesome/free-solid-svg-icons/faRss';
 import { faBook } from '@fortawesome/free-solid-svg-icons/faBook';
 import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
 import { faComments } from '@fortawesome/free-solid-svg-icons/faComments';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 import { sizes, colors, Icon, Popup } from '@stoplight/ui';
@@ -15,7 +15,9 @@ import Intercom from '../../utils/intercom';
 
 export const headerHeightClass = 'h-20';
 
-const Header = () => {
+const Header = ({ headerProps }) => {
+  const { products } = headerProps || {};
+
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">
       <div className="container">
@@ -25,9 +27,42 @@ const Header = () => {
           </Link>
 
           <div className="flex flex-1 justify-end items-center text-lg">
-            <Link to="/" className="text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2">
-              Platform
-            </Link>
+            {products && (
+              <Popup
+                width={300}
+                posX="center"
+                posY="bottom"
+                renderTrigger={attributes => (
+                  <div
+                    className="flex select-none cursor-pointer ml-3 text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2"
+                    {...attributes}
+                  >
+                    <div className="flex-1 mr-2">Products</div>
+                  </div>
+                )}
+                renderContent={() => (
+                  <div className="bg-white rounded-lg shadow-lg p-6">
+                    {products.map((product, index) => {
+                      return (
+                        <Link
+                          key={index}
+                          to={product.path}
+                          className="flex text-black hover:text-accent-light"
+                        >
+                          <span className="flex w-12 items-center">
+                            {product.icon && <FontAwesomeIcon icon={['fas', product.icon]} />}
+                          </span>
+                          <span className="flex-1">
+                            <span className="text-xl font-bold block">{product.title}</span>
+                            <span className="block opacity-75">{product.description}</span>
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              />
+            )}
 
             <Popup
               width={300}
@@ -39,10 +74,6 @@ const Header = () => {
                   {...attributes}
                 >
                   <div className="flex-1 mr-2">Resources</div>
-
-                  <div className="flex items-center justify-center">
-                    <Icon icon={faCaretDown} />
-                  </div>
                 </div>
               )}
               renderContent={() => (
@@ -107,7 +138,6 @@ const Header = () => {
                 </div>
               )}
             />
-
             <Link
               to="/pricing"
               className="text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2"
@@ -137,4 +167,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withSiteData(Header);
