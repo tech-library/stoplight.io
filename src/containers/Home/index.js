@@ -7,9 +7,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
-import Hero from '../../components/Hero';
-import ImageSection from '../../components/ImageSection';
-import Section from '../../components/Section';
+import Hero from '@components/Hero';
+import ImageSection from '@components/ImageSection';
+import Section from '@components/Section';
 
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (

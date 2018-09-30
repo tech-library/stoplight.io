@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static';
 
-import '../../styles/individual-case-study.scss';
+import '@styles/individual-case-study.scss';
 
 class CaseStudy extends React.Component {
   render() {

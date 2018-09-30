@@ -11,7 +11,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 import { sizes, colors, Icon, Popup } from '@stoplight/ui';
 
-import Intercom from '../../utils/intercom';
+import Intercom from '@utils/intercom';
 
 export const headerHeightClass = 'h-20';
 

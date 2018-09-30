@@ -6,7 +6,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 
 import { sizes, Icon } from '@stoplight/ui';
 
-import Intercom from '../../utils/intercom';
+import Intercom from '@utils/intercom';
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static';
 
-import '../../styles/about.scss';
+import '@styles/about.scss';
 
 const Quote = ({ image, company, quote, author, role }, key) => {
   return (

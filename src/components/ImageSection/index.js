@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import Section from '../Section';
+import Section from '@components/Section';
 
 import { colors, sizes, Button } from '@stoplight/ui';
 

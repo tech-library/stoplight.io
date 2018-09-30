@@ -218,6 +218,13 @@ export default {
         ],
       },
     ];
+
+    config.resolve.alias = {
+      '@components': nodePath.resolve(__dirname, 'src/components'),
+      '@styles': nodePath.resolve(__dirname, 'src/styles'),
+      '@utils': nodePath.resolve(__dirname, 'src/utils'),
+    };
+
     return config;
   },
 };

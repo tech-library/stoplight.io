@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 import { sizes, Icon } from '@stoplight/ui';
 
-import DocPlans from '../../components/DocPlans';
+import DocPlans from '@components/DocPlans';
 
 const Plan = props => {
   const { title, price, unit, features, button, darken } = props;

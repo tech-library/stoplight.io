@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static';
 
-import '../../styles/case-study.scss';
+import '@styles/case-study.scss';
 
 const CaseStudy = ({ title, description, logo, slug }, key) => {
   return (

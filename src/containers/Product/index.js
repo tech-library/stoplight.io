@@ -1,10 +1,10 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static';
 
-import '../../styles/product-page.scss';
-import DocPlans from '../../components/DocPlans';
-import Hero from '../../components/Hero';
-import ImageSection from '../../components/ImageSection';
+import '@styles/product-page.scss';
+import DocPlans from '@components/DocPlans';
+import Hero from '@components/Hero';
+import ImageSection from '@components/ImageSection';
 
 const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
   const img = (

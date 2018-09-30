@@ -7,7 +7,7 @@ import { faRocket } from '@fortawesome/free-solid-svg-icons/faRocket';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
-import { headerHeightClass } from '../Header';
+import { headerHeightClass } from '@components/Header';
 
 let Particles;
 if (typeof window !== 'undefined') {
