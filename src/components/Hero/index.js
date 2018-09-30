@@ -33,21 +33,22 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
     >
       <h3>{title}</h3>
       <div className="mt-4 leading-loose">{subtitle}</div>
-
       <div className={cn(`triangle-${indexMap[index]}`, 'platform-block-triangle')} />
     </Link>
   );
 };
 
-const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
+const Hero = ({ title, subtitle, image, rootClassName = '', cards = [] }) => {
   return (
     <div className="relative">
-      <div className="relative overflow-hidden">
+      <div className="relative">
         <div className={cn(headerHeightClass, 'w-100')} />
-        <div className="container text-center text-white flex flex-col pt-32 pb-40 relative z-5">
+        <div className="container text-center text-white flex flex-col pt-32 relative z-5">
           <div className="pb-24">
-            <h1 className="text-4xl">{title}</h1>
-            {subtitle && <h2 className="font-default opacity-75 mt-4 text-2xl">{subtitle}</h2>}
+            <h1>{title}</h1>
+            {subtitle && (
+              <h2 className="font-default opacity-75 mt-4 text-xl max-w-xl mx-auto">{subtitle}</h2>
+            )}
           </div>
 
           <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
@@ -56,13 +57,13 @@ const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
             </Button>
           </a>
 
-          {cards.length && (
+          {cards.length ? (
             <div className="flex">
               {cards.map((card, i) => (
                 <HeroCard key={i} index={i} {...card} />
               ))}
             </div>
-          )}
+          ) : null}
         </div>
 
         <div className="absolute z-1" style={{ left: -100, top: -100, right: -100, bottom: -100 }}>
@@ -104,16 +105,23 @@ const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
       </div>
 
       <div
-        className={cn(rootClassName, 'absolute z-0 border-4 border-lighten-300')}
+        className={cn(rootClassName, 'absolute z-0 border-4 border-lighten-300 overflow-hidden')}
         style={{
           width: 8000,
           height: 8000,
           left: '50%',
-          bottom: 0,
+          bottom: 50,
           marginLeft: -4000,
           borderRadius: '50%',
         }}
-      />
+      >
+        {image && (
+          <div
+            className="absolute pin bg-center bg-cover bg-no-repeat z-1"
+            style={{ backgroundImage: `url(${image})`, bottom: -60 }}
+          />
+        )}
+      </div>
     </div>
   );
 };

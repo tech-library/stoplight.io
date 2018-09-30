@@ -126,7 +126,7 @@ class HomePage extends React.Component {
       elems.push(
         <section key="platform" className="relative z-1 mt-48 mb-40 md:px-4 flex">
           <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-14">
-            <h2 className="max-w-xs text-secondary text-right uppercase mb-10">{platform.title}</h2>
+            <h2 className="max-w-xs text-secondary text-right mb-10">{platform.title}</h2>
 
             <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50">
               {platform.description}
@@ -155,7 +155,7 @@ class HomePage extends React.Component {
           <div id="section-gradient" className="absolute z-0" aria-hidden />
           <section className="relative z-5 flex items-center py-48 pb-40">
             <div className="container">
-              <h2 className="text-center uppercase mb-20">
+              <h2 className="text-center mb-20">
                 Thousands of companies use Stoplight to streamline
                 <br />
                 their API &amp; Microservices workflows
@@ -164,8 +164,8 @@ class HomePage extends React.Component {
               <div className="flex justify-center flex-wrap items-center">
                 {customers.map((customer, key) => {
                   return (
-                    <div key={key} className="p-6 text-center">
-                      <img className="h-16" src={customer} alt="" />
+                    <div key={key} className="p-8 text-center">
+                      <img className="h-14" src={customer} alt="" />
                     </div>
                   );
                 })}
@@ -179,7 +179,7 @@ class HomePage extends React.Component {
     elems.push(
       <section key="features" className="relative z-5 flex items-center py-48 pb-40">
         <div className="container">
-          <h2 className="text-center uppercase mb-20">Key Features</h2>
+          <h2 className="text-center mb-20">Key Features</h2>
 
           <div className="flex">
             <div className="flex-0 w-96 mr-12">{this.renderProductTabs()}</div>

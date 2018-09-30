@@ -22,11 +22,20 @@ platform:
   image: '/images/home-hero.png'
   description: >-
     Create OpenAPI documents 10x faster with no specialized knowledge required.
-    Combine OpenAPI files with Markdown to create beautiful documentation for internal and external
+    Combine OpenAPI files with markdown to create beautiful documentation for internal and external
     stakeholders. Instantly turn any OpenAPI file into a mock server. Leverage contract testing to ensure that
-    your single source of truth - your OpenAPI documents - accurately describe your APIs.
+    your single source of truth - OpenAPI - accurately describe your APIs.
 customers:
   - '/images/customer_logos/ea.png'
+  - '/images/customer_logos/arkea.png'
+  - '/images/customer_logos/chargify.png'
+  - '/images/customer_logos/deutsche_bank.png'
+  - '/images/customer_logos/quicken.png'
+  - '/images/customer_logos/sendgrid.png'
+  - '/images/customer_logos/shopgate.png'
+  - '/images/customer_logos/spotify.png'
+  - '/images/customer_logos/tivo.png'
+  - '/images/customer_logos/zendesk.png'
 products:
   - title: 'API Designer'
     description: "With the Stoplight visual designer, you don't need to be an OpenAPI Specification expert. Involve everybody in the design process and manage your specifications 10x faster."
