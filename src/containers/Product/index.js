@@ -3,6 +3,7 @@ import { withRouteData, Link } from 'react-static';
 
 import '../../styles/product-page.scss';
 import DocPlans from '../../components/DocPlans';
+import Hero from '../../components/Hero';
 
 const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
   const img = (
@@ -41,12 +42,24 @@ class Product extends React.Component {
   render() {
     const {
       topSection,
-      productSection,
+      productSection = {},
       signupSection,
       featureSection,
       docsPlanSection,
       callToActionSection,
     } = this.props;
+
+    const elems = [
+      <Hero
+        key="1"
+        title={topSection.heading}
+        subtitle={topSection.subheading}
+        image={productSection.image}
+        rootClassName="bg-green-darkest"
+      />,
+    ];
+
+    return elems;
 
     return (
       <div>
