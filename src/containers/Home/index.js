@@ -4,7 +4,6 @@ import cn from 'classnames';
 import { withRouteData, Link } from 'react-static';
 
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
-import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 
 import { colors, sizes, Button, Icon } from '@stoplight/ui';
 
@@ -127,7 +126,7 @@ class HomePage extends React.Component {
   render() {
     const { heading, description, platform, customers, testimonials } = this.props;
 
-    return [
+    const elems = [
       <Hero
         key="1"
         title={heading}
@@ -166,128 +165,96 @@ class HomePage extends React.Component {
       />,
     ];
 
-    return (
-      <div>
-        <header className="relative">
-          <div className="static-gradient purple absolute z-0" aria-hidden>
-            <div className="static-gradient-bg absolute" />
+    if (platform) {
+      elems.push(
+        <section key="platform" className="relative z-1 mt-40 mb-32 md:px-4 flex">
+          <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-14">
+            <h2 className="max-w-xs text-secondary text-right uppercase mb-10">{platform.title}</h2>
+
+            <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50">
+              {platform.description}
+            </div>
+
+            <a href="https://next.stoplight.io/join">
+              <Button color={colors.purple} size={sizes.lg} className="rounded-md shadow">
+                Get Started Now
+              </Button>
+            </a>
           </div>
 
-          <section id="hero" className="relative z-5 flex items-center">
-            <div className="container mx-auto text-white relative -mt-10">
-              <h1 className="text-5xl max-w-xl font-normal font-medium">{heading}</h1>
+          <div className="flex flex-col flex-1 w-1/2 md:hidden relative">
+            <div
+              className="absolute pin bg-left-top bg-cover bg-no-repeat"
+              style={{ backgroundImage: `url(${platform.image})`, top: -60, bottom: -200 }}
+            />
+          </div>
+        </section>
+      );
+    }
 
-              <p className="mt-10 text-xl opacity-85 max-w-md leading-loose">{description}</p>
+    if (customers && customers.length > 0) {
+      elems.push(
+        <section key="customers" className="relative z-5">
+          <div id="section-gradient" className="absolute z-0" aria-hidden />
+          <section className="relative z-5 flex items-center py-48 pb-40">
+            <div className="container">
+              <h2 className="text-center uppercase mb-20">
+                Thousands of companies use Stoplight to streamline
+                <br />
+                their API &amp; Microservices workflows
+              </h2>
 
-              <div className="flex mt-20">
-                <div className="flex flex-1 items-center">
-                  <Link href="/join">
-                    <Button color={colors.green} size={sizes.xl} shadow>
-                      <Icon icon={faGithub} className="mr-2" /> Start with GitHub
-                    </Button>
-                  </Link>
-
-                  <div className="text-white font-bold text-lg ml-6">OR</div>
-
-                  <Link href="/join">
-                    <Button
-                      size={sizes.xl}
-                      customTheme="ml-6 text-white hover:bg-lighten-200"
-                      shadow
-                      transparent
-                    >
-                      Email
-                    </Button>
-                  </Link>
-                </div>
+              <div className="flex justify-center flex-wrap items-center">
+                {customers.map((customer, key) => {
+                  return (
+                    <div key={key} className="p-6 text-center">
+                      <img className="h-16" src={customer} alt="" />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
-        </header>
+        </section>
+      );
+    }
 
-        {platform && (
-          <section id="pitch" className="relative z-1 flex items-center mt-4">
-            <div className="container mx-auto text-right">
-              <div className="w-3/5 md:w-full lg:w-full">
-                <h2 className="text-3xl max-w-xl font-bold text-secondary">{platform.title}</h2>
+    elems.push(
+      <section key="features" className="relative z-5 flex items-center py-48 pb-40">
+        <div className="container">
+          <h2 className="text-center uppercase mb-20">Key Features</h2>
 
-                {platform.features &&
-                  platform.features.length > 0 && (
-                    <div className="mt-10">{platform.features.map(Feature)}</div>
-                  )}
+          <div className="flex">
+            <div className="flex-0 w-96 mr-12">{this.renderProductTabs()}</div>
+            <div className="flex-1">{this.renderProduct()}</div>
+          </div>
+        </div>
+      </section>
+    );
+
+    if (testimonials && testimonials.length > 0) {
+      elems.push(
+        <section key="testimonials" id="testimonial" className="mt-48 pb-16 pt-16 relative">
+          <div className="static-gradient purple absolute z-0" aria-hidden />
+
+          <div className="container mx-auto relative z-5 flex flex-wrap items-center">
+            {testimonials.map(Testimonial)}
+
+            <div className="flex items-center mt-40 mb-12 w-full">
+              <div className="flex-1 text-center">
+                <Link href="/join">
+                  <Button color={colors.accent} size={sizes.xl} shadow className="w-full max-w-xs">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
-            </div>
-
-            <div id="product-img" className="md:hidden">
-              <img src={platform.image} alt="" />
-            </div>
-          </section>
-        )}
-
-        {customers &&
-          customers.length > 0 && (
-            <section className="relative z-5">
-              <div id="section-gradient" className="absolute z-0" aria-hidden />
-              <section id="customers" className="relative z-5 flex items-center">
-                <div className="container mx-auto">
-                  <h2 className="text-center text-3xl mb-8 opacity-85">
-                    Thousands of customers use Stoplight to streamline
-                    <br />
-                    their API &amp; Microservice workflow
-                  </h2>
-
-                  <div className="flex content-start flex-wrap items-center">
-                    {customers.map((customer, key) => {
-                      return (
-                        <div key={key} className="w-1/4 p-4 text-center">
-                          <img className="w-4/5" src={customer} alt="" />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </section>
-            </section>
-          )}
-
-        <section className="page-section py-48 relative z-5">
-          <div className="container mx-auto">
-            <h2 className="text-center text-3xl mb-24 opacity-85">Key Features</h2>
-
-            <div className="flex">
-              <div className="flex-0 w-96 mr-12">{this.renderProductTabs()}</div>
-              <div className="flex-1">{this.renderProduct()}</div>
             </div>
           </div>
         </section>
+      );
+    }
 
-        {testimonials &&
-          testimonials.length > 0 && (
-            <section id="testimonial" className="mt-48 pb-16 pt-16 relative">
-              <div className="static-gradient purple absolute z-0" aria-hidden />
-
-              <div className="container mx-auto relative z-5 flex flex-wrap items-center">
-                {testimonials.map(Testimonial)}
-
-                <div className="flex items-center mt-40 mb-12 w-full">
-                  <div className="flex-1 text-center">
-                    <Link href="/join">
-                      <Button
-                        color={colors.accent}
-                        size={sizes.xl}
-                        shadow
-                        className="w-full max-w-xs"
-                      >
-                        Get Started
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-      </div>
-    );
+    return elems;
   }
 }
 

@@ -6,10 +6,9 @@ $lighter-gray: #dadada;
 $blue: #9b1fb9;
 $medium-blue: #4587de;
 $light-blue: #f8fafc;
-$text-color: #4a4a4a;
+$text-color: #3f4a66;
 $link: #3b99fc;
 $link-hover: #52a6ff;
-
 
 $image-overlay-gradient: linear-gradient(
   to right,
@@ -30,10 +29,10 @@ $font-size-4xl: 40px;
 $font-size-5xl: 45px;
 
 $breakpoints: (
-  "sm": "576px",
-  "md": "768px",
-  "lg": "1008px",
-  "xl": "1200px"
+  'sm': '576px',
+  'md': '768px',
+  'lg': '1008px',
+  'xl': '1200px',
 );
 
 $skew-degree: -4deg;

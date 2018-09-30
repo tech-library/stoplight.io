@@ -7,6 +7,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons/faBook';
 import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
 import { faComments } from '@fortawesome/free-solid-svg-icons/faComments';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 
 import { sizes, colors, Icon, Popup } from '@stoplight/ui';
 
@@ -17,13 +18,13 @@ export const headerHeightClass = 'h-20';
 const Header = () => {
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">
-      <div className="container">
+      <div className="container border-b-2 border-lighten-100">
         <nav className={cn(headerHeightClass, 'flex items-center')}>
-          <Link to="/" className="text-white hover:opacity-75 hover:text-white text-3xl font-bold">
+          <Link to="/" className="text-white hover:opacity-75 hover:text-white text-2xl font-bold">
             Stoplight
           </Link>
 
-          <div className="flex flex-1 justify-end items-center font-bold text-lg">
+          <div className="flex flex-1 justify-end items-center text-lg">
             <Link to="/" className="text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2">
               Platform
             </Link>
@@ -115,18 +116,19 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="flex items-center font-bold text-lg">
+          <div className="flex items-center text-lg">
             <Link
               to="https://next.stoplight.io/login"
               className="text-white hover:opacity-85 hover:text-white py-4 px-4 mx-2"
             >
               Log In
             </Link>
+
             <Link
               to="https://next.stoplight.io/join"
-              className="text-white hover:bg-lighten-200 hover:text-white py-2 px-6 mx-2 border rounded border-lighten-300"
+              className="text-white hover:opacity-85 hover:text-white py-4 pl-4 pr-2 ml-2 flex items-center"
             >
-              Join
+              Join <Icon icon={faArrowRight} color={colors.white} className="ml-3" />
             </Link>
           </div>
         </nav>

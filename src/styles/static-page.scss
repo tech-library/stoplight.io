@@ -55,13 +55,13 @@
   height: 100%;
   overflow: hidden;
   transform: skewY(-7deg);
-  background-color: $lighter-gray;
-  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: #f6f9fc;
+  box-shadow: 0 0 5px #5c6c96;
 }
-#customers {
-  height: 650px;
-  margin-top: 75px;
-}
+// #customers {
+//   height: 650px;
+//   margin-top: 75px;
+// }
 #testimonial {
   background: #eff8ff;
   .static-gradient {

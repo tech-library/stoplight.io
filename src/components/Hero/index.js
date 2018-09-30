@@ -30,17 +30,17 @@ const HeroCard = ({ index, title, subtitle, href, color }) => {
 
 export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
   return (
-    <div className={cn(rootClassName, 'relative')}>
+    <div className={cn(rootClassName, 'relative overflow-hidden')}>
       <div className={cn(headerHeightClass, 'w-100')} />
-      <div className="container text-center text-white flex flex-col py-32 relative z-1">
+      <div className="container text-center text-white flex flex-col py-28 relative z-1">
         <div className="pb-24">
           <h1 className="text-4xl">{title}</h1>
           {subtitle && <h2 className="font-default opacity-75 mt-4 text-2xl">{subtitle}</h2>}
         </div>
 
         <a className="pb-24 mx-auto" href="https://next.stoplight.io/join">
-          <Button color={colors.purple} size={sizes.xl} shadow>
-            <Icon icon={faRocket} className="mr-3" /> Get Started Now
+          <Button color={colors.purple} size={sizes.xl} className="rounded-md shadow-dark">
+            Get Started Now <Icon icon={faRocket} className="ml-3" />
           </Button>
         </a>
 
@@ -58,6 +58,7 @@ export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
           style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
           params={{
             fps_limit: 15,
+            retina_detect: false, // possible performance issues when true
             particles: {
               number: {
                 value: 160,
@@ -83,30 +84,6 @@ export const Hero = ({ title, subtitle, rootClassName = '', cards = [] }) => {
                 out_mode: 'out',
               },
             },
-            // interactivity: {
-            //   events: {
-            //     onhover: {
-            //       enable: true,
-            //       mode: 'bubble',
-            //     },
-            //     onclick: {
-            //       enable: true,
-            //       mode: 'repulse',
-            //     },
-            //   },
-            //   modes: {
-            //     bubble: {
-            //       distance: 250,
-            //       duration: 2,
-            //       size: 0,
-            //       opacity: 0,
-            //     },
-            //     repulse: {
-            //       distance: 400,
-            //       duration: 4,
-            //     },
-            //   },
-            // },
           }}
         />
       </div>
