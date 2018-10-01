@@ -5,12 +5,13 @@ import cn from 'classnames';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
 
-const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
-  const isReversed = index % 2 !== 0;
+import { slugify } from '@utils/text';
 
-  return (
+const ProductFeature = ({ title, description, image, isReversed }) => {
+  return [
+    <a key="anchor" name={slugify(title)} />,
     <div
-      key={index}
+      key="content"
       className={cn('flex items-center py-12', {
         'flex-row': !isReversed,
         'flex-row-reverse': isReversed,
@@ -32,8 +33,8 @@ const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
           style={{ backgroundImage: `url(${image})`, boxShadow: '0 0 4px rgba(0, 0, 0, 0.5)' }}
         />
       </div>
-    </div>
-  );
+    </div>,
+  ];
 };
 
 class Product extends React.Component {
@@ -49,6 +50,7 @@ class Product extends React.Component {
           {...hero}
           features={features.map(feature => ({
             name: feature.shortName,
+            href: `#${slugify(feature.title)}`,
           }))}
         />
       );
@@ -65,7 +67,9 @@ class Product extends React.Component {
           </div>
 
           <div key="features" className="container mx-auto py-16">
-            {features.map(Feature)}
+            {features.map((feature, index) => (
+              <ProductFeature key={index} {...feature} isReversed={index % 2 !== 0} />
+            ))}
           </div>
         </Section>
       );

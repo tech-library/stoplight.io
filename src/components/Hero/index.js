@@ -44,16 +44,28 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
   );
 };
 
-const HeroFeature = ({ name, icon }) => {
-  return (
-    <div className="flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md opacity-93">
-      <FontAwesomeIcon
-        icon={['fas', icon ? icon.name : 'check-circle']}
-        className="mr-2 text-green text-lg"
-      />
-      <h4>{name}</h4>
-    </div>
-  );
+const HeroFeature = ({ name, icon, href }) => {
+  const className =
+    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md opacity-93';
+
+  const elems = [
+    <FontAwesomeIcon
+      key="1"
+      icon={['fas', icon ? icon.name : 'check-circle']}
+      className="mr-2 text-green text-lg"
+    />,
+    <h4 key="2">{name}</h4>,
+  ];
+
+  if (href) {
+    return (
+      <a href={href} className={className}>
+        {elems}
+      </a>
+    );
+  }
+
+  return <div className={className}>{elems}</div>;
 };
 
 const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], particles, image }) => {
