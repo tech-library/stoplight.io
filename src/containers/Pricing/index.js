@@ -75,7 +75,7 @@ const PricingPage = ({ color, hero, plans = [], docs }) => {
 
   if (plans.length) {
     elems.push(
-      <div key="plans" className="container -mt-64 z-5 relative">
+      <div key="plans" className="container -mt-80 z-5 relative">
         <div className="flex -mx-6">
           {plans.map((plan, index) => (
             <Plan key={index} titleColor={color} {...plan} />
