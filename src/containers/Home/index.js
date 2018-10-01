@@ -75,7 +75,7 @@ class HomePage extends React.Component {
             >
               <div
                 className={cn(
-                  'rounded-full h-16 w-16 flex items-center justify-center text-white mr-8',
+                  'rounded-full h-14 w-14 flex items-center justify-center text-white mr-6',
                   {
                     'bg-grey-darkest': !isActive,
                     'bg-accent-dark': isActive,
@@ -156,7 +156,7 @@ class HomePage extends React.Component {
       elems.push(
         <Section key="features">
           <div className="container">
-            <h2 className="text-center mb-20 text-3xl">Key Features</h2>
+            <h2 className="text-center mb-20 text-3xl hidden">Key Features</h2>
 
             <div className="flex">
               <div className="flex-0 w-96 mr-12">{this.renderFeatureTabs()}</div>
