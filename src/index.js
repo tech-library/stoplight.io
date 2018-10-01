@@ -27,6 +27,9 @@ initIcons({
     { name: 'arrow-right' },
     { name: 'bars' },
     { name: 'times' },
+    { name: 'twitter', style: 'brands' },
+    { name: 'linkedin', style: 'brands' },
+    { name: 'github', style: 'brands' },
   ],
 });
 

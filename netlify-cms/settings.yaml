@@ -74,9 +74,44 @@ header:
         style: suitcase
         name: book
 footer:
-  rightLinks:
-    - title: Home
-      path: /
+  social:
+    - icon: twitter
+      href: https://twitter.com/stoplightio
+    - icon: linkedin
+      href: https://www.linkedin.com/company/stoplight
+    - icon: github
+      href: https://www.github.com/stoplightio
+  groups:
+    - title: Products
+      links:
+        - title: API Designer
+          href: /api-design
+        - title: Technical Docs
+          href: /api-documentation
+        - title: Contract Testing
+          href: /api-testing
+        - title: API Mocking
+          href: /api-mocking
+    - title: Resources
+      links:
+        - title: Docs
+          href: http://docs.stoplight.io/
+        - title: Community
+          href: https://community.stoplight.io/
+        - title: Blog
+          href: http://blog.stoplight.io/
+        - title: Chat
+          onClick: 'intercom'
+    - title: Company
+      links:
+          - title: About Us
+            href: /about
+          - title: Case Studies
+            href: /case-studies
+          - title: Jobs
+            href: /jobs
+          - title: Terms
+            href: /terms
 meta:
   favicon: /favicons/favicon.ico
   title: Stoplight
