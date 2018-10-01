@@ -43,7 +43,7 @@ class Product extends React.Component {
   render() {
     const {
       hero,
-      productSection = {},
+      product = {},
       signupSection,
       featureSection,
       docsPlanSection,
@@ -56,15 +56,8 @@ class Product extends React.Component {
       elems.push(<Hero key="hero" {...hero} />);
     }
 
-    if (productSection) {
-      elems.push(
-        <ImageSection
-          key="product"
-          title={productSection.title}
-          body={productSection.description}
-          image={productSection.image}
-        />
-      );
+    if (product) {
+      elems.push(<ImageSection key="product" {...product} />);
     }
 
     return elems;

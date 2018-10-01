@@ -15,7 +15,8 @@ meta:
 hero:
   title: Best in class API Design, Docs, Mocking, and Testing
   subtitle: Stoplight leverages your OpenAPI files to drive the entire API development process.
-  cta: Get Started Now
+  cta:
+    name: Get Started Now
   bgColor: black
   cards:
     - title: API Designer
@@ -49,6 +50,8 @@ hero:
 product:
   title: The Complete OpenAPI (Swagger) Toolkit
   image: /images/home-hero.png
+  cta:
+    name: Get Started Now
   description: >-
     Create OpenAPI documents 10x faster with no specialized knowledge required.
     Combine OpenAPI files with markdown to create beautiful documentation for internal and external

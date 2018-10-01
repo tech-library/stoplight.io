@@ -11,7 +11,14 @@ import App from './App';
 // might be unreliable to scan all data file structures and extract used icon names, so perhaps another data file where all used icons must be defined?
 // or a util function to recurse through object and pull out all "icon" properties (JSON.stringify?)
 initIcons({
-  icons: [{ name: 'paint-brush' }, { name: 'book' }, { name: 'flask' }, { name: 'server' }],
+  icons: [
+    { name: 'paint-brush' },
+    { name: 'book' },
+    { name: 'flask' },
+    { name: 'server' },
+    { name: 'check' },
+    { name: 'check-circle' },
+  ],
 });
 
 // Render your app

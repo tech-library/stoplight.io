@@ -4,20 +4,25 @@ hero:
   title: Hosted API Documentation
   subtitle: >-
     Automatically generate customizable API documentation from your OpenAPI documents.
-  cta: Get Started Now
-productSection:
-  image: /images/product-page/docs-hero.png
-  description: >-
-    Use OpenAPI Specification (formerly known as Swagger) and Markdown to create
-    robust, internal and external API documentation for your organization.
-    One-click cloud deployment with Stoplight or download the static assets to
-    host anywhere.
+  cta:
+    name: Get Started Now
+    color: black
+  bgColor: green
   features:
-    - Interactive Documentation
-    - Fully Customizable Pages
-    - Versioning
-    - Access Control
-    - Integrations
+    - name: API Playground
+    - name: Theming
+    - name: Versioning
+    - name: Access Control
+    - name: Integrations
+product:
+  title: OpenAPI Documentation
+  image: /images/product-page/docs-hero.png
+  cta:
+    name: Create Docs Now
+  description: >-
+    Create API documentation in minutes. Use the OpenAPI Specification (formerly known as Swagger)
+    and Markdown to create robust, internal and external API documentation for your organization.
+    One-click cloud deployment with Stoplight or download the static assets to host anywhere.
 signupSection:
   heading: Interested in Documentation?
   subheading: The basic plan is free. 14 day trial for all features for free. No credit card required.

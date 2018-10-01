@@ -5,7 +5,7 @@ import Section from '@components/Section';
 
 import { colors, sizes, Button } from '@stoplight/ui';
 
-const ImageSection = ({ title, description, image, rootClassName }) => {
+const ImageSection = ({ title, cta, description, image, rootClassName }) => {
   return (
     <Section rootClassName={cn(rootClassName, 'flex')} paddingClassName={'pt-48 pb-40'}>
       <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-20">
@@ -15,11 +15,17 @@ const ImageSection = ({ title, description, image, rootClassName }) => {
           {description}
         </div>
 
-        <a href="https://next.stoplight.io/join">
-          <Button color={colors.purple} size={sizes.lg} className="rounded-md shadow">
-            Get Started Now
-          </Button>
-        </a>
+        {cta && (
+          <a href="https://next.stoplight.io/join">
+            <Button
+              color={colors[cta.color] || colors.purple}
+              size={sizes.lg}
+              className="rounded-md shadow"
+            >
+              {cta.name}
+            </Button>
+          </a>
+        )}
       </div>
 
       <div className="flex flex-col flex-1 w-1/2 md:hidden relative">
