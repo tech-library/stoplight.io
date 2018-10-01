@@ -14,7 +14,7 @@ const onClickFunctions = {
 
 const Footer = ({ footer }) => {
   return (
-    <footer className="bg-black py-8 border-t">
+    <footer className="bg-black py-8 border-t-4 border-lighten-300">
       <nav className="container mx-auto flex flex-col items-center">
         <div className="py-4">
           <Link to="/">

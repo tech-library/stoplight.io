@@ -84,6 +84,7 @@ const Hero = ({
   particles,
   image,
   skew,
+  bowl,
   containerClassName,
 }) => {
   const elems = [
@@ -173,7 +174,7 @@ const Hero = ({
           left: '50%',
           bottom: image ? -150 : 50,
           marginLeft: -4000,
-          borderRadius: !particles ? '0' : '50%',
+          borderRadius: !particles && !bowl ? '0' : '50%',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
           transform: skew || image ? `skew(0, ${skew || '-3deg'})` : undefined,
         }}

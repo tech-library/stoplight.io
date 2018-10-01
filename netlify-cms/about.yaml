@@ -1,14 +1,12 @@
 path: /about
-logo: /images/robot-dude.svg
-backgroundImage: /images/hero-bg.jpg
-description: >-
-  Stoplight is the best platform for an API design first approach. Easily create
-  your design spec in any format. Then run tests, mock responses, and create
-  beautiful documentation.
-mission: >-
-  Stoplight is the best platform for an API design first approach. Easily create
-  your design spec in any format. Then run tests, mock responses, and create
-  beautiful documentation.
+color: purple
+hero:
+  title: Hi There
+  bowl: true
+  subtitle: >-
+    Stoplight is the best platform for an API design first approach. Easily create
+    your design spec in any format. Then run tests, mock responses, and create
+    beautiful documentation.
 quotes:
   - author: Mike Bissett
     company: BurstSMS

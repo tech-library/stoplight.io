@@ -3,6 +3,8 @@ import { withRouteData, Link } from 'react-static';
 
 import '@styles/about.scss';
 
+import Hero from '@components/Hero';
+
 const Quote = ({ image, company, quote, author, role }, key) => {
   return (
     <section key={key} className="business-love__card px-3 flex">
@@ -55,48 +57,11 @@ const Press = ({ image, description, publication }, key) => {
 
 class About extends React.Component {
   render() {
-    const {
-      backgroundImage,
-      logo,
-      description,
-      mission,
-      quotes,
-      team,
-      press,
-      investors,
-      career,
-    } = this.props;
+    const { color, hero, mission, quotes, team, press, investors, career } = this.props;
 
     return (
       <div>
-        <header className="relative">
-          <div
-            style={{
-              height: '620px',
-              backgroundImage: `url(${backgroundImage})`,
-            }}
-            className="hero h-gradient-image flex items-stretch"
-          >
-            <div className="h-diagonal-stripes flex w-full">
-              <div className="h-skewed-bg h-skewed-bg--bordered flex items-center w-full">
-                <section className="container mx-auto">
-                  <img
-                    style={{
-                      maxWidth: '130px',
-                    }}
-                    className="max-w-lg mx-auto block robot-dude mb-6"
-                    src={logo}
-                    alt="Logo"
-                  />
-
-                  <p className="max-w-lg text-lg pt-8 h-text-md mx-auto text-center font-bold text-xl">
-                    {description}
-                  </p>
-                </section>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Hero key="hero" bgColor={color} {...hero} containerClassName="pb-24" />
 
         {mission && (
           <div className="h-gap">

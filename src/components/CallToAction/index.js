@@ -15,7 +15,7 @@ const CallToAction = ({
 
   return (
     <div className={cn(className)}>
-      <a href="https://next.stoplight.io/join">
+      <a href={href}>
         <Button
           color={colors[color] || colors.purple}
           size={sizes[size] || sizes.lg}
