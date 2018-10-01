@@ -45,9 +45,9 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
 
 const HeroFeature = ({ name, icon, href, color }) => {
   const className = cn(
-    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md',
+    'flex items-center py-3 text-grey-darkest pl-4 pr-6 mx-3 shadow-md bg-white rounded-md',
     {
-      'hover:opacity-85 cursor-pointer': href,
+      'hover:opacity-93 cursor-pointer': href,
       'cursor-default': !href,
     }
   );
@@ -58,7 +58,9 @@ const HeroFeature = ({ name, icon, href, color }) => {
       icon={['fas', icon ? icon.name : 'check-circle']}
       className={cn('mr-2 text-lg', `text-${color || 'green'}`)}
     />,
-    <h4 key="2">{name}</h4>,
+    <h4 key="2" className="font-semibold">
+      {name}
+    </h4>,
   ];
 
   if (href) {
@@ -158,6 +160,14 @@ const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], partic
           borderRadius: !particles ? '0' : '50%',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
           transform: image ? 'skew(0, -3deg)' : undefined,
+        }}
+      />
+
+      <div
+        className={cn('absolute pin z-0')}
+        style={{
+          background: 'linear-gradient(to right top, transparent, rgba(134, 218, 254, 0.1))',
+          bottom: image ? -200 : 0,
         }}
       />
     </div>,

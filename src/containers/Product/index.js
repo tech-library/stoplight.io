@@ -8,7 +8,7 @@ import Section from '@components/Section';
 
 import { slugify } from '@utils/text';
 
-const ProductFeature = ({ title, description, image, isReversed }) => {
+const ProductFeature = ({ title, description, image, isReversed, titleColor }) => {
   return [
     <a key="anchor" name={slugify(title)} />,
     <div
@@ -24,7 +24,9 @@ const ProductFeature = ({ title, description, image, isReversed }) => {
           'pl-18': isReversed,
         })}
       >
-        <h2 className="max-w-sm text-secondary mb-10 text-3xl">{title}</h2>
+        <h2 className={cn('max-w-sm mb-10 text-3xl', `text-${titleColor || 'grey-darkest'}`)}>
+          {title}
+        </h2>
         <div className="mb-12 pb-12 max-w-md leading-loose text-lg">{description}</div>
       </div>
 
@@ -70,7 +72,12 @@ class Product extends React.Component {
 
           <div key="features" className="container mx-auto py-16">
             {features.map((feature, index) => (
-              <ProductFeature key={index} {...feature} isReversed={index % 2 !== 0} />
+              <ProductFeature
+                key={index}
+                titleColor={hero.bgColor}
+                {...feature}
+                isReversed={index % 2 !== 0}
+              />
             ))}
           </div>
         </Section>
