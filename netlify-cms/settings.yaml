@@ -73,6 +73,15 @@ header:
       icon:
         style: suitcase
         name: book
+actionBar:
+  enabled: false
+  cta: Getting started is easy. Be up and running in minutes.
+  buttons:
+    - name: Request a demo
+      href: /contact/demo
+      outlined: true
+    - name: Create a Free Account
+      href: https://next.stoplight.io/join
 footer:
   social:
     - icon: twitter

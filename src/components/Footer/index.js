@@ -2,6 +2,7 @@ import React from 'react';
 import { withSiteData, Link } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import ActionBar from '@components/ActionBar';
 import Intercom from '@utils/intercom';
 
 const onClickFunctions = {
@@ -12,9 +13,13 @@ const onClickFunctions = {
   },
 };
 
-const Footer = ({ footer }) => {
-  return (
-    <footer className="bg-black py-8 border-t-4 border-lighten-300">
+const Footer = ({ footer, actionBar = {} }) => {
+  const { groups, social } = footer || {};
+
+  return [
+    <ActionBar key="action" {...actionBar} />,
+
+    <footer key="footer" className="bg-black py-8 border-t-4 border-lighten-300">
       <nav className="container mx-auto flex flex-col items-center">
         <div className="py-4">
           <Link to="/">
@@ -22,9 +27,9 @@ const Footer = ({ footer }) => {
           </Link>
         </div>
 
-        {footer.groups && (
+        {groups && (
           <div className="flex flex-wrap justify-between py-4 w-1/2 sm:w-full">
-            {footer.groups.map((group, index) => {
+            {groups.map((group, index) => {
               return (
                 <div key={index}>
                   <div className="font-bold text-grey-light py-2">{group.title}</div>
@@ -54,8 +59,8 @@ const Footer = ({ footer }) => {
         )}
 
         <div className="flex py-4">
-          {footer.social &&
-            footer.social.map((account, index) => {
+          {social &&
+            social.map((account, index) => {
               return (
                 <a
                   key={index}
@@ -72,8 +77,8 @@ const Footer = ({ footer }) => {
           &copy; {new Date().getFullYear()} Stoplight
         </Link>
       </nav>
-    </footer>
-  );
+    </footer>,
+  ];
 };
 
 export default withSiteData(Footer);

@@ -95,3 +95,5 @@ testimonials:
     quote: Stoplight provides a centralized, testable and reliable source for our APIs.
     author: Gil Barbara
     role: Frontend Engineer, AMARO
+actionBar:
+  enabled: true
