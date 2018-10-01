@@ -27,7 +27,8 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
       to={href}
       className={cn(
         'HeroBlock',
-        'shadow cursor-pointer relative flex flex-col flex-1 h-48 overflow-hidden rounded-md p-6 mx-3 text-left z-10 text-white',
+        'md:mb-6',
+        'shadow cursor-pointer relative flex flex-col flex-1 h-48 md:h-40 overflow-hidden rounded-md p-6 mx-3 text-left z-10 text-white',
         `block-${indexMap[index]}`,
         {
           [`bg-${bgColor}`]: bgColor,
@@ -93,24 +94,27 @@ const Hero = ({
       <div
         className={cn(
           containerClassName,
-          'container text-white flex flex-col pt-32 relative z-5 text-center'
+          'container text-white flex flex-col pt-32 md:pt-24 relative z-5 text-center'
         )}
       >
         <div
-          className={cn('mx-auto', !cta && !features.length && !cards.length ? 'pb-48' : 'pb-24')}
+          className={cn(
+            'mx-auto',
+            !cta && !features.length && !cards.length ? 'pb-48 md:pb-40' : 'pb-24 md:pb-20'
+          )}
         >
           <h1>{title}</h1>
           {subtitle && (
-            <h2 className={cn('font-default opacity-75 mt-4 text-xl mx-auto max-w-lg')}>
+            <h2 className={cn('font-default opacity-75 mt-4 md:mt-6 text-xl mx-auto max-w-lg')}>
               {subtitle}
             </h2>
           )}
         </div>
 
-        {cta && <CallToAction className="pb-24 mx-auto" size="xl" {...cta} />}
+        {cta && <CallToAction className="pb-24 mx-auto md:pb-20" size="xl" {...cta} />}
 
         {features.length ? (
-          <div className="flex mx-auto pb-24">
+          <div className="flex mx-auto pb-24 md:pb-16">
             {features.map((feature, i) => (
               <HeroFeature key={i} color={bgColor} {...feature} />
             ))}
@@ -118,7 +122,7 @@ const Hero = ({
         ) : null}
 
         {cards.length ? (
-          <div className="flex mx-auto">
+          <div className="flex mx-auto md:flex-col">
             {cards.map((card, i) => (
               <HeroCard key={i} index={parseInt(i) + 1} {...card} />
             ))}

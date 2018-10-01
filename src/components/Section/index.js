@@ -5,7 +5,7 @@ const Section = ({ children, rootClassName, paddingClassName, bgClassName }) => 
   return (
     <section
       className={cn(rootClassName, 'relative md:px-4', {
-        'py-40': !paddingClassName,
+        'py-40 md:py-32': !paddingClassName,
         [paddingClassName]: paddingClassName,
         'z-1': !bgClassName,
         'z-5': bgClassName,

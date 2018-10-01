@@ -127,13 +127,13 @@ class HomePage extends React.Component {
       elems.push(
         <Section key="customers" bgClassName="bg-grey-lightest">
           <div className="container">
-            <h2 className="text-center mb-20 text-3xl">
+            <h2 className="text-center mb-20 text-3xl md:mb-14">
               Thousands of companies use Stoplight to streamline
               <br />
               their API &amp; Microservices workflow
             </h2>
 
-            <div className="flex justify-center flex-wrap items-center pb-32">
+            <div className="flex justify-center flex-wrap items-center pb-32 md:pb-20">
               {customers.map((customer, key) => {
                 return (
                   <div key={key} className="p-8 text-center">
