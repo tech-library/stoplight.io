@@ -13,21 +13,19 @@ import Section from '@components/Section';
 
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
-    <div key={key} className="w-1/2 pr-10 pb-10">
+    <div key={key} className="w-1/2 flex px-14 pb-20">
       <div className="testimonial-card max-w-lg w-full lg:flex shadow-lg mx-auto items-stretch bg-white">
-        <div className="w-1/5 flex flex-col justify-center">
+        <div className="flex flex-col justify-center">
           <div
-            className="-ml-14 rounded-full bg-cover shadow-sm border-grey border"
+            className="-ml-14 rounded-full bg-cover shadow-sm border-grey border h-40 w-40"
             style={{
               backgroundImage: `url(${image})`,
-              height: '150px',
-              width: '150px',
             }}
             alt={author}
           />
         </div>
 
-        <div className="p-8 flex flex-col w-4/5 justify-center leading-normal">
+        <div className="p-8 flex flex-col justify-center leading-normal">
           <p className="text-grey-darker leading-loose">{quote}</p>
 
           <p className="font-bold mt-4">
@@ -170,8 +168,8 @@ class HomePage extends React.Component {
     if (testimonials.length) {
       elems.push(
         <Section key="testimonials" bgClassName="bg-grey-lightest">
-          <div className="container flex flex-wrap items-center">
-            {testimonials.map(Testimonial)}
+          <div className="container">
+            <div className="flex flex-wrap -mx-14">{testimonials.map(Testimonial)}</div>
 
             <div className="flex items-center mt-40 mb-12 w-full">
               <div className="flex-1 text-center">

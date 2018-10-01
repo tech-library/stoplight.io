@@ -83,3 +83,15 @@ testimonials:
     quote: I feel like Stoplight has the potential to shift the landscape pretty significantly, something I haven't seen any API service provider do in a while.
     author: Kin Lane
     role: API Evangelist
+  - image: /images/testimonials/bruce_wang.jpeg
+    quote: Stoplight allows for better public API docs and internal microservice API discovery/management.
+    author: Bruce Wang
+    role: CTO, Synq.fm
+  - image: /images/testimonials/john_vajda.jpeg
+    quote: Stoplight has been a serious game changer for JumpCloud’s API development! We love all the rich design, documentation and testing features, which has enabled us to design awesome APIs for our customers.
+    author: John Vajda
+    role: Product Manager, JumpCloud
+  - image: /images/testimonials/gil.jpeg
+    quote: Stoplight provides a centralized, testable and reliable source for our APIs.
+    author: Gil Barbara
+    role: Frontend Engineer, AMARO
