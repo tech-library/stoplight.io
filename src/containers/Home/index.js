@@ -132,7 +132,7 @@ class HomePage extends React.Component {
       elems.push(
         <Section key="customers" bgClassName="bg-grey-lightest">
           <div className="container">
-            <h2 className="text-center mb-20">
+            <h2 className="text-center mb-20 text-3xl">
               Thousands of companies use Stoplight to streamline
               <br />
               their API &amp; Microservices workflow
@@ -156,7 +156,7 @@ class HomePage extends React.Component {
       elems.push(
         <Section key="features">
           <div className="container">
-            <h2 className="text-center mb-20">Key Features</h2>
+            <h2 className="text-center mb-20 text-3xl">Key Features</h2>
 
             <div className="flex">
               <div className="flex-0 w-96 mr-12">{this.renderFeatureTabs()}</div>
