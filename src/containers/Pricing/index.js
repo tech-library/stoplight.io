@@ -73,8 +73,8 @@ const PricingPage = ({ title, description, plans, docs }) => {
 
             <div>
               <Link
+                to="https://next.stoplight.io/join"
                 className="block py-4 bg-green hover:bg-green-light font-bold text-center text-lg text-white hover:text-white"
-                to="/join"
               >
                 GET STARTED
                 <Icon icon={faArrowRight} className="ml-3" />

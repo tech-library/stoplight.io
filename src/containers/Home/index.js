@@ -175,7 +175,7 @@ class HomePage extends React.Component {
 
             <div className="flex items-center mt-40 mb-12 w-full">
               <div className="flex-1 text-center">
-                <Link to="/join">
+                <Link to="https://next.stoplight.io/join">
                   <Button color={colors.accent} size={sizes.xl} shadow className="w-full max-w-xs">
                     Get Started
                   </Button>

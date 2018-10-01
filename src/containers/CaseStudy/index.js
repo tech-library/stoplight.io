@@ -93,7 +93,7 @@ class CaseStudy extends React.Component {
 
           <div className="text-center">
             <Link
-              to="/join"
+              to="https://next.stoplight.io/join"
               title="Signup"
               className="h-button inline-block h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white"
             >
