@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-static';
 import cn from 'classnames';
 
 import { colors, sizes, Button } from '@stoplight/ui';
@@ -13,19 +14,21 @@ const CallToAction = ({
 }) => {
   if (!name) return null;
 
+  const cta = (
+    <Button
+      color={colors[color] || colors.purple}
+      size={sizes[size] || sizes.lg}
+      className={cn('rounded', {
+        'shadow-md': shadow,
+      })}
+    >
+      {name}
+    </Button>
+  );
+
   return (
     <div className={cn(className)}>
-      <a href={href}>
-        <Button
-          color={colors[color] || colors.purple}
-          size={sizes[size] || sizes.lg}
-          className={cn('rounded', {
-            'shadow-md': shadow,
-          })}
-        >
-          {name}
-        </Button>
-      </a>
+      {href.startsWith('/') ? <Link to={href}>{cta}</Link> : <a href={href}>{cta}</a>}
     </div>
   );
 };

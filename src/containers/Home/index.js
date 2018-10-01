@@ -10,6 +10,7 @@ import { colors, sizes, Button, Icon } from '@stoplight/ui';
 import Hero from '@components/Hero';
 import ImageSection from '@components/ImageSection';
 import Section from '@components/Section';
+import CallToAction from '@components/CallToAction';
 
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
@@ -136,15 +137,23 @@ class HomePage extends React.Component {
               their API &amp; Microservices workflow
             </h2>
 
-            <div className="flex justify-center flex-wrap items-center">
+            <div className="flex justify-center flex-wrap items-center pb-32">
               {customers.map((customer, key) => {
                 return (
                   <div key={key} className="p-8 text-center">
-                    <img className="h-14" src={customer} alt="" />
+                    <img className="h-12" src={customer} alt="" />
                   </div>
                 );
               })}
             </div>
+
+            <CallToAction
+              name="Read The Case Studies"
+              href="/case-studies"
+              className="text-center"
+              size="lg"
+              color="green"
+            />
           </div>
         </Section>
       );
