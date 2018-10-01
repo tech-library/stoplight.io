@@ -87,8 +87,8 @@ const PricingPage = ({ color, hero, plans = [], docs }) => {
 
   if (docs) {
     elems.push(
-      <Section>
-        <DocPlans key="docs" {...docs} />
+      <Section key="docs">
+        <DocPlans {...docs} />
       </Section>
     );
   }

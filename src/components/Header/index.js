@@ -3,8 +3,8 @@ import cn from 'classnames';
 import { withSiteData, Link } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Popup, Portal } from '@stoplight/ui';
-
+import Popup from '@components/Popup';
+import Portal from '@components/Portal';
 import Intercom from '@utils/intercom';
 
 export const headerHeightClass = 'h-20';

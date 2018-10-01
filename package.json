@@ -19,11 +19,11 @@
     "format": "prettier --single-quote --trailing-comma es5 --print-width 100 --write \"src/**/*.js\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.x",
     "@fortawesome/free-brands-svg-icons": "5.3.x",
     "@fortawesome/free-solid-svg-icons": "5.3.x",
-    "@stoplight/ui": "0.0.36",
+    "@fortawesome/react-fontawesome": "0.1.x",
     "classnames": "2.2.x",
-    "lodash": "4.17.x",
     "react": "16.5.x",
     "react-particles-js": "2.4.0-beta.8",
     "react-static": "5.9.x",
@@ -58,6 +58,8 @@
     "prismjs": "1.15.x",
     "sass-loader": "7.1.x",
     "serve": "10.0.x",
-    "style-loader": "0.23.x"
+    "style-loader": "0.23.x",
+    "ts-loader": "3.5.x",
+    "typescript": "2.7.x"
   }
 }

@@ -1,11 +1,7 @@
 import React from 'react';
-import _ from 'lodash';
 import cn from 'classnames';
 import { withRouteData, Link } from 'react-static';
-
-import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
-
-import { colors, sizes, Button, Icon } from '@stoplight/ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from '@components/Hero';
 import ImageSection from '@components/ImageSection';
@@ -54,12 +50,12 @@ class HomePage extends React.Component {
   }
 
   renderFeatureTabs() {
-    const { features } = this.props;
+    const { features = [] } = this.props;
     const { featureTab } = this.state;
 
     return (
       <ul className="list-reset">
-        {_.map(features, (feature, index) => {
+        {features.map((feature, index) => {
           const isActive = feature.title === featureTab;
 
           return (
@@ -81,7 +77,7 @@ class HomePage extends React.Component {
                   }
                 )}
               >
-                <Icon icon={faCheck} size={sizes.xl} />
+                <FontAwesomeIcon icon={['fas', 'check']} size="lg" />
               </div>
               <div className="text-2xl font-bold leading-loose">{feature.title}</div>
             </li>
@@ -103,12 +99,12 @@ class HomePage extends React.Component {
         <p className="mt-12 text-2xl">{description}</p>
 
         <p className="mt-8 text-xl text-right">
-          <a
-            href={href}
+          <Link
+            to={href}
             className="text-grey-darkest border-b-2 border-accent-dark pb-2 font-bold text-lg hover:border-transparent hover:text-grey-dark"
           >
             Learn more about the {title}
-          </a>
+          </Link>
         </p>
       </div>
     );

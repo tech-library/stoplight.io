@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 export const slugify = input => {
   let str = input;
 
@@ -23,5 +21,5 @@ export const slugify = input => {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-'); // remove invalid chars // collapse whitespace and replace by - // collapse dashes
 
-  return _.trim(str, '-/');
+  return str.replace(/^\-\//, '');
 };

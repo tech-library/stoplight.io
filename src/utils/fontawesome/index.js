@@ -1,16 +1,38 @@
-import _ from 'lodash';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faPaintBrush,
+  faBook,
+  faFlask,
+  faServer,
+  faCheck,
+  faCheckCircle,
+  faRss,
+  faUsers,
+  faComments,
+  faGraduationCap,
+  faSuitcase,
+  faArrowRight,
+  faBars,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export const init = ({ icons = [] }) => {
-  for (const icon of icons) {
-    try {
-      const { name, style = 'solid' } = icon;
-      const faName = _.camelCase(`fa-${name}`);
-      const i = require(`@fortawesome/free-${style}-svg-icons/${faName}`)[faName];
-      library.add(i);
-      console.info('Icon loaded:', `${name} (${style})`);
-    } catch (e) {
-      console.warn('Could not load icon:', icon, e);
-    }
-  }
+export const init = () => {
+  library.add(faPaintBrush);
+  library.add(faBook);
+  library.add(faFlask);
+  library.add(faServer);
+  library.add(faCheck);
+  library.add(faCheckCircle);
+  library.add(faRss);
+  library.add(faUsers);
+  library.add(faComments);
+  library.add(faGraduationCap);
+  library.add(faSuitcase);
+  library.add(faArrowRight);
+  library.add(faBars);
+  library.add(faTimes);
+  library.add(faTwitter);
+  library.add(faLinkedin);
+  library.add(faGithub);
 };

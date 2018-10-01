@@ -1,78 +1,12 @@
-import _ from 'lodash';
-
 const getConfigVar = () => {
   // TODO
 };
-
-const parseQuery = () => {
-  // TODO
-};
-
-const safeStringify = obj => {
-  // TODO
-  return JSON.stringify(obj);
-};
-
-const safeParse = str => {
-  // TODO
-  return JSON.parse(str);
-};
-
-const utmKeys = ['utm_campaign', 'utm_content', 'utm_medium', 'utm_source', 'utm_term'];
 
 const sdk = _key => {
   const key = _key || getConfigVar('INTERCOM_KEY');
 
   if (key && typeof window !== 'undefined' && window.Intercom) {
     return window.Intercom;
-  }
-};
-
-const init = (_key, { hideLauncher = true } = {}) => {
-  const key = _key || getConfigVar('INTERCOM_KEY');
-  const Intercom = sdk(key);
-
-  if (Intercom) {
-    const utm = localStorage.getItem('utm');
-
-    if (!utm && window.location.search) {
-      const utmParams = _.pick(parseQuery(window.location.search), utmKeys);
-
-      if (!_.isEmpty(utmParams)) {
-        localStorage.setItem(
-          'utm',
-          safeStringify({
-            ...utmParams,
-            referrer: document.referrer,
-          })
-        );
-      }
-    }
-
-    Intercom('boot', {
-      app_id: key,
-      hide_default_launcher: hideLauncher,
-    });
-  }
-};
-
-const update = (userInfo, key, { hideLauncher = true } = {}) => {
-  const Intercom = sdk(key);
-
-  if (Intercom) {
-    let utmParams = {};
-    const utm = localStorage.getItem('utm');
-
-    if (utm) {
-      utmParams = _.pickBy(safeParse(utm));
-      localStorage.removeItem('utm');
-    }
-
-    Intercom('update', {
-      ...utmParams,
-      ...userInfo,
-      hide_default_launcher: hideLauncher,
-    });
   }
 };
 
@@ -103,8 +37,6 @@ const script = _key => {
 };
 
 export default {
-  init,
-  update,
   show,
   shutdown,
   script,

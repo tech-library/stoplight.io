@@ -2,28 +2,20 @@ import React from 'react';
 import { Link } from 'react-static';
 import cn from 'classnames';
 
-import { colors, sizes, Button } from '@stoplight/ui';
-
 const CallToAction = ({
   name,
-  color,
-  size,
+  color = 'purple',
   className,
-  shadow = true,
   href = 'https://next.stoplight.io/join',
 }) => {
   if (!name) return null;
 
   const cta = (
-    <Button
-      color={colors[color] || colors.purple}
-      size={sizes[size] || sizes.lg}
-      className={cn('rounded', {
-        'shadow-md': shadow,
-      })}
+    <div
+      className={`Button rounded shadow-md flex select-none inline-flex justify-center font-bold leading-reset h-xl text-xl rounded z-0 hover:z-5 border-transparent text-white hover:text-white bg-${color} hover:bg-${color}-light cursor-pointer solid`}
     >
-      {name}
-    </Button>
+      <div className="flex items-center px-6">{name}</div>
+    </div>
   );
 
   return (

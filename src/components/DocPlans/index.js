@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-static';
-
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
-
-import { colors, sizes, Icon } from '@stoplight/ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DocPlans = ({ title, description, features, plans, buttonUrl, buttonText }) => {
   return (
@@ -43,7 +39,11 @@ const DocPlans = ({ title, description, features, plans, buttonUrl, buttonText }
                       return (
                         <td key={index}>
                           {feature.plans.includes(plan.title) && (
-                            <Icon icon={faCheckCircle} color={colors.green} size={sizes.xl} />
+                            <FontAwesomeIcon
+                              className="text-green"
+                              icon={['fas', 'check-circle']}
+                              size="lg"
+                            />
                           )}
                         </td>
                       );
@@ -61,7 +61,7 @@ const DocPlans = ({ title, description, features, plans, buttonUrl, buttonText }
             className="block py-6 bg-green hover:bg-green-light font-bold text-center text-xl text-white hover:text-white"
           >
             {buttonText}
-            <Icon icon={faArrowRight} className="ml-3" />
+            <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
           </Link>
         </div>
       </div>

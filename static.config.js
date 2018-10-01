@@ -214,6 +214,19 @@ export default {
     config.module.rules = [
       {
         oneOf: [
+          {
+            test: /\.ts(x?)$/,
+            exclude: [/node_modules|\.min\./],
+            use: [
+              {
+                loader: 'ts-loader',
+                options: {
+                  onlyCompileBundledFiles: true,
+                  transpileOnly: true,
+                },
+              },
+            ],
+          },
           defaultLoaders.jsLoader,
           sassLoader(stage),
           cssLoader(stage),
@@ -221,6 +234,8 @@ export default {
         ],
       },
     ];
+
+    config.resolve.extensions.push('.ts', '.tsx');
 
     config.resolve.alias = {
       '@components': nodePath.resolve(__dirname, 'src/components'),
