@@ -74,11 +74,27 @@ const HeroFeature = ({ name, icon, href, color }) => {
   return <div className={className}>{elems}</div>;
 };
 
-const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], particles, image }) => {
+const Hero = ({
+  title,
+  subtitle,
+  cta,
+  bgColor,
+  cards = [],
+  features = [],
+  particles,
+  image,
+  skew,
+  containerClassName,
+}) => {
   const elems = [
     <div key="main" className="relative">
       <div className={cn(headerHeightClass, 'w-100')} />
-      <div className={cn('container text-white flex flex-col pt-32 relative z-5 text-center')}>
+      <div
+        className={cn(
+          containerClassName,
+          'container text-white flex flex-col pt-32 relative z-5 text-center'
+        )}
+      >
         <div className="pb-24 mx-auto ">
           <h1>{title}</h1>
           {subtitle && (
@@ -101,7 +117,7 @@ const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], partic
         {cards.length ? (
           <div className="flex mx-auto">
             {cards.map((card, i) => (
-              <HeroCard key={i} index={i} {...card} />
+              <HeroCard key={i} index={parseInt(i) + 1} {...card} />
             ))}
           </div>
         ) : null}
@@ -159,7 +175,7 @@ const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], partic
           marginLeft: -4000,
           borderRadius: !particles ? '0' : '50%',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
-          transform: image ? 'skew(0, -3deg)' : undefined,
+          transform: skew || image ? `skew(0, ${skew || '-3deg'})` : undefined,
         }}
       />
 

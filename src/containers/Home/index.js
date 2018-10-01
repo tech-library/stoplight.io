@@ -116,12 +116,12 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { hero, product, customers = [], testimonials = [], features = [] } = this.props;
+    const { color, hero, product, customers = [], testimonials = [], features = [] } = this.props;
 
     const elems = [];
 
     if (hero) {
-      elems.push(<Hero key="hero" {...hero} />);
+      elems.push(<Hero key="hero" bgColor={color} {...hero} />);
     }
 
     if (product) {

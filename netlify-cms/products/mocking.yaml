@@ -1,9 +1,9 @@
 path: /api-mocking
+color: grey-darkest
 hero:
   title: OpenAPI Powered Mock Servers
   subtitle: >-
     Build first-class APIs and accelerate API development with instant mock servers.
-  bgColor: grey-darkest
   image: /images/product/mocking-hero.png
 product:
   title: OpenAPI Mocking

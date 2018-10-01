@@ -1,9 +1,9 @@
 path: /api-testing
+color: orange
 hero:
   title: OpenAPI Contract Testing
   subtitle: >-
     Build reliable web APIs with robust test coverage based on your OpenAPI documents.
-  bgColor: orange
   image: /images/product/testing-hero.png
 product:
   title: OpenAPI Testing

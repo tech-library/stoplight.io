@@ -1,92 +1,99 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
-
-import { sizes, Icon } from '@stoplight/ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import DocPlans from '@components/DocPlans';
+import Hero from '@components/Hero';
+import Section from '@components/Section';
+import CallToAction from '@components/CallToAction';
+
+const PlanFeature = ({ color, name }) => {
+  return (
+    <div className="flex items-center py-2">
+      <FontAwesomeIcon
+        key="1"
+        icon={['fas', 'check-circle']}
+        className={`mr-3 text-lg text-${color}`}
+      />{' '}
+      <div>{name}</div>
+    </div>
+  );
+};
 
 const Plan = props => {
-  const { title, price, unit, features, button, darken } = props;
+  const {
+    title,
+    description,
+    price,
+    unit,
+    inheritedFeatures = [],
+    features = [],
+    titleColor,
+    cta,
+  } = props;
 
   return (
-    <div className="flex-1 flex flex-col">
-      <div className={`font-semibold py-4 text-lg bg-darken-${darken ? 100 : 50}`}>{title}</div>
-
-      <div className={`flex-grow px-3 py-8 ${darken ? 'bg-darken-50' : ''}`}>
-        <div className="text-xl px-3 pb-3 h-16">
-          {button ? (
-            <a
-              className="block mx-4 py-2 bg-blue hover:bg-blue-light font-bold text-center text-lg text-white hover:text-white transparent shadow"
-              href={button.link}
-              size={sizes.xl}
-            >
-              {button.title}
-            </a>
-          ) : (
-            <div className="font-bold">
-              {price}
-              {unit && <span className="text-sm"> per member</span>}
-            </div>
-          )}
+    <div className="flex-1 mx-6">
+      <div className="bg-white p-10 shadow-lg rounded">
+        <div className="mb-10 bg-grey-lightest px-8 py-8 -mt-10 -mx-10">
+          <div className={`font-bold pb-3 uppercase text-${titleColor || 'grey-darkest'}`}>
+            {title}
+          </div>
+          <div className="leading-loose">{description}</div>
         </div>
 
-        {features.map((feature, key) => (
-          <div key={key} className="flex items-center justify-center py-2 font-semibold">
-            {feature}
-          </div>
-        ))}
+        <div className="font-bold mb-4 text-xl flex items-center">
+          {price}
+          {unit && <span className="font-default text-base ml-3">{unit}</span>}
+        </div>
+
+        <div className="mb-10">
+          {features.map((feature, key) => (
+            <PlanFeature key={key} name={feature} color="green" />
+          ))}
+
+          {inheritedFeatures.map((feature, key) => (
+            <PlanFeature key={key} name={feature} color="grey" />
+          ))}
+        </div>
+
+        {cta && <CallToAction {...cta} shadow={false} />}
       </div>
     </div>
   );
 };
 
-const PricingPage = ({ title, description, plans, docs }) => {
-  return (
-    <div>
-      <section id="pricing-hero" className="flex items-center relative">
-        <div className="static-gradient blue absolute z-0" aria-hidden>
-          <div className="static-gradient-bg absolute" />
+const PricingPage = ({ color, hero, plans = [], docs }) => {
+  const elems = [];
+
+  if (hero) {
+    elems.push(
+      <Hero key="hero" bgColor={color} {...hero} skew="7deg" containerClassName="pb-64" />
+    );
+  }
+
+  if (plans.length) {
+    elems.push(
+      <div key="plans" className="container -mt-64 z-5 relative">
+        <div className="flex -mx-6">
+          {plans.map((plan, index) => (
+            <Plan key={index} titleColor={color} {...plan} />
+          ))}
         </div>
+      </div>
+    );
+  }
 
-        <div
-          className="container mx-auto text-white relative text-center z-5"
-          style={{ marginTop: -210 }}
-        >
-          <h1 className="text-5xl font-normal font-medium">{title}</h1>
+  if (docs) {
+    elems.push(
+      <Section>
+        <DocPlans key="docs" {...docs} />
+      </Section>
+    );
+  }
 
-          <div className="mt-10 text-xl mx-auto opacity-85 max-w-lg leading-loose">
-            {description}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative z-5" style={{ marginTop: -300 }}>
-        <div className="mx-auto relative z-1" style={{ maxWidth: 600 }}>
-          <div className="shadow-lg rounded-lg text-grey-darker overflow-hidden">
-            <div className="pricing-table flex">
-              {plans.map((plan, index) => (
-                <Plan key={index} {...plan} darken={index === plans.length - 1} />
-              ))}
-            </div>
-
-            <div>
-              <Link
-                to="https://next.stoplight.io/join"
-                className="block py-4 bg-green hover:bg-green-light font-bold text-center text-lg text-white hover:text-white"
-              >
-                GET STARTED
-                <Icon icon={faArrowRight} className="ml-3" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {docs && <DocPlans {...docs} />}
-    </div>
-  );
+  return elems;
 };
 
 export default withRouteData(PricingPage);

@@ -1,30 +1,50 @@
-title: 'Simple, Flexible Pricing'
 path: /pricing
-description: 'All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation'
+color: blue
+hero:
+  title: Simple, Flexible Pricing
+  subtitle: 'All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation'
 plans:
-  - title: 'Open Source'
+  - title: 'Personal'
+    description: 'For open source and individual use.'
     price: 'Free'
     features:
-      - 'Unlimited public projects'
-      - '5 members'
+      - 'Unlimited projects'
+    cta:
+      name: Sign Up
+      color: green
   - title: 'Team'
+    description: For small teams and startups.
     price: '$24'
-    unit: 'per member'
+    unit: '/ user / month'
     features:
-      - 'Unlimited private projects'
-      - 'Up to 25 members'
+      - 'Up to 25 users'
+      - 'Collaboration and discussions'
+      - 'Access and role management'
+    inheritedFeatures:
+      - 'Unlimited projects'
+    cta:
+      name: Sign Up
+      color: green
   - title: 'Enterprise'
-    button:
-      title: 'Contact Us'
-      link: 'mailto:sales@stoplight.io'
+    description: For enterprises with demanding requirements.
+    price: 'Contact Us'
     features:
-      - 'Hosted or On-Premise'
-      - 'Unlimited members'
-      - 'SAML single sign-on'
-      - 'Dedicated Support'
+      - 'Unlimited users'
+      - 'Hosted or on-premise'
+      - 'Single sign-on'
+      - 'Dedicated support'
+    inheritedFeatures:
+      - 'Unlimited projects'
+      - 'Collaboration and discussions'
+      - 'Access and role management'
+    cta:
+      name: Contact Us
+      color: orange
+      href: mailto:sales@stoplight.io
 docs:
-  title: 'Documentation Add-ons'
+  title: 'Documentation Add-On'
   description: 'Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere.'
+  buttonText: 'Create Your First Documentation Hub'
   features:
     - title: 'OpenAPI, Markdown, Request Maker'
       plans:
@@ -92,17 +112,3 @@ docs:
     - title: 'Pro'
       price: '$349 / mo'
       domains: 'Unlimited'
-meta:
-  favicon: '/favicons/favicon.ico'
-  title: Stoplight
-  siteName: Stoplight
-  description: Stoplight, providing engineering teams with the best way to document,
-    test, and build web APIs.
-  url: https://stoplight.io
-  image: '/images/home-hero.png'
-  twitter:
-    title: Stoplight
-    description: Stoplight, providing engineering teams with the best way to document,
-      test, and build web APIs.
-    image: '/images/home-hero.png'
-    username: '@stoplight'

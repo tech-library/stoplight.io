@@ -8,6 +8,7 @@ const CallToAction = ({
   color,
   size,
   className,
+  shadow = true,
   href = 'https://next.stoplight.io/join',
 }) => {
   if (!name) return null;
@@ -18,7 +19,9 @@ const CallToAction = ({
         <Button
           color={colors[color] || colors.purple}
           size={sizes[size] || sizes.lg}
-          className="rounded-md shadow"
+          className={cn('rounded', {
+            'shadow-md': shadow,
+          })}
         >
           {name}
         </Button>

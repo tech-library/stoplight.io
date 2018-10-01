@@ -42,7 +42,7 @@ const ProductFeature = ({ title, description, image, isReversed, titleColor }) =
 
 class Product extends React.Component {
   render() {
-    const { hero, product = {}, features = [] } = this.props;
+    const { color, hero, product = {}, features = [] } = this.props;
 
     const elems = [];
 
@@ -50,6 +50,7 @@ class Product extends React.Component {
       elems.push(
         <Hero
           key="hero"
+          bgColor={color}
           {...hero}
           features={features.map(feature => ({
             name: feature.shortName,
@@ -74,7 +75,7 @@ class Product extends React.Component {
             {features.map((feature, index) => (
               <ProductFeature
                 key={index}
-                titleColor={hero.bgColor}
+                titleColor={color}
                 {...feature}
                 isReversed={index % 2 !== 0}
               />
