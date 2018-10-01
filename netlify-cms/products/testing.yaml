@@ -1,8 +1,38 @@
 path: /api-testing
-color: orange
-topSection:
-  heading: OpenAPI Contract Testing
-  subheading: >-
-    The subtitle
-  buttonText: Signup
-  buttonUrl: https://next.stoplight.io/join
+hero:
+  title: OpenAPI Contract Testing
+  subtitle: >-
+    Build reliable web APIs with robust test coverage based on your OpenAPI documents.
+  bgColor: orange
+  image: /images/product/testing-hero.png
+product:
+  title: OpenAPI Testing
+  cta:
+    name: Start Testing
+  description: >-
+    Mocking your API with Stoplight is your API design’s perfect companion. Powered by Prism,
+    the instant mock server routes incoming requests to example responses or dynamically
+    generates examples on the fly based on your OpenAPI Specification (formerly known as Swagger).
+features:
+  - shortName: CI/CD Integration
+    title: Simple Automation
+    image: /images/product/testing-integration.png
+    description: >-
+      Integrate your tests into your existing CI/CD pipeline with our
+      command line tool, powered by Prism. Alternatively, you can trigger your
+      tests with a single HTTP call.
+  - shortName: Contract Testing
+    title: Contract Testing
+    image: /images/product/testing-validation.png
+    description: >-
+      Create test collections that ensure the API implementation meets the standards and definitions
+      described in your OpenAPI Specification or JSON Schema, also known as Contract Testing.
+      Stoplight uses realistic, dynamic data based on your OpenAPI Specification to simulate
+      real-life API consumers across your local development, staging, and production environments.
+  - shortName: Coverage Reporting
+    title: Coverage Reporting
+    image: /images/product/testing-reporting.png
+    description: >-
+      With integrated contract testing reporting capabilities, you can track your progress
+      towards 100% coverage. Stoplight verifies that the API responses for different status
+      codes match the contract of connected OpenAPI documents.

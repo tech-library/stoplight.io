@@ -1,8 +1,46 @@
 path: /api-mocking
-color: grey-darkest
-topSection:
-  heading: OpenAPI Powered Mock Servers
-  subheading: >-
-    The subtitle
-  buttonText: Signup
-  buttonUrl: https://next.stoplight.io/join
+hero:
+  title: OpenAPI Powered Mock Servers
+  subtitle: >-
+    Build first-class APIs and accelerate API development with instant mock servers.
+  bgColor: grey-darkest
+  image: /images/product/mocking-hero.png
+product:
+  title: OpenAPI Mocking
+  cta:
+    name: Start Mocking
+  description: >-
+    Mocking your API with Stoplight is your API design’s perfect companion. Powered by Prism,
+    the instant mock server routes incoming requests to example responses or dynamically
+    generates examples on the fly based on your OpenAPI Specification (formerly known as Swagger).
+features:
+  - shortName: Design First
+    title: Quick to Start
+    image: /images/product/design-first.png
+    description: >-
+      Get started quickly with API design-first principles. Import an existing API or
+      start from scratch with a new API, zero coding required. The Visual Editor reduces
+      time to get started on your API design by providing an intuitive UI.
+  - shortName: Visual Editor
+    title: Powerful, Visual Editor
+    image: /images/product/design-visual.png
+    description: >-
+      Design an API with speed and efficiency from scratch. Stoplight’s Visual Editor decreases the
+      learning curve so you don’t need to be an OpenAPI expert to create first-class API designs.
+      Describe endpoints, headers, bodies, multiple responses, query string parameters, shared models, and much more.
+  - shortName: Mock Servers
+    title: Integrated, Hosted Mock Servers
+    image: /images/product/design-mocking.png
+    description: >-
+      Instantly prototype and collaborate on your API design with our integrated,
+      hosted Mock Servers, powered by Prism. Mock a single API, multiple APIs,
+      or even just a few endpoints. Increase efficiency by allowing your
+      fronted teams to start implementation while the backend team develops the API.
+  - shortName: Collaborative
+    title: Collaborative
+    image: /images/product/design-collaborate.png
+    description: >-
+      Instantly share API prototypes, automated documentation, and hosted Mock Servers.
+      Invite teammates, partners, and API consumers to view and collaborate on your
+      API designs privately or publicly with Discussions. With one click export and
+      programmatic access, you can use and share your specification document where ever you want.

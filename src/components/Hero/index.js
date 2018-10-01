@@ -45,7 +45,7 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
 
 const HeroFeature = ({ name, icon, href, color }) => {
   const className = cn(
-    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md opacity-93',
+    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md',
     {
       'hover:opacity-85 cursor-pointer': href,
       'cursor-default': !href,
