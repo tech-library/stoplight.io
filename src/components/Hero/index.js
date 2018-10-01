@@ -101,7 +101,7 @@ const Hero = ({
         >
           <h1>{title}</h1>
           {subtitle && (
-            <h2 className={cn('font-default opacity-75 mt-4 text-xl mx-auto max-w-xl')}>
+            <h2 className={cn('font-default opacity-75 mt-4 text-xl mx-auto max-w-lg')}>
               {subtitle}
             </h2>
           )}
