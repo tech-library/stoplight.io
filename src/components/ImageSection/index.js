@@ -1,9 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
 
+import CallToAction from '@components/CallToAction';
 import Section from '@components/Section';
-
-import { colors, sizes, Button } from '@stoplight/ui';
 
 const ImageSection = ({ title, cta, description, image, rootClassName }) => {
   return (
@@ -15,17 +14,7 @@ const ImageSection = ({ title, cta, description, image, rootClassName }) => {
           {description}
         </div>
 
-        {cta && (
-          <a href="https://next.stoplight.io/join">
-            <Button
-              color={colors[cta.color] || colors.purple}
-              size={sizes.lg}
-              className="rounded-md shadow"
-            >
-              {cta.name}
-            </Button>
-          </a>
-        )}
+        {cta && <CallToAction {...cta} />}
       </div>
 
       <div className="flex-1 w-1/2 md:hidden relative">

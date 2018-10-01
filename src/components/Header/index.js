@@ -64,7 +64,7 @@ const HeaderDropdown = ({ width, title, items }) => {
       posY="bottom"
       renderTrigger={attributes => (
         <div
-          className="flex select-none cursor-pointer ml-3 text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2"
+          className="flex select-none cursor-default ml-3 text-white py-2 px-4 mx-2"
           {...attributes}
         >
           <div className="flex-1 mr-2">{title}</div>
@@ -94,7 +94,7 @@ const Desktop = ({ products, resources, company }) => {
     <Link
       key="2"
       to="https://next.stoplight.io/join"
-      className="sm:hidden text-lg text-white hover:opacity-85 hover:text-white py-4 pl-4 pr-2 ml-8 flex items-center"
+      className="sm:hidden text-lg text-white hover:border-lighten-500 hover:text-white py-2 px-4 ml-6 flex items-center border border-lighten-300 bg-lighten-50 rounded"
     >
       Sign In <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
     </Link>,
@@ -207,13 +207,6 @@ class Mobile extends React.Component {
                       })}
                   </div>
                 </div>
-
-                {/* <Link
-                to="https://next.stoplight.io/login"
-                className="w-full block px-6 py-3 bg-grey-lighter text-md font-bold"
-              >
-                Sign in <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
-              </Link> */}
               </div>
             </div>
           </Portal>

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouteData } from 'react-static';
 import cn from 'classnames';
 
+import CallToAction from '@components/CallToAction';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
 
@@ -64,6 +65,7 @@ class Product extends React.Component {
             <div className="flex leading-loose text-lg text-center max-w-lg mx-auto">
               {product.description}
             </div>
+            {product.cta && <CallToAction {...product.cta} className="mx-auto text-center mt-20" />}
           </div>
 
           <div key="features" className="container mx-auto py-16">

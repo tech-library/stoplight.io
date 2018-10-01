@@ -4,8 +4,7 @@ import cn from 'classnames';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { colors, sizes, Button } from '@stoplight/ui';
-
+import CallToAction from '@components/CallToAction';
 import { headerHeightClass } from '@components/Header';
 
 let Particles;
@@ -44,15 +43,20 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
   );
 };
 
-const HeroFeature = ({ name, icon, href }) => {
-  const className =
-    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md opacity-93';
+const HeroFeature = ({ name, icon, href, color }) => {
+  const className = cn(
+    'flex items-center py-3 text-black pl-4 pr-6 mx-3 shadow-md bg-white rounded-md opacity-93',
+    {
+      'hover:opacity-85 cursor-pointer': href,
+      'cursor-default': !href,
+    }
+  );
 
   const elems = [
     <FontAwesomeIcon
       key="1"
       icon={['fas', icon ? icon.name : 'check-circle']}
-      className="mr-2 text-green text-lg"
+      className={cn('mr-2 text-lg', `text-${color || 'green'}`)}
     />,
     <h4 key="2">{name}</h4>,
   ];
@@ -82,22 +86,12 @@ const Hero = ({ title, subtitle, cta, bgColor, cards = [], features = [], partic
           )}
         </div>
 
-        {cta && (
-          <a className=" pb-24 mx-auto" href="https://next.stoplight.io/join">
-            <Button
-              color={colors[cta.color] || colors.purple}
-              size={sizes.xl}
-              className="rounded-md shadow-md"
-            >
-              {cta.name}
-            </Button>
-          </a>
-        )}
+        {cta && <CallToAction className="pb-24 mx-auto" size="xl" {...cta} />}
 
         {features.length ? (
           <div className="flex mx-auto pb-24">
             {features.map((feature, i) => (
-              <HeroFeature key={i} {...feature} />
+              <HeroFeature key={i} color={bgColor} {...feature} />
             ))}
           </div>
         ) : null}
