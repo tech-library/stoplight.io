@@ -12,7 +12,7 @@ mission: >-
 quotes:
   - author: Mike Bissett
     company: BurstSMS
-    image: /images/burst-sms-logo.png
+    image: /images/customers/burst-sms.png
     quote: >-
       Great product, really does take the pain out of creating and maintaining
       swagger specs.
@@ -32,23 +32,9 @@ team:
       role: Founder and CEO
 press:
   - description: Stoplight Launches Scenarios API Testing and Debugging Tool
-    image: /images/programmableweb-logo.png
+    image: /images/press/programmableweb.png
     publication: Programmable Web
 investors:
-  - image: /images/nextgen-venture-partners-logo.png
+  - image: /images/investors/nextgen-venture-partners.png
     name: NextGen Venture Partners
 career: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-meta:
-  favicon: '/favicons/favicon.ico'
-  title: Stoplight
-  siteName: Stoplight
-  description: Stoplight, providing engineering teams with the best way to document,
-    test, and build web APIs.
-  url: https://stoplight.io
-  image: '/images/home-hero.png'
-  twitter:
-    title: Stoplight
-    description: Stoplight, providing engineering teams with the best way to document,
-      test, and build web APIs.
-    image: '/images/home-hero.png'
-    username: '@stoplight'

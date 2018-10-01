@@ -1,11 +1,9 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 import cn from 'classnames';
 
 import Hero from '@components/Hero';
 import Section from '@components/Section';
-
-import '@styles/product-page.scss';
 
 const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
   const isReversed = index % 2 !== 0;
@@ -40,7 +38,7 @@ const Feature = ({ title, description, image, linkText, linkUrl }, index) => {
 
 class Product extends React.Component {
   render() {
-    const { hero, product = {}, features = [], callToActionSection } = this.props;
+    const { hero, product = {}, features = [] } = this.props;
 
     const elems = [];
 

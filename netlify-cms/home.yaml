@@ -1,17 +1,3 @@
-meta:
-  favicon: /favicons/favicon.ico
-  title: Stoplight
-  siteName: Stoplight
-  description: Stoplight, providing engineering teams with the best way to document,
-    test, and build web APIs.
-  url: https://stoplight.io
-  image: /images/home-hero.png
-  twitter:
-    title: Stoplight
-    description: Stoplight, providing engineering teams with the best way to document,
-      test, and build web APIs.
-    image: /images/home-hero.png
-    username: '@stoplight'
 hero:
   title: Best in class API Design, Docs, Mocking, and Testing
   subtitle: Stoplight leverages your OpenAPI files to drive the entire API development process.
@@ -59,19 +45,19 @@ product:
     stakeholders. Instantly turn any OpenAPI file into a mock server. Leverage contract testing to ensure that
     your single source of truth - OpenAPI - accurately describe your APIs.
 customers:
-  - '/images/customer_logos/ea.png'
-  - '/images/customer_logos/arkea.png'
-  - '/images/customer_logos/chargify.png'
-  - '/images/customer_logos/deutsche_bank.png'
-  - '/images/customer_logos/quicken.png'
-  - '/images/customer_logos/sendgrid.png'
-  - '/images/customer_logos/shopgate.png'
-  - '/images/customer_logos/spotify.png'
-  - '/images/customer_logos/tivo.png'
-  - '/images/customer_logos/zendesk.png'
+  - '/images/customers/ea.png'
+  - '/images/customers/arkea.png'
+  - '/images/customers/chargify.png'
+  - '/images/customers/deutsche-bank.png'
+  - '/images/customers/quicken.png'
+  - '/images/customers/sendgrid.png'
+  - '/images/customers/shopgate.png'
+  - '/images/customers/spotify.png'
+  - '/images/customers/tivo.png'
+  - '/images/customers/zendesk.png'
 features:
   - title: API Designer
-    image: /images/editors/design_editor.png
+    image: /images/product/design_editor.png
     description: With the Stoplight visual designer, you don't need to be an OpenAPI Specification expert. Involve everybody in the design process and manage your specifications 10x faster.
     href: http://docs.stoplight.io/modeling/introduction
 testimonials:

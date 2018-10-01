@@ -5,7 +5,7 @@ hero:
   subtitle: >-
     Automatically generate customizable API documentation from your OpenAPI documents.
   bgColor: green
-  image: /images/product-page/docs-hero.png
+  image: /images/product/docs-hero.png
 product:
   title: OpenAPI Documentation
   cta:
@@ -17,7 +17,7 @@ product:
 features:
   - shortName: API Playground
     title: Interactive API Documentation
-    image: /images/product-page/docs-interactive.png
+    image: /images/product/docs-interactive.png
     description: >-
       Stoplight offers multiple ways for your API consumers to try out your API.
       Test Requests within your documentation allows consumers to understand how
@@ -26,7 +26,7 @@ features:
       and paste right into their own code.
   - shortName: Theming
     title: Fully Customizable
-    image: /images/product-page/docs-theme.png
+    image: /images/product/docs-theme.png
     description: >-
       Customize your documentation with Themes, Custom CSS, Pages, Domains,
       and Versioning. With fully customizable layouts, page design and
@@ -35,14 +35,14 @@ features:
       documentation for a more complete view of your platform.
   - shortName: CI/CD Integration
     title: Automated API Documentation
-    image: /images/product-page/docs-automate.png
+    image: /images/product/docs-automate.png
     description: >-
       Never have out-of-date documentation. Reference your OpenAPI Specification document
       to automatically generated API reference documentation. Use the Stoplight API to
       automate your documentation process by integrating it into your existing CI/CD workflow.
   - shortName: Integrations
     title: Simple, Flexible Deployment
-    image: /images/product-page/docs-deploy.png
+    image: /images/product/docs-deploy.png
     description: >-
       With flexible and secure deployment options, you can find a hosting
       solution that works for you. Allow Stoplight to host your documentation

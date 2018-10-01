@@ -1,7 +1,7 @@
 path: /deutsche-bank
 title: 'Deutsche Bank'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed sapien orci. Nulla congue, sem at dapibus facilisis, purus metus hendrerit diam, tincidunt finibus eros libero eget ex.'
-logo: /images/deutsche-bank-logo.png
+logo: /images/customers/deutsche-bank.png
 features:
   - 'Feature 1'
   - 'Feature 2'

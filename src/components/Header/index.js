@@ -93,10 +93,10 @@ const Desktop = ({ products, resources, company }) => {
 
     <Link
       key="2"
-      to="https://next.stoplight.io/login"
+      to="https://next.stoplight.io/join"
       className="sm:hidden text-lg text-white hover:opacity-85 hover:text-white py-4 pl-4 pr-2 ml-8 flex items-center"
     >
-      Sign in <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
+      Sign In <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
     </Link>,
   ];
 };
