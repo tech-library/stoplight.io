@@ -96,7 +96,9 @@ const Hero = ({
           'container text-white flex flex-col pt-32 relative z-5 text-center'
         )}
       >
-        <div className="pb-24 mx-auto ">
+        <div
+          className={cn('mx-auto', !cta && !features.length && !cards.length ? 'pb-48' : 'pb-24')}
+        >
           <h1>{title}</h1>
           {subtitle && (
             <h2 className={cn('font-default opacity-75 mt-4 text-xl mx-auto max-w-xl')}>
@@ -174,7 +176,7 @@ const Hero = ({
           left: '50%',
           bottom: image ? -150 : 50,
           marginLeft: -4000,
-          borderRadius: !particles && !bowl ? '0' : '50%',
+          borderRadius: !bowl ? '0' : '50%',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
           transform: skew || image ? `skew(0, ${skew || '-3deg'})` : undefined,
         }}

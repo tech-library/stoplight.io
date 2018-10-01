@@ -4,10 +4,12 @@ import fs from 'fs';
 import klaw from 'klaw';
 import yaml from 'js-yaml';
 import chokidar from 'chokidar';
+import frontmatter from 'front-matter';
 import { reloadRoutes } from 'react-static/node';
 
 import cssLoader from './webpack/cssLoader';
 import sassLoader from './webpack/sassLoader';
+import { Renderer } from './src/utils/markdown';
 
 const NETLIFY_PATH = nodePath.resolve(__dirname, 'netlify-cms');
 
@@ -22,11 +24,23 @@ const slugify = title => {
     .replace(/\/$/g, '');
 };
 
-const getFile = srcPath => {
+const dataLoaders = {
+  '.md': file => {
+    const { attributes, body } = frontmatter(file);
+
+    return {
+      ...attributes,
+      html: Renderer(body),
+    };
+  },
+  '.yaml': yaml.safeLoad,
+};
+
+const getFile = (srcPath, extension = '.yaml') => {
   let data;
 
   try {
-    data = yaml.safeLoad(fs.readFileSync(srcPath, 'utf8')) || {};
+    data = dataLoaders[extension](fs.readFileSync(srcPath, 'utf8')) || {};
   } catch (e) {
     data = {};
     console.error(e);
@@ -40,7 +54,7 @@ const getFile = srcPath => {
   };
 };
 
-const getFiles = async srcPath => {
+const getFiles = async (srcPath, extensions = ['.yaml']) => {
   const files = [];
 
   return new Promise((resolve, reject) => {
@@ -51,11 +65,13 @@ const getFiles = async srcPath => {
 
     klaw(srcPath)
       .on('data', item => {
-        if (nodePath.extname(item.path) !== '.yaml') {
+        const extension = nodePath.extname(item.path);
+
+        if (!extensions.includes(extension)) {
           return;
         }
 
-        files.push(getFile(item.path));
+        files.push(getFile(item.path, extension));
       })
       .on('error', e => {
         console.error(e);
@@ -79,13 +95,14 @@ export default {
   getSiteData: () => getFile(`${NETLIFY_PATH}/settings.yaml`),
 
   getRoutes: async () => {
-    const [home, pricing, about, products, caseStudies] = await Promise.all([
+    const [home, pricing, about, products, caseStudies, markdown] = await Promise.all([
       getFile(`${NETLIFY_PATH}/home.yaml`),
       getFile(`${NETLIFY_PATH}/pricing.yaml`),
       getFile(`${NETLIFY_PATH}/about.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
       getFiles(`${NETLIFY_PATH}/case-studies`),
+      getFiles(`${NETLIFY_PATH}/markdown`, ['.md']),
     ]);
 
     const routes = [
@@ -148,6 +165,16 @@ export default {
       });
     });
 
+    markdown.forEach(md => {
+      if (!md.path) return;
+
+      routes.push({
+        path: md.path,
+        component: 'src/containers/Markdown',
+        getData: () => md,
+      });
+    });
+
     return routes;
   },
 
@@ -203,4 +230,6 @@ export default {
 
     return config;
   },
+
+  // bundleAnalyzer: true,
 };

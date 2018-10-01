@@ -5,6 +5,7 @@ hero:
     name: Get Started Now
   bgColor: black
   particles: true
+  bowl: true
   cards:
     - title: API Designer
       subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
