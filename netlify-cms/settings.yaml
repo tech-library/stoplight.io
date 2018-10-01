@@ -1,9 +1,78 @@
 header:
   products:
-    - title: Design
-      description: Easy visual modeling
-      icon: paint-brush
-      path: /api-design
+    - title: API Designer
+      subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
+      href: /api-design
+      titleColor: blue
+      icon:
+        style: solid
+        name: paint-brush
+    - title: Technical Docs
+      subtitle: Increase customer adoption with beautiful, functional documentation.
+      href: /api-documentation
+      titleColor: green
+      icon:
+        style: solid
+        name: book
+    - title: Contract Testing
+      subtitle: Leverage OpenAPI to test, automate, and debug web APIs.
+      href: /api-testing
+      titleColor: orange
+      icon:
+        style: solid
+        name: flask
+    - title: API Mocking
+      subtitle: Parallelize development with one click mock servers, powered by OpenAPI.
+      href: /api-mocking
+      titleColor: grey-darkest
+      icon:
+        style: solid
+        name: server
+  resources:
+    - title: Docs
+      subtitle: Learn how to use Stoplight
+      href: http://docs.stoplight.io/
+      titleColor: blue
+      icon:
+        style: solid
+        name: book
+    - title: Community
+      subtitle: Join the Stoplight community
+      href: https://community.stoplight.io/
+      titleColor: green
+      icon:
+        style: solid
+        name: users
+    - title: Blog
+      subtitle: Stay up to date on Stoplight
+      href: http://blog.stoplight.io/
+      titleColor: orange
+      icon:
+        style: solid
+        name: rss
+    - title: Chat
+      subtitle: Ask us anything
+      titleColor: grey-darkest
+      onClick: 'intercom'
+      icon:
+        style: solid
+        name: comments
+  company:
+    - title: About Us
+      href: /about
+      icon:
+        style: solid
+        name: users
+    - title: Case Studies
+      href: /case-studies
+      icon:
+        style: solid
+        name: graduation-cap
+    - title: Jobs
+      href: /jobs
+      icon:
+        style: suitcase
+        name: book
 footer:
   rightLinks:
     - title: Home

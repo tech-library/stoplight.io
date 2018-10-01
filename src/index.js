@@ -18,6 +18,15 @@ initIcons({
     { name: 'server' },
     { name: 'check' },
     { name: 'check-circle' },
+    { name: 'rss' },
+    { name: 'users' },
+    { name: 'comments' },
+    { name: 'graduation-cap' },
+    { name: 'suitcase' },
+    { name: 'users' },
+    { name: 'arrow-right' },
+    { name: 'bars' },
+    { name: 'times' },
   ],
 });
 
