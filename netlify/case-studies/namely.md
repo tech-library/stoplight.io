@@ -8,8 +8,8 @@ hero:
   pageName: Customer Stories
   skew: '-3deg'
   title: >-
-    How Namely built a personal relationship with their customers across every
-    touchpoint.
+    Namely is a All-In-One HR Platform that strives to provide HR professionals
+    with the technology, data, and support they need to help employees thrive.
 info:
   employees: 250-500
   industry: HR Software
