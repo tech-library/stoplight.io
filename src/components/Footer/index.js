@@ -1,8 +1,8 @@
 import React from 'react';
-import { withSiteData, withRouteData, Link } from 'react-static';
+import { withSiteData, withRouteData } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import ActionBar from '@components/ActionBar';
+import Link from '@components/Link';
 import Intercom from '@utils/intercom';
 
 const onClickFunctions = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
-import { Link } from 'react-static';
+
+import Link from '@components/Link';
 
 export default ({ className, color = 'purple', outlined, href, text, onClick }) => {
   return (

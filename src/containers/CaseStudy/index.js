@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 
 import Hero from '@components/Hero';
 import ActionBar from '@components/ActionBar';

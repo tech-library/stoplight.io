@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-static';
 import cn from 'classnames';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import CallToAction from '@components/CallToAction';
 import { headerHeightClass } from '@components/Header';
+import Link from '@components/Link';
 
 let Particles;
 if (typeof window !== 'undefined') {

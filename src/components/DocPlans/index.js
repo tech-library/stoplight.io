@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import Link from '@components/Link';
 
 const DocPlans = ({ title, description, features, plans, buttonUrl, buttonText }) => {
   return (

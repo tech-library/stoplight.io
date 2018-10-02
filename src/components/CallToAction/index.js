@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-static';
 import cn from 'classnames';
+
+import Link from '@components/Link';
 
 const CallToAction = ({
   name,

@@ -1,8 +1,9 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 
 import Hero from '@components/Hero';
 import ActionBar from '@components/ActionBar';
+import Link from '@components/Link';
 
 import '@styles/case-study.scss';
 

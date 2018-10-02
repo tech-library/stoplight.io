@@ -1,10 +1,11 @@
 import React from 'react';
 import cn from 'classnames';
-import { withSiteData, withRouteData, Link } from 'react-static';
+import { withSiteData, withRouteData } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Popup from '@components/Popup';
 import Portal from '@components/Portal';
+import Link from '@components/Link';
 import Intercom from '@utils/intercom';
 
 export const headerHeightClass = 'h-20';
