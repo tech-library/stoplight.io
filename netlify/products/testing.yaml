@@ -22,7 +22,7 @@ cta:
   href: 'https://next.stoplight.io/'
   name: Start Testing
 features:
-  - image: /images/automation.png
+  - image: /images/testing_automation.png
     shortName: CI/CD Integration
     title: Simple Automation
     description: >-
@@ -30,7 +30,7 @@ features:
       testing your web API. Build scenarios by capturing and passing data
       between test API calls. Then integrate your test scenarios into your
       existing CI/CD pipeline with our command line tool, powered by Prism.
-  - image: /images/validation.png
+  - image: /images/testing_validation.png
     shortName: Contract Testing
     title: Contract Testing
     description: >-
@@ -40,7 +40,7 @@ features:
       data based on your OpenAPI Specification to simulate real-life API
       consumers across your local development, staging, and production
       environments.
-  - image: /images/reporting.png
+  - image: /images/testing_reporting.png
     shortName: Coverage Reporting
     title: Coverage Reporting
     description: >-
