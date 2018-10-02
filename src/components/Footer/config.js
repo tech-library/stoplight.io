@@ -35,10 +35,7 @@ export default {
               label: 'Action',
               widget: 'select',
               required: false,
-              options: [
-                { label: 'Open Intercom', value: 'intercom' },
-                { label: 'Open Email', value: 'email' },
-              ],
+              options: [{ label: 'Open Intercom', value: 'intercom' }],
             },
           ],
         },
