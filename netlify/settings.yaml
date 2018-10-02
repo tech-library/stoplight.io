@@ -117,7 +117,7 @@ footer:
           title: About Us
         - href: /case-studies
           title: Case Studies
-        - onClick: email
+        - href: mailto://support@stoplight.io
           title: Contact Us
       title: Company
   social:
