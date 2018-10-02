@@ -1,5 +1,5 @@
 import hero from '@components/Hero/config';
-import cta from '@components/CallToAction/config';
+import button from '@components/Button/config';
 import metaTags from '@components/MetaTags/config';
 import docPlans from '@components/DocPlans/config';
 
@@ -63,7 +63,7 @@ export default {
             },
           ],
         },
-        cta,
+        button,
         {
           label: 'Price Unit',
           name: 'unit',

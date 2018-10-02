@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 import Link from '@components/Link';
 
-export default ({ className, color = 'purple', outlined, href, text, onClick }) => {
+export default ({ className, color = 'purple', outlined, href, title, children, onClick }) => {
   return (
     <Link
       className={cn(
@@ -19,7 +19,7 @@ export default ({ className, color = 'purple', outlined, href, text, onClick }) 
       )}
       to={href}
     >
-      {text}
+      {children || title}
     </Link>
   );
 };

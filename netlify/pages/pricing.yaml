@@ -10,9 +10,10 @@ plans:
     price: 'Free'
     features:
       - 'Unlimited projects'
-    cta:
-      name: Sign Up
+    button:
+      title: Sign Up
       color: green
+      href: https://next.stoplight.io
   - title: 'Team'
     description: For small teams and startups.
     price: '$24'
@@ -23,9 +24,10 @@ plans:
       - 'Access and role management'
     inheritedFeatures:
       - 'Unlimited projects'
-    cta:
-      name: Sign Up
+    button:
+      title: Sign Up
       color: green
+      href: https://next.stoplight.io
   - title: 'Enterprise'
     description: For enterprises with demanding requirements.
     price: 'Contact Us'
@@ -38,8 +40,8 @@ plans:
       - 'Unlimited projects'
       - 'Collaboration and discussions'
       - 'Access and role management'
-    cta:
-      name: Contact Us
+    button:
+      title: Contact Us
       color: orange
       href: mailto:sales@stoplight.io
 docs:

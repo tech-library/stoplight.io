@@ -52,7 +52,7 @@ features:
 actionBar:
   buttons:
     - href: 'https://next.stoplight.io/'
-      text: Get Started
+      title: Get Started
   text: Ready to Start Testing?
 meta:
   description: >-

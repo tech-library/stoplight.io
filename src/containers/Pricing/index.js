@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DocPlans from '@components/DocPlans';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
-import CallToAction from '@components/CallToAction';
+import Button from '@components/Button';
 
 const PlanFeature = ({ color, name }) => {
   return (
@@ -30,11 +30,11 @@ const Plan = props => {
     inheritedFeatures = [],
     features = [],
     titleColor,
-    cta,
+    button,
   } = props;
 
   return (
-    <div className="flex-1 mx-6">
+    <div className="flex-1 mx-6 md:my-6 md:flex-auto md:w-full">
       <div className="bg-white p-10 shadow-lg rounded">
         <div className="mb-10 bg-grey-lightest px-8 py-8 -mt-10 -mx-10">
           <div className={`font-bold pb-3 uppercase text-${titleColor || 'grey-darkest'}`}>
@@ -58,7 +58,11 @@ const Plan = props => {
           ))}
         </div>
 
-        {cta && <CallToAction {...cta} shadow={false} />}
+        {button && (
+          <div className="-mx-10 -mb-10">
+            <Button {...button} />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -76,7 +80,7 @@ const PricingPage = ({ color, hero, plans = [], docs }) => {
   if (plans.length) {
     elems.push(
       <div key="plans" className="container -mt-80 z-5 relative">
-        <div className="flex -mx-6">
+        <div className="flex flex-wrap md:mx-0 -mx-6">
           {plans.map((plan, index) => (
             <Plan key={index} titleColor={color} {...plan} />
           ))}

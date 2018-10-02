@@ -97,7 +97,7 @@ actionBar:
   buttons:
     - color: accent
       href: 'https://angel.co/stoplight/jobs'
-      text: Learn More
+      title: Learn More
   enabled: true
   text: Want to join the team? We're hiring!
 meta:

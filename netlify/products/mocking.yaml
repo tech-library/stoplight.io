@@ -51,7 +51,7 @@ features:
 actionBar:
   buttons:
     - href: 'https://next.stoplight.io/'
-      text: 'Get Started '
+      title: Get Started
   enabled: true
   text: 'Want to mock your API? '
 meta:

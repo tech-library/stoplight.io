@@ -1,3 +1,5 @@
+import button from '@components/Button/config';
+
 export default {
   name: 'actionBar',
   label: 'Action Bar',
@@ -19,30 +21,7 @@ export default {
       name: 'buttons',
       label: 'Buttons',
       widget: 'list',
-      fields: [
-        {
-          name: 'outlined',
-          label: 'Outlined?',
-          widget: 'boolean',
-        },
-        {
-          name: 'text',
-          label: 'Text',
-          widget: 'string',
-        },
-        {
-          name: 'href',
-          label: 'Link',
-          widget: 'string',
-        },
-        {
-          name: 'color',
-          label: 'Color',
-          widget: 'string',
-          default: 'purple',
-          hint: 'Default: purple',
-        },
-      ],
+      fields: button.fields,
     },
   ],
 };

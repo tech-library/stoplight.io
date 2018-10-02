@@ -92,6 +92,6 @@ actionBar:
   buttons:
     - color: accent
       href: 'https://next.stoplight.io/'
-      text: Sign Up
+      title: Sign Up
   enabled: true
   text: Getting started is easy.
