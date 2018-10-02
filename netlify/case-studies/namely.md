@@ -1,25 +1,39 @@
 ---
 path: /namely
 hero:
-  pageName: Customer Stories
-  title: How Namely built a personal relationship with their customers across every touchpoint.
   bgColor: blue
   cta:
+    href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
     name: Request a demo
-    href: mailto:sales@stoplight.io?subject="I'd like to recieve a demo"
+  pageName: Customer Stories
   skew: '-3deg'
+  title: >-
+    How Namely built a personal relationship with their customers across every
+    touchpoint.
 info:
+  employees: 250-500
+  industry: HR Software
+  location: New York
+  logo: /images/namely_logo.png
   name: Namely
-  logo: /images/customers/deutsche-bank.png
-  industry: Domains
-  location: Somewhere
-  employees: 56
 quotes:
-  - quote: The UI was the best we had seen among all of the contenders thus far when it came to the user experience, design, and customization.
-    author: Katie Corcos
+  - author: Katie Corcos
+    quote: >-
+      The UI was the best we had seen among all of the contenders thus far when
+      it came to the user experience, design, and customization.
     role: Technologist
-actionBar:
-  enabled: true
+meta:
+  description: >-
+    How Namely built a personal relationship with their customers across every
+    touchpoint.
+  favicon: /images/mark_light_bg.png
+  siteName: Namely | Stoplight
+  twitter:
+    description: >-
+      How Namely built a personal relationship with their customers across every
+      touchpoint.
+    title: Namely | Stoplight
+    username: '@stoplightio'
 ---
 
 ## The Namely Narrative
