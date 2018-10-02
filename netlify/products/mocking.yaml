@@ -7,8 +7,8 @@ hero:
   title: OpenAPI Powered Mock Servers
 product:
   cta:
-    href: 'https://next.stoplight.io/'
-    name: Start Mocking
+    href: ''
+    name: ''
   description: >-
     Mocking your API with Stoplight is your API design’s perfect companion.
     Powered by Prism, the instant mock server routes incoming requests to
