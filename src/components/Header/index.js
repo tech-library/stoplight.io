@@ -125,6 +125,25 @@ class Mobile extends React.Component {
 
     const [main, ...extras] = items;
 
+    const renderLink = (item, index) => {
+      return (
+        <Link
+          key={index}
+          to={item.href}
+          className="w-1/2 py-3"
+          onClick={e => {
+            if (item.onClick && onClickFunctions[item.onClick]) {
+              e.preventDefault();
+
+              onClickFunctions[item.onClick]();
+            }
+          }}
+        >
+          {item.title}
+        </Link>
+      );
+    };
+
     return (
       <div className="hidden sm:flex flex-1 justify-end">
         <FontAwesomeIcon
@@ -153,43 +172,46 @@ class Mobile extends React.Component {
 
                   {main && (
                     <div className="text-md">
-                      <div className="pb-3 uppercase font-bold text-grey-darker">Products</div>
+                      <div className="pb-3 uppercase font-bold text-grey-darker">{main.title}</div>
                       <div className="flex flex-wrap">
-                        {main.map((product, index) => {
-                          return (
-                            <Link
-                              key={index}
-                              to={product.href}
-                              className="w-full flex items-center text-black py-4"
-                              onClick={e => {
-                                if (product.onClick && onClickFunctions[product.onClick]) {
-                                  e.preventDefault();
+                        {main.links &&
+                          main.links.map((product, index) => {
+                            return (
+                              <Link
+                                key={index}
+                                to={product.href}
+                                className="w-full flex items-center text-black py-4"
+                                onClick={e => {
+                                  if (product.onClick && onClickFunctions[product.onClick]) {
+                                    e.preventDefault();
 
-                                  onClickFunctions[product.onClick]();
-                                }
-                              }}
-                            >
-                              {product.icon && (
-                                <FontAwesomeIcon
-                                  className={cn(product.titleColor && `text-${product.titleColor}`)}
-                                  icon={product.icon}
-                                  // size="sm"
-                                />
-                              )}
+                                    onClickFunctions[product.onClick]();
+                                  }
+                                }}
+                              >
+                                {product.icon && (
+                                  <FontAwesomeIcon
+                                    className={cn(
+                                      product.titleColor && `text-${product.titleColor}`
+                                    )}
+                                    icon={product.icon}
+                                    // size="sm"
+                                  />
+                                )}
 
-                              <div className="flex-1 ml-3">
-                                <div
-                                  className={cn(
-                                    'font-bold',
-                                    product.titleColor && `text-${product.titleColor}`
-                                  )}
-                                >
-                                  {product.title}
+                                <div className="flex-1 ml-3">
+                                  <div
+                                    className={cn(
+                                      'font-bold',
+                                      product.titleColor && `text-${product.titleColor}`
+                                    )}
+                                  >
+                                    {product.title}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          );
-                        })}
+                              </Link>
+                            );
+                          })}
                       </div>
                     </div>
                   )}
@@ -197,22 +219,11 @@ class Mobile extends React.Component {
                   <div className="flex flex-wrap border-t mt-4 py-4 font-bold text-black text-md">
                     {extras &&
                       extras.map((item, index) => {
-                        return (
-                          <Link
-                            key={index}
-                            to={item.href}
-                            className="w-1/2 py-3"
-                            onClick={e => {
-                              if (item.onClick && onClickFunctions[item.onClick]) {
-                                e.preventDefault();
+                        if (item.links) {
+                          return item.links.map(renderLink);
+                        }
 
-                                onClickFunctions[item.onClick]();
-                              }
-                            }}
-                          >
-                            {item.title}
-                          </Link>
-                        );
+                        return renderLink(item, index);
                       })}
                   </div>
                 </div>
@@ -225,7 +236,7 @@ class Mobile extends React.Component {
   }
 }
 
-const Header = ({ header, ...rest }) => {
+const Header = ({ header }) => {
   if (!header) return null;
 
   return (
