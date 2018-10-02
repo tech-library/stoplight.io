@@ -89,9 +89,4 @@ testimonials:
       APIs.
     role: 'Frontend Engineer, AMARO'
 actionBar:
-  buttons:
-    - color: accent
-      href: 'https://next.stoplight.io/'
-      title: Sign Up
   enabled: true
-  text: Getting started is easy.

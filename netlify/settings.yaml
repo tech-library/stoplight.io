@@ -82,9 +82,9 @@ header:
 actionBar:
   buttons:
     - color: purple
-      href: /contact/demo
+      href: mailto://support@stoplight.io
       outlined: true
-      title: Request a demo
+      title: Request a Demo
     - color: purple
       href: 'https://next.stoplight.io'
       title: Create a Free Account
