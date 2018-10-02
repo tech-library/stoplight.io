@@ -1,5 +1,5 @@
 ---
-path: /gft-technology
+path: /gft
 hero:
   bgColor: blue
   cta:
