@@ -5,7 +5,7 @@ import metaTags from '@components/MetaTags/config';
 export default {
   label: 'Case Studies',
   label_singular: 'Case Study',
-  name: 'case-studies',
+  name: 'case-study',
   folder: 'netlify/case-studies',
   create: true,
   delete: false,

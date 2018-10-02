@@ -95,10 +95,19 @@ export default {
   getSiteData: () => getFile(`${NETLIFY_PATH}/settings.yaml`),
 
   getRoutes: async () => {
-    const [home, pricing, about, products, caseStudies, markdown] = await Promise.all([
+    const [
+      home,
+      pricing,
+      about,
+      caseStudyConfig,
+      products,
+      caseStudies,
+      markdown,
+    ] = await Promise.all([
       getFile(`${NETLIFY_PATH}/pages/home.yaml`),
       getFile(`${NETLIFY_PATH}/pages/pricing.yaml`),
       getFile(`${NETLIFY_PATH}/pages/about.yaml`),
+      getFile(`${NETLIFY_PATH}/pages/case-studies.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
       getFiles(`${NETLIFY_PATH}/case-studies`, ['.md']),
@@ -132,17 +141,21 @@ export default {
         getData: () => about,
       },
       {
-        path: '/case-studies',
+        path: caseStudyConfig.path,
         component: 'src/containers/CaseStudies',
         getData: () => ({
+          ...caseStudyConfig,
           caseStudies: caseStudies
             .map(caseStudy => {
               if (!caseStudy.path) return;
+
+              const { hero = {}, info = {} } = caseStudy;
+
               return {
-                title: caseStudy.title,
-                description: caseStudy.description,
-                logo: caseStudy.logo,
-                path: caseStudy.path,
+                title: info.name,
+                description: hero.title,
+                logo: info.logo,
+                href: caseStudyConfig.path + caseStudy.path,
               };
             })
             .filter(Boolean),

@@ -4,30 +4,6 @@ export default {
   widget: 'object',
   fields: [
     {
-      name: 'social',
-      label: 'Social Media',
-      widget: 'list',
-      fields: [
-        {
-          name: 'title',
-          label: 'Title',
-          widget: 'string',
-        },
-        {
-          name: 'icon',
-          label: 'Icon',
-          widget: 'fontawesome-brand',
-          type: 'array',
-        },
-        {
-          name: 'href',
-          label: 'Link',
-          widget: 'string',
-          required: false,
-        },
-      ],
-    },
-    {
       name: 'columns',
       label: 'Columns',
       widget: 'list',
@@ -65,6 +41,30 @@ export default {
               ],
             },
           ],
+        },
+      ],
+    },
+    {
+      name: 'social',
+      label: 'Social Media',
+      widget: 'list',
+      fields: [
+        {
+          name: 'title',
+          label: 'Title',
+          widget: 'string',
+        },
+        {
+          name: 'icon',
+          label: 'Icon',
+          widget: 'fontawesome-brand',
+          type: 'array',
+        },
+        {
+          name: 'href',
+          label: 'Link',
+          widget: 'string',
+          required: false,
         },
       ],
     },

@@ -111,8 +111,12 @@ const Hero = ({
             !cta && !features.length && !cards.length ? 'pb-48 md:pb-40' : 'pb-24 md:pb-20'
           )}
         >
-          {pageName && <div className="uppercase grey-darker">{pageName}</div>}
+          {pageName && (
+            <div className="uppercase text-white opacity-75 font-semibold mb-4">{pageName}</div>
+          )}
+
           <h1>{title}</h1>
+
           {subtitle && (
             <h2 className={cn('font-default opacity-75 mt-4 md:mt-6 text-xl mx-auto max-w-lg')}>
               {subtitle}
@@ -122,7 +126,7 @@ const Hero = ({
 
         {cta && (
           <CallToAction
-            className={cn('pb-24', {
+            className={cn('pb-24 md:pb-4', {
               'mx-auto': aligned === 'center',
               'ml-auto': aligned === 'right',
               'mr-auto': aligned === 'left',
@@ -200,7 +204,7 @@ const Hero = ({
           width: 8000,
           height: 8000,
           left: '50%',
-          bottom: image ? -150 : 50,
+          bottom: image ? -150 : cards.length ? 50 : 0,
           marginLeft: -4000,
           borderRadius: skew === 'rounded' ? '50%' : '0',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,

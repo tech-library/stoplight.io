@@ -1,0 +1,8 @@
+path: /case-studies
+color: grey-darkest
+hero:
+  title: Case Studies
+  subtitle: >-
+    Here they are.
+actionBar:
+  enabled: true

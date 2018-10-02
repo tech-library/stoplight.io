@@ -39,7 +39,7 @@
   overflow: hidden;
 }
 
-.markdown-body [type="checkbox"] {
+.markdown-body [type='checkbox'] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -72,7 +72,7 @@
 .markdown-body hr {
   height: 0.25em;
   padding: 0;
-  margin: 30px ;
+  margin: 30px;
   background-color: $light-gray;
   border: 0;
   box-sizing: content-box;
@@ -81,13 +81,13 @@
 
 .markdown-body hr::before {
   display: table;
-  content: "";
+  content: '';
 }
 
 .markdown-body hr::after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .markdown-body table {
@@ -104,8 +104,8 @@
 
 .markdown-body p {
   margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 2.6;
+  margin-bottom: 14px;
+  line-height: 2.2;
 
   &:last-child {
     margin-bottom: 0;
@@ -148,20 +148,20 @@
 
 .markdown-body::before {
   display: table;
-  content: "";
+  content: '';
 }
 
 .markdown-body::after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -206,11 +206,11 @@
   border-left: 0.25em solid $light-gray;
 }
 
-.markdown-body blockquote>:first-child {
+.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote>:last-child {
+.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -424,7 +424,7 @@
 .markdown-body pre {
   padding: 16px 18px;
   overflow: auto;
-  background-color: #F6F8FA;
+  background-color: #f6f8fa;
   border-radius: 2px;
   word-break: normal;
   word-wrap: normal;
@@ -455,14 +455,14 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  background-color: rgba(27, 31, 35, 0.05);
   border-radius: 2px;
 }
 
 .markdown-body code::before,
 .markdown-body code::after {
   letter-spacing: -0.2em;
-  content: "\00a0";
+  content: '\00a0';
 }
 
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
@@ -470,7 +470,7 @@
   border-color: #005cc5;
 }
 
-.markdown-body :checked+.radio-label {
+.markdown-body :checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #0366d6;
@@ -484,7 +484,7 @@
   text-decoration: line-through;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 

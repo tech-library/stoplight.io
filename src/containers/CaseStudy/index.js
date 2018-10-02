@@ -23,7 +23,7 @@ const InfoItem = ({ className, name, value }) => {
 
 const Info = ({ logo, name, about, industry, location, employees }) => {
   return (
-    <div className="p-8 border rounded bg-white">
+    <div className="p-8 rounded bg-white shadow">
       <div className="text-center">
         <div className="p-8">{logo ? <img src={logo} alt={name} /> : <h1>{name}</h1>}</div>
       </div>
@@ -56,7 +56,7 @@ const Quotes = ({ quotes }) => {
   if (!quotes.length) return null;
 
   return (
-    <div className="mt-8 p-8 border rounded bg-grey-lighter relative">
+    <div className="mt-8 p-8 shadow rounded bg-grey-lighter relative">
       {quotes.map((quote, index) => {
         return <Quote key={index} {...quote} />;
       })}
@@ -75,10 +75,10 @@ class CaseStudy extends React.Component {
     }
 
     elems.push(
-      <div key="content" className="container mx-auto pb-24 pt-16">
+      <div key="content" className="container mx-auto pb-24 pt-40">
         <div className="relative flex md:flex-col-reverse">
           <div
-            className="markdown-body flex-1 mr-8 md:mr-0"
+            className="markdown-body flex-1 mr-14 md:mr-0"
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
