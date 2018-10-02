@@ -1,11 +1,48 @@
 import React from 'react';
+import cn from 'classnames';
 import { withRouteData, Link } from 'react-static';
 
+import Hero from '@components/Hero';
+
 import '@styles/individual-case-study.scss';
+import '@styles/markdown.scss';
+import '@styles/highlight.scss';
+
+const CustomerInfo = ({ logo, name }) => {
+  return (
+    <div className="p-8 border rounded w-1/3 bg-white -mt-64">
+      <div className="text-center">
+        <div className="p-8">{logo ? <img src={logo} alt={name} /> : <h1>{name}</h1>}</div>
+      </div>
+    </div>
+  );
+};
 
 class CaseStudy extends React.Component {
   render() {
-    const { title, description, logo, features, solution, goal, results, next, prev } = this.props;
+    const { hero, logo, customerInfo, html } = this.props;
+
+    const elems = [];
+
+    if (hero) {
+      elems.push(<Hero key="hero" {...hero} pageName="customer story" aligned="left" />);
+    }
+
+    elems.push(
+      <div className="container mx-auto pb-24 pt-16">
+        <div className="relative flex flex-wrap">
+          <div
+            key="html"
+            className={cn('markdown-body w-2/3')}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+
+          {customerInfo && <CustomerInfo {...customerInfo} />}
+        </div>
+      </div>
+    );
+
+    return elems;
 
     return (
       <div>

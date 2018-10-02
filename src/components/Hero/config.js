@@ -15,20 +15,42 @@ export default {
       label: 'Subtitle',
       widget: 'string',
     },
+    {
+      name: 'pageName',
+      label: 'Page Name',
+      widget: 'string',
+      required: false,
+    },
+    {
+      name: 'aligned',
+      label: 'Alignment',
+      widget: 'select',
+      options: ['center', 'left', 'right'],
+      required: false,
+    },
     cta,
     {
       name: 'bgColor',
       label: 'Background Color',
       widget: 'string',
+      default: 'black',
+    },
+    {
+      name: 'skew',
+      label: 'Skew?',
+      widget: 'select',
+      options: [
+        { left: '-3deg' },
+        { 'steep left': '-7deg' },
+        { right: '3deg' },
+        { 'steep right': '7deg' },
+        { rounded: 'rounded' },
+      ],
+      required: false,
     },
     {
       name: 'particles',
       label: 'Show particles?',
-      widget: 'boolean',
-    },
-    {
-      name: 'bowl',
-      label: 'Curved border?',
       widget: 'boolean',
     },
     {

@@ -79,16 +79,17 @@ const HeroFeature = ({ name, icon, href, color }) => {
 };
 
 const Hero = ({
+  pageName,
+  aligned = 'center',
   title,
   subtitle,
   cta,
-  bgColor,
+  bgColor = 'black',
   cards = [],
   features = [],
   particles,
   image,
   skew,
-  bowl,
   containerClassName,
 }) => {
   const elems = [
@@ -97,15 +98,20 @@ const Hero = ({
       <div
         className={cn(
           containerClassName,
-          'container text-white flex flex-col pt-32 md:pt-24 relative z-5 text-center'
+          `container text-white flex flex-col pt-32 md:pt-24 relative z-5 text-${aligned}`
         )}
       >
         <div
           className={cn(
-            'mx-auto',
+            {
+              'mx-auto': aligned === 'center',
+              'ml-auto': aligned === 'right',
+              'mr-auto': aligned === 'left',
+            },
             !cta && !features.length && !cards.length ? 'pb-48 md:pb-40' : 'pb-24 md:pb-20'
           )}
         >
+          {pageName && <div className="uppercase grey-darker">{pageName}</div>}
           <h1>{title}</h1>
           {subtitle && (
             <h2 className={cn('font-default opacity-75 mt-4 md:mt-6 text-xl mx-auto max-w-lg')}>
@@ -114,7 +120,17 @@ const Hero = ({
           )}
         </div>
 
-        {cta && <CallToAction className="pb-24 mx-auto md:pb-20" size="xl" {...cta} />}
+        {cta && (
+          <CallToAction
+            className={cn('pb-24 md:pb-20', {
+              'mx-auto': aligned === 'center',
+              'ml-auto': aligned === 'right',
+              'mr-auto': aligned === 'left',
+            })}
+            size="xl"
+            {...cta}
+          />
+        )}
 
         {features.length ? (
           <div className="flex flex-wrap mx-auto pb-24 md:pb-16">
@@ -186,9 +202,9 @@ const Hero = ({
           left: '50%',
           bottom: image ? -150 : 50,
           marginLeft: -4000,
-          borderRadius: !bowl ? '0' : '50%',
+          borderRadius: skew === 'rounded' ? '50%' : '0',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
-          transform: skew || image ? `skew(0, ${skew || '-3deg'})` : undefined,
+          transform: skew && skew !== 'rounded' ? `skew(0, ${skew})` : undefined,
         }}
       />
 

@@ -54,7 +54,7 @@ const getFile = (srcPath, extension = '.yaml') => {
   };
 };
 
-const getFiles = async (srcPath, extensions = ['.yaml']) => {
+const getFiles = async (srcPath, extensions = ['.md', '.yaml']) => {
   const files = [];
 
   return new Promise((resolve, reject) => {
@@ -101,7 +101,7 @@ export default {
       getFile(`${NETLIFY_PATH}/pages/about.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
-      getFiles(`${NETLIFY_PATH}/case-studies`),
+      getFiles(`${NETLIFY_PATH}/case-studies`, ['.md']),
       getFiles(`${NETLIFY_PATH}/markdown`, ['.md']),
     ]);
 

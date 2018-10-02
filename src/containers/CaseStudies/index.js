@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static';
 
 import '@styles/case-study.scss';
 
-const CaseStudy = ({ title, description, logo, slug }, key) => {
+const CaseStudy = ({ title, description, logo, path }, key) => {
   return (
     <section key={key} className="w-full sm:p-3 md:p-4 lg:p-6 flex">
       <div className="w-full sm:p-2 md:p-8 overflow-hidden shadow-lg bg-white flex flex-wrap items-center">
@@ -17,7 +17,7 @@ const CaseStudy = ({ title, description, logo, slug }, key) => {
           <p className="mb-8 max-w-md">{description}</p>
 
           <Link
-            to={`/case-studies/${slug}`}
+            to={`/case-studies/${path}`}
             className="h-button--green h-button inline-block text-center text-white font-bold py-2 px-4 rounded"
           >
             View

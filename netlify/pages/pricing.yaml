@@ -3,6 +3,7 @@ color: blue
 hero:
   title: Simple, Flexible Pricing
   subtitle: 'All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation'
+  skew: '-7deg'
 plans:
   - title: 'Personal'
     description: 'For open source and individual use.'
