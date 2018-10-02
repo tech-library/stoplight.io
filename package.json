@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "name": "stoplight.io",
   "description": "The stoplight.io website.",
-  "license": "MIT",
   "author": "Stoplight, Inc <support@stoplight.io>",
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "https://github.com/stoplightio/stoplight.io.git"
