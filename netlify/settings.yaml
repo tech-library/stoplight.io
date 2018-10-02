@@ -90,7 +90,9 @@ actionBar:
   text: Getting started is easy. Be up and running in minutes.
 footer:
   columns:
-    - items: []
+    - links:
+      - title: Test
+        href: /foo
       title: Products
     - title: Resources
     - title: Company

@@ -38,8 +38,8 @@ export default {
           widget: 'string',
         },
         {
-          name: 'items',
-          label: 'Items',
+          name: 'links',
+          label: 'Links',
           widget: 'list',
           required: false,
           fields: [
