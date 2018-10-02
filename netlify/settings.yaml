@@ -92,7 +92,7 @@ actionBar:
   text: Getting started is easy. Be up and running in minutes.
 footer:
   columns:
-    - items:
+    - links:
         - href: /design
           title: Design
         - href: /documentation
@@ -102,7 +102,7 @@ footer:
         - href: /mocking
           title: Mocking
       title: Products
-    - items:
+    - links:
         - href: 'https://docs.stoplight.io/'
           title: Help Center
         - href: 'https://community.stoplight.io/'
