@@ -78,5 +78,5 @@ actionBar:
   text: Getting started is easy.
   buttons:
     - text: Sign Up
-      link: https://next.stoplight.io/join
+      link: https://next.stoplight.io
       color: accent

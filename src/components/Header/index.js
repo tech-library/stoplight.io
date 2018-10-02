@@ -106,7 +106,7 @@ const Desktop = ({ items }) => {
 
     <Link
       key="2"
-      to="https://next.stoplight.io/join"
+      to="https://next.stoplight.io"
       className="sm:hidden text-lg text-white hover:border-lighten-500 hover:text-white py-2 px-4 ml-6 flex items-center border border-lighten-300 bg-lighten-50 rounded font-semibold"
     >
       Sign In <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />

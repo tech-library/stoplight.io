@@ -6,7 +6,7 @@ const CallToAction = ({
   name,
   color = 'purple',
   className,
-  href = 'https://next.stoplight.io/join',
+  href = 'https://next.stoplight.io',
 }) => {
   if (!name) return null;
 

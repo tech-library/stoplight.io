@@ -85,7 +85,7 @@ actionBar:
       href: /contact/demo
       outlined: true
     - text: Create a Free Account
-      href: https://next.stoplight.io/join
+      href: https://next.stoplight.io
 footer:
   social:
     - icon:
@@ -123,12 +123,12 @@ footer:
           onClick: 'intercom'
     - title: Company
       links:
-          - title: About Us
-            href: /about
-          - title: Case Studies
-            href: /case-studies
-          - title: Terms
-            href: /terms
+        - title: About Us
+          href: /about
+        - title: Case Studies
+          href: /case-studies
+        - title: Terms
+          href: /terms
 meta:
   favicon: /favicons/favicon.ico
   title: Stoplight

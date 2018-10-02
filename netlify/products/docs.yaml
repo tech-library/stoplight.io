@@ -54,5 +54,5 @@ actionBar:
   text: Docs are awesome.
   buttons:
     - text: Get Started Now
-      link: https://next.stoplight.io/join
+      link: https://next.stoplight.io
       color: accent
