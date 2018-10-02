@@ -39,6 +39,7 @@ export const config = {
   },
   publish_mode: 'editorial_workflow',
   media_folder: 'public/images',
+  public_folder: '/images',
   display_url: 'https://stoplight.io',
   site_domain: 'cms.netlify.com',
   collections: [
