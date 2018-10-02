@@ -1,88 +1,86 @@
 path: /about
-color: blue-light
 hero:
-  title: Hi There
   subtitle: >-
-    Stoplight is the best platform for an API design first approach. Easily create
-    your design spec in any format. Then run tests, mock responses, and create
-    beautiful documentation.
+    Headquartered in Austin, Texas, our team hails from all over the United
+    States and Europe, united by their passion for APIs. From skeeball champions
+    to rock climbers, tough mudders to restaurateurs, each and every member
+    brings their own unique perspectives and experiences to the table. Thinking
+    out of the box is our purpose, the weirder the better, and challenging the
+    status quo is our culture
+  title: About Us
 team:
-  - name: Taylor Barnett
+  - image: /public/images/barnett_headshot.png
+    name: Taylor Barnett
     role: Community Engineer
-    image: /images/team/taylor-barnett.png
-  - name: Nicholas Cassera
+  - image: /public/images/cassera_headshot.png
+    name: Nicholas Cassera
     role: Software Engineer
-    image: /images/team/marc-macleod.png
-  - name: Vincenzo Chianese
+  - image: /public/images/chianese_headshot.png
+    name: Vincenzo Chianese
     role: Software Engineer
-    image: /images/team/marc-macleod.png
-  - name: Scott Faust
+  - image: /public/images/faust_headshot.png
+    name: Scott Faust
     role: Head of Growth
-    image: /images/team/scott-faust.png
-  - name: William Hilton
+  - image: /public/images/hilton_headshot.png
+    name: William Hilton
     role: Software Engineer
-    image: /images/team/marc-macleod.png
-  - name: Chris Lott
+  - image: /public/images/lott_headshot.png
+    name: Chris Lott
     role: Software Engineer
-    image: /images/team/chris-lott.png
-  - name: Marc MacLeod
+  - image: /public/images/macleod_headshot.png
+    name: Marc MacLeod
     role: Founder & CEO
     twitter: '@marbemac'
-    image: /images/team/marc-macleod.png
-  - name: Ross Mcdonald
+  - image: /public/images/mcdonald_headshot.png
+    name: Ross Mcdonald
     role: Sales Engineer
-    image: /images/team/ross-mcdonald.png
-  - name: Vazha Omanashvili
+  - image: /images/team/vazha-omanashvili.png
+    name: Vazha Omanashvili
     role: Software Engineer
-    image: /images/team/vazha-omanashvili.png
-  - name: Thomas Pytleski
+  - image: /public/images/pytleski_headshot.png
+    name: Thomas Pytleski
     role: Software Engineer
-    image: /images/team/thomas-pytleski.png
-  - name: Brian Rock
+  - image: /public/images/rock_headshot.png
+    name: Brian Rock
     role: Director of Engineering
-    image: /images/team/marc-macleod.png
-  - name: Duane Tharp
+  - image: /public/images/tharp_headshot.png
+    name: Duane Tharp
     role: Sales & Partnerships
-    image: /images/team/marc-macleod.png
-  - name: Robert Wallach
+  - image: /public/images/wallach_headshot.png
+    name: Robert Wallach
     role: Content & Support
-    image: /images/team/robert-wallach.png
-actionBar:
-  enabled: true
-  text: Want to join the team? We're hiring!
-  buttons:
-    - text: Introduce Yourself
-      link: mailto:hi@stoplight.io
-      color: accent
 quotes:
-  - author: Mike Bissett
-    company: BurstSMS
-    image: /images/customers/burst-sms.png
+  - author: Evin Callahan
+    company: Hudya
+    image: /public/images/hudya_logo.png
     quote: >-
-      Great product, really does take the pain out of creating and maintaining
-      swagger specs.
-    role: CTO
-  - author: Mike Bissett
-    company: BurstSMS
-    image: /images/customers/burst-sms.png
+      Having all the tools to model, test, and document our API in one place,
+      and integrating it nicely along the entire CI/CD workflow process has been
+      extremely helpful for us.
+    role: Cloud Architect
+  - author: Josh Flyer
+    company: AppointmentPlus
+    image: /public/images/appointment_plus_logo.png
     quote: >-
-      Great product, really does take the pain out of creating and maintaining
-      swagger specs.
-    role: CTO
-  - author: Mike Bissett
-    company: BurstSMS
-    image: /images/customers/burst-sms.png
+      We really enjoy the modeling feature, helping us define our API before
+      even writing code. Also, the way the modeling feature inherits models from
+      other Projects. Hubs integrates with OAS files, both partials or the
+      entire schema, which is rad.
+    role: Lead Developer
+  - author: Katie Corcos
+    company: Namely
+    image: /public/images/namely_logo.png
     quote: >-
-      Great product, really does take the pain out of creating and maintaining
-      swagger specs.
-    role: CTO
-  - author: Mike Bissett
-    company: BurstSMS
-    image: /images/customers/burst-sms.png
+      The UI was the best we had seen among all of the contenders thus far when
+      it came to the user experience, design and customization.
+    role: Technologist
+  - author: Carlos Lozano
+    company: GFT Group
+    image: /public/images/gft_group_logo.jpg
     quote: >-
-      Great product, really does take the pain out of creating and maintaining
-      swagger specs.
-    role: CTO
+      Stoplight is getting better all the time. Big leap from [Stoplight]
+      Classic.
+    role: Senior Enterprise Architect
 press:
   - description: Stoplight Launches Scenarios API Testing and Debugging Tool
     image: /images/press/programmableweb.png
@@ -91,9 +89,16 @@ press:
     image: /images/press/programmableweb.png
     publication: Programmable Web
 investors:
-  - name: NextGen Venture Partners
-    image: /images/investors/nextgen-venture-partners.png
-  - name: Capital Factory
-    image: /images/investors/capital-factory.png
-  - name: Techstars
-    image: /images/investors/techstars.png
+  - image: /images/investors/nextgen-venture-partners.png
+    name: NextGen Venture Partners
+  - image: /images/investors/capital-factory.png
+    name: Capital Factory
+  - image: /images/investors/techstars.png
+    name: Techstars
+actionBar:
+  buttons:
+    - color: accent
+      href: 'https://angel.co/stoplight/jobs'
+      text: Learn More
+  enabled: true
+  text: Want to join the team? We're hiring!
