@@ -44,9 +44,9 @@ const Quote = ({ quote, author, role }) => {
     <div key="index">
       <p className="leading-loose pb-6 italic text-lg">{`"${quote}"`}</p>
 
-      <div className="flex font-bold">
-        <div className="pb-1 uppercase">{author}</div>
-        <div>, {role}</div>
+      <div className="font-bold">
+        <div className="pb-1 uppercase text-green">{author}</div>
+        <div>{role}</div>
       </div>
     </div>
   );
