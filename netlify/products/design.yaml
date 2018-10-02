@@ -7,7 +7,7 @@ hero:
   title: Visual OpenAPI Designer
 product:
   cta:
-    name: Start Modeling Now
+    name: ''
   description: >-
     Start designing your API in minutes. Use the OpenAPI Specification (formerly
     known as Swagger) with Stoplight’s visual editor to design consistent and
