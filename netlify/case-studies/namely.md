@@ -5,7 +5,7 @@ hero:
   cta:
     href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
     name: Request a demo
-  pageName: Customer Story
+  pageName: Customer Stories
   skew: '-3deg'
   subtitle: >-
     Namely is an All-In-One HR Platform that strives to provide HR professionals
@@ -15,7 +15,7 @@ info:
   employees: 250-500
   industry: HR Software
   location: New York
-  logo: /images/namely_logo.png
+  logo: /images/logo_namely_transparent.png
   name: Namely
 quotes:
   - author: Katie Corcos
