@@ -104,9 +104,9 @@ const Hero = ({
         <div
           className={cn(
             {
-              'mx-auto': aligned === 'center',
-              'ml-auto': aligned === 'right',
-              'mr-auto': aligned === 'left',
+              'mx-auto': !aligned || aligned === 'center',
+              'ml-auto w-2/3 md:w-full': aligned === 'right',
+              'mr-auto w-2/3 md:w-full': aligned === 'left',
             },
             !cta && !features.length && !cards.length ? 'pb-48 md:pb-40' : 'pb-24 md:pb-20'
           )}
@@ -122,7 +122,7 @@ const Hero = ({
 
         {cta && (
           <CallToAction
-            className={cn('pb-24 md:pb-20', {
+            className={cn('pb-24', {
               'mx-auto': aligned === 'center',
               'ml-auto': aligned === 'right',
               'mr-auto': aligned === 'left',

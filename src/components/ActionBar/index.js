@@ -1,6 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
-import { Link, RouteData } from 'react-static';
+import { SiteData } from 'react-static';
+
+import Button from '@components/Button';
 
 const ActionBar = ({ enabled, text, buttons, className }) => {
   if (!enabled) return null;
@@ -17,29 +19,7 @@ const ActionBar = ({ enabled, text, buttons, className }) => {
       {buttons && (
         <div className="flex-1 flex justify-end sm:justify-center sm:items-between sm:flex-wrap">
           {buttons.map((button, index) => {
-            return (
-              <Link
-                key={index}
-                className={cn(
-                  `border-${button.color}`,
-                  `hover:border-${button.color}-dark`,
-                  `focus:border-${button.color}-dark`,
-                  `px-12 font-bold sm:w-full sm:mt-6 rounded-md py-3 flex justify-center select-none border-2 cursor-pointer`,
-                  {
-                    'ml-4 sm:ml-0': index > 0,
-                    [`bg-${button.color} hover:bg-${
-                      button.color
-                    }-dark text-white`]: !button.outlined,
-                    [`text-${button.color}-dark hover:text-${
-                      button.color
-                    }-darker`]: button.outlined,
-                  }
-                )}
-                to={button.href}
-              >
-                {button.text}
-              </Link>
-            );
+            return <Button key={index} className={index > 0 && 'ml-4 sm:ml-0'} {...button} />;
           })}
         </div>
       )}
@@ -49,9 +29,9 @@ const ActionBar = ({ enabled, text, buttons, className }) => {
 
 export default props => {
   return (
-    <RouteData
+    <SiteData
       render={({ actionBar }) => {
-        return <ActionBar {...Object.assign({}, props, actionBar)} />;
+        return <ActionBar {...Object.assign({}, actionBar, props)} />;
       }}
     />
   );

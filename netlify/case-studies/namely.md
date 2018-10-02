@@ -2,15 +2,24 @@
 path: /namely
 hero:
   pageName: Customer Stories
-  subtitle: How Namely built a personal relationship with their customers across every touchpoint.
+  title: How Namely built a personal relationship with their customers across every touchpoint.
   bgColor: blue
   cta:
     name: Request a demo
     href: mailto:sales@stoplight.io?subject="I'd like to recieve a demo"
   skew: '-3deg'
-customerInfo:
+info:
   name: Namely
   logo: /images/customers/deutsche-bank.png
+  industry: Domains
+  location: Somewhere
+  employees: 56
+quotes:
+  - quote: The UI was the best we had seen among all of the contenders thus far when it came to the user experience, design, and customization.
+    author: Katie Corcos
+    role: Technologist
+actionBar:
+  enabled: true
 ---
 ## The Namely Narrative
 

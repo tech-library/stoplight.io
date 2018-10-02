@@ -84,8 +84,10 @@ actionBar:
     - href: /contact/demo
       outlined: true
       text: Request a demo
+      color: purple
     - href: 'https://next.stoplight.io'
       text: Create a Free Account
+      color: purple
   enabled: false
   text: Getting started is easy. Be up and running in minutes.
 footer:
