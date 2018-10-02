@@ -1,82 +1,94 @@
 hero:
-  title: Best in class API Design, Docs, Mocking, and Testing
-  subtitle: Stoplight leverages your OpenAPI files to drive the entire API development process.
-  cta:
-    name: Get Started Now
   bgColor: black
-  particles: true
   bowl: true
   cards:
-    - title: API Designer
-      subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
-      href: /api-design
-      bgColor: blue
+    - bgColor: blue
+      href: /design
       icon:
-        style: solid
         name: paint-brush
-    - title: Technical Docs
-      subtitle: Increase customer adoption with beautiful, functional documentation.
-      href: /api-documentation
-      bgColor: green
-      icon:
         style: solid
+      subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster
+      title: Design
+    - bgColor: green
+      href: /documentation
+      icon:
         name: book
-    - title: Contract Testing
-      subtitle: Leverage OpenAPI to test, automate, and debug web APIs.
-      href: /api-testing
-      bgColor: orange
-      icon:
         style: solid
+      subtitle: 'Increase customer adoption with beautiful, functional documentation'
+      title: Documentation
+    - bgColor: orange
+      href: /testing
+      icon:
         name: flask
-    - title: API Mocking
-      subtitle: Parallelize development with one click mock servers, powered by OpenAPI.
-      href: /api-mocking
-      bgColor: grey-darkest
-      icon:
         style: solid
+      subtitle: 'Leverage OpenAPI to test, automate, and debug web APIs'
+      title: Testing
+    - bgColor: grey-darkest
+      href: /mocking
+      icon:
         name: server
+        style: solid
+      subtitle: 'Parallelize development with one click mock servers, powered by Prism'
+      title: Mocking
+  cta:
+    name: Get Started Now
+  particles: true
+  subtitle: >-
+    Stoplight leverages your OpenAPI files to drive the entire API development
+    process
+  title: 'Best in class API Design, Docs, Mocking, and Testing'
 product:
-  title: The Complete OpenAPI (Swagger) Toolkit
-  image: /images/home-hero.png
   cta:
     name: Get Started Now
   description: >-
     Create OpenAPI documents 10x faster with no specialized knowledge required.
-    Combine OpenAPI files with markdown to create beautiful documentation for internal and external
-    stakeholders. Instantly turn any OpenAPI file into a mock server. Leverage contract testing to ensure that
-    your single source of truth - OpenAPI - accurately describe your APIs.
+    Combine OpenAPI files with markdown to create beautiful documentation for
+    internal and external stakeholders. Instantly turn any OpenAPI file into a
+    mock server. Leverage contract testing to ensure that your single source of
+    truth - OpenAPI - accurately describe your APIs.
+  image: /images/home-hero.png
+  title: The Complete OpenAPI (Swagger) Toolkit
 customers:
-  - '/images/customers/ea.png'
-  - '/images/customers/arkea.png'
-  - '/images/customers/chargify.png'
-  - '/images/customers/deutsche-bank.png'
-  - '/images/customers/quicken.png'
-  - '/images/customers/sendgrid.png'
-  - '/images/customers/shopgate.png'
-  - '/images/customers/spotify.png'
-  - '/images/customers/tivo.png'
-  - '/images/customers/zendesk.png'
+  - /public/images/ea.png
+  - /public/images/arkea_logo.png
+  - /public/images/chargify-new-logo.png
+  - /public/images/deutsche_bank.png
+  - /images/customers/quicken.png
+  - /public/images/sendgrid_logo.png
+  - /public/images/shopgate.png
+  - /public/images/spotify.png
+  - /public/images/tivo.png
+  - /public/images/zendesk_logo.png
 testimonials:
-  - image: /images/testimonials/kin_lane.jpeg
-    quote: I feel like Stoplight has the potential to shift the landscape pretty significantly, something I haven't seen any API service provider do in a while.
-    author: Kin Lane
+  - author: Kin Lane
+    image: /images/testimonials/kin_lane.jpeg
+    quote: >-
+      I feel like Stoplight has the potential to shift the landscape pretty
+      significantly, something I haven't seen any API service provider do in a
+      while.
     role: API Evangelist
-  - image: /images/testimonials/bruce_wang.jpeg
-    quote: Stoplight allows for better public API docs and internal microservice API discovery/management.
-    author: Bruce Wang
-    role: CTO, Synq.fm
-  - image: /images/testimonials/john_vajda.jpeg
-    quote: Stoplight has been a serious game changer for JumpCloud’s API development! We love all the rich design, documentation and testing features, which has enabled us to design awesome APIs for our customers.
-    author: John Vajda
-    role: Product Manager, JumpCloud
-  - image: /images/testimonials/gil.jpeg
-    quote: Stoplight provides a centralized, testable and reliable source for our APIs.
-    author: Gil Barbara
-    role: Frontend Engineer, AMARO
+  - author: 'Carlos Lozano '
+    image: /public/images/carlos_testimonial.jpeg
+    quote: >-
+      When it comes to specification markup and documentation, the order of
+      magnitude has gone from days to hours.
+    role: 'Senior Enterprise Architect, GFT Group'
+  - author: John Vajda
+    image: /images/testimonials/john_vajda.jpeg
+    quote: >-
+      Stoplight has been a serious game changer for JumpCloud’s API development!
+      We love all the rich design, documentation and testing features, which has
+      enabled us to design awesome APIs for our customers.
+    role: 'Product Manager, JumpCloud'
+  - author: Gil Barbara
+    image: /images/testimonials/gil.jpeg
+    quote: >-
+      Stoplight provides a centralized, testable and reliable source for our
+      APIs.
+    role: 'Frontend Engineer, AMARO'
 actionBar:
+  buttons:
+    - color: accent
+      text: Sign Up
   enabled: true
   text: Getting started is easy.
-  buttons:
-    - text: Sign Up
-      link: https://next.stoplight.io
-      color: accent
