@@ -16,7 +16,7 @@ export default {
         {
           name: 'icon',
           label: 'Icon',
-          widget: 'fontawesome',
+          widget: 'fontawesome-brand',
           type: 'array',
         },
         {

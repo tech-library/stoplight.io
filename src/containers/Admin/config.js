@@ -6,23 +6,23 @@ import PricingConfig from '@containers/Pricing/config';
 import ProductConfig from '@containers/Product/config';
 import SettingsConfig from '@components/Settings/config';
 
-import Home from '@containers/Home';
-import About from '@containers/About';
-import CaseStudy from '@containers/CaseStudy';
-import Markdown from '@containers/Markdown';
-import Pricing from '@containers/Pricing';
-import Product from '@containers/Product';
-import Settings from '@components/Settings';
+// import Home from '@containers/Home';
+// import About from '@containers/About';
+// import CaseStudy from '@containers/CaseStudy';
+// import Markdown from '@containers/Markdown';
+// import Pricing from '@containers/Pricing';
+// import Product from '@containers/Product';
+// import Settings from '@components/Settings';
 
-export const templates = {
-  home: Home,
-  about: About,
-  caseStudies: CaseStudy,
-  markdown: Markdown,
-  pricing: Pricing,
-  products: Product,
-  settings: Settings,
-};
+// export const templates = {
+//   home: Home,
+//   about: About,
+//   caseStudies: CaseStudy,
+//   markdown: Markdown,
+//   pricing: Pricing,
+//   products: Product,
+//   settings: Settings,
+// };
 
 export const config = {
   backend: {

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import appStyles from '!css-loader!sass-loader!@styles/app.css';
-import app2Styles from '!css-loader!sass-loader!@styles/app.scss';
-import app3Styles from '!css-loader!sass-loader!@styles/static-page.scss';
+// import { config, templates } from './config';
+import { config } from './config';
 
-import { config, templates } from './config';
+// import appStyles from '!css-loader!@styles/app.css';
 
 class Admin extends Component {
   componentDidMount() {
     if (typeof window === 'undefined') return;
 
     window.netlify = require('netlify-cms');
+    window.CMS = window.netlify.default;
 
     window.netlifyIdentity = require('netlify-identity-widget');
     window.netlifyIdentity.on('init', user => {
@@ -25,21 +25,29 @@ class Admin extends Component {
     window.netlifyIdentity.init();
     window.netlify.init({ config });
 
-    window.CMS = window.netlify.default;
-    window.CMS.registerPreviewStyle(appStyles.toString(), { raw: true });
-    window.CMS.registerPreviewStyle(app2Styles.toString(), { raw: true });
-    window.CMS.registerPreviewStyle(app3Styles.toString(), { raw: true });
+    // window.CMS.registerPreviewStyle(appStyles.toString(), { raw: true });
 
-    const FontawesomeWidget = require('netlify-cms-widget-fontawesome');
-    window.CMS.registerWidget('fontawesome', FontawesomeWidget.Solid, FontawesomeWidget.Preview);
+    // const FontawesomeWidget = require('netlify-cms-widget-fontawesome');
+    // window.CMS.registerWidget(
+    //   'fontawesome-solid',
+    //   FontawesomeWidget.Solid,
+    //   FontawesomeWidget.Preview
+    // );
+    // window.CMS.registerWidget(
+    //   'fontawesome-brand',
+    //   FontawesomeWidget.Brands,
+    //   FontawesomeWidget.Preview
+    // );
 
-    Object.keys(templates).forEach(collectionName => {
-      window.CMS.registerPreviewTemplate(collectionName, ({ entry }) => {
-        const Template = templates[collectionName];
+    // Object.keys(templates).forEach(collectionName => {
+    //   window.CMS.registerPreviewTemplate(collectionName, ({ entry }) => {
+    //     const Template = templates[collectionName];
 
-        return <Template {...entry.getIn(['data']).toJS()} />;
-      });
-    });
+    //     console.log(entry, Template);
+
+    //     return <Template {...entry.getIn(['data']).toJS()} />;
+    //   });
+    // });
 
     // Hack to make this work
     document.getElementById('root').remove();

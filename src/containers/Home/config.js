@@ -15,18 +15,11 @@ export default {
       name: 'customers',
       label: 'Customers',
       widget: 'list',
-      fields: [
-        {
-          name: 'title',
-          label: 'Title',
-          widget: 'string',
-        },
-        {
-          name: 'image',
-          label: 'Image',
-          widget: 'image',
-        },
-      ],
+      field: {
+        name: 'image',
+        label: 'Image',
+        widget: 'image',
+      },
     },
     {
       name: 'testimonials',
