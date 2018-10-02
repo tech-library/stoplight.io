@@ -1,6 +1,5 @@
 path: /about
 hero:
-  title: Meet The Team
   subtitle: >-
     Headquartered in Austin, Texas, our team hails from all over the United
     States and Europe, united by their passion for APIs. From skeeball champions
@@ -8,6 +7,7 @@ hero:
     brings their own unique perspectives and experiences to the table. Thinking
     out of the box is our purpose, the weirder the better, and challenging the
     status quo is our culture
+  title: About Us
 team:
   - image: /images/barnett_headshot.png
     name: Taylor Barnett
@@ -93,6 +93,8 @@ investors:
     name: Bill Wood Ventures
   - image: /images/logo_socialstarts.png
     name: Social Starts
+  - image: /images/logo_nextcoast.png
+    name: Next Coast Ventures
 actionBar:
   buttons:
     - color: accent
