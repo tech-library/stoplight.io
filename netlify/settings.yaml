@@ -1,147 +1,124 @@
 header:
   items:
-    - title: Products
-      width: 400
-      links:
-        - title: API Designer
-          subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
-          href: /api-design
-          titleColor: blue
+    - links:
+        - href: /design
           icon:
             - fas
             - paint-brush
-        - title: Technical Docs
-          subtitle: Increase customer adoption with beautiful, functional documentation.
-          href: /api-documentation
-          titleColor: green
+          subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
+          title: Design
+          titleColor: blue
+        - href: '/documentation '
           icon:
             - fas
             - book
-        - title: Contract Testing
-          subtitle: Leverage OpenAPI to test, automate, and debug web APIs.
-          href: /api-testing
-          titleColor: orange
+          subtitle: 'Increase customer adoption with beautiful, functional documentation.'
+          title: Documentation
+          titleColor: green
+        - href: /testing
           icon:
             - fas
             - flask
-        - title: API Mocking
-          subtitle: Parallelize development with one click mock servers, powered by OpenAPI.
-          href: /api-mocking
-          titleColor: grey-darkest
+          subtitle: 'Leverage OpenAPI to test, automate, and debug web APIs.'
+          title: Testing
+          titleColor: orange
+        - href: /mocking
           icon:
             - fas
             - server
-    - title: Resources
-      width: 350
-      links:
-        - title: Docs
-          subtitle: Learn how to use Stoplight
-          href: http://docs.stoplight.io/
-          titleColor: blue
+          subtitle: >-
+            Parallelize development with one click mock servers, powered by
+            OpenAPI.
+          title: Mocking
+          titleColor: grey-darkest
+      title: Products
+      width: 400
+    - links:
+        - href: 'http://docs.stoplight.io/'
           icon:
             - fas
             - book
-        - title: Community
-          subtitle: Join the Stoplight community
-          href: https://community.stoplight.io/
-          titleColor: green
+          subtitle: Learn how to use Stoplight
+          title: Docs
+          titleColor: blue
+        - href: 'https://community.stoplight.io/'
           icon:
             - fas
             - users
-        - title: Blog
-          subtitle: Stay up to date on Stoplight
-          href: http://blog.stoplight.io/
-          titleColor: orange
+          subtitle: Join the Stoplight community
+          title: Community
+          titleColor: green
+        - href: 'http://blog.stoplight.io/'
           icon:
             - fas
             - rss
-        - title: Chat
-          subtitle: Ask us anything
-          titleColor: grey-darkest
-          onClick: 'intercom'
-          icon:
+          subtitle: Stay up to date on Stoplight
+          title: Blog
+          titleColor: orange
+        - icon:
             - fas
             - comments
-    - title: Company
-      width: 250
-      links:
-        - title: About Us
-          href: /about
+          onClick: intercom
+          subtitle: Ask us anything
+          title: Chat
+          titleColor: grey-darkest
+      title: Resources
+      width: 350
+    - links:
+        - href: /about
           icon:
             - fas
             - users
-        - title: Case Studies
-          href: /case-studies
+          title: About Us
+        - href: /case-studies
           icon:
             - fas
             - graduation-cap
-    - title: Pricing
-      href: /pricing
+          title: Case Studies
+      title: Company
+      width: 250
+    - href: /pricing
+      title: Pricing
 actionBar:
+  buttons:
+    - href: /contact/demo
+      outlined: true
+      text: Request a demo
+    - href: 'https://next.stoplight.io'
+      text: Create a Free Account
   enabled: false
   text: Getting started is easy. Be up and running in minutes.
-  buttons:
-    - text: Request a demo
-      href: /contact/demo
-      outlined: true
-    - text: Create a Free Account
-      href: https://next.stoplight.io
 footer:
+  columns:
+    - items: []
+      title: Products
+    - title: Resources
+    - title: Company
   social:
-    - icon:
+    - href: 'https://twitter.com/stoplightio'
+      icon:
         - fab
         - twitter
-      href: https://twitter.com/stoplightio
-    - icon:
+    - href: 'https://www.linkedin.com/company/stoplight'
+      icon:
         - fab
         - linkedin
-      href: https://www.linkedin.com/company/stoplight
-    - icon:
+    - href: 'https://www.github.com/stoplightio'
+      icon:
         - fab
         - github
-      href: https://www.github.com/stoplightio
-  columns:
-    - title: Products
-      links:
-        - title: API Designer
-          href: /api-design
-        - title: Technical Docs
-          href: /api-documentation
-        - title: Contract Testing
-          href: /api-testing
-        - title: API Mocking
-          href: /api-mocking
-    - title: Resources
-      links:
-        - title: Docs
-          href: http://docs.stoplight.io/
-        - title: Community
-          href: https://community.stoplight.io/
-        - title: Blog
-          href: http://blog.stoplight.io/
-        - title: Chat
-          onClick: 'intercom'
-    - title: Company
-      links:
-        - title: Pricing
-          href: /pricing
-        - title: About Us
-          href: /about
-        - title: Case Studies
-          href: /case-studies
-        - title: Terms
-          href: /terms
 meta:
+  description: >-
+    Stoplight, providing engineering teams with the best way to document, test,
+    and build web APIs.
   favicon: /favicons/favicon.ico
-  title: Stoplight
-  siteName: Stoplight
-  description: Stoplight, providing engineering teams with the best way to document,
-    test, and build web APIs.
-  url: https://stoplight.io
   image: /images/home-hero.png
+  siteName: Stoplight
   twitter:
-    title: Stoplight
-    description: Stoplight, providing engineering teams with the best way to document,
+    description: >-
+      Stoplight, providing engineering teams with the best way to document,
       test, and build web APIs.
     image: /images/home-hero.png
-    username: '@stoplight'
+    title: Stoplight
+    username: '@stoplightio'
+  url: 'https://stoplight.io'
