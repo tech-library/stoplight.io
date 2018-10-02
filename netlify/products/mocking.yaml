@@ -22,7 +22,7 @@ features:
       instant mock server, which automatically reloads when your specification
       changes. A mock API simulates the behavior of a real API allowing
       collaboration and feedback on your API design.
-  - image: /images/product/design-visual.png
+  - image: /images/mocking_virtualization.png
     shortName: Virtualization
     title: Virtualization
     description: >-
