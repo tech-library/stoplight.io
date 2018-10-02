@@ -7,35 +7,34 @@ hero:
     name: Request a demo
   pageName: Customer Story
   skew: '-3deg'
-  title: >-
-    How Hudya built a personal relationship with their customers across every
-    touchpoint.
+  subtitle: >-
+    Hudya is a digital platform that is redefining and simplifying how
+    traditional utilities and services can be purchased and managed.
+  title: Hudya
 info:
-  employees: 250-500
-  industry: HR Software
-  location: New York
+  employees: Startup
+  industry: FinTech & InsurTech
+  location: Norway
   logo: /images/hudya_logo.png
   name: Hudya
 quotes:
   - author: Evin Callahan
-    role: Cloud Architect
     quote: >-
-      We were previously using something like Swagger-UI but Stoplight allowed our developers to interact with other services from other teams and developers without too much effort. That was something that really made Stoplight special.
+      We were previously using something like Swagger-UI but Stoplight allowed
+      our developers to interact with other services from other teams and
+      developers without too much effort. That was something that really made
+      Stoplight special.
+    role: Cloud Architect
 meta:
-  description: >-
-    How Hudya built a personal relationship with their customers across every
-    touchpoint.
+  description: ''
   favicon: /images/mark_light_bg.png
   siteName: Hudya | Stoplight
   twitter:
-    description: >-
-      How Hudya built a personal relationship with their customers across every
-      touchpoint.
+    description: ''
     title: Hudya | Stoplight
     username: '@stoplightio'
 ---
-
-## Hudya’s Pain Points / Hudya’s Hazards
+## Hudya’s Hazards
 
 Hudya ideally wanted to have all of their API service built and managed in a single centralized platform. They were experiencing issues managing a large amount of specifications for their services and the corresponding documentation and they worried that merging all these files down the road would be painful and unsustainable. They also wanted to convert to a design-first philosophy and have collaborative tooling to assist them in managing multiple services assigned to separate teams and developers.
 
