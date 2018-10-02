@@ -156,7 +156,7 @@ class Mobile extends React.Component {
 
         {showMenu && (
           <Portal>
-            <div className="absolute pin z-10">
+            <div className="absolute pin z-10 flex flex-col">
               <div
                 className="relative m-4 pt-6 bg-white rounded"
                 onClick={() => this.setState({ showMenu: false })}
@@ -229,6 +229,7 @@ class Mobile extends React.Component {
                   </div>
                 </div>
               </div>
+              <div className="flex-grow" onClick={() => this.setState({ showMenu: false })} />
             </div>
           </Portal>
         )}
