@@ -3,6 +3,7 @@ export default {
   name: 'meta',
   widget: 'object',
   required: false,
+  hint: 'Defaults to the meta tags defined in Site Settings',
   fields: [
     {
       label: 'Favicon',

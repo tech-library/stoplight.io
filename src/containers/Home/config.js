@@ -8,7 +8,6 @@ export default {
   name: 'home',
   file: 'netlify/pages/home.yaml',
   fields: [
-    metaTags,
     hero,
     product,
     {
@@ -49,5 +48,6 @@ export default {
       ],
     },
     actionBar,
+    metaTags,
   ],
 };

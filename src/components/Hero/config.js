@@ -20,13 +20,16 @@ export default {
       label: 'Page Name',
       widget: 'string',
       required: false,
+      hint: 'Small, muted text above the title.',
     },
     {
       name: 'aligned',
       label: 'Alignment',
       widget: 'select',
       options: ['center', 'left', 'right'],
+      default: 'center',
       required: false,
+      hint: 'Default: center',
     },
     cta,
     {
@@ -34,17 +37,18 @@ export default {
       label: 'Background Color',
       widget: 'string',
       default: 'black',
+      hint: 'Default: black',
     },
     {
       name: 'skew',
       label: 'Skew?',
       widget: 'select',
       options: [
-        { left: '-3deg' },
-        { 'steep left': '-7deg' },
-        { right: '3deg' },
-        { 'steep right': '7deg' },
-        { rounded: 'rounded' },
+        { label: 'slant left', value: '-3deg' },
+        { label: 'steeper slant left', value: '-7deg' },
+        { label: 'slant right', value: '3deg' },
+        { label: 'steeper slant right', value: '7deg' },
+        { label: 'rounded', value: 'rounded' },
       ],
       required: false,
     },
@@ -71,11 +75,6 @@ export default {
         {
           name: 'href',
           label: 'Link',
-          widget: 'string',
-        },
-        {
-          name: 'bgColor',
-          label: 'Background Color',
           widget: 'string',
         },
         {
