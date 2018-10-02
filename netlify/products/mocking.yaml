@@ -31,7 +31,7 @@ features:
       Stoplight’s mock servers can virtualize internal and external APIs within
       your platform with dynamic responses generated from your JSON Schema,
       which can be run locally or hosted with Stoplight.
-  - image: /images/product/design-mocking.png
+  - image: /images/mocking_request_validation.png
     shortName: Request Validation
     title: Automatic Request Validation
     description: >-
