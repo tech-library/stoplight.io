@@ -30,7 +30,7 @@ export const templates = {
 export const config = {
   backend: {
     name: 'git-gateway',
-    branch: 'next',
+    branch: 'develop',
     squash_merges: true,
     commit_messages: {
       create: 'Create {{collection}} “{{slug}}”',
