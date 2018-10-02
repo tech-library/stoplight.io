@@ -1,58 +1,61 @@
-path: /api-documentation
+path: /documentation
+color: green
 hero:
-  title: Hosted API Documentation
-  subtitle: >-
-    Automatically generate customizable API documentation from your OpenAPI documents.
   bgColor: green
-  image: /images/product/docs-hero.png
+  subtitle: >-
+    Create beautiful, customizable, interactive API documentation generated from
+    your OpenAPI Specification
+  title: Hosted API Documentation
 product:
-  title: OpenAPI Documentation
   cta:
     name: Create Docs Now
   description: >-
-    Create API documentation in minutes. Combine your OpenAPI documents (formerly known as Swagger)
-    with markdown to create robust, internal and external API documentation for your organization.
-    Take advantage of one-click cloud deployment with Stoplight, or download the static HTML to host anywhere.
+    Create API documentation in minutes. Combine your OpenAPI documents
+    (formerly known as Swagger) with markdown to create robust, internal and
+    external API documentation for your organization. Take advantage of
+    one-click cloud deployment with Stoplight, or download the static HTML to
+    host anywhere.
+  title: OpenAPI Documentation
 features:
-  - shortName: API Playground
-    title: Interactive API Documentation
-    image: /images/product/docs-interactive.png
-    description: >-
+  - description: >-
       Stoplight offers multiple ways for your API consumers to try out your API.
       Test Requests within your documentation allows consumers to understand how
       your API works. Code Examples generated from dozens of languages such as
-      JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy
-      and paste right into their own code.
-  - shortName: Theming
-    title: Fully Customizable
+      JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy and
+      paste right into their own code.
+    image: /images/product/docs-interactive.png
+    shortName: API Playground
+    title: Interactive API Documentation
+  - description: >-
+      Customize your documentation with Themes, Custom CSS, Pages, Domains, and
+      Versioning. With fully customizable layouts, page design and our
+      Markdown-based Editor, you can document multiple APIs and add rich content
+      and resources alongside API reference documentation for a more complete
+      view of your platform.
     image: /images/product/docs-theme.png
-    description: >-
-      Customize your documentation with Themes, Custom CSS, Pages, Domains,
-      and Versioning. With fully customizable layouts, page design and
-      our Markdown-based Editor, you can document multiple APIs and
-      add rich content and resources alongside API reference
-      documentation for a more complete view of your platform.
-  - shortName: CI/CD Integration
-    title: Automated API Documentation
+    shortName: Theming
+    title: Fully Customizable
+  - description: >-
+      Never have out-of-date documentation. Reference your OpenAPI Specification
+      document to automatically generated API reference documentation. Use the
+      Stoplight API to automate your documentation process by integrating it
+      into your existing CI/CD workflow.
     image: /images/product/docs-automate.png
-    description: >-
-      Never have out-of-date documentation. Reference your OpenAPI Specification document
-      to automatically generated API reference documentation. Use the Stoplight API to
-      automate your documentation process by integrating it into your existing CI/CD workflow.
-  - shortName: Integrations
-    title: Simple, Flexible Deployment
-    image: /images/product/docs-deploy.png
-    description: >-
+    shortName: CI/CD Integration
+    title: Automated API Documentation
+  - description: >-
       With flexible and secure deployment options, you can find a hosting
       solution that works for you. Allow Stoplight to host your documentation
       for you, so you never have to worry about managing servers for your
       documentation ever again. Manage access control and measure analytics with
       integrations. Or download the static assets or use our on-premise
       solutions behind your firewall to host your documentation from anywhere.
+    image: /images/product/docs-deploy.png
+    shortName: Integrations
+    title: 'Simple, Flexible Deployment'
 actionBar:
+  buttons:
+    - color: accent
+      text: Get Started Now
   enabled: true
   text: Docs are awesome.
-  buttons:
-    - text: Get Started Now
-      link: https://next.stoplight.io
-      color: accent
