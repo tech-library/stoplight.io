@@ -31,6 +31,7 @@ hero:
       subtitle: 'Parallelize development with one click mock servers, powered by Prism'
       title: Mocking
   cta:
+    href: 'https://next.stoplight.io/'
     name: Get Started Now
   particles: true
   subtitle: >-
@@ -39,6 +40,7 @@ hero:
   title: 'Best in class API Design, Docs, Mocking, and Testing'
 product:
   cta:
+    href: 'https://next.stoplight.io/'
     name: Get Started Now
   description: >-
     Create OpenAPI documents 10x faster with no specialized knowledge required.
@@ -89,6 +91,7 @@ testimonials:
 actionBar:
   buttons:
     - color: accent
+      href: 'https://next.stoplight.io/'
       text: Sign Up
   enabled: true
   text: Getting started is easy.
