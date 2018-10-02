@@ -55,3 +55,24 @@ actionBar:
     - href: 'https://next.stoplight.io/'
       text: Get Started
   text: Ready to Start Testing?
+meta:
+  description: >-
+    Increase the test coverage of your web APIs so they break less for your
+    consumers. Create a full collection of tests with Stoplight Testing. Use
+    Environment and Context Variables to reference other complex test scenarios
+    to accelerate test generations and reduce duplication. Test just one API
+    call or a scenario of API calls working together in a real-life use case.
+  favicon: /public/images/mark_light_bg.png
+  image: /public/images/testing_header.png
+  siteName: Testing | Stoplight
+  twitter:
+    description: >-
+      Increase the test coverage of your web APIs so they break less for your
+      consumers. Create a full collection of tests with Stoplight Testing. Use
+      Environment and Context Variables to reference other complex test
+      scenarios to accelerate test generations and reduce duplication. Test just
+      one API call or a scenario of API calls working together in a real-life
+      use case.
+    image: /public/images/testing_header.png
+    title: Testing | Stoplight
+    username: '@stoplightio'
