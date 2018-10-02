@@ -47,8 +47,8 @@ export default {
         },
         {
           name: 'employees',
-          label: 'Company Employees',
-          widget: 'number',
+          label: 'Number of Employees',
+          widget: 'string',
         },
       ],
     },
