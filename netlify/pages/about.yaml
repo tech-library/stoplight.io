@@ -1,13 +1,52 @@
----
 path: /about
-color: purple
+color: blue-light
 hero:
   title: Hi There
-  bowl: true
   subtitle: >-
     Stoplight is the best platform for an API design first approach. Easily create
     your design spec in any format. Then run tests, mock responses, and create
     beautiful documentation.
+team:
+  - name: Taylor Barnett
+    role: Community Engineer
+    image: /images/team/taylor-barnett.png
+  - name: Nicholas Cassera
+    role: Software Engineer
+    image: /images/team/marc-macleod.png
+  - name: Vincenzo Chianese
+    role: Software Engineer
+    image: /images/team/marc-macleod.png
+  - name: Scott Faust
+    role: Head of Growth
+    image: /images/team/scott-faust.png
+  - name: William Hilton
+    role: Software Engineer
+    image: /images/team/marc-macleod.png
+  - name: Chris Lott
+    role: Software Engineer
+    image: /images/team/chris-lott.png
+  - name: Marc MacLeod
+    role: Founder & CEO
+    twitter: '@marbemac'
+    image: /images/team/marc-macleod.png
+  - name: Ross Mcdonald
+    role: Sales Engineer
+    image: /images/team/ross-mcdonald.png
+  - name: Vazha Omanashvili
+    role: Software Engineer
+    image: /images/team/vazha-omanashvili.png
+  - name: Thomas Pytleski
+    role: Software Engineer
+    image: /images/team/thomas-pytleski.png
+  - name: Brian Rock
+    role: Director of Engineering
+    image: /images/team/marc-macleod.png
+  - name: Duane Tharp
+    role: Technical Sales
+    image: /images/team/marc-macleod.png
+  - name: Robert Wallach
+    role: Content & Support
+    image: /images/team/robert-wallach.png
 quotes:
   - author: Mike Bissett
     company: BurstSMS
@@ -16,19 +55,6 @@ quotes:
       Great product, really does take the pain out of creating and maintaining
       swagger specs.
     role: CTO
-team:
-  description: >-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    dfasdf
-  members:
-    - image: /images/team/marc-macleod.png
-      name: Marc Macleod
-      role: Founder and CEO
 press:
   - description: Stoplight Launches Scenarios API Testing and Debugging Tool
     image: /images/press/programmableweb.png

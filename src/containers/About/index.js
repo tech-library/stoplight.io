@@ -24,15 +24,24 @@ const Quote = ({ image, company, quote, author, role }, key) => {
   );
 };
 
-const Member = ({ image, name, role }, key) => {
+const Member = ({ image, name, role, twitter }) => {
   return (
-    <div key={key} className="collage__employee collage__employee--1">
-      <img src={image} alt={name} />
+    <div className="text-center shadow bg-white py-8 px-4 w-64 rounded-lg">
+      <div
+        className="-mt-20 mx-auto rounded-full bg-cover shadow-sm border-grey border h-32 w-32 mb-6"
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+        alt={name}
+      />
 
-      <div className="collage__info">
-        <div className="collage__name">{name}</div>
-        <div className="collage__role">{role}</div>
-      </div>
+      <div className="font-bold uppercase text-green">{name}</div>
+      {role && <div className="pt-2">{role}</div>}
+      {twitter && (
+        <div className="pt-2">
+          <a href={`https://twitter.com/${twitter}`}>{twitter}</a>
+        </div>
+      )}
     </div>
   );
 };
@@ -57,20 +66,23 @@ const Press = ({ image, description, publication }, key) => {
 
 class About extends React.Component {
   render() {
-    const { color, hero, mission, quotes, team, press, investors, career } = this.props;
+    const { color, hero, quotes, team = [], press, investors, career } = this.props;
 
     return (
       <div>
         <Hero key="hero" bgColor={color} {...hero} containerClassName="pb-24" />
 
-        {mission && (
-          <div className="h-gap">
-            <section className="container mx-auto py-4">
-              <h1 className="text-center mb-2">Our Mission</h1>
-              <p className="max-w-lg text-lg h-text-md mx-auto text-center px-2 py-8">{mission}</p>
-            </section>
-          </div>
-        )}
+        {team.length ? (
+          <section className="bg-grey-lightest relative z-10" style={{ marginTop: -50 }}>
+            <div className="container flex flex-wrap justify-center text-center ">
+              {team.map((member, index) => (
+                <div key={index} className="mx-10 mb-48 -mt-24">
+                  <Member {...member} />
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {quotes &&
           quotes.length > 0 && (
@@ -80,23 +92,6 @@ class About extends React.Component {
               <section className="container mx-auto py-4 flex flex-wrap space-between">
                 {quotes.map(Quote)}
               </section>
-            </section>
-          )}
-
-        {team &&
-          team.members.length > 0 && (
-            <section className="meet-our-team py-4 h-gap">
-              <div className="meet-our-team__col meet-our-team__col--1 p-8">
-                <div className="collage">{team.members.map(Member)}</div>
-              </div>
-
-              <div className="meet-our-team__col meet-our-team__col--2 p-8">
-                <h1 className="mb-6">Meet Our Winning Team</h1>
-                <p className="mb-6">{team.description}</p>
-                <Link to={'/team'} className="h-bottom-border-link">
-                  Meet the Team
-                </Link>
-              </div>
             </section>
           )}
 
