@@ -9,50 +9,50 @@ hero:
     status quo is our culture
   title: About Us
 team:
-  - image: /public/images/barnett_headshot.png
+  - image: /images/barnett_headshot.png
     name: Taylor Barnett
     role: Community Engineer
-  - image: /public/images/cassera_headshot.png
+  - image: /images/cassera_headshot.png
     name: Nicholas Cassera
     role: Software Engineer
-  - image: /public/images/chianese_headshot.png
+  - image: /images/chianese_headshot.png
     name: Vincenzo Chianese
     role: Software Engineer
-  - image: /public/images/faust_headshot.png
+  - image: /images/faust_headshot.png
     name: Scott Faust
     role: Head of Growth
-  - image: /public/images/hilton_headshot.png
+  - image: /images/hilton_headshot.png
     name: William Hilton
     role: Software Engineer
-  - image: /public/images/lott_headshot.png
+  - image: /images/lott_headshot.png
     name: Chris Lott
     role: Software Engineer
-  - image: /public/images/macleod_headshot.png
+  - image: /images/macleod_headshot.png
     name: Marc MacLeod
     role: Founder & CEO
     twitter: '@marbemac'
-  - image: /public/images/mcdonald_headshot.png
+  - image: /images/mcdonald_headshot.png
     name: Ross Mcdonald
     role: Sales Engineer
   - image: /images/team/vazha-omanashvili.png
     name: Vazha Omanashvili
     role: Software Engineer
-  - image: /public/images/pytleski_headshot.png
+  - image: /images/pytleski_headshot.png
     name: Thomas Pytleski
     role: Software Engineer
-  - image: /public/images/rock_headshot.png
+  - image: /images/rock_headshot.png
     name: Brian Rock
     role: Director of Engineering
-  - image: /public/images/tharp_headshot.png
+  - image: /images/tharp_headshot.png
     name: Duane Tharp
     role: Sales & Partnerships
-  - image: /public/images/wallach_headshot.png
+  - image: /images/wallach_headshot.png
     name: Robert Wallach
     role: Content & Support
 quotes:
   - author: Evin Callahan
     company: Hudya
-    image: /public/images/hudya_logo.png
+    image: /images/hudya_logo.png
     quote: >-
       Having all the tools to model, test, and document our API in one place,
       and integrating it nicely along the entire CI/CD workflow process has been
@@ -60,7 +60,7 @@ quotes:
     role: Cloud Architect
   - author: Josh Flyer
     company: AppointmentPlus
-    image: /public/images/appointment_plus_logo.png
+    image: /images/appointment_plus_logo.png
     quote: >-
       We really enjoy the modeling feature, helping us define our API before
       even writing code. Also, the way the modeling feature inherits models from
@@ -69,29 +69,29 @@ quotes:
     role: Lead Developer
   - author: Katie Corcos
     company: Namely
-    image: /public/images/namely_logo.png
+    image: /images/namely_logo.png
     quote: >-
       The UI was the best we had seen among all of the contenders thus far when
       it came to the user experience, design and customization.
     role: Technologist
   - author: Carlos Lozano
     company: GFT Group
-    image: /public/images/gft_group_logo.jpg
+    image: /images/gft_group_logo.jpg
     quote: >-
       Stoplight is getting better all the time. Big leap from [Stoplight]
       Classic.
     role: Senior Enterprise Architect
 press: []
 investors:
-  - image: /public/images/logo_next_gen_ventures.png
+  - image: /images/logo_next_gen_ventures.png
     name: NextGen Venture Partners
-  - image: /public/images/logo_capitalfactory.png
+  - image: /images/logo_capitalfactory.png
     name: Capital Factory
-  - image: /public/images/logo_techstars.png
+  - image: /images/logo_techstars.png
     name: Techstars
-  - image: /public/images/bill-wood-logo_trans.png
+  - image: /images/bill-wood-logo_trans.png
     name: Bill Wood Ventures
-  - image: /public/images/logo_socialstarts.png
+  - image: /images/logo_socialstarts.png
     name: Social Starts
 actionBar:
   buttons:
@@ -101,7 +101,7 @@ actionBar:
   enabled: true
   text: Want to join the team? We're hiring!
 meta:
-  favicon: /public/images/mark_light_bg.png
+  favicon: /images/mark_light_bg.png
   siteName: About | Stoplight
   twitter:
     title: About | Stoplight

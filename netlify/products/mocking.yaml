@@ -19,7 +19,7 @@ features:
       have created or imported your OpenAPI Specification, you have access to an
       instant mock server, which automatically reloads when your specification
       changes. A mock API simulates the behavior of a real API allowing
-      collaboration and feedback on your API design. 
+      collaboration and feedback on your API design.
     image: /images/product/design-first.png
     shortName: Instant Mocking
     title: Instant Mock Server
@@ -28,7 +28,7 @@ features:
       work in tandem before the API is available through virtualization.
       Stoplight’s mock servers can virtualize internal and external APIs within
       your platform with dynamic responses generated from your JSON Schema,
-      which can be run locally or hosted with Stoplight. 
+      which can be run locally or hosted with Stoplight.
     image: /images/product/design-visual.png
     shortName: Virtualization
     title: Virtualization
@@ -45,7 +45,7 @@ features:
       Need a mocked response property to always be a random future date? No
       problem. Mocking can extend your OpenAPI Specification with scripts before
       or after traffic reaches your mock server. Write scripts for more complex
-      mocking behavior, custom validations, and much more. 
+      mocking behavior, custom validations, and much more.
     image: /images/product/design-collaborate.png
     shortName: Customizable
     title: Customizable
@@ -60,14 +60,14 @@ meta:
     Mocking your API with Stoplight is your API design’s perfect companion.
     Powered by Prism, the instant mock server routes incoming requests to
     example responses or dynamically generates examples on the fly based on your
-    OpenAPI Specification (formerly known as Swagger). 
-  favicon: /public/images/mark_light_bg.png
+    OpenAPI Specification (formerly known as Swagger).
+  favicon: /images/mark_light_bg.png
   siteName: Mocking | Stoplight
   twitter:
     description: >-
       Mocking your API with Stoplight is your API design’s perfect companion.
       Powered by Prism, the instant mock server routes incoming requests to
       example responses or dynamically generates examples on the fly based on
-      your OpenAPI Specification (formerly known as Swagger). 
+      your OpenAPI Specification (formerly known as Swagger).
     title: Mocking | Stoplight
     username: '@stoplightio'

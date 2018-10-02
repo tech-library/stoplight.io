@@ -61,13 +61,13 @@ meta:
   description: >-
     Build first-class APIs with a collaborative, powerful, visual editor that
     allows you to prototype and share your API within minutes
-  favicon: /public/images/mark_light_bg.png
-  image: /public/images/design_feature_3.png
+  favicon: /images/mark_light_bg.png
+  image: /images/design_feature_3.png
   siteName: Design | Stoplight
   twitter:
     description: >-
       Build first-class APIs with a collaborative, powerful, visual editor that
       allows you to prototype and share your API within minutes
-    image: /public/images/design_feature_3.png
+    image: /images/design_feature_3.png
     title: Design | Stoplight
     username: '@stoplightio'

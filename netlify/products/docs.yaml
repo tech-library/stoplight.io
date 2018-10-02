@@ -15,7 +15,7 @@ product:
     external API documentation for your organization. Take advantage of
     one-click cloud deployment with Stoplight, or download the static HTML to
     host anywhere.
-  image: /public/images/docs_header.png
+  image: /images/docs_header.png
   title: OpenAPI Documentation
 features:
   - description: >-
@@ -24,7 +24,7 @@ features:
       your API works. Code Examples generated from dozens of languages such as
       JavaScript, Python, Ruby, Java, cURL, and more allow consumers to copy and
       paste right into their own code.
-    image: /public/images/docs_feature_1.png
+    image: /images/docs_feature_1.png
     shortName: API Playground
     title: Interactive API Documentation
   - description: >-
@@ -41,7 +41,7 @@ features:
       document to automatically generated API reference documentation. Use the
       Stoplight API to automate your documentation process by integrating it
       into your existing CI/CD workflow.
-    image: /public/images/docs_feature_3.png
+    image: /images/docs_feature_3.png
     shortName: CI/CD Integration
     title: Automated API Documentation
   - description: >-
@@ -51,7 +51,7 @@ features:
       documentation ever again. Manage access control and measure analytics with
       integrations. Or download the static assets or use our on-premise
       solutions behind your firewall to host your documentation from anywhere.
-    image: /public/images/flexible_deployment.png
+    image: /images/flexible_deployment.png
     shortName: Integrations
     title: 'Simple, Flexible Deployment'
 actionBar:
@@ -68,8 +68,8 @@ meta:
     internal and external API documentation for your organization. One-click
     cloud deployment with Stoplight or download the static assets to host
     anywhere.
-  favicon: /public/images/mark_light_bg.png
-  image: /public/images/docs_header.png
+  favicon: /images/mark_light_bg.png
+  image: /images/docs_header.png
   siteName: Documentation | Stoplight
   twitter:
     description: >-
@@ -78,6 +78,6 @@ meta:
       internal and external API documentation for your organization. One-click
       cloud deployment with Stoplight or download the static assets to host
       anywhere.
-    image: /public/images/docs_header.png
+    image: /images/docs_header.png
     title: Documentation | Stoplight
     username: '@stoplightio'

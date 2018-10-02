@@ -51,16 +51,16 @@ product:
   image: /images/home-hero.png
   title: The Complete OpenAPI (Swagger) Toolkit
 customers:
-  - /public/images/ea.png
-  - /public/images/arkea_logo.png
-  - /public/images/chargify-new-logo.png
-  - /public/images/deutsche_bank.png
+  - /images/ea.png
+  - /images/arkea_logo.png
+  - /images/chargify-new-logo.png
+  - /images/deutsche_bank.png
   - /images/customers/quicken.png
-  - /public/images/sendgrid_logo.png
-  - /public/images/shopgate.png
-  - /public/images/spotify.png
-  - /public/images/tivo.png
-  - /public/images/zendesk_logo.png
+  - /images/sendgrid_logo.png
+  - /images/shopgate.png
+  - /images/spotify.png
+  - /images/tivo.png
+  - /images/zendesk_logo.png
 testimonials:
   - author: Kin Lane
     image: /images/testimonials/kin_lane.jpeg
@@ -70,7 +70,7 @@ testimonials:
       while.
     role: API Evangelist
   - author: 'Carlos Lozano '
-    image: /public/images/carlos_testimonial.jpeg
+    image: /images/carlos_testimonial.jpeg
     quote: >-
       When it comes to specification markup and documentation, the order of
       magnitude has gone from days to hours.
