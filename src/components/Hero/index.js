@@ -131,7 +131,10 @@ const Hero = ({
       </div>
 
       {particles && (
-        <div className="absolute z-1" style={{ left: -100, top: -100, right: -100, bottom: -100 }}>
+        <div
+          className="absolute z-1 sm:hidden"
+          style={{ left: -100, top: -100, right: -100, bottom: -100 }}
+        >
           {Particles && (
             <Particles
               style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
@@ -170,7 +173,7 @@ const Hero = ({
       )}
 
       <div
-        className={cn('absolute z-0 border-4 border-lighten-300 overflow-hidden', {
+        className={cn('absolute z-0 border-4 border-lighten-300 overflow-hidden sm:hidden', {
           [`bg-${bgColor}`]: bgColor,
           'background-repeat': !particles,
         })}
@@ -183,6 +186,21 @@ const Hero = ({
           borderRadius: !bowl ? '0' : '50%',
           backgroundImage: !particles ? `url(/images/patterns/diagonal-stripes.png)` : undefined,
           transform: skew || image ? `skew(0, ${skew || '-3deg'})` : undefined,
+        }}
+      />
+
+      <div
+        className={cn(
+          'absolute pin z-0 border-4 border-lighten-300 overflow-hidden sm:block hidden',
+          {
+            [`bg-${bgColor}`]: bgColor,
+            'background-repeat': true,
+          }
+        )}
+        style={{
+          width: '100vw',
+          height: '100vh',
+          backgroundImage: `url(/images/patterns/diagonal-stripes.png)`,
         }}
       />
 

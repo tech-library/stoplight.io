@@ -10,12 +10,12 @@ const ImageSection = ({ title, cta, description, image, rootClassName }) => {
       rootClassName={cn(rootClassName, 'flex', 'md:pr-0 md:text-center')}
       paddingClassName={'pt-48 pb-40 md:pt-40 md:pb-32'}
     >
-      <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end pr-20 md:pr-0 md:text-center">
+      <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end md:items-center pr-20 md:pr-0 md:text-center">
         <h2 className={cn('max-w-sm text-secondary text-right mb-10 text-3xl', 'md:text-center')}>
           {title}
         </h2>
 
-        <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50 md:border-none">
+        <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50 md:border-none sm:px-2">
           {description}
         </div>
 
