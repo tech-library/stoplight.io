@@ -9,26 +9,32 @@ import ActionBar from '@components/ActionBar';
 
 import { slugify } from '@utils/text';
 
-const ProductFeature = ({ title, description, image, isReversed, titleColor }) => {
+const ProductFeature = ({ title, description, image, isReversed, titleColor, isLast }) => {
   return [
     <a key="anchor" name={slugify(title)} />,
     <div
       key="content"
-      className={cn('flex items-center py-12', {
+      className={cn('flex items-center py-12 md:pb-0', {
         'flex-row': !isReversed,
         'flex-row-reverse': isReversed,
       })}
     >
       <div
         className={cn('flex flex-col flex-1 w-1/2 md:w-100', {
-          'pr-24': !isReversed,
-          'pl-18': isReversed,
+          'pr-24 md:pr-0': !isReversed,
+          'pl-18 md:pl-0': isReversed,
         })}
       >
         <h2 className={cn('max-w-sm mb-10 text-3xl', `text-${titleColor || 'grey-darkest'}`)}>
           {title}
         </h2>
-        <div className="mb-12 pb-12 max-w-md leading-loose text-lg">{description}</div>
+        <div
+          className={cn('mb-12 pb-12 md:pb-0 max-w-md leading-loose text-lg', {
+            'md:mb-0': isLast,
+          })}
+        >
+          {description}
+        </div>
       </div>
 
       <div className="flex-1 w-1/2 md:hidden relative">
@@ -79,6 +85,7 @@ class Product extends React.Component {
                 titleColor={color}
                 {...feature}
                 isReversed={index % 2 !== 0}
+                isLast={index === features.length - 1}
               />
             ))}
           </div>

@@ -8,7 +8,7 @@ const ImageSection = ({ title, cta, description, image, rootClassName }) => {
   return (
     <Section
       rootClassName={cn(rootClassName, 'flex', 'md:pr-0 md:text-center')}
-      paddingClassName={'pt-48 pb-40 md:pt-40 md:pb-32'}
+      paddingClassName={'pt-48 pb-40 md:pt-40 md:pb-24'}
     >
       <div className="flex flex-col flex-1 w-1/2 md:w-100 text-right items-end md:items-center pr-20 md:pr-0 md:text-center">
         <h2 className={cn('max-w-sm text-secondary text-right mb-10 text-3xl', 'md:text-center')}>

@@ -123,6 +123,8 @@ footer:
           onClick: 'intercom'
     - title: Company
       links:
+        - title: Pricing
+          href: /pricing
         - title: About Us
           href: /about
         - title: Case Studies

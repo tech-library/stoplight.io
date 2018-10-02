@@ -46,7 +46,7 @@ const HeroCard = ({ index, title, subtitle, href, bgColor, icon }) => {
 
 const HeroFeature = ({ name, icon, href, color }) => {
   const className = cn(
-    'flex items-center py-3 text-grey-darkest pl-4 pr-6 mx-3 shadow-md bg-white rounded-md',
+    'flex items-center py-3 text-grey-darkest pl-4 pr-6 sm:m-3 mx-3 shadow-md bg-white rounded-md',
     {
       'hover:opacity-93 cursor-pointer': href,
       'cursor-default': !href,
@@ -64,15 +64,18 @@ const HeroFeature = ({ name, icon, href, color }) => {
     </h4>,
   ];
 
+  let elem;
   if (href) {
-    return (
+    elem = (
       <a href={href} className={className}>
         {elems}
       </a>
     );
+  } else {
+    elem = <div className={className}>{elems}</div>;
   }
 
-  return <div className={className}>{elems}</div>;
+  return <div className="sm:w-1/2">{elem}</div>;
 };
 
 const Hero = ({
@@ -114,7 +117,7 @@ const Hero = ({
         {cta && <CallToAction className="pb-24 mx-auto md:pb-20" size="xl" {...cta} />}
 
         {features.length ? (
-          <div className="flex mx-auto pb-24 md:pb-16">
+          <div className="flex flex-wrap mx-auto pb-24 md:pb-16">
             {features.map((feature, i) => (
               <HeroFeature key={i} color={bgColor} {...feature} />
             ))}
@@ -216,7 +219,7 @@ const Hero = ({
 
   if (image) {
     elems.push(
-      <div key="image" className="w-2/3 mx-auto relative" style={{ height: 500 }}>
+      <div key="image" className="sm:hidden w-2/3 mx-auto relative" style={{ height: 500 }}>
         <div
           className="absolute pin bg-left-top bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(${image})` }}

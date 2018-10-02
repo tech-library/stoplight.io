@@ -4,8 +4,8 @@ import cn from 'classnames';
 const Section = ({ children, rootClassName, paddingClassName, bgClassName }) => {
   return (
     <section
-      className={cn(rootClassName, 'relative sm:px-0', {
-        'py-40 md:py-32': !paddingClassName,
+      className={cn(rootClassName, 'relative md:px-0', {
+        'py-40 md:py-24': !paddingClassName,
         [paddingClassName]: paddingClassName,
         'z-1': !bgClassName,
         'z-5': bgClassName,
