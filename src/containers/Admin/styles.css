@@ -177,37 +177,6 @@
 .h-text-5xl {
   font-size: 45px; }
 
-.main {
-  height: 660px;
-  background-color: #1bbb9b;
-  margin-bottom: -150px; }
-.h-text-sm {
-  font-size: 12px; }
-
-.h-text-base {
-  font-size: 14px; }
-
-.h-text-md {
-  font-size: 18px; }
-
-.h-text-lg {
-  font-size: 20px; }
-
-.h-text-xl {
-  font-size: 24px; }
-
-.h-text-2xl {
-  font-size: 30px; }
-
-.h-text-3xl {
-  font-size: 34px; }
-
-.h-text-4xl {
-  font-size: 40px; }
-
-.h-text-5xl {
-  font-size: 45px; }
-
 .study {
   height: 600px;
   background-color: #1bbb9b;
@@ -919,6 +888,37 @@ pre.line-numbers > code {
 .line-numbers .line-highlight:before,
 .line-numbers .line-highlight:after {
   content: none; }
+.h-text-sm {
+  font-size: 12px; }
+
+.h-text-base {
+  font-size: 14px; }
+
+.h-text-md {
+  font-size: 18px; }
+
+.h-text-lg {
+  font-size: 20px; }
+
+.h-text-xl {
+  font-size: 24px; }
+
+.h-text-2xl {
+  font-size: 30px; }
+
+.h-text-3xl {
+  font-size: 34px; }
+
+.h-text-4xl {
+  font-size: 40px; }
+
+.h-text-5xl {
+  font-size: 45px; }
+
+.main {
+  height: 660px;
+  background-color: #1bbb9b;
+  margin-bottom: -150px; }
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -23184,5 +23184,3 @@ ul {
 @media (min-width: 880px) {
   #hero {
     height: 725px; } }
-
-/*# sourceMappingURL=styles.c0d574b3.css.map*/
