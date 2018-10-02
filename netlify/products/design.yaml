@@ -21,7 +21,7 @@ features:
       API or start from scratch with a new API, zero coding required. The Visual
       Editor reduces time to get started on your API design by providing an
       intuitive UI.
-    image: /images/product/design-first.png
+    image: /images/design_quick_start.png
     shortName: Design First
     title: Quick to Start
   - description: >-
@@ -30,7 +30,7 @@ features:
       expert to create first-class API designs. Describe endpoints, headers,
       bodies, multiple responses, query string parameters, shared models, and
       much more.
-    image: /images/product/design-visual.png
+    image: /images/design_visual.png
     shortName: Visual Editor
     title: 'Powerful, Visual Editor'
   - description: >-
@@ -39,7 +39,7 @@ features:
       multiple APIs, or even just a few endpoints. Increase efficiency by
       allowing your fronted teams to start implementation while the backend team
       develops the API.
-    image: /images/product/design-mocking.png
+    image: /images/mocking_request_validation.png
     shortName: Mock Servers
     title: 'Integrated, Hosted Mock Servers'
   - description: >-
@@ -48,9 +48,9 @@ features:
       collaborate on your API designs privately or publicly with Discussions.
       With one click export and programmatic access, you can use and share your
       specification document where ever you want.
-    image: /images/product/design-collaborate.png
+    image: /images/design_collaborate.png
     shortName: Collaborative
-    title: Collaborative
+    title: Collaborative Design
 actionBar:
   buttons:
     - href: 'https://next.stoplight.io/'

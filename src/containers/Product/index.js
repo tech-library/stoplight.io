@@ -39,7 +39,7 @@ const ProductFeature = ({ title, description, image, isReversed, titleColor, isL
 
       <div className="flex-1 w-1/2 md:hidden relative">
         <div
-          className="bg-left-top bg-cover bg-no-repeat h-128 w-128 rounded-full"
+          className="bg-center bg-cover bg-no-repeat h-128 w-128 rounded-full"
           style={{ backgroundImage: `url(${image})`, boxShadow: '0 0 4px rgba(0, 0, 0, 0.5)' }}
         />
       </div>

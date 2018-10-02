@@ -236,7 +236,7 @@ const Hero = ({
 
   if (image) {
     elems.push(
-      <div key="image" className="sm:hidden w-2/3 mx-auto relative" style={{ height: 500 }}>
+      <div key="image" className="sm:hidden container mx-auto relative" style={{ height: 500 }}>
         <div
           className="absolute pin bg-left-top bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(${image})` }}
