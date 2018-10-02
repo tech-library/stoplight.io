@@ -100,3 +100,9 @@ actionBar:
       text: Learn More
   enabled: true
   text: Want to join the team? We're hiring!
+meta:
+  favicon: /public/images/mark_light_bg.png
+  siteName: About | Stoplight
+  twitter:
+    title: About | Stoplight
+    username: '@stoplightio'
