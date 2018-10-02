@@ -3,17 +3,17 @@ color: blue
 hero:
   subtitle: >-
     Build first-class APIs with a collaborative, powerful, visual editor that
-    allows you to prototype and share your API within minutes.
+    allows you to prototype and share your API within minutes
   title: Visual OpenAPI Designer
 product:
   cta:
     name: Start Modeling Now
   description: >-
-    Create API documentation in minutes. Combine your OpenAPI documents
-    (formerly known as Swagger) with markdown to create robust, internal and
-    external API documentation for your organization. Take advantage of
-    one-click cloud deployment with Stoplight, or download the static HTML to
-    host anywhere.
+    Start designing your API in minutes. Use the OpenAPI Specification (formerly
+    known as Swagger) with Stoplight’s visual editor to design consistent and
+    standardized REST APIs for your organization. Without writing any code,
+    model complex APIs faster than ever while simultaneously getting feedback on
+    your prototypes with hosted mock servers.
   title: OpenAPI Designer
 features:
   - description: >-
