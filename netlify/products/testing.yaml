@@ -1,38 +1,57 @@
-path: /api-testing
+path: /testing
 color: orange
 hero:
-  title: OpenAPI Contract Testing
   subtitle: >-
-    Build reliable web APIs with robust test coverage based on your OpenAPI documents.
-  image: /images/product/testing-hero.png
-product:
+    Build reliable web APIs with fully customizable tests and robust test
+    coverage based on your API contracts. Test your endpoints, status codes, and
+    more. 
   title: OpenAPI Testing
+product:
   cta:
+    href: 'https://next.stoplight.io/'
     name: Start Testing
   description: >-
-    Mocking your API with Stoplight is your API design’s perfect companion. Powered by Prism,
-    the instant mock server routes incoming requests to example responses or dynamically
-    generates examples on the fly based on your OpenAPI Specification (formerly known as Swagger).
+    Increase the test coverage of your web APIs so they break less for your
+    consumers. Create a full collection of tests with Stoplight Testing. Use
+    Environment and Context Variables to reference other complex test scenarios
+    to accelerate test generations and reduce duplication. Test just one API
+    call or a scenario of API calls working together in a real-life use case.
+    Stoplight Testing gives you the flexibility to make your tests fit you
+    workflow by supporting command line and CI/CD pipeline integrations.
+    Contract Testing your API against your OpenAPI Specification (formerly known
+    as Swagger) or JSON Schema is possible with our visual Test Editor. 
+  image: /public/images/testing_header.png
+  title: OpenAPI Testing
 features:
-  - shortName: CI/CD Integration
+  - description: >-
+      With our Visual Test Editor, create multi-step test scenarios to automate
+      testing your web API. Build scenarios by capturing and passing data
+      between test API calls. Then integrate your test scenarios into your
+      existing CI/CD pipeline with our command line tool, powered by Prism. 
+    image: /public/images/automation.png
+    shortName: CI/CD Integration
     title: Simple Automation
-    image: /images/product/testing-integration.png
-    description: >-
-      Integrate your tests into your existing CI/CD pipeline with our
-      command line tool, powered by Prism. Alternatively, you can trigger your
-      tests with a single HTTP call.
-  - shortName: Contract Testing
+  - description: >-
+      Create test collections that ensure the API implementation meets the
+      standards and definitions described in your OpenAPI Specification or JSON
+      Schema, also known as Contract Testing. Stoplight uses realistic, dynamic
+      data based on your OpenAPI Specification to simulate real-life API
+      consumers across your local development, staging, and production
+      environments.
+    image: /public/images/validation.png
+    shortName: Contract Testing
     title: Contract Testing
-    image: /images/product/testing-validation.png
-    description: >-
-      Create test collections that ensure the API implementation meets the standards and definitions
-      described in your OpenAPI Specification or JSON Schema, also known as Contract Testing.
-      Stoplight uses realistic, dynamic data based on your OpenAPI Specification to simulate
-      real-life API consumers across your local development, staging, and production environments.
-  - shortName: Coverage Reporting
+  - description: >-
+      With integrated Contract Testing reporting capabilities, you can track
+      your progress towards 100% coverage. Stoplight verifies that the API
+      responses for different status codes match the contract of a connected
+      OpenAPI Specification; enabling collaboration over API test coverage
+      within your organization. 
+    image: /public/images/reporting.png
+    shortName: Coverage Reporting
     title: Coverage Reporting
-    image: /images/product/testing-reporting.png
-    description: >-
-      With integrated contract testing reporting capabilities, you can track your progress
-      towards 100% coverage. Stoplight verifies that the API responses for different status
-      codes match the contract of connected OpenAPI documents.
+actionBar:
+  buttons:
+    - href: 'https://next.stoplight.io/'
+      text: Get Started
+  text: Ready to Start Testing?
