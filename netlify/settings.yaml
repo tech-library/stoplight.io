@@ -119,6 +119,8 @@ footer:
           title: Case Studies
         - href: mailto://support@stoplight.io
           title: Contact Us
+        - href: https://press.stoplight.io
+          title: Press
       title: Company
   social:
     - href: 'https://twitter.com/stoplightio'
