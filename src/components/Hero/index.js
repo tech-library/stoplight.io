@@ -3,9 +3,9 @@ import cn from 'classnames';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import Link from '@components/Link';
 import CallToAction from '@components/CallToAction';
 import { headerHeightClass } from '@components/Header';
-import Link from '@components/Link';
 
 let Particles;
 if (typeof window !== 'undefined') {
@@ -67,9 +67,9 @@ const HeroFeature = ({ name, icon, href, color }) => {
   let elem;
   if (href) {
     elem = (
-      <a href={href} className={className}>
+      <Link to={href} className={className}>
         {elems}
-      </a>
+      </Link>
     );
   } else {
     elem = <div className={className}>{elems}</div>;

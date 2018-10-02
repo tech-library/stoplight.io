@@ -12,20 +12,7 @@ const Markdown = ({ color, hero, html }) => {
   const elems = [];
 
   if (hero) {
-    elems.push(
-      <Hero
-        key="hero"
-        bgColor={color}
-        {...hero}
-        features={
-          hero.features &&
-          hero.features.map(feature => ({
-            name: feature.shortName,
-            href: `#${slugify(feature.title)}`,
-          }))
-        }
-      />
-    );
+    elems.push(<Hero key="hero" {...hero} />);
   }
 
   if (html) {

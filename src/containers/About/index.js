@@ -7,6 +7,7 @@ import '@styles/about.scss';
 import ActionBar from '@components/ActionBar';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
+import Link from '@components/Link';
 
 const Quote = ({ image, company, quote, author, role }) => {
   return (
@@ -58,9 +59,9 @@ const Press = ({ image, description, publication, href }) => {
       </div>
 
       <div className="px-4">
-        <a href={href} target="_blank" className="font-semibold">
+        <Link to={href} target="_blank" className="font-semibold">
           {description}
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ const CallToAction = ({
 
   return (
     <div className={cn(className)}>
-      {href.startsWith('/') ? <Link to={href}>{cta}</Link> : <a href={href}>{cta}</a>}
+      <Link to={href}>{cta}</Link>
     </div>
   );
 };

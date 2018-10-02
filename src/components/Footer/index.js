@@ -69,13 +69,13 @@ const Footer = ({ footer, actionBar = {} }) => {
           {social &&
             social.map((account, index) => {
               return (
-                <a
+                <Link
                   key={index}
-                  href={account.href}
+                  to={account.href}
                   className="mx-4 text-grey hover:text-grey-lighter"
                 >
                   <FontAwesomeIcon icon={account.icon} size="lg" />
-                </a>
+                </Link>
               );
             })}
         </div>
