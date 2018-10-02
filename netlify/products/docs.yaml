@@ -61,3 +61,23 @@ actionBar:
       text: Get Started Now
   enabled: true
   text: 'Ready to Publish? '
+meta:
+  description: >-
+    Create API documentation in minutes. Combine OpenAPI Specifications
+    (formerly known as Swagger) with Markdown to create robust, searchable,
+    internal and external API documentation for your organization. One-click
+    cloud deployment with Stoplight or download the static assets to host
+    anywhere.
+  favicon: /public/images/mark_light_bg.png
+  image: /public/images/docs_header.png
+  siteName: Documentation | Stoplight
+  twitter:
+    description: >-
+      Create API documentation in minutes. Combine OpenAPI Specifications
+      (formerly known as Swagger) with Markdown to create robust, searchable,
+      internal and external API documentation for your organization. One-click
+      cloud deployment with Stoplight or download the static assets to host
+      anywhere.
+    image: /public/images/docs_header.png
+    title: Documentation | Stoplight
+    username: '@stoplightio'
