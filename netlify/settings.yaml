@@ -8,7 +8,7 @@ header:
           subtitle: Use our visual designer to manage OpenAPI (Swagger) 10x faster.
           title: Design
           titleColor: blue
-        - href: '/documentation '
+        - href: /documentation
           icon:
             - fas
             - book
