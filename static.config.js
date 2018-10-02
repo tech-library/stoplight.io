@@ -18,6 +18,7 @@ chokidar.watch(NETLIFY_PATH).on('all', () => reloadRoutes());
 const slugify = title => {
   return title
     .toLowerCase()
+    .trim()
     .replace(/ /g, '-')
     .replace(/[^\w-]+/g, '')
     .replace(/^\//g, '')
