@@ -20,6 +20,60 @@ export default {
     },
     hero,
     cta,
+    {
+      label: 'Company Info',
+      name: 'info',
+      widget: 'object',
+      fields: [
+        {
+          name: 'name',
+          label: 'Company Name',
+          widget: 'string',
+        },
+        {
+          name: 'logo',
+          label: 'Company Logo',
+          widget: 'image',
+        },
+        {
+          name: 'industry',
+          label: 'Company Industry',
+          widget: 'string',
+        },
+        {
+          name: 'location',
+          label: 'Company Location',
+          widget: 'string',
+        },
+        {
+          name: 'employees',
+          label: 'Company Employees',
+          widget: 'number',
+        },
+      ],
+    },
+    {
+      label: 'Quotes',
+      name: 'quotes',
+      widget: 'list',
+      fields: [
+        {
+          name: 'quote',
+          label: 'Quote',
+          widget: 'string',
+        },
+        {
+          name: 'author',
+          label: 'Author',
+          widget: 'string',
+        },
+        {
+          name: 'role',
+          label: 'Role',
+          widget: 'string',
+        },
+      ],
+    },
     metaTags,
     {
       label: 'Content',
