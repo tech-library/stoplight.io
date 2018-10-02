@@ -84,18 +84,18 @@ quotes:
     role: Senior Enterprise Architect
 press: []
 investors:
-  - image: /images/logo_next_gen_ventures.png
-    name: NextGen Venture Partners
-  - image: /images/logo_capitalfactory.png
-    name: Capital Factory
-  - image: /images/logo_techstars.png
-    name: Techstars
   - image: /images/bill-wood-logo_trans.png
     name: Bill Wood Ventures
-  - image: /images/logo_socialstarts.png
-    name: Social Starts
+  - image: /images/logo_next_gen_ventures.png
+    name: NextGen Venture Partners
   - image: /images/logo_nextcoast.png
     name: Next Coast Ventures
+  - image: /images/logo_techstars.png
+    name: Techstars
+  - image: /images/logo_capitalfactory.png
+    name: Capital Factory
+  - image: /images/logo_socialstarts.png
+    name: Social Starts
 actionBar:
   buttons:
     - color: accent

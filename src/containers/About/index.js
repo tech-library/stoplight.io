@@ -13,7 +13,7 @@ const Quote = ({ image, company, quote, author, role }) => {
   return (
     <div className="py-8 px-4 shadow bg-white rounded-lg flex flex-col">
       <div className="px-2 py-2 pb-8 flex justify-center items-start">
-        <img src={image} alt={company} />
+        <img style={{ maxHeight: 50 }} src={image} alt={company} />
       </div>
 
       <div className="px-4">
@@ -104,10 +104,10 @@ class About extends React.Component {
             <div className="container">
               <h2 className="text-center mb-20 text-3xl md:mb-14">In the Press</h2>
 
-              <div className="flex justify-center flex-wrap items-center -mb-12">
+              <div className="flex justify-center flex-wrap -mb-12">
                 {press.map((quote, key) => {
                   return (
-                    <div key={key} className="md:w-full w-1/4 px-6 mb-12">
+                    <div key={key} className="flex md:w-full w-1/4 px-6 mb-12">
                       <Press {...quote} />
                     </div>
                   );
@@ -124,10 +124,10 @@ class About extends React.Component {
                 Businesses Are Loving Stoplight
               </h2>
 
-              <div className="flex justify-center flex-wrap items-center -mb-12">
+              <div className="flex justify-center flex-wrap -mb-12">
                 {quotes.map((quote, key) => {
                   return (
-                    <div key={key} className="md:w-full w-1/3 px-6 mb-12">
+                    <div key={key} className="flex md:w-full w-1/3 px-6 mb-12">
                       <Quote {...quote} />
                     </div>
                   );
