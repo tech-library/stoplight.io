@@ -7,6 +7,8 @@ export default {
       name: 'enabled',
       label: 'Enabled?',
       widget: 'boolean',
+      default: false,
+      hint: 'Default: false',
     },
     {
       name: 'text',
@@ -38,6 +40,7 @@ export default {
           label: 'Color',
           widget: 'string',
           default: 'purple',
+          hint: 'Default: purple',
         },
       ],
     },
