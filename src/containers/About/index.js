@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import { withRouteData } from 'react-static';
 
 import '@styles/about.scss';
@@ -25,24 +26,26 @@ const Quote = ({ image, company, quote, author, role }) => {
   );
 };
 
-const Member = ({ image, name, role, twitter }) => {
+const Member = ({ image, name, role, twitter, isLast }) => {
   return (
-    <div className="text-center shadow bg-white py-10 px-4 w-64 rounded-lg">
-      <div
-        className="-mt-20 mx-auto rounded-full bg-cover shadow-sm border-grey border h-32 w-32 mb-10"
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
-        alt={name}
-      />
+    <div className={cn('mb-48 -mt-24 px-10 sm:px-0 sm:w-48', { 'sm:mb-24': isLast })}>
+      <div className="text-center shadow bg-white py-10 sm:py-4 px-4 sm:px-0 w-64 sm:w-full rounded-lg">
+        <div
+          className="-mt-20 mx-auto rounded-full bg-cover shadow-sm border-grey border h-32 w-32 mb-10"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+          alt={name}
+        />
 
-      <div className="font-bold uppercase text-green">{name}</div>
-      {role && <div className="pt-2">{role}</div>}
-      {twitter && (
-        <div className="pt-2">
-          <a href={`https://twitter.com/${twitter}`}>{twitter}</a>
-        </div>
-      )}
+        <div className="font-bold uppercase text-green">{name}</div>
+        {role && <div className="pt-2">{role}</div>}
+        {twitter && (
+          <div className="pt-2">
+            <a href={`https://twitter.com/${twitter}`}>{twitter}</a>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -81,16 +84,14 @@ class About extends React.Component {
 
         {team.length ? (
           <section className="bg-grey-lightest relative z-5" style={{ marginTop: -50 }}>
-            <div className="container flex flex-wrap justify-center text-center">
+            <div className="container flex flex-wrap justify-center md:justify-around text-center md:px-0">
               {team.map((member, index) => (
-                <div key={index} className="mx-10 mb-48 -mt-24">
-                  <Member {...member} />
-                </div>
+                <Member key={index} isLast={index === team.length - 1} {...member} />
               ))}
             </div>
 
             {actionBar && actionBar.enabled ? (
-              <div className="pb-40 -mt-10">
+              <div className="md:pb-24 pb-40 -mt-10">
                 <ActionBar className="bg-white" {...actionBar} />
               </div>
             ) : null}
@@ -102,10 +103,10 @@ class About extends React.Component {
             <div className="container">
               <h2 className="text-center mb-20 text-3xl md:mb-14">In the Press</h2>
 
-              <div className="flex justify-center flex-wrap items-center -px-4 -mb-12">
+              <div className="flex justify-center flex-wrap items-center -mb-12">
                 {press.map((quote, key) => {
                   return (
-                    <div key={key} className="w-1/4 px-6 mb-12">
+                    <div key={key} className="md:w-full w-1/4 px-6 mb-12">
                       <Press {...quote} />
                     </div>
                   );
@@ -122,10 +123,10 @@ class About extends React.Component {
                 Businesses Are Loving Stoplight
               </h2>
 
-              <div className="flex justify-center flex-wrap items-center -px-4 -mb-12">
+              <div className="flex justify-center flex-wrap items-center -mb-12">
                 {quotes.map((quote, key) => {
                   return (
-                    <div key={key} className="w-1/3 px-6 mb-12">
+                    <div key={key} className="md:w-full w-1/3 px-6 mb-12">
                       <Quote {...quote} />
                     </div>
                   );
@@ -140,7 +141,7 @@ class About extends React.Component {
             <div className="container">
               <h2 className="text-center mb-20 text-3xl md:mb-14">Our Investors</h2>
 
-              <div className="flex justify-center flex-wrap items-center -mx-10">
+              <div className="flex justify-center flex-wrap items-center">
                 {investors.map((investor, key) => {
                   return (
                     <div key={key} className="p-10 text-center">
