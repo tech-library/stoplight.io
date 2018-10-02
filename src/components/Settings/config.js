@@ -13,7 +13,18 @@ export default {
       label: 'Site Settings',
       name: 'settings',
       file: 'netlify/settings.yaml',
-      fields: [header, actionBar, footer, metaTags],
+      fields: [
+        header,
+        actionBar,
+        footer,
+        metaTags,
+        {
+          name: 'googleTagManager',
+          label: 'Google Tag Manager',
+          widget: 'string',
+          required: false,
+        },
+      ],
     },
   ],
 };
