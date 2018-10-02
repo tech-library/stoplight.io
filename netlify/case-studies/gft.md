@@ -29,13 +29,14 @@ quotes:
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
-  siteName: GFT | Stoplight
+  title: GFT | Stoplight
   twitter:
     description: ''
     title: GFT | Stoplight
     username: '@stoplightio'
 ---
-## GFT's Grievance 
+
+## GFT's Grievance
 
 GFT Technology was looking for an API Design tool that promoted and allowed for collaboration between technical and non-technical staff. The non-technical staff was struggling with having to create models with the OpenAPI Specification and the learning curve was very steep. They not only needed a tool that promoted collaboration but also increased efficiency, catered to multiple personas, and met the needs of the developers (e.g. code editor, markup, testing, etc.) and the needs of non-technical staff (e.g. visual tools, data models, documentation, etc.).
 

@@ -63,7 +63,7 @@ meta:
     allows you to prototype and share your API within minutes
   favicon: /images/mark_light_bg.png
   image: /images/design_feature_3.png
-  siteName: Design | Stoplight
+  title: Design | Stoplight
   twitter:
     description: >-
       Build first-class APIs with a collaborative, powerful, visual editor that

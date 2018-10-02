@@ -141,7 +141,7 @@ meta:
     and build web APIs.
   favicon: /favicons/favicon.ico
   image: /images/home-hero.png
-  siteName: Stoplight
+  title: Stoplight
   twitter:
     description: >-
       Stoplight, providing engineering teams with the best way to document,

@@ -217,7 +217,7 @@ export default {
           <meta property="og:title" content={meta.title} />
           <meta property="og:description" content={meta.description} />
           <meta property="og:url" content={meta.url} />
-          <meta property="og:site_name" content={meta.siteName} />
+          <meta property="og:site_name" content="stoplight.io" />
           <meta property="og:image" content={meta.image} />
 
           <meta name="twitter:card" content="summary_large_image" />

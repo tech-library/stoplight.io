@@ -24,11 +24,11 @@ quotes:
       it came to the user experience, design, and customization.
     role: Technologist
 meta:
+  title: Namely | Stoplight
   description: >-
     How Namely built a personal relationship with their customers across every
     touchpoint.
   favicon: /images/mark_light_bg.png
-  siteName: Namely | Stoplight
   twitter:
     description: >-
       How Namely built a personal relationship with their customers across every

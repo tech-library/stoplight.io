@@ -28,12 +28,13 @@ quotes:
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
-  siteName: AppointmentPlus | Stoplight
+  title: AppointmentPlus | Stoplight
   twitter:
     description: ''
     title: AppointmentPlus | Stoplight
     username: '@stoplightio'
 ---
+
 ## Appointment Plus’ Aggravation
 
 AppointmentPlus was managing multiple APIs built by different teams, at different times, with different strategies and intents. Some of their APIs were documented as PDFs, not documented at all, or were documented using a custom solution.

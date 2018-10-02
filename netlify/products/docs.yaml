@@ -69,7 +69,7 @@ meta:
     anywhere.
   favicon: /images/mark_light_bg.png
   image: /images/docs_header.png
-  siteName: Documentation | Stoplight
+  title: Documentation | Stoplight
   twitter:
     description: >-
       Create API documentation in minutes. Combine OpenAPI Specifications

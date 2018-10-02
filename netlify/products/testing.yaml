@@ -64,7 +64,7 @@ meta:
     call or a scenario of API calls working together in a real-life use case.
   favicon: /images/mark_light_bg.png
   image: /images/testing_header.png
-  siteName: Testing | Stoplight
+  title: Testing | Stoplight
   twitter:
     title: Testing | Stoplight
     description: >-

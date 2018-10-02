@@ -11,7 +11,7 @@ export default {
       widget: 'image',
     },
     {
-      name: 'siteName',
+      name: 'title',
       label: 'Site Name',
       widget: 'string',
     },

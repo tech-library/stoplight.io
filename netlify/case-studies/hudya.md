@@ -28,12 +28,13 @@ quotes:
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
-  siteName: Hudya | Stoplight
+  title: Hudya | Stoplight
   twitter:
     description: ''
     title: Hudya | Stoplight
     username: '@stoplightio'
 ---
+
 ## Hudya’s Hazards
 
 Hudya ideally wanted to have all of their API service built and managed in a single centralized platform. They were experiencing issues managing a large amount of specifications for their services and the corresponding documentation and they worried that merging all these files down the road would be painful and unsustainable. They also wanted to convert to a design-first philosophy and have collaborative tooling to assist them in managing multiple services assigned to separate teams and developers.

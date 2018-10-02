@@ -61,7 +61,7 @@ meta:
     example responses or dynamically generates examples on the fly based on your
     OpenAPI Specification (formerly known as Swagger).
   favicon: /images/mark_light_bg.png
-  siteName: Mocking | Stoplight
+  title: Mocking | Stoplight
   twitter:
     title: Mocking | Stoplight
     description: >-
