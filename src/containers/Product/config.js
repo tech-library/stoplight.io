@@ -1,7 +1,7 @@
 import hero from '@components/Hero/config';
 import actionBar from '@components/ActionBar/config';
 import metaTags from '@components/MetaTags/config';
-import product from '@components/ImageSection/config';
+import cta from '@components/CallToAction/config';
 
 export default {
   label: 'Products',
@@ -18,13 +18,23 @@ export default {
       name: 'path',
       widget: 'string',
     },
+    hero,
     {
       label: 'Color',
       name: 'color',
       widget: 'string',
     },
-    hero,
-    product,
+    {
+      label: 'Title',
+      name: 'title',
+      widget: 'string',
+    },
+    {
+      label: 'description',
+      name: 'description',
+      widget: 'string',
+    },
+    cta,
     {
       name: 'features',
       label: 'Features',

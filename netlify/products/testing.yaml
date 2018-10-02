@@ -1,27 +1,26 @@
 path: /testing
 color: orange
 hero:
+  image: /images/testing_header.png
   subtitle: >-
     Build reliable web APIs with fully customizable tests and robust test
     coverage based on your API contracts. Test your endpoints, status codes, and
     more.
   title: OpenAPI Testing
-product:
-  cta:
-    href: 'https://next.stoplight.io/'
-    name: Start Testing
-  description: >-
-    Increase the test coverage of your web APIs so they break less for your
-    consumers. Create a full collection of tests with Stoplight Testing. Use
-    Environment and Context Variables to reference other complex test scenarios
-    to accelerate test generations and reduce duplication. Test just one API
-    call or a scenario of API calls working together in a real-life use case.
-    Stoplight Testing gives you the flexibility to make your tests fit you
-    workflow by supporting command line and CI/CD pipeline integrations.
-    Contract Testing your API against your OpenAPI Specification (formerly known
-    as Swagger) or JSON Schema is possible with our visual Test Editor.
-  image: /images/testing_header.png
-  title: OpenAPI Testing
+cta:
+  href: 'https://next.stoplight.io/'
+  name: Start Testing
+description: >-
+  Increase the test coverage of your web APIs so they break less for your
+  consumers. Create a full collection of tests with Stoplight Testing. Use
+  Environment and Context Variables to reference other complex test scenarios
+  to accelerate test generations and reduce duplication. Test just one API
+  call or a scenario of API calls working together in a real-life use case.
+  Stoplight Testing gives you the flexibility to make your tests fit you
+  workflow by supporting command line and CI/CD pipeline integrations.
+  Contract Testing your API against your OpenAPI Specification (formerly known
+  as Swagger) or JSON Schema is possible with our visual Test Editor.
+title: OpenAPI Testing
 features:
   - description: >-
       With our Visual Test Editor, create multi-step test scenarios to automate

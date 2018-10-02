@@ -1,22 +1,21 @@
 path: /documentation
 color: green
 hero:
+  image: /images/docs_header.png
   bgColor: green
   subtitle: >-
     Create beautiful, customizable, interactive API documentation generated from
     your OpenAPI Specification
   title: Hosted API Documentation
-product:
-  cta:
-    name: Create Docs Now
-  description: >-
-    Create API documentation in minutes. Combine your OpenAPI documents
-    (formerly known as Swagger) with markdown to create robust, internal and
-    external API documentation for your organization. Take advantage of
-    one-click cloud deployment with Stoplight, or download the static HTML to
-    host anywhere.
-  image: /images/docs_header.png
-  title: OpenAPI Documentation
+cta:
+  name: Create Docs Now
+description: >-
+  Create API documentation in minutes. Combine your OpenAPI documents
+  (formerly known as Swagger) with markdown to create robust, internal and
+  external API documentation for your organization. Take advantage of
+  one-click cloud deployment with Stoplight, or download the static HTML to
+  host anywhere.
+title: OpenAPI Documentation
 features:
   - description: >-
       Stoplight offers multiple ways for your API consumers to try out your API.

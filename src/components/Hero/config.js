@@ -102,5 +102,10 @@ export default {
         },
       ],
     },
+    {
+      name: 'image',
+      label: 'Image',
+      widget: 'image',
+    },
   ],
 };

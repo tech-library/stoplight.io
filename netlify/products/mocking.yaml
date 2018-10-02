@@ -3,16 +3,15 @@ color: grey-darkest
 hero:
   subtitle: Build APIs and accelerate API development with instant mock servers
   title: OpenAPI Powered Mock Servers
-product:
-  cta:
-    href: ''
-    name: ''
-  description: >-
-    Mocking your API with Stoplight is your API design’s perfect companion.
-    Powered by Prism, the instant mock server routes incoming requests to
-    example responses or dynamically generates examples on the fly based on your
-    OpenAPI Specification (formerly known as Swagger).
-  title: OpenAPI Mocking
+cta:
+  href: ''
+  name: ''
+description: >-
+  Mocking your API with Stoplight is your API design’s perfect companion.
+  Powered by Prism, the instant mock server routes incoming requests to
+  example responses or dynamically generates examples on the fly based on your
+  OpenAPI Specification (formerly known as Swagger).
+title: OpenAPI Mocking
 features:
   - description: >-
       Supercharge any OpenAPI Specification with Stoplight Mocking. Once you

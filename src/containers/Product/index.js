@@ -49,7 +49,7 @@ const ProductFeature = ({ title, description, image, isReversed, titleColor, isL
 
 class Product extends React.Component {
   render() {
-    const { color, hero, product = {}, features = [], actionBar = {} } = this.props;
+    const { color, hero, title, description, cta, features = [], actionBar = {} } = this.props;
 
     const elems = [];
 
@@ -67,35 +67,33 @@ class Product extends React.Component {
       );
     }
 
-    if (product) {
-      elems.push(
-        <Section key="product" bgClassName="bg-grey-lightest">
-          <div className="container border-b pb-32">
-            <h2 className="text-center mb-12 text-3xl">{product.title}</h2>
-            <div className="flex leading-loose text-lg text-center max-w-lg mx-auto">
-              {product.description}
-            </div>
-            {product.cta && <CallToAction {...product.cta} className="mx-auto text-center mt-20" />}
+    elems.push(
+      <Section key="product" bgClassName="bg-grey-lightest">
+        <div className="container border-b pb-32">
+          <h2 className="text-center mb-12 text-3xl">{title}</h2>
+          <div className="flex leading-loose text-lg text-center max-w-lg mx-auto">
+            {description}
           </div>
+          {cta && <CallToAction {...cta} className="mx-auto text-center mt-20" />}
+        </div>
 
-          <div key="features" className="container mx-auto py-16">
-            {features.map((feature, index) => (
-              <ProductFeature
-                key={index}
-                titleColor={color}
-                {...feature}
-                isReversed={index % 2 !== 0}
-                isLast={index === features.length - 1}
-              />
-            ))}
-          </div>
+        <div key="features" className="container mx-auto py-16">
+          {features.map((feature, index) => (
+            <ProductFeature
+              key={index}
+              titleColor={color}
+              {...feature}
+              isReversed={index % 2 !== 0}
+              isLast={index === features.length - 1}
+            />
+          ))}
+        </div>
 
-          {actionBar && actionBar.enabled ? (
-            <ActionBar className="bg-white sm:mt-14 mt-20" {...actionBar} />
-          ) : null}
-        </Section>
-      );
-    }
+        {actionBar && actionBar.enabled ? (
+          <ActionBar className="bg-white sm:mt-14 mt-20" {...actionBar} />
+        ) : null}
+      </Section>
+    );
 
     return elems;
   }
