@@ -40,7 +40,7 @@ features:
       request headers, query strings, and request bodies against your OpenAPI
       Specification.
     href: ''
-  - image: /images/product/design-collaborate.png
+  - image: /images/mocking_customization.png
     shortName: Customizable
     title: Customizable
     description: >-
