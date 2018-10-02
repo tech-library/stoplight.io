@@ -8,7 +8,7 @@ import { slugify } from '@utils/text';
 import '@styles/markdown.scss';
 import '@styles/highlight.scss';
 
-const Markdown = ({ color, hero, html, features = [] }) => {
+const Markdown = ({ color, hero, html }) => {
   const elems = [];
 
   if (hero) {
@@ -17,10 +17,13 @@ const Markdown = ({ color, hero, html, features = [] }) => {
         key="hero"
         bgColor={color}
         {...hero}
-        features={features.map(feature => ({
-          name: feature.shortName,
-          href: `#${slugify(feature.title)}`,
-        }))}
+        features={
+          hero.features &&
+          hero.features.map(feature => ({
+            name: feature.shortName,
+            href: `#${slugify(feature.title)}`,
+          }))
+        }
       />
     );
   }

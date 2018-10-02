@@ -49,66 +49,66 @@ class HomePage extends React.Component {
     }
   }
 
-  renderFeatureTabs() {
-    const { features = [] } = this.props;
-    const { featureTab } = this.state;
+  // renderFeatureTabs() {
+  //   const { features = [] } = this.props;
+  //   const { featureTab } = this.state;
 
-    return (
-      <ul className="list-reset">
-        {features.map((feature, index) => {
-          const isActive = feature.title === featureTab;
+  //   return (
+  //     <ul className="list-reset">
+  //       {features.map((feature, index) => {
+  //         const isActive = feature.title === featureTab;
 
-          return (
-            <li
-              key={index}
-              className={cn('flex items-center cursor-pointer', {
-                'text-accent-dark': isActive,
-                'hover:opacity-85': !isActive,
-                'mt-20': index !== 0,
-              })}
-              onClick={() => this.setState({ featureTab: feature.title })}
-            >
-              <div
-                className={cn(
-                  'rounded-full h-14 w-14 flex items-center justify-center text-white mr-6',
-                  {
-                    'bg-grey-darkest': !isActive,
-                    'bg-accent-dark': isActive,
-                  }
-                )}
-              >
-                <FontAwesomeIcon icon={['fas', 'check']} size="lg" />
-              </div>
-              <div className="text-2xl font-bold leading-loose">{feature.title}</div>
-            </li>
-          );
-        })}
-      </ul>
-    );
-  }
+  //         return (
+  //           <li
+  //             key={index}
+  //             className={cn('flex items-center cursor-pointer', {
+  //               'text-accent-dark': isActive,
+  //               'hover:opacity-85': !isActive,
+  //               'mt-20': index !== 0,
+  //             })}
+  //             onClick={() => this.setState({ featureTab: feature.title })}
+  //           >
+  //             <div
+  //               className={cn(
+  //                 'rounded-full h-14 w-14 flex items-center justify-center text-white mr-6',
+  //                 {
+  //                   'bg-grey-darkest': !isActive,
+  //                   'bg-accent-dark': isActive,
+  //                 }
+  //               )}
+  //             >
+  //               <FontAwesomeIcon icon={['fas', 'check']} size="lg" />
+  //             </div>
+  //             <div className="text-2xl font-bold leading-loose">{feature.title}</div>
+  //           </li>
+  //         );
+  //       })}
+  //     </ul>
+  //   );
+  // }
 
-  renderFeature() {
-    const { features } = this.props;
-    const { image, href, description, title } = features.find(
-      feature => feature.title === this.state.featureTab
-    );
+  // renderFeature() {
+  //   const { features } = this.props;
+  //   const { image, href, description, title } = features.find(
+  //     feature => feature.title === this.state.featureTab
+  //   );
 
-    return (
-      <div>
-        <img className="w-full shadow-lg rounded-xl" src={image} alt="" />
-        <p className="mt-12 text-2xl">{description}</p>
+  //   return (
+  //     <div>
+  //       <img className="w-full shadow-lg rounded-xl" src={image} alt="" />
+  //       <p className="mt-12 text-2xl">{description}</p>
 
-        <p className="mt-8 text-xl text-right">
-          <Link
-            to={href}
-            className="text-grey-darkest border-b-2 border-accent-dark pb-2 font-bold text-lg hover:border-transparent hover:text-grey-dark"
-          >
-            Learn more about the {title}
-          </Link>
-        </p>
-      </div>
-    );
-  }
+  //       <p className="mt-8 text-xl text-right">
+  //         <Link
+  //           to={href}
+  //           className="text-grey-darkest border-b-2 border-accent-dark pb-2 font-bold text-lg hover:border-transparent hover:text-grey-dark"
+  //         >
+  //           Learn more about the {title}
+  //         </Link>
+  //       </p>
+  //     </div>
+  //   );
+  // }
 
   render() {
     const { color, hero, product, customers = [], testimonials = [], features = [] } = this.props;
@@ -155,20 +155,20 @@ class HomePage extends React.Component {
       );
     }
 
-    if (features.length) {
-      elems.push(
-        <Section key="features">
-          <div className="container">
-            <h2 className="text-center mb-20 text-3xl hidden">Key Features</h2>
+    // if (features.length) {
+    //   elems.push(
+    //     <Section key="features">
+    //       <div className="container">
+    //         <h2 className="text-center mb-20 text-3xl hidden">Key Features</h2>
 
-            <div className="flex">
-              <div className="flex-0 w-96 mr-12">{this.renderFeatureTabs()}</div>
-              <div className="flex-1">{this.renderFeature()}</div>
-            </div>
-          </div>
-        </Section>
-      );
-    }
+    //         <div className="flex">
+    //           <div className="flex-0 w-96 mr-12">{this.renderFeatureTabs()}</div>
+    //           <div className="flex-1">{this.renderFeature()}</div>
+    //         </div>
+    //       </div>
+    //     </Section>
+    //   );
+    // }
 
     if (testimonials.length) {
       elems.push(

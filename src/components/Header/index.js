@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { withSiteData, Link } from 'react-static';
+import { withSiteData, withRouteData, Link } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Popup from '@components/Popup';
@@ -37,7 +37,7 @@ const DropdownItem = (item, index) => {
         {item.icon && (
           <FontAwesomeIcon
             className={cn(item.titleColor && `text-${item.titleColor}`)}
-            icon={['fas', item.icon.name]}
+            icon={item.icon}
             size={item.subtitle ? '2x' : 'lg'}
           />
         )}
@@ -54,8 +54,8 @@ const DropdownItem = (item, index) => {
   );
 };
 
-const HeaderDropdown = ({ width, title, items }) => {
-  if (!items || !items.length) return null;
+const HeaderDropdown = ({ width, title, links }) => {
+  if (!links || !links.length) return null;
 
   return (
     <Popup
@@ -71,27 +71,37 @@ const HeaderDropdown = ({ width, title, items }) => {
         </div>
       )}
       renderContent={() => (
-        <div className="bg-white rounded-lg shadow-lg p-6">{items.map(DropdownItem)}</div>
+        <div className="bg-white rounded-lg shadow-lg p-6">{links.map(DropdownItem)}</div>
       )}
     />
   );
 };
 
-const Desktop = ({ products, resources, company }) => {
+const Desktop = ({ items }) => {
   return [
     <div key="1" className="sm:hidden flex flex-1 justify-end items-center text-lg">
-      <HeaderDropdown width={400} title="Products" items={products} />
+      {items.map((item, index) => {
+        if (item.links && item.links.length) {
+          return <HeaderDropdown key={index} {...item} />;
+        }
 
-      <HeaderDropdown width={350} title="Resources" items={resources} />
+        return (
+          <Link
+            key={index}
+            to={item.href}
+            className="text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2 font-semibold"
+            onClick={e => {
+              if (item.onClick && onClickFunctions[item.onClick]) {
+                e.preventDefault();
 
-      <HeaderDropdown width={250} title="Company" items={company} />
-
-      <Link
-        to="/pricing"
-        className="text-white hover:opacity-85 hover:text-white py-2 px-4 mx-2 font-semibold"
-      >
-        Pricing
-      </Link>
+                onClickFunctions[item.onClick]();
+              }
+            }}
+          >
+            {item.title}
+          </Link>
+        );
+      })}
     </div>,
 
     <Link
@@ -110,10 +120,10 @@ class Mobile extends React.Component {
   };
 
   render() {
-    const { products, resources = [], company = [] } = this.props;
+    const { items = [] } = this.props;
     const { showMenu } = this.state;
 
-    const items = resources.concat(company);
+    const [main, ...extras] = items;
 
     return (
       <div className="hidden sm:flex flex-1 justify-end">
@@ -141,11 +151,11 @@ class Mobile extends React.Component {
                     />
                   </div>
 
-                  {products && (
+                  {main && (
                     <div className="text-md">
                       <div className="pb-3 uppercase font-bold text-grey-darker">Products</div>
                       <div className="flex flex-wrap">
-                        {products.map((product, index) => {
+                        {main.map((product, index) => {
                           return (
                             <Link
                               key={index}
@@ -162,7 +172,7 @@ class Mobile extends React.Component {
                               {product.icon && (
                                 <FontAwesomeIcon
                                   className={cn(product.titleColor && `text-${product.titleColor}`)}
-                                  icon={['fas', product.icon.name]}
+                                  icon={product.icon}
                                   // size="sm"
                                 />
                               )}
@@ -185,12 +195,8 @@ class Mobile extends React.Component {
                   )}
 
                   <div className="flex flex-wrap border-t mt-4 py-4 font-bold text-black text-md">
-                    <Link to="/pricing" className="w-1/2 py-3">
-                      Pricing
-                    </Link>
-
-                    {items &&
-                      items.map((item, index) => {
+                    {extras &&
+                      extras.map((item, index) => {
                         return (
                           <Link
                             key={index}
@@ -219,8 +225,8 @@ class Mobile extends React.Component {
   }
 }
 
-const Header = ({ header }) => {
-  const { products, resources, company } = header || {};
+const Header = ({ header, ...rest }) => {
+  if (!header) return null;
 
   return (
     <header className="absolute z-10 pin-t pin-l pin-r">
@@ -230,13 +236,13 @@ const Header = ({ header }) => {
             Stoplight
           </Link>
 
-          <Desktop products={products} resources={resources} company={company} />
+          <Desktop items={header.items} />
 
-          <Mobile products={products} resources={resources} company={company} />
+          <Mobile items={header.items} />
         </nav>
       </div>
     </header>
   );
 };
 
-export default withSiteData(Header);
+export default withSiteData(withRouteData(Header));

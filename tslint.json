@@ -2,7 +2,7 @@
   "defaultSeverity": "error",
   "extends": ["tslint:recommended", "tslint-config-prettier", "tslint-plugin-prettier"],
   "linterOptions": {
-    "exclude": ["build/**", "dist/**", "public/**", "node_modules/**", "netlify-cms/**", "tmp/**"]
+    "exclude": ["build/**", "dist/**", "public/**", "node_modules/**", "netlify/**", "tmp/**"]
   },
   "rules": {
     "prettier": true,

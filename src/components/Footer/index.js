@@ -1,8 +1,8 @@
 import React from 'react';
-import { withSiteData, Link } from 'react-static';
+import { withSiteData, withRouteData, Link } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import ActionBar from '@components/ActionBar';
+// import ActionBar from '@components/ActionBar';
 import Intercom from '@utils/intercom';
 
 const onClickFunctions = {
@@ -14,10 +14,12 @@ const onClickFunctions = {
 };
 
 const Footer = ({ footer, actionBar = {} }) => {
-  const { groups, social } = footer || {};
+  if (!footer) return null;
+
+  const { columns, social } = footer || {};
 
   return [
-    <ActionBar key="action" {...actionBar} />,
+    // <ActionBar key="action" {...actionBar} />,
 
     <footer key="footer" className="bg-black py-8 border-t-4 border-lighten-300">
       <nav className="container mx-auto flex flex-col items-center">
@@ -27,31 +29,32 @@ const Footer = ({ footer, actionBar = {} }) => {
           </Link>
         </div>
 
-        {groups && (
+        {columns && (
           <div className="flex flex-wrap justify-between py-4 w-1/2 sm:w-full">
-            {groups.map((group, index) => {
+            {columns.map((column, index) => {
               return (
                 <div key={index}>
-                  <div className="font-bold text-grey-light py-2">{group.title}</div>
+                  <div className="font-bold text-grey-light py-2">{column.title}</div>
 
-                  {group.links.map((link, index) => {
-                    return (
-                      <Link
-                        key={index}
-                        to={link.href}
-                        className="cursor-pointer text-grey hover:text-grey-lighter block py-2"
-                        onClick={e => {
-                          if (link.onClick && onClickFunctions[link.onClick]) {
-                            e.preventDefault();
+                  {column.links &&
+                    column.links.map((link, index) => {
+                      return (
+                        <Link
+                          key={index}
+                          to={link.href}
+                          className="cursor-pointer text-grey hover:text-grey-lighter block py-2"
+                          onClick={e => {
+                            if (link.onClick && onClickFunctions[link.onClick]) {
+                              e.preventDefault();
 
-                            onClickFunctions[link.onClick]();
-                          }
-                        }}
-                      >
-                        {link.title}
-                      </Link>
-                    );
-                  })}
+                              onClickFunctions[link.onClick]();
+                            }
+                          }}
+                        >
+                          {link.title}
+                        </Link>
+                      );
+                    })}
                 </div>
               );
             })}
@@ -67,7 +70,7 @@ const Footer = ({ footer, actionBar = {} }) => {
                   href={account.href}
                   className="mx-4 text-grey hover:text-grey-lighter"
                 >
-                  <FontAwesomeIcon icon={['fab', account.icon]} size="lg" />
+                  <FontAwesomeIcon icon={account.icon} size="lg" />
                 </a>
               );
             })}
@@ -81,4 +84,4 @@ const Footer = ({ footer, actionBar = {} }) => {
   ];
 };
 
-export default withSiteData(Footer);
+export default withSiteData(withRouteData(Footer));

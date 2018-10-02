@@ -7,11 +7,11 @@ import chokidar from 'chokidar';
 import frontmatter from 'front-matter';
 import { reloadRoutes } from 'react-static/node';
 
-import cssLoader from './webpack/cssLoader';
-import sassLoader from './webpack/sassLoader';
 import { Renderer } from './src/utils/markdown';
 
-const NETLIFY_PATH = nodePath.resolve(__dirname, 'netlify-cms');
+import webpack from './webpack';
+
+const NETLIFY_PATH = nodePath.resolve(__dirname, 'netlify');
 
 chokidar.watch(NETLIFY_PATH).on('all', () => reloadRoutes());
 
@@ -43,7 +43,7 @@ const getFile = (srcPath, extension = '.yaml') => {
     data = dataLoaders[extension](fs.readFileSync(srcPath, 'utf8')) || {};
   } catch (e) {
     data = {};
-    console.error(e);
+    console.error('Error getFile:', srcPath, e);
   }
 
   const path = slugify(data.path || data.title || nodePath.basename(srcPath, 'yaml'));
@@ -74,7 +74,7 @@ const getFiles = async (srcPath, extensions = ['.yaml']) => {
         files.push(getFile(item.path, extension));
       })
       .on('error', e => {
-        console.error(e);
+        console.error('Error getFiles:', srcPath, e);
         reject(e);
       })
       .on('end', () => {
@@ -96,9 +96,9 @@ export default {
 
   getRoutes: async () => {
     const [home, pricing, about, products, caseStudies, markdown] = await Promise.all([
-      getFile(`${NETLIFY_PATH}/home.yaml`),
-      getFile(`${NETLIFY_PATH}/pricing.yaml`),
-      getFile(`${NETLIFY_PATH}/about.yaml`),
+      getFile(`${NETLIFY_PATH}/pages/home.yaml`),
+      getFile(`${NETLIFY_PATH}/pages/pricing.yaml`),
+      getFile(`${NETLIFY_PATH}/pages/about.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
       getFiles(`${NETLIFY_PATH}/case-studies`),
@@ -110,6 +110,16 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => home,
+      },
+      {
+        path: '/admin',
+        component: 'src/containers/Admin',
+        getData: () => {
+          return {
+            header: null,
+            footer: null,
+          };
+        },
       },
       {
         path: pricing.path,
@@ -204,47 +214,20 @@ export default {
           <meta name="twitter:image" content={meta.twitter.image} />
 
           <link rel="shortcut icon" href={meta.favicon} type="image/x-icon" />
+
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `window.CMS_MANUAL_INIT = true;`,
+            }}
+          />
         </Head>
         <Body>{children}</Body>
       </Html>
     );
   },
 
-  webpack: (config, { stage, defaultLoaders }) => {
-    config.module.rules = [
-      {
-        oneOf: [
-          {
-            test: /\.ts(x?)$/,
-            exclude: [/node_modules|\.min\./],
-            use: [
-              {
-                loader: 'ts-loader',
-                options: {
-                  onlyCompileBundledFiles: true,
-                  transpileOnly: true,
-                },
-              },
-            ],
-          },
-          defaultLoaders.jsLoader,
-          sassLoader(stage),
-          cssLoader(stage),
-          defaultLoaders.fileLoader,
-        ],
-      },
-    ];
-
-    config.resolve.extensions.push('.ts', '.tsx');
-
-    config.resolve.alias = {
-      '@components': nodePath.resolve(__dirname, 'src/components'),
-      '@styles': nodePath.resolve(__dirname, 'src/styles'),
-      '@utils': nodePath.resolve(__dirname, 'src/utils'),
-    };
-
-    return config;
-  },
+  webpack,
 
   // bundleAnalyzer: true,
 };
