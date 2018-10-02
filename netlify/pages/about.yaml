@@ -12,6 +12,7 @@ team:
   - image: /images/barnett_headshot.png
     name: Taylor Barnett
     role: Community Engineer
+    twitter: '@taylor_atx'
   - image: /images/cassera_headshot.png
     name: Nicholas Cassera
     role: Software Engineer
