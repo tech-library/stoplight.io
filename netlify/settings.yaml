@@ -39,7 +39,7 @@ header:
             - fas
             - book
           subtitle: Learn how to use Stoplight
-          title: Docs
+          title: Help Center
           titleColor: blue
         - href: 'https://community.stoplight.io/'
           icon:
@@ -81,22 +81,37 @@ header:
       title: Pricing
 actionBar:
   buttons:
-    - href: /contact/demo
+    - color: purple
+      href: /contact/demo
       outlined: true
       text: Request a demo
-      color: purple
-    - href: 'https://next.stoplight.io'
+    - color: purple
+      href: 'https://next.stoplight.io'
       text: Create a Free Account
-      color: purple
   enabled: false
   text: Getting started is easy. Be up and running in minutes.
 footer:
   columns:
-    - links:
-      - title: Test
-        href: /foo
+    - items:
+        - href: /design
+          title: Design
+        - href: /documentation
+          title: Documentation
+        - href: /testing
+          title: Testing
+        - href: /mocking
+          title: Mocking
       title: Products
-    - title: Resources
+    - items:
+        - href: 'https://docs.stoplight.io/'
+          title: Help Center
+        - href: 'https://community.stoplight.io/'
+          title: Community
+        - href: 'http://blog.stoplight.io/'
+          title: Blog
+        - onClick: intercom
+          title: Chat
+      title: Resources
     - title: Company
   social:
     - href: 'https://twitter.com/stoplightio'
