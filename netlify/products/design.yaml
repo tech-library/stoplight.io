@@ -1,46 +1,59 @@
-path: /api-design
+path: /design
 color: blue
 hero:
-  title: Visual OpenAPI Designer
   subtitle: >-
-    Build first-class APIs with a collaborative, powerful, visual editor that allows you to prototype and share your API within minutes.
-  image: /images/product/design-hero.png
+    Build first-class APIs with a collaborative, powerful, visual editor that
+    allows you to prototype and share your API within minutes.
+  title: Visual OpenAPI Designer
 product:
-  title: OpenAPI Designer
   cta:
     name: Start Modeling Now
   description: >-
-    Create API documentation in minutes. Combine your OpenAPI documents (formerly known as Swagger)
-    with markdown to create robust, internal and external API documentation for your organization.
-    Take advantage of one-click cloud deployment with Stoplight, or download the static HTML to host anywhere.
+    Create API documentation in minutes. Combine your OpenAPI documents
+    (formerly known as Swagger) with markdown to create robust, internal and
+    external API documentation for your organization. Take advantage of
+    one-click cloud deployment with Stoplight, or download the static HTML to
+    host anywhere.
+  title: OpenAPI Designer
 features:
-  - shortName: Design First
-    title: Quick to Start
+  - description: >-
+      Get started quickly with API design-first principles. Import an existing
+      API or start from scratch with a new API, zero coding required. The Visual
+      Editor reduces time to get started on your API design by providing an
+      intuitive UI.
     image: /images/product/design-first.png
-    description: >-
-      Get started quickly with API design-first principles. Import an existing API or
-      start from scratch with a new API, zero coding required. The Visual Editor reduces
-      time to get started on your API design by providing an intuitive UI.
-  - shortName: Visual Editor
-    title: Powerful, Visual Editor
+    shortName: Design First
+    title: Quick to Start
+  - description: >-
+      Design an API with speed and efficiency from scratch. Stoplight’s Visual
+      Editor decreases the learning curve so you don’t need to be an OpenAPI
+      expert to create first-class API designs. Describe endpoints, headers,
+      bodies, multiple responses, query string parameters, shared models, and
+      much more.
     image: /images/product/design-visual.png
-    description: >-
-      Design an API with speed and efficiency from scratch. Stoplight’s Visual Editor decreases the
-      learning curve so you don’t need to be an OpenAPI expert to create first-class API designs.
-      Describe endpoints, headers, bodies, multiple responses, query string parameters, shared models, and much more.
-  - shortName: Mock Servers
-    title: Integrated, Hosted Mock Servers
+    shortName: Visual Editor
+    title: 'Powerful, Visual Editor'
+  - description: >-
+      Instantly prototype and collaborate on your API design with our
+      integrated, hosted Mock Servers, powered by Prism. Mock a single API,
+      multiple APIs, or even just a few endpoints. Increase efficiency by
+      allowing your fronted teams to start implementation while the backend team
+      develops the API.
     image: /images/product/design-mocking.png
-    description: >-
-      Instantly prototype and collaborate on your API design with our integrated,
-      hosted Mock Servers, powered by Prism. Mock a single API, multiple APIs,
-      or even just a few endpoints. Increase efficiency by allowing your
-      fronted teams to start implementation while the backend team develops the API.
-  - shortName: Collaborative
-    title: Collaborative
+    shortName: Mock Servers
+    title: 'Integrated, Hosted Mock Servers'
+  - description: >-
+      Instantly share API prototypes, automated documentation, and hosted Mock
+      Servers. Invite teammates, partners, and API consumers to view and
+      collaborate on your API designs privately or publicly with Discussions.
+      With one click export and programmatic access, you can use and share your
+      specification document where ever you want.
     image: /images/product/design-collaborate.png
-    description: >-
-      Instantly share API prototypes, automated documentation, and hosted Mock Servers.
-      Invite teammates, partners, and API consumers to view and collaborate on your
-      API designs privately or publicly with Discussions. With one click export and
-      programmatic access, you can use and share your specification document where ever you want.
+    shortName: Collaborative
+    title: Collaborative
+actionBar:
+  buttons:
+    - href: 'https://next.stoplight.io/'
+      text: Get Started
+  enabled: true
+  text: Ready to Model and Design?
