@@ -81,20 +81,18 @@ quotes:
       Stoplight is getting better all the time. Big leap from [Stoplight]
       Classic.
     role: Senior Enterprise Architect
-press:
-  - description: Stoplight Launches Scenarios API Testing and Debugging Tool
-    image: /images/press/programmableweb.png
-    publication: Programmable Web
-  - description: Stoplight Launches Scenarios API Testing and Debugging Tool
-    image: /images/press/programmableweb.png
-    publication: Programmable Web
+press: []
 investors:
-  - image: /images/investors/nextgen-venture-partners.png
+  - image: /public/images/logo_next_gen_ventures.png
     name: NextGen Venture Partners
-  - image: /images/investors/capital-factory.png
+  - image: /public/images/logo_capitalfactory.png
     name: Capital Factory
-  - image: /images/investors/techstars.png
+  - image: /public/images/logo_techstars.png
     name: Techstars
+  - image: /public/images/bill-wood-logo_trans.png
+    name: Bill Wood Ventures
+  - image: /public/images/logo_socialstarts.png
+    name: Social Starts
 actionBar:
   buttons:
     - color: accent
