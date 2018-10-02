@@ -5,7 +5,7 @@ hero:
   cta:
     href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
     name: Request a demo
-  pageName: Customer Stories
+  pageName: Customer Story
   skew: '-3deg'
   subtitle: >-
     Namely is an All-In-One HR Platform that strives to provide HR professionals
