@@ -137,7 +137,7 @@ const Hero = ({
         )}
 
         {features.length ? (
-          <div className="flex flex-wrap mx-auto pb-24 md:pb-16">
+          <div className="flex flex-wrap mx-auto pb-24 md:pt-16">
             {features.map((feature, i) => (
               <HeroFeature key={i} color={bgColor} {...feature} />
             ))}
@@ -145,7 +145,7 @@ const Hero = ({
         ) : null}
 
         {cards.length ? (
-          <div className="flex mx-auto md:flex-col">
+          <div className="flex mx-auto md:flex-col md:pt-16">
             {cards.map((card, i) => (
               <HeroCard key={i} index={parseInt(i) + 1} {...card} />
             ))}
@@ -213,13 +213,10 @@ const Hero = ({
       />
 
       <div
-        className={cn(
-          'absolute pin z-0 border-4 border-lighten-300 overflow-hidden sm:block hidden',
-          {
-            [`bg-${bgColor}`]: bgColor,
-            'background-repeat': true,
-          }
-        )}
+        className={cn('absolute pin overflow-hidden sm:block hidden', {
+          [`bg-${bgColor}`]: bgColor,
+          'background-repeat': true,
+        })}
         style={{
           width: '100vw',
           height: '100vh',
