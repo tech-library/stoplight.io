@@ -154,7 +154,7 @@ export default {
 
               return {
                 title: info.name,
-                description: hero.title,
+                description: hero.subtitle,
                 logo: info.logo,
                 href: caseStudyConfig.path + caseStudy.path,
               };
