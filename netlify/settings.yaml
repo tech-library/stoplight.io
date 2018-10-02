@@ -106,13 +106,20 @@ footer:
         - href: 'https://docs.stoplight.io/'
           title: Help Center
         - href: 'https://community.stoplight.io/'
-          title: Community
+          title: 'Community '
         - href: 'http://blog.stoplight.io/'
           title: Blog
         - onClick: intercom
           title: Chat
       title: Resources
-    - title: Company
+    - links:
+        - href: /about
+          title: About Us
+        - href: /case-studies
+          title: Case Studies
+        - onClick: email
+          title: Contact Us
+      title: Company
   social:
     - href: 'https://twitter.com/stoplightio'
       icon:
