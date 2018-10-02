@@ -1,34 +1,34 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 
 import '@styles/about.scss';
 
 import Hero from '@components/Hero';
+import Section from '@components/Section';
 
-const Quote = ({ image, company, quote, author, role }, key) => {
+const Quote = ({ image, company, quote, author, role }) => {
   return (
-    <section key={key} className="business-love__card px-3 flex">
-      <div className="w-full py-2 px-2 overflow-hidden shadow-lg bg-white flex flex-col justify-between">
-        <div className="px-2 py-8 mb-8 h-32 flex justify-center items-start">
-          <img src={image} alt={company} />
-        </div>
+    <div className="py-8 px-4 shadow bg-white rounded-lg flex flex-col">
+      <div className="px-2 py-2 pb-8 flex justify-center items-start">
+        <img src={image} alt={company} />
+      </div>
 
-        <div className="px-2 py-4">
-          <p className="mb-2">{quote}</p>
-          <p className="h-text-purple">
-            <span className="font-bold">{author}</span>, {company}, {role}
-          </p>
+      <div className="px-4">
+        <p className="leading-loose pb-6">{`"${quote}"`}</p>
+        <div className="font-bold pb-1 uppercase text-blue">{author}</div>
+        <div>
+          {company}, {role}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 const Member = ({ image, name, role, twitter }) => {
   return (
-    <div className="text-center shadow bg-white py-8 px-4 w-64 rounded-lg">
+    <div className="text-center shadow bg-white py-10 px-4 w-64 rounded-lg">
       <div
-        className="-mt-20 mx-auto rounded-full bg-cover shadow-sm border-grey border h-32 w-32 mb-6"
+        className="-mt-20 mx-auto rounded-full bg-cover shadow-sm border-grey border h-32 w-32 mb-10"
         style={{
           backgroundImage: `url(${image})`,
         }}
@@ -46,35 +46,33 @@ const Member = ({ image, name, role, twitter }) => {
   );
 };
 
-const Press = ({ image, description, publication }, key) => {
+const Press = ({ image, description, publication, href }) => {
   return (
-    <section key={key} className="press__card flex">
-      <div className="w-full px-4 overflow-hidden shadow-lg bg-white flex flex-col justify-between">
-        <div className="px-6 py-8 mb-8 h-32 flex justify-center items-start">
-          <img src={image} alt={publication} />
-        </div>
-
-        <div className="h-24">
-          <a href="#" target="_blank" className="font-bold h-text-purple">
-            {description}
-          </a>
-        </div>
+    <div className="py-8 px-6 shadow bg-white rounded-lg flex flex-col text-center">
+      <div className="px-2 py-2 pb-8 flex justify-center items-start">
+        <img src={image} alt={publication} />
       </div>
-    </section>
+
+      <div className="px-4">
+        <a href={href} target="_blank" className="font-semibold">
+          {description}
+        </a>
+      </div>
+    </div>
   );
 };
 
 class About extends React.Component {
   render() {
-    const { color, hero, quotes, team = [], press, investors, career } = this.props;
+    const { color, hero, quotes = [], team = [], press = [], investors = [] } = this.props;
 
     return (
       <div>
         <Hero key="hero" bgColor={color} {...hero} containerClassName="pb-24" />
 
         {team.length ? (
-          <section className="bg-grey-lightest relative z-10" style={{ marginTop: -50 }}>
-            <div className="container flex flex-wrap justify-center text-center ">
+          <section className="bg-grey-lightest relative z-5" style={{ marginTop: -50 }}>
+            <div className="container flex flex-wrap justify-center text-center">
               {team.map((member, index) => (
                 <div key={index} className="mx-10 mb-48 -mt-24">
                   <Member {...member} />
@@ -84,58 +82,61 @@ class About extends React.Component {
           </section>
         ) : null}
 
-        {quotes &&
-          quotes.length > 0 && (
-            <section className="business-love bg-grey-lightest h-skewed-bg py-8">
-              <h1 className="text-center">Businesses Are Loving Stoplight</h1>
+        {press.length ? (
+          <Section key="press">
+            <div className="container">
+              <h2 className="text-center mb-20 text-3xl md:mb-14">In the Press</h2>
 
-              <section className="container mx-auto py-4 flex flex-wrap space-between">
-                {quotes.map(Quote)}
-              </section>
-            </section>
-          )}
-
-        {press &&
-          press.length > 0 && (
-            <section className="press bg-grey-lightest h-skewed-bg py-4">
-              <h1 className="text-center my-8">In the Press</h1>
-
-              <div className="container mx-auto py-4 flex flex-wrap space-between">
-                {press.map(Press)}
+              <div className="flex justify-center flex-wrap items-center -px-4 -mb-12">
+                {press.map((quote, key) => {
+                  return (
+                    <div key={key} className="w-1/4 px-6 mb-12">
+                      <Press {...quote} />
+                    </div>
+                  );
+                })}
               </div>
-            </section>
-          )}
-
-        {career && (
-          <section className="h-gap">
-            <h1 className="text-center my-8">Work at Stoplight</h1>
-
-            <div className="text-center">
-              <p className="max-w-lg text-lg h-text-md mx-auto py-8 mb-8">{career}</p>
-
-              <Link
-                to="/careers"
-                title="Careers"
-                className="h-bg-purple h-button text-white font-bold py-4 px-8 hover:text-white"
-              >
-                Careers
-              </Link>
             </div>
-          </section>
-        )}
+          </Section>
+        ) : null}
 
-        {investors &&
-          investors.length > 0 && (
-            <section className="investors bg-blue-lightest py-8">
-              <h1 className="text-center pb-8">Our Investors</h1>
+        {quotes.length ? (
+          <Section key="businesses" bgClassName="bg-grey-lightest">
+            <div className="container">
+              <h2 className="text-center mb-20 text-3xl md:mb-14">
+                Businesses Are Loving Stoplight
+              </h2>
 
-              <div className="investors__images pb-8">
-                {investors.map(({ image, name }, key) => (
-                  <img key={key} src={image} alt={name} />
-                ))}
+              <div className="flex justify-center flex-wrap items-center -px-4 -mb-12">
+                {quotes.map((quote, key) => {
+                  return (
+                    <div key={key} className="w-1/3 px-6 mb-12">
+                      <Quote {...quote} />
+                    </div>
+                  );
+                })}
               </div>
-            </section>
-          )}
+            </div>
+          </Section>
+        ) : null}
+
+        {investors.length ? (
+          <Section key="investors">
+            <div className="container">
+              <h2 className="text-center mb-20 text-3xl md:mb-14">Our Investors</h2>
+
+              <div className="flex justify-center flex-wrap items-center -mx-10">
+                {investors.map((investor, key) => {
+                  return (
+                    <div key={key} className="p-10 text-center">
+                      <img className="h-24" src={investor.image} alt={investor.name} />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </Section>
+        ) : null}
       </div>
     );
   }

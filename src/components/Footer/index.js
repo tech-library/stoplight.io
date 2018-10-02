@@ -21,7 +21,7 @@ const Footer = ({ footer, actionBar = {} }) => {
   return [
     // <ActionBar key="action" {...actionBar} />,
 
-    <footer key="footer" className="bg-black py-8 border-t-4 border-lighten-300">
+    <footer key="footer" className="bg-black py-12 border-t-4 border-lighten-300">
       <nav className="container mx-auto flex flex-col items-center">
         <div className="py-4">
           <Link to="/">
@@ -30,7 +30,7 @@ const Footer = ({ footer, actionBar = {} }) => {
         </div>
 
         {columns && (
-          <div className="flex flex-wrap justify-between py-4 w-1/2 sm:w-full">
+          <div className="flex flex-wrap justify-between py-8 w-1/2 sm:w-full">
             {columns.map((column, index) => {
               return (
                 <div key={index}>
@@ -61,7 +61,11 @@ const Footer = ({ footer, actionBar = {} }) => {
           </div>
         )}
 
-        <div className="flex py-4">
+        <div className="flex pt-8">
+          <Link className="block text-grey pr-4" to="/">
+            &copy; {new Date().getFullYear()} Stoplight
+          </Link>
+
           {social &&
             social.map((account, index) => {
               return (
@@ -75,10 +79,6 @@ const Footer = ({ footer, actionBar = {} }) => {
               );
             })}
         </div>
-
-        <Link className="block text-grey py-4" to="/">
-          &copy; {new Date().getFullYear()} Stoplight
-        </Link>
       </nav>
     </footer>,
   ];

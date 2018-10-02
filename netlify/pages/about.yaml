@@ -55,11 +55,38 @@ quotes:
       Great product, really does take the pain out of creating and maintaining
       swagger specs.
     role: CTO
+  - author: Mike Bissett
+    company: BurstSMS
+    image: /images/customers/burst-sms.png
+    quote: >-
+      Great product, really does take the pain out of creating and maintaining
+      swagger specs.
+    role: CTO
+  - author: Mike Bissett
+    company: BurstSMS
+    image: /images/customers/burst-sms.png
+    quote: >-
+      Great product, really does take the pain out of creating and maintaining
+      swagger specs.
+    role: CTO
+  - author: Mike Bissett
+    company: BurstSMS
+    image: /images/customers/burst-sms.png
+    quote: >-
+      Great product, really does take the pain out of creating and maintaining
+      swagger specs.
+    role: CTO
 press:
   - description: Stoplight Launches Scenarios API Testing and Debugging Tool
     image: /images/press/programmableweb.png
     publication: Programmable Web
+  - description: Stoplight Launches Scenarios API Testing and Debugging Tool
+    image: /images/press/programmableweb.png
+    publication: Programmable Web
 investors:
-  - image: /images/investors/nextgen-venture-partners.png
-    name: NextGen Venture Partners
-career: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  - name: NextGen Venture Partners
+    image: /images/investors/nextgen-venture-partners.png
+  - name: Capital Factory
+    image: /images/investors/capital-factory.png
+  - name: Techstars
+    image: /images/investors/techstars.png
