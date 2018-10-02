@@ -5,6 +5,7 @@ import cn from 'classnames';
 import CallToAction from '@components/CallToAction';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
+import ActionBar from '@components/ActionBar';
 
 import { slugify } from '@utils/text';
 
@@ -42,7 +43,7 @@ const ProductFeature = ({ title, description, image, isReversed, titleColor }) =
 
 class Product extends React.Component {
   render() {
-    const { color, hero, product = {}, features = [] } = this.props;
+    const { color, hero, product = {}, features = [], actionBar = {} } = this.props;
 
     const elems = [];
 
@@ -81,6 +82,10 @@ class Product extends React.Component {
               />
             ))}
           </div>
+
+          {actionBar && actionBar.enabled ? (
+            <ActionBar className="bg-white sm:mt-14 mt-20" {...actionBar} />
+          ) : null}
         </Section>
       );
     }

@@ -56,29 +56,6 @@ customers:
   - '/images/customers/spotify.png'
   - '/images/customers/tivo.png'
   - '/images/customers/zendesk.png'
-features:
-  - title: API Designer
-    image: /images/product/home-design.png
-    description: >-
-      With the Stoplight visual designer, you don't need to be an OpenAPI Specification expert.
-      Involve everybody in the design process and manage your specifications 10x faster.
-    href: http://docs.stoplight.io/modeling/introduction
-  - title: API Documentation
-    image: /images/product/home-docs.png
-    description: >-
-      Stoplight’s hosted documentation product supports custom domains, embedded docs,
-      analytics integrations, custom themes, multiple layouts, and much more.
-    href: http://docs.stoplight.io/modeling/introduction
-  - title: API Mocking
-    image: /images/product/home-mocking.png
-    description: >-
-      Turn your OpenAPI specifications into instant mock servers to allow your frontend and backend teams to work in parallel.
-    href: http://docs.stoplight.io/modeling/introduction
-  - title: API Testing
-    image: /images/product/home-testing.png
-    description: >-
-      Run test scenarios directly from your terminal, with a single command. Integrates easily into your existing continuous integration process.
-    href: http://docs.stoplight.io/modeling/introduction
 testimonials:
   - image: /images/testimonials/kin_lane.jpeg
     quote: I feel like Stoplight has the potential to shift the landscape pretty significantly, something I haven't seen any API service provider do in a while.
@@ -98,3 +75,8 @@ testimonials:
     role: Frontend Engineer, AMARO
 actionBar:
   enabled: true
+  text: Getting started is easy.
+  buttons:
+    - text: Sign Up
+      link: https://next.stoplight.io/join
+      color: accent

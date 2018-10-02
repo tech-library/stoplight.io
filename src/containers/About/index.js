@@ -3,6 +3,7 @@ import { withRouteData } from 'react-static';
 
 import '@styles/about.scss';
 
+import ActionBar from '@components/ActionBar';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
 
@@ -64,7 +65,15 @@ const Press = ({ image, description, publication, href }) => {
 
 class About extends React.Component {
   render() {
-    const { color, hero, quotes = [], team = [], press = [], investors = [] } = this.props;
+    const {
+      color,
+      hero,
+      quotes = [],
+      team = [],
+      actionBar = {},
+      press = [],
+      investors = [],
+    } = this.props;
 
     return (
       <div>
@@ -79,6 +88,12 @@ class About extends React.Component {
                 </div>
               ))}
             </div>
+
+            {actionBar && actionBar.enabled ? (
+              <div className="pb-40 -mt-10">
+                <ActionBar className="bg-white" {...actionBar} />
+              </div>
+            ) : null}
           </section>
         ) : null}
 

@@ -2,6 +2,7 @@ export default {
   name: 'cta',
   label: 'Call to action',
   widget: 'object',
+  required: false,
   fields: [
     {
       name: 'name',

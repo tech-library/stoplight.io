@@ -42,11 +42,18 @@ team:
     role: Director of Engineering
     image: /images/team/marc-macleod.png
   - name: Duane Tharp
-    role: Technical Sales
+    role: Sales & Partnerships
     image: /images/team/marc-macleod.png
   - name: Robert Wallach
     role: Content & Support
     image: /images/team/robert-wallach.png
+actionBar:
+  enabled: true
+  text: Want to join the team? We're hiring!
+  buttons:
+    - text: Introduce Yourself
+      link: mailto:hi@stoplight.io
+      color: accent
 quotes:
   - author: Mike Bissett
     company: BurstSMS

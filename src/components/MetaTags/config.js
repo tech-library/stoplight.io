@@ -2,6 +2,7 @@ export default {
   label: 'Meta Tags',
   name: 'meta',
   widget: 'object',
+  required: false,
   fields: [
     {
       label: 'Favicon',

@@ -49,3 +49,10 @@ features:
       documentation ever again. Manage access control and measure analytics with
       integrations. Or download the static assets or use our on-premise
       solutions behind your firewall to host your documentation from anywhere.
+actionBar:
+  enabled: true
+  text: Docs are awesome.
+  buttons:
+    - text: Get Started Now
+      link: https://next.stoplight.io/join
+      color: accent

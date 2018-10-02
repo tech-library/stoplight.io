@@ -5,6 +5,7 @@ import Hero from '@components/Hero';
 import ImageSection from '@components/ImageSection';
 import Section from '@components/Section';
 import CallToAction from '@components/CallToAction';
+import ActionBar from '@components/ActionBar';
 
 const Testimonial = ({ image, quote, author, company, role }, key) => {
   return (
@@ -36,7 +37,7 @@ const Testimonial = ({ image, quote, author, company, role }, key) => {
 
 class HomePage extends React.Component {
   render() {
-    const { color, hero, product, customers = [], testimonials = [] } = this.props;
+    const { color, hero, product, customers = [], testimonials = [], actionBar = {} } = this.props;
 
     const elems = [];
 
@@ -86,6 +87,10 @@ class HomePage extends React.Component {
           <div className="container">
             <div className="flex flex-wrap -mx-14 sm:mx-0">{testimonials.map(Testimonial)}</div>
           </div>
+
+          {actionBar && actionBar.enabled ? (
+            <ActionBar className="bg-grey-lightest sm:mt-20 mt-32" {...actionBar} />
+          ) : null}
         </Section>
       );
     }

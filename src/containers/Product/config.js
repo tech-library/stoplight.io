@@ -1,4 +1,6 @@
 import hero from '@components/Hero/config';
+import actionBar from '@components/ActionBar/config';
+import metaTags from '@components/MetaTags/config';
 import product from '@components/ImageSection/config';
 
 export default {
@@ -55,5 +57,7 @@ export default {
         },
       ],
     },
+    actionBar,
+    metaTags,
   ],
 };
