@@ -7,9 +7,10 @@ hero:
     name: Request a demo
   pageName: Customer Stories
   skew: '-3deg'
-  title: >-
-    Namely is a All-In-One HR Platform that strives to provide HR professionals
+  subtitle: >-
+    Namely is an All-In-One HR Platform that strives to provide HR professionals
     with the technology, data, and support they need to help employees thrive.
+  title: Namely
 info:
   employees: 250-500
   industry: HR Software
