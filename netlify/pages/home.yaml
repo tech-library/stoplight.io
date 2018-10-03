@@ -43,13 +43,14 @@ product:
     href: 'https://next.stoplight.io/'
     name: Get Started Now
   description: >-
-    Create OpenAPI documents 10x faster with no specialized knowledge required.
-    Combine OpenAPI files with markdown to create beautiful documentation for
-    internal and external stakeholders. Instantly turn any OpenAPI file into a
-    mock server. Leverage contract testing to ensure that your single source of
-    truth - OpenAPI - accurately describe your APIs.
+    Create OpenAPI Specifications (formerly known as Swagger) 10x faster with no
+    specialized knowledge required. Combine OpenAPI documents with Markdown to
+    create beautiful documentation for internal and external stakeholders.
+    Instantly turn any OpenAPI document into a mock server. Leverage contract
+    testing to ensure that your Single Source of Truth - OpenAPI Specification -
+    accurately describe your APIs.
   image: /images/home-hero.png
-  title: The Complete OpenAPI (Swagger) Toolkit
+  title: The Complete OpenAPI Specification Toolkit
 customers:
   - /images/ea.png
   - /images/logo_arkea_transparent.png
