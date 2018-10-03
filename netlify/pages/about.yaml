@@ -75,7 +75,20 @@ quotes:
       Stoplight is getting better all the time. Big leap from [Stoplight]
       Classic.
     role: Senior Enterprise Architect
-press: []
+press:
+  - description: 'To Help Developers Get A Grip On APIs, Stoplight Raises $3.25M'
+    image: /images/logo_crunchbase.png
+    publication: crunchbase news
+  - description: >-
+      Software startup raises more than $3M in round led by former Austin
+      Ventures bigwig 
+    image: /images/logo_austin_bj.png
+    publication: Austin Business Journal
+  - description: >-
+      Stoplight Lands $3.25M of Seed Funding to Lead Evolution of Enterprise API
+      Lifecycle Management
+    image: /images/logo_venturebeat.png
+    publication: VentureBeat
 investors:
   - image: /images/bill-wood-logo_trans.png
     name: Bill Wood Ventures
