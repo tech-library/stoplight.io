@@ -101,6 +101,7 @@ export default {
       pricing,
       about,
       caseStudyConfig,
+
       products,
       caseStudies,
       markdown,
@@ -120,6 +121,10 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => home,
+      },
+      {
+        is404: true,
+        component: 'src/containers/404',
       },
       {
         path: pricing.path,
