@@ -104,6 +104,12 @@ press:
       https://venturebeat.com/2018/10/03/stoplight-lands-3-25m-of-seed-funding-to-lead-evolution-of-enterprise-api-lifecycle-management
     image: /images/logo_venturebeat.png
     publication: VentureBeat
+  - date: 'OCTOBER, 2018'
+    description: Austin startup Stoplight raises more than $3 million
+    href: >-
+      https://www.statesman.com/news/20181003/austin-startup-stoplight-raises-more-than-3-million
+    image: /images/logo_statesman.png
+    publication: 'Austin-American Statesman '
 investors:
   - image: /images/bill-wood-logo_trans.png
     name: Bill Wood Ventures
