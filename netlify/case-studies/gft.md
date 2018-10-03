@@ -3,7 +3,7 @@ path: /gft
 hero:
   bgColor: blue
   pageName: Customer Story
-  skew: '3deg'
+  skew: 3deg
   subtitle: >-
     GFT Technology is a leading IT solutions supplier with a focus on the
     financial sector.
@@ -26,11 +26,15 @@ quotes:
 actionBar:
   enabled: true
 meta:
-  description: ''
+  description: >-
+    How GFT Technology found a balanced tool for developers and non-technical
+    staff in Stoplight
   favicon: /images/mark_light_bg.png
   title: GFT | Stoplight
   twitter:
-    description: ''
+    description: >-
+      How GFT Technology found a balanced tool for developers and non-technical
+      staff in Stoplight
     title: GFT | Stoplight
     username: '@stoplightio'
 ---
