@@ -13,8 +13,8 @@
   },
   "scripts": {
     "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
+    "build": "RELEASE_STAGE=production react-static build",
+    "build.staging": "RELEASE_STAGE=staging react-static build",
     "serve": "serve dist -p 3000",
     "format": "prettier --single-quote --trailing-comma es5 --print-width 100 --write \"src/**/*.js\""
   },

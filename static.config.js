@@ -122,16 +122,6 @@ export default {
         getData: () => home,
       },
       {
-        path: '/admin',
-        component: 'src/containers/Admin',
-        getData: () => {
-          return {
-            header: null,
-            footer: null,
-          };
-        },
-      },
-      {
         path: pricing.path,
         component: 'src/containers/Pricing',
         getData: () => pricing,
@@ -198,6 +188,20 @@ export default {
         getData: () => md,
       });
     });
+
+    // Don't include admin route in production
+    if (process.env.RELEASE_STAGE !== 'production') {
+      routes.push({
+        path: '/admin',
+        component: 'src/containers/Admin',
+        getData: () => {
+          return {
+            header: null,
+            footer: null,
+          };
+        },
+      });
+    }
 
     return routes;
   },
