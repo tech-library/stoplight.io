@@ -83,6 +83,11 @@ export default {
           widget: 'image',
         },
         {
+          label: 'Month, Year',
+          name: 'date',
+          widget: 'string',
+        },
+        {
           label: 'Description',
           name: 'description',
           widget: 'text',
@@ -96,7 +101,6 @@ export default {
           label: 'Link',
           name: 'href',
           widget: 'string',
-          required: false,
         },
       ],
     },
