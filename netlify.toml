@@ -1,3 +1,6 @@
 [build]
   publish = "dist"
   command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build.staging"
