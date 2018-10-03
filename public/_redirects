@@ -1,3 +1,16 @@
 # Redirect default Netlify subdomain to primary domain
-http://stoplightio.netlify.com/* http://stoplight.io/:splat 301!
+http://stoplightio.netlify.com/*  http://stoplight.io/:splat 301!
 https://stoplightio.netlify.com/* https://stoplight.io/:splat 301!
+
+# External redirects
+/login https://next.stoplight.io/login
+/join https://next.stoplight.io
+/register https://next.stoplight.io
+/twitter https://twitter.com/stoplightio
+
+# Internal redirects
+/prism /mocking
+/platform/prism /mocking
+/platform/design /design
+/platform/docs /documentation
+/platform/scenarios /testing

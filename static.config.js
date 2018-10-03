@@ -101,6 +101,7 @@ export default {
       pricing,
       about,
       caseStudyConfig,
+
       products,
       caseStudies,
       markdown,
@@ -120,6 +121,10 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => home,
+      },
+      {
+        is404: true,
+        component: 'src/containers/404',
       },
       {
         path: pricing.path,
@@ -209,6 +214,8 @@ export default {
   Document: ({ Html, Head, Body, children, routeInfo, siteData }) => {
     const meta = resolveMeta(siteData.meta, routeInfo && routeInfo.allProps.meta);
 
+    const isProduction = process.env.RELEASE_STAGE === 'production';
+
     return (
       <Html lang="en-US">
         <Head>
@@ -240,32 +247,34 @@ export default {
             }}
           />
 
-          {siteData.googleTagManager && (
-            <script
-              type="text/javascript"
-              dangerouslySetInnerHTML={{
-                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          {isProduction &&
+            siteData.googleTagManager && (
+              <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','${siteData.googleTagManager}');`,
-              }}
-            />
-          )}
+                }}
+              />
+            )}
 
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
         </Head>
         <Body>
-          {siteData.googleTagManager && (
-            <noscript>
-              <iframe
-                src={`https://www.googletagmanager.com/ns.html?id=${siteData.googleTagManager}`}
-                height="0"
-                width="0"
-                style={{ display: 'none', visibility: 'hidden' }}
-              />
-            </noscript>
-          )}
+          {isProduction &&
+            siteData.googleTagManager && (
+              <noscript>
+                <iframe
+                  src={`https://www.googletagmanager.com/ns.html?id=${siteData.googleTagManager}`}
+                  height="0"
+                  width="0"
+                  style={{ display: 'none', visibility: 'hidden' }}
+                />
+              </noscript>
+            )}
 
           {children}
         </Body>
