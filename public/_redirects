@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+http://stoplightio.netlify.com/* http://stoplight.io/:splat 301!
+https://stoplightio.netlify.com/* https://stoplight.io/:splat 301!
