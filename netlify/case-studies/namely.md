@@ -3,7 +3,7 @@ path: /namely
 hero:
   bgColor: blue
   pageName: Customer Stories
-  skew: '3deg'
+  skew: 3deg
   subtitle: >-
     Namely is an All-In-One HR Platform that strives to provide HR professionals
     with the technology, data, and support they need to help employees thrive.
@@ -23,15 +23,11 @@ quotes:
 actionBar:
   enabled: true
 meta:
-  title: Namely | Stoplight
-  description: >-
-    How Namely built a personal relationship with their customers across every
-    touchpoint.
+  description: How Namely adopted API Design First Principles with Stoplight
   favicon: /images/mark_light_bg.png
+  title: Namely | Stoplight
   twitter:
-    description: >-
-      How Namely built a personal relationship with their customers across every
-      touchpoint.
+    description: How Namely adopted API Design First Principles with Stoplight
     title: Namely | Stoplight
     username: '@stoplightio'
 ---

@@ -1,117 +1,128 @@
 path: /pricing
 color: blue
 hero:
-  title: Simple, Flexible Pricing
-  subtitle: 'All plans include the entire Stoplight platform: API Modeling, Testing, Mocking, and Documentation'
   skew: '-7deg'
+  subtitle: >-
+    All plans include the entire Stoplight platform: API Modeling, Testing,
+    Mocking, and Documentation
+  title: 'Simple, Flexible Pricing'
 plans:
-  - title: 'Personal'
-    description: 'For open source and individual use.'
-    price: 'Free'
-    features:
-      - 'Unlimited projects'
-    button:
-      title: Sign Up
+  - button:
       color: green
-      href: https://next.stoplight.io
-  - title: 'Team'
+      href: 'https://next.stoplight.io'
+      title: Sign Up
+    description: For open source and individual use.
+    features:
+      - Unlimited projects
+    price: Free
+    title: Personal
+  - button:
+      color: green
+      href: 'https://next.stoplight.io'
+      title: Sign Up
     description: For small teams and startups.
-    price: '$24'
-    unit: '/ user / month'
     features:
-      - 'Up to 25 users'
-      - 'Collaboration and discussions'
-      - 'Access and role management'
+      - Up to 25 users
+      - Collaboration and discussions
+      - Access and role management
     inheritedFeatures:
-      - 'Unlimited projects'
-    button:
-      title: Sign Up
-      color: green
-      href: https://next.stoplight.io
-  - title: 'Enterprise'
-    description: For enterprises with demanding requirements.
-    price: 'Contact Us'
-    features:
-      - 'Unlimited users'
-      - 'Hosted or on-premise'
-      - 'Single sign-on'
-      - 'Dedicated support'
-    inheritedFeatures:
-      - 'Unlimited projects'
-      - 'Collaboration and discussions'
-      - 'Access and role management'
-    button:
-      title: Contact Us
+      - Unlimited projects
+    price: $24
+    title: Team
+    unit: / user / month
+  - button:
       color: orange
-      href: mailto:sales@stoplight.io
-docs:
-  title: 'Documentation Add-On'
-  description: 'Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere.'
-  buttonText: 'Create Your First Documentation Hub'
+      href: 'mailto:sales@stoplight.io'
+      title: Contact Us
+    description: For enterprises with demanding requirements.
+    features:
+      - Unlimited users
+      - Hosted or on-premise
+      - Single sign-on
+      - Dedicated support
+    inheritedFeatures:
+      - Unlimited projects
+      - Collaboration and discussions
+      - Access and role management
+    price: Contact Us
+    title: Enterprise
+docPlans:
+  buttonText: Create Your First Documentation Hub
+  description: >-
+    Combine OpenAPI with Markdown to create robust documentation for internal
+    and external stakeholders. One click publish to host with Stoplight or
+    download the static assets to host anywhere.
   features:
-    - title: 'OpenAPI, Markdown, Request Maker'
-      plans:
-        - 'Basic'
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Unlimited Visits'
-      plans:
-        - 'Basic'
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Publish to docs.stoplight.io'
-      plans:
-        - 'Basic'
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Publish to your domain'
-      plans:
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Theming'
-      plans:
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Build history & instant rollbacks'
-      plans:
-        - 'Essential'
-        - 'Standard'
-        - 'Pro'
-    - title: 'Custom CSS'
-      plans:
-        - 'Standard'
-        - 'Pro'
-    - title: 'White label'
-      plans:
-        - 'Standard'
-        - 'Pro'
-    - title: 'Basic auth & Auth0 integrations'
-      plans:
-        - 'Standard'
-        - 'Pro'
-    - title: 'Download static HTML/CSS'
-      plans:
-        - 'Pro'
-    - title: 'SAML single sign-on'
-      plans:
-        - 'Pro'
-    - title: 'HTTP request OAuth token manager'
-      plans:
-        - 'Pro'
+    - plans:
+        - Basic
+        - Essential
+        - Standard
+        - Pro
+      title: 'OpenAPI, Markdown, Request Maker'
+    - plans:
+        - Basic
+        - Essential
+        - Standard
+        - Pro
+      title: Unlimited Visits
+    - plans:
+        - Basic
+        - Essential
+        - Standard
+        - Pro
+      title: Publish to docs.stoplight.io
+    - plans:
+        - Essential
+        - Standard
+        - Pro
+      title: Publish to your domain
+    - plans:
+        - Essential
+        - Standard
+        - Pro
+      title: Theming
+    - plans:
+        - Essential
+        - Standard
+        - Pro
+      title: Build history & instant rollbacks
+    - plans:
+        - Standard
+        - Pro
+      title: Custom CSS
+    - plans:
+        - Standard
+        - Pro
+      title: White label
+    - plans:
+        - Standard
+        - Pro
+      title: Basic auth & Auth0 integrations
+    - plans:
+        - Pro
+      title: Download static HTML/CSS
+    - plans:
+        - Pro
+      title: SAML single sign-on
+    - plans:
+        - Pro
+      title: HTTP request OAuth token manager
   plans:
-    - title: 'Basic'
-      price: 'Free'
-    - title: 'Essential'
-      price: '$69 / mo'
-      domains: '1'
-    - title: 'Standard'
-      price: '$159 / mo'
-      domains: '10'
-    - title: 'Pro'
-      price: '$349 / mo'
-      domains: 'Unlimited'
+    - price: Free
+      title: Basic
+    - domains: '1'
+      price: $69 / mo
+      title: Essential
+    - domains: '10'
+      price: $159 / mo
+      title: Standard
+    - domains: Unlimited
+      price: $349 / mo
+      title: Pro
+  title: Documentation Add-On
+meta:
+  favicon: /images/mark_light_bg.png
+  title: Our Pricing Plans | Stoplight
+  twitter:
+    title: Our Pricing Plans | Stoplight
+    username: '@stoplightio'

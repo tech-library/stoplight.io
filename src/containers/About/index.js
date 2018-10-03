@@ -4,6 +4,7 @@ import { withRouteData } from 'react-static';
 
 import '@styles/about.scss';
 
+import CallToAction from '@components/CallToAction';
 import ActionBar from '@components/ActionBar';
 import Hero from '@components/Hero';
 import Section from '@components/Section';
@@ -51,19 +52,20 @@ const Member = ({ image, name, role, twitter, isLast }) => {
   );
 };
 
-const Press = ({ image, description, publication, href }) => {
+const Press = ({ image, date, description, publication, href }) => {
   return (
-    <div className="py-8 px-6 shadow bg-white rounded-lg flex flex-col text-center">
-      <div className="px-2 py-2 pb-8 flex justify-center items-start">
+    <a
+      href={href}
+      target="_blank"
+      className="pb-6 px-6 shadow bg-white rounded-lg text-grey-darker cursor-pointer hover:bg-grey-lightest"
+    >
+      <div className="flex items-center justify-center items-start h-32">
         <img src={image} alt={publication} />
       </div>
 
-      <div className="px-4">
-        <Link to={href} target="_blank" className="font-semibold">
-          {description}
-        </Link>
-      </div>
-    </div>
+      <div className="uppercase font-bold mb-3">{date}</div>
+      <div>{description}</div>
+    </a>
   );
 };
 
@@ -102,7 +104,7 @@ class About extends React.Component {
         {press.length ? (
           <Section key="press">
             <div className="container">
-              <h2 className="text-center mb-20 text-3xl md:mb-14">In the Press</h2>
+              <h2 className="text-center mb-20 text-3xl md:mb-14">In The Press</h2>
 
               <div className="flex justify-center flex-wrap -mb-12">
                 {press.map((quote, key) => {
@@ -112,6 +114,16 @@ class About extends React.Component {
                     </div>
                   );
                 })}
+              </div>
+
+              <div className="mt-24 md:mt-14 text-center">
+                <CallToAction
+                  className="inline"
+                  size="md"
+                  color="grey-darkest"
+                  name="More Press & Assets"
+                  href="https://press.stoplight.io"
+                />
               </div>
             </div>
           </Section>
