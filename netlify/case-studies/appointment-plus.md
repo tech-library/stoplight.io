@@ -2,11 +2,8 @@
 path: /appointmentplus
 hero:
   bgColor: blue
-  cta:
-    href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
-    name: Request a demo
   pageName: Customer Story
-  skew: '-3deg'
+  skew: '3deg'
   subtitle: >-
     AppointmentPlus provides a scheduling platform that streamlines and
     automates the scheduling process.
@@ -25,6 +22,8 @@ quotes:
       other Projects. Documentation integrates with OAS files, both partials or
       the entire schema, which is rad.
     role: Lead Developer
+actionBar:
+  enabled: true
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
