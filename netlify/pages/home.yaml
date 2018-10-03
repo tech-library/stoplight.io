@@ -52,15 +52,15 @@ product:
   title: The Complete OpenAPI (Swagger) Toolkit
 customers:
   - /images/ea.png
-  - /images/arkea_logo.png
+  - /images/logo_arkea_transparent.png
   - /images/chargify-new-logo.png
   - /images/deutsche_bank.png
   - /images/customers/quicken.png
-  - /images/sendgrid_logo.png
+  - /images/logo-sendgrid.png
   - /images/shopgate.png
   - /images/spotify.png
   - /images/tivo.png
-  - /images/zendesk_logo.png
+  - /images/logo_zendesk.png
 testimonials:
   - author: Kin Lane
     image: /images/testimonials/kin_lane.jpeg
