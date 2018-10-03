@@ -3,7 +3,7 @@ path: /appointmentplus
 hero:
   bgColor: blue
   pageName: Customer Story
-  skew: '3deg'
+  skew: 3deg
   subtitle: >-
     AppointmentPlus provides a scheduling platform that streamlines and
     automates the scheduling process.
@@ -25,10 +25,11 @@ quotes:
 actionBar:
   enabled: true
 meta:
-  description: ''
+  description: How AppointmentPlus managed multiple APIs with Stoplight
   favicon: /images/mark_light_bg.png
+  title: AppointmentPlus | Stoplight
   twitter:
-    description: ''
+    description: How AppointmentPlus managed multiple APIs with Stoplight
     title: AppointmentPlus | Stoplight
     username: '@stoplightio'
 ---
