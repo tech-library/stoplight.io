@@ -238,7 +238,7 @@ const Hero = ({
     elems.push(
       <div key="image" className="sm:hidden container mx-auto relative" style={{ height: 500 }}>
         <div
-          className="absolute pin bg-left-top bg-cover bg-no-repeat"
+          className="-mx-12 absolute pin bg-left-top bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(${image})` }}
         />
       </div>

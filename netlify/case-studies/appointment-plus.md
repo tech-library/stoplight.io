@@ -15,7 +15,7 @@ info:
   employees: 50-100
   industry: Scheduling Software
   location: Arizona
-  logo: /images/appointment_plus_logo.png
+  logo: /images/logo_appointmentplus_transparent.png
   name: AppointmentPlus
 quotes:
   - author: Josh Flyer
@@ -28,7 +28,6 @@ quotes:
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
-  title: AppointmentPlus | Stoplight
   twitter:
     description: ''
     title: AppointmentPlus | Stoplight
