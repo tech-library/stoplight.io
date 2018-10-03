@@ -98,6 +98,7 @@ actionBar:
   text: Want to join the team? We're hiring!
 meta:
   favicon: /images/mark_light_bg.png
+  title: Learn About Us | Stoplight
   twitter:
-    title: About | Stoplight
+    title: Learn About Us | Stoplight
     username: '@stoplightio'
