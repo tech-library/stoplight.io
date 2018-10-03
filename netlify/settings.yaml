@@ -55,13 +55,6 @@ header:
           subtitle: Stay up to date on Stoplight
           title: Blog
           titleColor: orange
-        - icon:
-            - fas
-            - comments
-          onClick: intercom
-          subtitle: Ask us anything
-          title: Chat
-          titleColor: grey-darkest
       title: Resources
       width: 350
     - links:
