@@ -24,15 +24,13 @@ quotes:
 actionBar:
   enabled: true
 meta:
-  description: >-
-    How Bodev met the needs of developers and non-technical staff with
-    Stoplight.
+  description: How Bodev integrated their Design and Documentation processed with Stoplight
   favicon: /images/mark_light_bg.png
   title: Bodev | Stoplight
   twitter:
     description: >-
-      How Bodev met the needs of developers and non-technical staff with
-      Stoplight 
+      How Bodev integrated their Design and Documentation processed with
+      Stoplight
     title: Bodev | Stoplight
     username: '@stoplightio'
 ---
