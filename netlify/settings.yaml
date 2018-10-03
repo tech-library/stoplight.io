@@ -103,14 +103,14 @@ footer:
           title: Mocking
       title: Products
     - links:
-        - href: 'https://docs.stoplight.io/'
+        - href: 'https://docs.stoplight.io'
           title: Help Center
-        - href: 'https://community.stoplight.io/'
+        - href: 'https://community.stoplight.io'
           title: 'Community '
-        - href: 'http://blog.stoplight.io/'
+        - href: 'https://blog.stoplight.io'
           title: Blog
-        - onClick: intercom
-          title: Chat
+        - href: https://press.stoplight.io
+          title: Press
       title: Resources
     - links:
         - href: /about
@@ -119,8 +119,6 @@ footer:
           title: Case Studies
         - href: mailto://support@stoplight.io
           title: Contact Us
-        - href: https://press.stoplight.io
-          title: Press
       title: Company
   social:
     - href: 'https://twitter.com/stoplightio'
