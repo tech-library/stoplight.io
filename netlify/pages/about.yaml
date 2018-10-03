@@ -68,13 +68,6 @@ quotes:
       other Projects. Hubs integrates with OAS files, both partials or the
       entire schema, which is rad.
     role: Lead Developer
-  - author: Katie Corcos
-    company: Namely
-    image: /images/namely_logo.png
-    quote: >-
-      The UI was the best we had seen among all of the contenders thus far when
-      it came to the user experience, design and customization.
-    role: Technologist
   - author: Carlos Lozano
     company: GFT Group
     image: /images/gft_group_logo.jpg
@@ -105,7 +98,6 @@ actionBar:
   text: Want to join the team? We're hiring!
 meta:
   favicon: /images/mark_light_bg.png
-  title: About | Stoplight
   twitter:
     title: About | Stoplight
     username: '@stoplightio'
