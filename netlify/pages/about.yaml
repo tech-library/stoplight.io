@@ -20,15 +20,18 @@ team:
   - image: /images/chianese_headshot.png
     name: Vincenzo Chianese
     role: Software Engineer
+    twitter: '@d3dvincent'
   - image: /images/faust_headshot.png
     name: Scott Faust
     role: Head of Growth
   - image: /images/hilton_headshot.png
     name: William Hilton
     role: Software Engineer
+    twitter: '@wmhilton'
   - image: /images/lott_headshot.png
     name: Chris Lott
     role: Software Engineer
+    twitter: '@ChrisNLott'
   - image: /images/macleod_headshot.png
     name: Marc MacLeod
     role: Founder & CEO
@@ -42,9 +45,11 @@ team:
   - image: /images/pytleski_headshot.png
     name: Thomas Pytleski
     role: Software Engineer
+    twitter: '@pytlesk4'
   - image: /images/rock_headshot.png
     name: Brian Rock
     role: Director of Engineering
+    twitter: '@brianmrock'
   - image: /images/tharp_headshot.png
     name: Duane Tharp
     role: Sales & Partnerships
