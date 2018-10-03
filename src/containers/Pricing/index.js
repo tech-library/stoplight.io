@@ -68,7 +68,7 @@ const Plan = props => {
   );
 };
 
-const PricingPage = ({ color, hero, plans = [], docs }) => {
+const PricingPage = ({ color, hero, plans = [], docPlans }) => {
   const elems = [];
 
   if (hero) {
@@ -89,10 +89,10 @@ const PricingPage = ({ color, hero, plans = [], docs }) => {
     );
   }
 
-  if (docs) {
+  if (docPlans) {
     elems.push(
-      <Section key="docs">
-        <DocPlans {...docs} />
+      <Section key="docPlans">
+        <DocPlans {...docPlans} />
       </Section>
     );
   }

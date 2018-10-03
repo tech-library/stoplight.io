@@ -44,7 +44,7 @@ plans:
       title: Contact Us
       color: orange
       href: mailto:sales@stoplight.io
-docs:
+docPlans:
   title: 'Documentation Add-On'
   description: 'Combine OpenAPI with Markdown to create robust documentation for internal and external stakeholders. One click publish to host with Stoplight or download the static assets to host anywhere.'
   buttonText: 'Create Your First Documentation Hub'
