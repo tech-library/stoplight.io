@@ -1,8 +1,6 @@
 path: /case-studies
-color: grey-darkest
 hero:
+  subtitle: Discover & Educate
   title: Case Studies
-  subtitle: >-
-    Here they are.
 actionBar:
   enabled: true
