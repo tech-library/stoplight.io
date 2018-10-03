@@ -92,6 +92,12 @@ export default {
           name: 'publication',
           widget: 'string',
         },
+        {
+          label: 'Link',
+          name: 'href',
+          widget: 'string',
+          required: false,
+        },
       ],
     },
     {
