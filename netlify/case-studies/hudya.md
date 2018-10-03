@@ -3,7 +3,7 @@ path: /hudya
 hero:
   bgColor: blue
   pageName: Customer Story
-  skew: '3deg'
+  skew: 3deg
   subtitle: >-
     Hudya is a digital platform that is redefining and simplifying how
     traditional utilities and services can be purchased and managed.
@@ -25,11 +25,11 @@ quotes:
 actionBar:
   enabled: true
 meta:
-  description: ''
+  description: How Hudya centralized their API development with Stoplight
   favicon: /images/mark_light_bg.png
-  siteName: Hudya | Stoplight
+  title: Hudya | Stoplight
   twitter:
-    description: ''
+    description: How Hudya centralized their API development with Stoplight
     title: Hudya | Stoplight
     username: '@stoplightio'
 ---
