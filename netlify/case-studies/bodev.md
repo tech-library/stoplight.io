@@ -1,7 +1,7 @@
 ---
 path: /bodev
 hero:
-  skew: '-3deg'
+  skew: '3deg'
   subtitle: >-
     Bo Development Offices provides enterprise solutions for the automotive,
     telecom, media industries in the private and public sector.
@@ -21,6 +21,8 @@ quotes:
       We can prepare and publish both documentation in one place and easily
       deliver documentation to the clients and third party developers.
     role: Executive Manager
+actionBar:
+  enabled: true
 meta:
   favicon: /images/mark_light_bg.png
   title: Bodev | Stoplight

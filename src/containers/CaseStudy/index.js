@@ -75,14 +75,14 @@ class CaseStudy extends React.Component {
     }
 
     elems.push(
-      <div key="content" className="container mx-auto pb-24 pt-40">
+      <div key="content" className="container mx-auto pb-24 pt-24">
         <div className="relative flex md:flex-col-reverse">
           <div
-            className="markdown-body flex-1 mr-14 md:mr-0"
+            className="markdown-body flex-1 pr-32 md:pr-0"
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
-          <div className="-mt-64 w-1/3 md:mt-0 md:w-full md:pb-24">
+          <div className="-mt-40 w-1/3 md:mt-0 md:w-full md:pb-24">
             <Info {...info} />
             <Quotes quotes={quotes} />
           </div>
@@ -91,7 +91,7 @@ class CaseStudy extends React.Component {
     );
 
     if (actionBar) {
-      elems.push(<ActionBar key="actionBar" className="mb-24" {...actionBar} />);
+      elems.push(<ActionBar key="actionBar" className="mt-20 mb-24" {...actionBar} />);
     }
 
     return elems;

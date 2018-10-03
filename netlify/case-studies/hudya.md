@@ -2,11 +2,8 @@
 path: /hudya
 hero:
   bgColor: blue
-  cta:
-    href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
-    name: Request a demo
   pageName: Customer Story
-  skew: '-3deg'
+  skew: '3deg'
   subtitle: >-
     Hudya is a digital platform that is redefining and simplifying how
     traditional utilities and services can be purchased and managed.
@@ -25,6 +22,8 @@ quotes:
       developers without too much effort. That was something that really made
       Stoplight special.
     role: Cloud Architect
+actionBar:
+  enabled: true
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
@@ -34,6 +33,7 @@ meta:
     title: Hudya | Stoplight
     username: '@stoplightio'
 ---
+
 ## Hudya’s Hazards
 
 Hudya ideally wanted to have all of their API service built and managed in a single centralized platform. They were experiencing issues managing a large amount of specifications for their services and the corresponding documentation and they worried that merging all these files down the road would be painful and unsustainable. They also wanted to convert to a design-first philosophy and have collaborative tooling to assist them in managing multiple services assigned to separate teams and developers.

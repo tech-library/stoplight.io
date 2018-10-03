@@ -2,11 +2,8 @@
 path: /namely
 hero:
   bgColor: blue
-  cta:
-    href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
-    name: Request a demo
   pageName: Customer Stories
-  skew: '-3deg'
+  skew: '3deg'
   subtitle: >-
     Namely is an All-In-One HR Platform that strives to provide HR professionals
     with the technology, data, and support they need to help employees thrive.
@@ -23,6 +20,8 @@ quotes:
       The UI was the best we had seen among all of the contenders thus far when
       it came to the user experience, design, and customization.
     role: Technologist
+actionBar:
+  enabled: true
 meta:
   title: Namely | Stoplight
   description: >-

@@ -1,6 +1,7 @@
 import hero from '@components/Hero/config';
 import cta from '@components/CallToAction/config';
 import metaTags from '@components/MetaTags/config';
+import actionBar from '@components/ActionBar/config';
 
 export default {
   label: 'Case Studies',
@@ -74,6 +75,7 @@ export default {
         },
       ],
     },
+    actionBar,
     metaTags,
     {
       label: 'Content',

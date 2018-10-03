@@ -2,11 +2,8 @@
 path: /gft
 hero:
   bgColor: blue
-  cta:
-    href: 'mailto:sales@stoplight.io?subject="I''d like to recieve a demo"'
-    name: Request a demo
   pageName: Customer Story
-  skew: '-3deg'
+  skew: '3deg'
   subtitle: >-
     GFT Technology is a leading IT solutions supplier with a focus on the
     financial sector.
@@ -26,6 +23,8 @@ quotes:
       specification development in a matter of hours — not weeks. Also, it makes
       documenting an API and providing a testing harness for it a breeze.
     role: Senior Enterprise Architect
+actionBar:
+  enabled: true
 meta:
   description: ''
   favicon: /images/mark_light_bg.png
