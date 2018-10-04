@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { withSiteData, withRouteData } from 'react-static';
+import { withSiteData, withRouteData, Head } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Popup from '@components/Popup';
@@ -238,11 +238,11 @@ class Mobile extends React.Component {
   }
 }
 
-const Header = ({ header }) => {
+const Header = ({ header, meta }) => {
   if (!header) return null;
 
-  return (
-    <header className="absolute z-10 pin-t pin-l pin-r">
+  const elems = [
+    <header key="header" className="absolute z-10 pin-t pin-l pin-r">
       <div className="container">
         <nav className={cn(headerHeightClass, 'flex items-center')}>
           <Link to="/" className="text-white hover:opacity-75 hover:text-white text-2xl font-bold">
@@ -254,8 +254,18 @@ const Header = ({ header }) => {
           <Mobile items={header.items} />
         </nav>
       </div>
-    </header>
-  );
+    </header>,
+  ];
+
+  if (meta) {
+    elems.push(
+      <Head key="meta">
+        <title>{meta.title}</title>
+      </Head>
+    );
+  }
+
+  return elems;
 };
 
 export default withSiteData(withRouteData(Header));
