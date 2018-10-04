@@ -92,7 +92,16 @@ const resolveMeta = (defaultMeta = {}, meta = {}) => {
   };
 };
 
+let siteRoot;
+if (process.env.RELEASE_STAGE === 'production') {
+  siteRoot = 'https://stoplight.io';
+} else if (process.env.RELEASE_STAGE === 'staging') {
+  siteRoot = 'https://develop--stoplightio.netlify.com';
+}
+
 export default {
+  siteRoot,
+
   getSiteData: () => getFile(`${NETLIFY_PATH}/settings.yaml`),
 
   getRoutes: async () => {
