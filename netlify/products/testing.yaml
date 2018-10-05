@@ -56,17 +56,17 @@ actionBar:
   enabled: true
   text: Ready to Start Testing?
 meta:
+  favicon: /images/mark_light_bg.png
+  title: Automated REST API unit & performance testing | Stoplight
   description: >-
     Increase the test coverage of your web APIs so they break less for your
     consumers. Create a full collection of tests with Stoplight Testing. Use
     Environment and Context Variables to reference other complex test scenarios
     to accelerate test generations and reduce duplication. Test just one API
     call or a scenario of API calls working together in a real-life use case.
-  favicon: /images/mark_light_bg.png
   image: /images/testing_header.png
-  title: Testing | Stoplight
   twitter:
-    title: Testing | Stoplight
+    title: Automated REST API unit & performance testing | Stoplight
     description: >-
       Increase the test coverage of your web APIs so they break less for your
       consumers. Create a full collection of tests with Stoplight Testing. Use
