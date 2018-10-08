@@ -10,24 +10,25 @@ color: orange
 title: OpenAPI Testing
 description: >-
   Increase the test coverage of your web APIs so they break less for your
-  consumers. Create a full collection of tests with Stoplight Testing. Use
-  Environment and Context Variables to reference other complex test scenarios to
-  accelerate test generations and reduce duplication. Test just one API call or
-  a scenario of API calls working together in a real-life use case. Stoplight
-  Testing gives you the flexibility to make your tests fit you workflow by
-  supporting command line and CI/CD pipeline integrations. Contract Testing your
-  API against your OpenAPI Specification (formerly known as Swagger) or JSON
-  Schema is possible with our visual Test Editor.
+  consumers online. Create a full collection of tests with Stoplight Testing.
+  Use Environment and Context Variables to reference other complex test
+  scenarios to accelerate test generations and reduce duplication. Whether you
+  are writing test for just one API call or a scenario of API calls working
+  together in a real-life use case, Stoplight Testing gives you the flexibility
+  to make your tests fit you workflow by supporting command line and CI/CD
+  pipeline integrations. Contract Testing your API against your OpenAPI
+  Specification (formerly known as Swagger) or JSON Schema is possible with our
+  simple visual Test Editor.
 cta:
   href: 'https://next.stoplight.io/'
   name: Start Testing
 features:
   - image: /images/testing_automation.png
     shortName: CI/CD Integration
-    title: Simple Automation
+    title: Simple Automated API Testing
     description: >-
       With our Visual Test Editor, create multi-step test scenarios to automate
-      testing your web API. Build scenarios by capturing and passing data
+      testing your web(REST) APIs. Build scenarios by capturing and passing data
       between test API calls. Then integrate your test scenarios into your
       existing CI/CD pipeline with our command line tool, powered by Prism.
   - image: /images/testing_validation.png
@@ -39,7 +40,7 @@ features:
       Schema, also known as Contract Testing. Stoplight uses realistic, dynamic
       data based on your OpenAPI Specification to simulate real-life API
       consumers across your local development, staging, and production
-      environments.
+      environments complementing your Unit tests.
   - image: /images/testing_reporting.png
     shortName: Coverage Reporting
     title: Coverage Reporting
