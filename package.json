@@ -21,8 +21,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.x",
     "@fortawesome/free-brands-svg-icons": "5.3.x",
-    "@fortawesome/free-solid-svg-icons": "5.3.x",
     "@fortawesome/free-regular-svg-icons": "5.3.x",
+    "@fortawesome/free-solid-svg-icons": "5.3.x",
     "@fortawesome/react-fontawesome": "0.1.x",
     "classnames": "2.2.x",
     "netlify-cms": "^2.1.2",
