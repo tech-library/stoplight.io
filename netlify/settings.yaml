@@ -110,7 +110,7 @@ footer:
           title: About Us
         - href: /case-studies
           title: Case Studies
-        - href: mailto://support@stoplight.io
+        - href: mailto:support@stoplight.io
           title: Contact Us
       title: Company
   social:
