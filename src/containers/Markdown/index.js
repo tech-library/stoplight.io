@@ -1,26 +1,24 @@
 import React from 'react';
-import cn from 'classnames';
 import { withRouteData } from 'react-static';
 
 import Hero from '@components/Hero';
-import { slugify } from '@utils/text';
 
 import '@styles/markdown.scss';
 import '@styles/highlight.scss';
 
-const Markdown = ({ color, hero, html }) => {
+const Markdown = ({ hero, body }) => {
   const elems = [];
 
   if (hero) {
     elems.push(<Hero key="hero" {...hero} />);
   }
 
-  if (html) {
+  if (body) {
     elems.push(
       <div
-        key="html"
-        className={cn('markdown-body container mx-auto pb-24', { 'pt-24': !hero })}
-        dangerouslySetInnerHTML={{ __html: html }}
+        key="body"
+        className="markdown-body container mx-auto py-24"
+        dangerouslySetInnerHTML={{ __html: body }}
       />
     );
   }
