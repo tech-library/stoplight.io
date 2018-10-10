@@ -31,7 +31,7 @@ const dataLoaders = {
 
     return {
       ...attributes,
-      html: Renderer(body),
+      body: Renderer(body),
     };
   },
   '.yaml': yaml.safeLoad,

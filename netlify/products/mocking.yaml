@@ -55,15 +55,15 @@ actionBar:
   enabled: true
   text: 'Want to mock your API? '
 meta:
+  favicon: /images/mark_light_bg.png
+  title: REST API mocking service and server by Prism | Stoplight
   description: >-
     Mocking your API with Stoplight is your API design’s perfect companion.
     Powered by Prism, the instant mock server routes incoming requests to
     example responses or dynamically generates examples on the fly based on your
     OpenAPI Specification (formerly known as Swagger).
-  favicon: /images/mark_light_bg.png
-  title: Mocking | Stoplight
   twitter:
-    title: Mocking | Stoplight
+    title: REST API mocking service and server by Prism | Stoplight
     description: >-
       Mocking your API with Stoplight is your API design’s perfect companion.
       Powered by Prism, the instant mock server routes incoming requests to
