@@ -12,7 +12,7 @@ description: >-
   known as Swagger) with Stoplight’s visual editor to design consistent and
   standardized REST APIs for your organization. Without writing any code, model
   complex APIs faster than ever while simultaneously getting feedback on your
-  prototypes with [hosted mock servers](https://stoplight.io/mocking).
+  prototypes with hosted mock servers.
 cta:
   name: ''
 features:
