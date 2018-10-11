@@ -63,7 +63,9 @@ const getFile = (srcPath, extension = '.yaml') => {
 
   const path = slugify(data.path || data.title || nodePath.basename(srcPath, 'yaml'));
 
-  data = convertDescriptionsToHTML(data);
+  if (extension !== '.md') {
+    data = convertDescriptionsToHTML(data);
+  }
 
   return {
     ...data,
@@ -184,6 +186,7 @@ export default {
         children: caseStudies
           .map((caseStudy, index) => {
             if (!caseStudy.path) return;
+
             return {
               path: caseStudy.path,
               component: 'src/containers/CaseStudy',

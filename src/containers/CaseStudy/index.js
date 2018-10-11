@@ -66,7 +66,7 @@ const Quotes = ({ quotes }) => {
 
 class CaseStudy extends React.Component {
   render() {
-    const { hero, html, info, quotes, actionBar } = this.props;
+    const { hero, body, info, quotes, actionBar } = this.props;
 
     const elems = [];
 
@@ -79,7 +79,7 @@ class CaseStudy extends React.Component {
         <div className="relative flex md:flex-col-reverse">
           <div
             className="markdown-body flex-1 pr-32 md:pr-0"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
 
           <div className="-mt-40 w-1/3 md:mt-0 md:w-full md:pb-24">
