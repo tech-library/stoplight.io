@@ -221,6 +221,8 @@ export default {
   },
 
   Document: ({ Html, Head, Body, children, routeInfo, siteData }) => {
+    const { intercom, hubspot, googleTagManager } = siteData;
+
     const meta = resolveMeta(siteData.meta, routeInfo && routeInfo.allProps.meta);
 
     const isProduction = process.env.RELEASE_STAGE === 'production';
@@ -249,15 +251,17 @@ export default {
 
           <link rel="shortcut icon" href={meta.favicon} type="image/x-icon" />
 
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: `window.CMS_MANUAL_INIT = true;`,
-            }}
-          />
+          {!isProduction && (
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `window.CMS_MANUAL_INIT = true;`,
+              }}
+            />
+          )}
 
           {isProduction &&
-            siteData.googleTagManager && (
+            googleTagManager && (
               <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
@@ -265,19 +269,33 @@ export default {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${siteData.googleTagManager}');`,
+              })(window,document,'script','dataLayer','${googleTagManager}');`,
                 }}
               />
             )}
 
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
+          {isProduction && <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />}
+
+          {isProduction &&
+            intercom && (
+              <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  window.intercomSettings = {
+                    app_id: "${intercom}"
+                  };
+                  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/${intercom}';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()`,
+                }}
+              />
+            )}
         </Head>
         <Body>
           {isProduction &&
-            siteData.googleTagManager && (
+            googleTagManager && (
               <noscript>
                 <iframe
-                  src={`https://www.googletagmanager.com/ns.html?id=${siteData.googleTagManager}`}
+                  src={`https://www.googletagmanager.com/ns.html?id=${googleTagManager}`}
                   height="0"
                   width="0"
                   style={{ display: 'none', visibility: 'hidden' }}
@@ -286,6 +304,17 @@ export default {
             )}
 
           {children}
+
+          {isProduction &&
+            hubspot && (
+              <script
+                type="text/javascript"
+                id="hs-script-loader"
+                async
+                defer
+                src={`//js.hs-scripts.com/${hubspot}.js`}
+              />
+            )}
         </Body>
       </Html>
     );
