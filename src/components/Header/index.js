@@ -6,14 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Popup from '@components/Popup';
 import Portal from '@components/Portal';
 import Link from '@components/Link';
-import Intercom from '@utils/intercom';
 
 export const headerHeightClass = 'h-20';
 
 const onClickFunctions = {
   intercom: () => {
-    if (Intercom.sdk()) {
-      Intercom.show();
+    if (window.Intercom) {
+      window.Intercom.show();
     }
   },
 };

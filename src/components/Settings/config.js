@@ -24,6 +24,18 @@ export default {
           widget: 'string',
           required: false,
         },
+        {
+          name: 'hubspot',
+          label: 'HubSpot ID',
+          widget: 'string',
+          required: false,
+        },
+        {
+          name: 'intercom',
+          label: 'Intercom App ID',
+          widget: 'string',
+          required: false,
+        },
       ],
     },
   ],

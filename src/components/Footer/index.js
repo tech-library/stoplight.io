@@ -3,12 +3,11 @@ import { withSiteData, withRouteData } from 'react-static';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from '@components/Link';
-import Intercom from '@utils/intercom';
 
 const onClickFunctions = {
   intercom: () => {
-    if (Intercom.sdk()) {
-      Intercom.show();
+    if (window.Intercom) {
+      window.Intercom.show();
     }
   },
 };

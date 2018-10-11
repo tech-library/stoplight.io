@@ -2,8 +2,7 @@ import React from 'react';
 import Routes from 'react-static-routes';
 import { Router } from 'react-static';
 
-import Intercom from '@utils/intercom';
-
+import Analytics from '@components/Analytics';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -16,22 +15,12 @@ const AppContent = () => {
 };
 
 class App extends React.Component {
-  componentDidMount() {
-    if (Intercom.sdk()) {
-      Intercom.update(undefined, undefined, { hideLauncher: false });
-    }
-  }
-
-  componentWillUnmount() {
-    if (Intercom.sdk()) {
-      Intercom.update(undefined, undefined, { hideLauncher: true });
-    }
-  }
-
   render() {
     return (
       <Router>
-        <AppContent />
+        <Analytics>
+          <AppContent />
+        </Analytics>
       </Router>
     );
   }
