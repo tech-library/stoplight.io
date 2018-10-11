@@ -15,9 +15,10 @@ const ImageSection = ({ title, cta, description, image, rootClassName }) => {
           {title}
         </h2>
 
-        <div className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50 md:border-none sm:px-2">
-          {description}
-        </div>
+        <div
+          className="mb-12 pb-12 max-w-md leading-loose text-lg border-b border-darken-50 md:border-none sm:px-2"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
 
         {cta && <CallToAction {...cta} className="md:mx-auto" />}
       </div>

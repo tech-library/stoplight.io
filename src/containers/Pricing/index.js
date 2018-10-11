@@ -40,7 +40,7 @@ const Plan = props => {
           <div className={`font-bold pb-3 uppercase text-${titleColor || 'grey-darkest'}`}>
             {title}
           </div>
-          <div className="leading-loose">{description}</div>
+          <div className="leading-loose" dangerouslySetInnerHTML={{ __html: description }} />
         </div>
 
         <div className="font-bold mb-4 text-xl flex items-center">

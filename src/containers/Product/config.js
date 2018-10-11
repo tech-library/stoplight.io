@@ -31,8 +31,8 @@ export default {
     },
     {
       label: 'description',
-      name: 'description',
-      widget: 'string',
+      name: 'Description',
+      widget: 'markdown',
     },
     cta,
     {
@@ -58,7 +58,7 @@ export default {
         {
           name: 'description',
           label: 'Description',
-          widget: 'string',
+          widget: 'markdown',
         },
         {
           name: 'href',

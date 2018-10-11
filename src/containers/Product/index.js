@@ -32,9 +32,8 @@ const ProductFeature = ({ title, description, image, isReversed, titleColor, isL
           className={cn('mb-12 pb-12 md:pb-0 max-w-md leading-loose text-lg', {
             'md:mb-0': isLast,
           })}
-        >
-          {description}
-        </div>
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
 
       <div className="flex-1 w-1/2 md:hidden relative">
@@ -71,9 +70,10 @@ class Product extends React.Component {
       <Section key="product" bgClassName="bg-grey-lightest">
         <div className="container border-b pb-32">
           <h2 className="text-center mb-12 text-3xl">{title}</h2>
-          <div className="flex leading-loose text-lg text-center max-w-lg mx-auto">
-            {description}
-          </div>
+          <div
+            className="flex leading-loose text-lg text-center max-w-lg mx-auto"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           {cta && <CallToAction {...cta} className="mx-auto text-center mt-20" />}
         </div>
 

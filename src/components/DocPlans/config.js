@@ -11,7 +11,7 @@ export default {
     {
       label: 'Description',
       name: 'description',
-      widget: 'text',
+      widget: 'markdown',
     },
     {
       label: 'Button Text',

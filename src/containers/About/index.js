@@ -64,7 +64,7 @@ const Press = ({ image, date, description, publication, href }) => {
       </div>
 
       <div className="uppercase font-bold mb-3">{date}</div>
-      <div>{description}</div>
+      <div dangerouslySetInnerHTML={{ __html: description }} />
     </a>
   );
 };

@@ -7,7 +7,7 @@ import chokidar from 'chokidar';
 import frontmatter from 'front-matter';
 import { reloadRoutes } from 'react-static/node';
 
-import { Renderer } from './src/utils/markdown';
+import { Renderer as MarkdownRenderer } from './src/utils/markdown';
 
 import webpack from './webpack';
 
@@ -31,10 +31,24 @@ const dataLoaders = {
 
     return {
       ...attributes,
-      body: Renderer(body),
+      body: MarkdownRenderer(body),
     };
   },
   '.yaml': yaml.safeLoad,
+};
+
+const convertDescriptionsToHTML = data => {
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      if (typeof data[key] === 'object') {
+        data[key] = convertDescriptionsToHTML(data[key]);
+      } else if (key === 'description') {
+        data[key] = MarkdownRenderer(data[key]);
+      }
+    }
+  }
+
+  return data;
 };
 
 const getFile = (srcPath, extension = '.yaml') => {
@@ -48,6 +62,10 @@ const getFile = (srcPath, extension = '.yaml') => {
   }
 
   const path = slugify(data.path || data.title || nodePath.basename(srcPath, 'yaml'));
+
+  if (extension !== '.md') {
+    data = convertDescriptionsToHTML(data);
+  }
 
   return {
     ...data,
@@ -168,6 +186,7 @@ export default {
         children: caseStudies
           .map((caseStudy, index) => {
             if (!caseStudy.path) return;
+
             return {
               path: caseStudy.path,
               component: 'src/containers/CaseStudy',

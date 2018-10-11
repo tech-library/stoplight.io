@@ -20,7 +20,7 @@ const CaseStudy = ({ title, description, logo, href }) => {
       <div className="flex-1">
         <h1 className="mb-4">{title}</h1>
 
-        <p className="mb-10 leading-loose">{description}</p>
+        <p className="mb-10 leading-loose" dangerouslySetInnerHTML={{ __html: description }} />
 
         <div className="bg-green inline-block text-white font-bold py-2 px-8 rounded hover:opacity-93">
           Read
