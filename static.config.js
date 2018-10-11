@@ -63,7 +63,8 @@ const getFile = (srcPath, extension = '.yaml') => {
 
   const path = slugify(data.path || data.title || nodePath.basename(srcPath, 'yaml'));
 
-  if (extension !== '.md') {
+  // Don't convert markdown or settings files
+  if (extension !== '.md' && !/settings\.yaml/.test(srcPath)) {
     data = convertDescriptionsToHTML(data);
   }
 
@@ -240,11 +241,22 @@ export default {
   },
 
   Document: ({ Html, Head, Body, children, routeInfo, siteData }) => {
-    const { intercom, hubspot, googleTagManager } = siteData;
+    const { integrations, info } = siteData;
+    const { intercom, hubspot, googleTagManager } = integrations;
 
     const meta = resolveMeta(siteData.meta, routeInfo && routeInfo.allProps.meta);
 
     const isProduction = process.env.RELEASE_STAGE === 'production';
+
+    const companyInfo = JSON.stringify({
+      '@context': 'http://schema.org/',
+      '@type': 'Corporation',
+      address: {
+        '@type': 'PostalAddress',
+        ...info.address,
+      },
+      email: info.email,
+    });
 
     return (
       <Html lang="en-US">
@@ -335,6 +347,8 @@ export default {
                 src={`//js.hs-scripts.com/${hubspot}.js`}
               />
             )}
+
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: companyInfo }} />
         </Body>
       </Html>
     );

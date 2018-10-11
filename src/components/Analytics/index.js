@@ -10,7 +10,7 @@ class Analytics extends React.Component {
      * But the route data needed to mount this page won't be found since it's key'd by pathname.
      * We can get around this by removing index.html from the history state.
      */
-    if (/\/\.index.html/.test(window.location.pathname)) {
+    if (/\/index\.html/.test(window.location.pathname)) {
       this.props.history.replace(window.location.pathname.replace('/index.html', ''));
     }
 
@@ -39,7 +39,7 @@ class Analytics extends React.Component {
       _hsq.push(['trackPageView']);
     }
 
-    if (window.intercom) {
+    if (window.Intercom) {
       window.Intercom('update');
     }
   };
