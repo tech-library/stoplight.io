@@ -63,7 +63,8 @@ const getFile = (srcPath, extension = '.yaml') => {
 
   const path = slugify(data.path || data.title || nodePath.basename(srcPath, 'yaml'));
 
-  if (extension !== '.md') {
+  // Don't convert markdown or settings files
+  if (extension !== '.md' && !/settings\.yaml/.test(srcPath)) {
     data = convertDescriptionsToHTML(data);
   }
 
@@ -110,7 +111,7 @@ const resolveMeta = (defaultMeta = {}, meta = {}) => {
   };
 };
 
-let siteRoot;
+let siteRoot = '';
 if (process.env.RELEASE_STAGE === 'production') {
   siteRoot = 'https://stoplight.io';
 } else if (process.env.RELEASE_STAGE === 'staging') {
@@ -240,17 +241,29 @@ export default {
   },
 
   Document: ({ Html, Head, Body, children, routeInfo, siteData }) => {
-    const { intercom, hubspot, googleTagManager } = siteData;
+    const { integrations, info } = siteData;
+    const { intercom, hubspot, googleTagManager } = integrations;
 
     const meta = resolveMeta(siteData.meta, routeInfo && routeInfo.allProps.meta);
 
     const isProduction = process.env.RELEASE_STAGE === 'production';
+
+    const companyInfo = JSON.stringify({
+      '@context': 'http://schema.org/',
+      '@type': 'Corporation',
+      address: {
+        '@type': 'PostalAddress',
+        ...info.address,
+      },
+      email: info.email,
+    });
 
     return (
       <Html lang="en-US">
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="robots" content={isProduction ? 'index, follow' : 'noindex, nofollow'} />
 
           <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
@@ -259,14 +272,14 @@ export default {
           <meta property="og:description" content={meta.description} />
           <meta property="og:url" content={meta.url} />
           <meta property="og:site_name" content="stoplight.io" />
-          <meta property="og:image" content={meta.image} />
+          <meta property="og:image" content={siteRoot + meta.image} />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content={meta.twitter.username} />
           <meta name="twitter:creator" content={meta.twitter.username} />
           <meta name="twitter:title" content={meta.twitter.title} />
           <meta name="twitter:description" content={meta.twitter.description} />
-          <meta name="twitter:image" content={meta.twitter.image} />
+          <meta name="twitter:image" content={siteRoot + meta.twitter.image} />
 
           <link rel="shortcut icon" href={meta.favicon} type="image/x-icon" />
 
@@ -334,6 +347,8 @@ export default {
                 src={`//js.hs-scripts.com/${hubspot}.js`}
               />
             )}
+
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: companyInfo }} />
         </Body>
       </Html>
     );
