@@ -8,7 +8,10 @@ const DocPlans = ({ title, description, features, plans, buttonUrl, buttonText }
     <div className="container mx-auto">
       <div className="text-center mb-20">
         <div className="text-4xl font-bold">{title}</div>
-        <div className="mt-10 text-xl mx-auto opacity-50 max-w-lg leading-loose">{description}</div>
+        <div
+          className="mt-10 text-xl mx-auto opacity-50 max-w-lg leading-loose"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
 
       <div className="shadow-lg">
