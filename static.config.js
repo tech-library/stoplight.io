@@ -111,7 +111,7 @@ const resolveMeta = (defaultMeta = {}, meta = {}) => {
   };
 };
 
-let siteRoot;
+let siteRoot = '';
 if (process.env.RELEASE_STAGE === 'production') {
   siteRoot = 'https://stoplight.io';
 } else if (process.env.RELEASE_STAGE === 'staging') {
@@ -272,14 +272,14 @@ export default {
           <meta property="og:description" content={meta.description} />
           <meta property="og:url" content={meta.url} />
           <meta property="og:site_name" content="stoplight.io" />
-          <meta property="og:image" content={meta.image} />
+          <meta property="og:image" content={siteRoot + meta.image} />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content={meta.twitter.username} />
           <meta name="twitter:creator" content={meta.twitter.username} />
           <meta name="twitter:title" content={meta.twitter.title} />
           <meta name="twitter:description" content={meta.twitter.description} />
-          <meta name="twitter:image" content={meta.twitter.image} />
+          <meta name="twitter:image" content={siteRoot + meta.twitter.image} />
 
           <link rel="shortcut icon" href={meta.favicon} type="image/x-icon" />
 
