@@ -31,7 +31,7 @@ plans:
     title: Team
     unit: / user / month
   - button:
-      color: orange
+      color: green
       href: 'mailto:sales@stoplight.io'
       title: Contact Us
     description: For enterprises with demanding requirements.
