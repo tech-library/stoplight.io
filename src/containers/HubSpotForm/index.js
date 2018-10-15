@@ -2,15 +2,60 @@ import React from 'react';
 import { withRouteData } from 'react-static';
 
 import Hero from '@components/Hero';
-import ImageSection from '@components/ImageSection';
 import Section from '@components/Section';
 import CallToAction from '@components/CallToAction';
 import ActionBar from '@components/ActionBar';
 import Testimonial from '@components/Testimonial';
 
-class HomePage extends React.Component {
+let globalId = 0;
+class HubSpotForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoaded: false,
+    };
+
+    this.id = `hubspot-form-${globalId++}`;
+  }
+
+  componentDidMount() {
+    if (window.hbspt) {
+      this.createForm();
+    } else {
+      this.loadScript();
+    }
+  }
+
+  createForm = () => {
+    const { hubspot } = this.props;
+    const { portalId, formId } = hubspot || {};
+
+    if (!window.hbspt || !portalId || !formId) return;
+
+    window.hbspt.forms.create({
+      target: `#${this.id}`,
+      portalId,
+      formId,
+    });
+
+    this.setState({ isLoaded: true });
+  };
+
+  loadScript = () => {
+    const script = document.createElement(`script`);
+    script.defer = true;
+    script.onload = () => {
+      this.createForm();
+    };
+    script.src = `//js.hsforms.net/forms/v2.js`;
+
+    document.head.appendChild(script);
+  };
+
   render() {
-    const { color, hero, product, customers = [], testimonials = [], actionBar = {} } = this.props;
+    const { color, hero, hubspot, customers = [], testimonials = [], actionBar = {} } = this.props;
+    const { isLoaded } = this.state;
 
     const elems = [];
 
@@ -18,13 +63,23 @@ class HomePage extends React.Component {
       elems.push(<Hero key="hero" bgColor={color} {...hero} />);
     }
 
-    if (product) {
-      elems.push(<ImageSection key="product" {...product} />);
+    if (hubspot) {
+      elems.push(
+        <Section key="hubspot" bgClassName="bg-grey-lightest">
+          <div className="container flex items-center justify-center">
+            <div
+              className="bg-white shadow rounded p-16 -mt-64"
+              style={{ display: isLoaded ? 'block' : 'none', width: 600 }}
+              id={this.id}
+            />
+          </div>
+        </Section>
+      );
     }
 
     if (customers.length) {
       elems.push(
-        <Section key="customers" bgClassName="bg-grey-lightest">
+        <Section key="customers">
           <div className="container">
             <h2 className="text-center mb-20 text-3xl md:mb-14">
               Thousands of companies use Stoplight to streamline
@@ -56,7 +111,7 @@ class HomePage extends React.Component {
 
     if (testimonials.length) {
       elems.push(
-        <Section key="testimonials">
+        <Section key="testimonials" bgClassName="bg-grey-lightest">
           <div className="container">
             <div className="flex flex-wrap -mx-14 sm:mx-0">{testimonials.map(Testimonial)}</div>
           </div>
@@ -72,4 +127,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default withRouteData(HomePage);
+export default withRouteData(HubSpotForm);

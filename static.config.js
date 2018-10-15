@@ -130,9 +130,10 @@ export default {
       about,
       caseStudyConfig,
 
-      products,
-      caseStudies,
-      markdown,
+      products = [],
+      hubspotForms = [],
+      caseStudies = [],
+      markdown = [],
     ] = await Promise.all([
       getFile(`${NETLIFY_PATH}/pages/home.yaml`),
       getFile(`${NETLIFY_PATH}/pages/pricing.yaml`),
@@ -140,6 +141,7 @@ export default {
       getFile(`${NETLIFY_PATH}/pages/case-studies.yaml`),
 
       getFiles(`${NETLIFY_PATH}/products`),
+      getFiles(`${NETLIFY_PATH}/hubspot`),
       getFiles(`${NETLIFY_PATH}/case-studies`, ['.md']),
       getFiles(`${NETLIFY_PATH}/markdown`, ['.md']),
     ]);
@@ -202,6 +204,16 @@ export default {
           .filter(Boolean),
       },
     ];
+
+    hubspotForms.forEach(form => {
+      if (!form.path) return;
+
+      routes.push({
+        path: form.path,
+        component: 'src/containers/HubSpotForm',
+        getData: () => form,
+      });
+    });
 
     products.forEach(product => {
       if (!product.path) return;
