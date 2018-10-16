@@ -22,16 +22,7 @@ const PlanFeature = ({ color, name }) => {
 };
 
 const Plan = props => {
-  const {
-    title,
-    description,
-    price,
-    unit,
-    inheritedFeatures = [],
-    features = [],
-    titleColor,
-    button,
-  } = props;
+  const { title, description, price, unit, features = [], titleColor, button } = props;
 
   return (
     <div className="flex-1 mx-6 md:my-6 md:flex-auto md:w-full">
@@ -51,10 +42,6 @@ const Plan = props => {
         <div className="mb-10">
           {features.map((feature, key) => (
             <PlanFeature key={key} name={feature} color="green" />
-          ))}
-
-          {inheritedFeatures.map((feature, key) => (
-            <PlanFeature key={key} name={feature} color="grey" />
           ))}
         </div>
 
