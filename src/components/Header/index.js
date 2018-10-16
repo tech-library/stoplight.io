@@ -77,12 +77,28 @@ const HeaderDropdown = ({ width, title, links }) => {
   );
 };
 
+const HeaderButton = ({ title, href, icon, dark }) => {
+  return (
+    <Link
+      key="2"
+      to={href}
+      className="text-lg font-semibold py-2 px-4 ml-6 flex items-center border rounded text-white hover:text-white border-lighten-300 hover:border-lighten-500 bg-lighten-50"
+    >
+      {title} {icon && <FontAwesomeIcon icon={icon} className="ml-3" />}
+    </Link>
+  );
+};
+
 const Desktop = ({ items }) => {
-  return [
-    <div key="1" className="sm:hidden flex flex-1 justify-end items-center text-lg">
+  return (
+    <div className="sm:hidden flex flex-1 justify-end items-center text-lg">
       {items.map((item, index) => {
         if (item.links && item.links.length) {
           return <HeaderDropdown key={index} {...item} />;
+        }
+
+        if (item.isButton) {
+          return <HeaderButton key={index} {...item} />;
         }
 
         return (
@@ -102,16 +118,26 @@ const Desktop = ({ items }) => {
           </Link>
         );
       })}
-    </div>,
+    </div>
+  );
+};
 
+const MobileLink = item => {
+  return (
     <Link
-      key="2"
-      to="https://next.stoplight.io"
-      className="sm:hidden text-lg text-white hover:border-lighten-500 hover:text-white py-2 px-4 ml-6 flex items-center border border-lighten-300 bg-lighten-50 rounded font-semibold"
+      to={item.href}
+      className="w-1/2 py-3"
+      onClick={e => {
+        if (item.onClick && onClickFunctions[item.onClick]) {
+          e.preventDefault();
+
+          onClickFunctions[item.onClick]();
+        }
+      }}
     >
-      Sign In <FontAwesomeIcon icon={['fas', 'arrow-right']} className="ml-3" />
-    </Link>,
-  ];
+      {item.title}
+    </Link>
+  );
 };
 
 class Mobile extends React.Component {
@@ -124,25 +150,6 @@ class Mobile extends React.Component {
     const { showMenu } = this.state;
 
     const [main, ...extras] = items;
-
-    const renderLink = (item, index) => {
-      return (
-        <Link
-          key={index}
-          to={item.href}
-          className="w-1/2 py-3"
-          onClick={e => {
-            if (item.onClick && onClickFunctions[item.onClick]) {
-              e.preventDefault();
-
-              onClickFunctions[item.onClick]();
-            }
-          }}
-        >
-          {item.title}
-        </Link>
-      );
-    };
 
     return (
       <div className="hidden sm:flex flex-1 justify-end">
@@ -220,10 +227,12 @@ class Mobile extends React.Component {
                     {extras &&
                       extras.map((item, index) => {
                         if (item.links) {
-                          return item.links.map(renderLink);
+                          return item.links.map((item, index) => (
+                            <MobileLink key={index} {...item} />
+                          ));
                         }
 
-                        return renderLink(item, index);
+                        return <MobileLink key={index} {...item} />;
                       })}
                   </div>
                 </div>

@@ -85,10 +85,20 @@ header:
       width: 250
     - href: /pricing
       title: Pricing
+    - href: /demo
+      title: Request Demo
+      isButton: true
+    - href: https://next.stoplight.io
+      title: Sign In
+      color: white
+      isButton: true
+      icon:
+        - fas
+        - arrow-right
 actionBar:
   buttons:
     - color: purple
-      href: 'mailto://support@stoplight.io'
+      href: '/demo'
       outlined: true
       title: Request a Demo
     - color: purple
@@ -123,7 +133,7 @@ footer:
           title: About Us
         - href: /case-studies
           title: Case Studies
-        - href: 'mailto:support@stoplight.io'
+        - href: '/contact-us'
           title: Contact Us
         - href: 'https://app.stoplight.io/login'
           title: Classic Login
