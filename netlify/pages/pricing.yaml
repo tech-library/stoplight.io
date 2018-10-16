@@ -44,9 +44,9 @@ plans:
       - Collaboration and discussions
       - Access and role management
     inheritedFeatures:
-      - Unlimited projects
-      - Collaboration and discussions
-      - Access and role management
+      - ''
+      - ''
+      - ''
     price: Contact Us
     title: Enterprise
 docPlans:
