@@ -32,8 +32,8 @@ plans:
     unit: / user / month
   - button:
       color: green
-      href: 'mailto:sales@stoplight.io'
-      title: Contact Us
+      href: '/demo'
+      title: Request Demo
     description: For enterprises with demanding requirements.
     features:
       - Unlimited users
