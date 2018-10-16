@@ -32,7 +32,7 @@ plans:
     unit: / user / month
   - button:
       color: green
-      href: '/demo'
+      href: /demo
       title: Request Demo
     description: For enterprises with demanding requirements.
     features:
@@ -40,6 +40,9 @@ plans:
       - Hosted or on-premise
       - Single sign-on
       - Dedicated support
+      - Unlimited projects
+      - Collaboration and discussions
+      - Access and role management
     inheritedFeatures:
       - Unlimited projects
       - Collaboration and discussions
