@@ -7,7 +7,6 @@ import CallToAction from '@components/CallToAction';
 import ActionBar from '@components/ActionBar';
 import Testimonial from '@components/Testimonial';
 
-let globalId = 0;
 class HubSpotForm extends React.Component {
   constructor(props) {
     super(props);
@@ -15,8 +14,6 @@ class HubSpotForm extends React.Component {
     this.state = {
       isLoaded: false,
     };
-
-    this.id = `hubspot-form-${globalId++}`;
   }
 
   componentDidMount() {
@@ -34,7 +31,7 @@ class HubSpotForm extends React.Component {
     if (!window.hbspt || !portalId || !formId) return;
 
     window.hbspt.forms.create({
-      target: `#${this.id}`,
+      target: '#hubspot-form',
       portalId,
       formId,
     });
@@ -70,7 +67,7 @@ class HubSpotForm extends React.Component {
             <div
               className="bg-white shadow rounded p-16 -mt-64"
               style={{ display: isLoaded ? 'block' : 'none', width: 600 }}
-              id={this.id}
+              id="hubspot-form"
             />
           </div>
         </Section>
