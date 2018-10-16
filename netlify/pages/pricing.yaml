@@ -32,8 +32,8 @@ plans:
     unit: / user / month
   - button:
       color: green
-      href: /demo
-      title: Request Demo
+      href: /contact-us
+      title: Contact us
     description: For enterprises with demanding requirements.
     features:
       - Unlimited users
