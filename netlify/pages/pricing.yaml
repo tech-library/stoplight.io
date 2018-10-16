@@ -25,7 +25,6 @@ plans:
       - Up to 25 users
       - Collaboration and discussions
       - Access and role management
-    inheritedFeatures:
       - Unlimited projects
     price: $24
     title: Team
@@ -43,10 +42,6 @@ plans:
       - Unlimited projects
       - Collaboration and discussions
       - Access and role management
-    inheritedFeatures:
-      - ''
-      - ''
-      - ''
     price: Contact Us
     title: Enterprise
 docPlans:
