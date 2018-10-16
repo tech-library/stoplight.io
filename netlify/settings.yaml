@@ -1,17 +1,16 @@
 info:
-  email: 'sales@stoplight.io'
-  "@type": "Corporation"
   address:
-    '@type': 'PostalAddress'
-    addressCountry: 'United States'
-    addressLocality: 'Austin'
-    addressRegion: 'TX'
+    addressLocality: Austin
+    addressRegion: TX
+    alternateName: Stoplight
+    description: >-
+      Stoplight, providing engineering teams with the best way to document,
+      test, and build web APIs.
+    email: hello@stoplight.io
+    name: Stoplight.io
     postalCode: '78704'
-    streetAddress: '1100 S 1st St'
-    email: 'hello@stoplight.io'
-    alternateName: 'Stoplight'
-    description: 'Stoplight, providing engineering teams with the best way to document, test, and build web APIs.'
-    name: 'Stoplight.io'
+    streetAddress: 1100 S 1st St
+  email: sales@stoplight.io
 header:
   items:
     - links:
@@ -89,7 +88,7 @@ header:
 actionBar:
   buttons:
     - color: purple
-      href: mailto://support@stoplight.io
+      href: 'mailto://support@stoplight.io'
       outlined: true
       title: Request a Demo
     - color: purple
@@ -116,7 +115,7 @@ footer:
           title: 'Community '
         - href: 'https://blog.stoplight.io'
           title: Blog
-        - href: https://press.stoplight.io
+        - href: 'https://press.stoplight.io'
           title: Press
       title: Resources
     - links:
@@ -124,8 +123,10 @@ footer:
           title: About Us
         - href: /case-studies
           title: Case Studies
-        - href: mailto:support@stoplight.io
+        - href: 'mailto:support@stoplight.io'
           title: Contact Us
+        - href: 'https://app.stoplight.io/login'
+          title: Classic Login
       title: Company
   social:
     - href: 'https://twitter.com/stoplightio'

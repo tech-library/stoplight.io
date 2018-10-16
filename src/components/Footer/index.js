@@ -18,8 +18,6 @@ const Footer = ({ footer, actionBar = {} }) => {
   const { columns, social } = footer || {};
 
   return [
-    // <ActionBar key="action" {...actionBar} />,
-
     <footer key="footer" className="bg-black py-12 border-t-4 border-lighten-300">
       <nav className="container mx-auto flex flex-col items-center">
         <div className="py-4">
