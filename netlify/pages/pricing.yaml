@@ -25,22 +25,20 @@ plans:
       - Up to 25 users
       - Collaboration and discussions
       - Access and role management
-    inheritedFeatures:
       - Unlimited projects
     price: $24
     title: Team
     unit: / user / month
   - button:
       color: green
-      href: '/demo'
-      title: Request Demo
+      href: /contact-us
+      title: Contact us
     description: For enterprises with demanding requirements.
     features:
       - Unlimited users
       - Hosted or on-premise
       - Single sign-on
       - Dedicated support
-    inheritedFeatures:
       - Unlimited projects
       - Collaboration and discussions
       - Access and role management
