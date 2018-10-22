@@ -36,12 +36,12 @@ plans:
     description: For enterprises with demanding requirements.
     features:
       - Unlimited users
+      - Collaboration and discussions
+      - Access and role management
       - Unlimited projects
       - Hosted or on-premise
       - Single sign-on
-      - Collaboration and discussions
       - Style Guide Enforcement Policy
-      - Access and role management
       - Dedicated support
     price: Contact Us
     title: Enterprise
