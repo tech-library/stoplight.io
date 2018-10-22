@@ -75,5 +75,5 @@ meta:
       one API call or a scenario of API calls working together in a real-life
       use case.
     image: /images/testing_header.png
-    title: Automated REST API unit & performance testing | Stoplight
+    title: Automated REST API Testing | Stoplight
     username: '@stoplightio'
