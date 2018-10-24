@@ -35,10 +35,10 @@ meta:
     title: Pepipost | Stoplight
     username: '@stoplightio'
 ---
-## Pepipost’s Predicament 
+## Pepipost’s Predicament
 
 Pepipost wanted a tool that would assist them in the development and maintenance of a number of existing and upcoming APIs with corresponding documentation. There were having difficulty maintaining design standards across teams due to a lack of proper validation, collaborative tools, and outdated documentation. They also required a method for generating code snippets for different languages and a user facing method for testing their APIs. 
 
-## The Stoplight Strategy 
+## The Stoplight Strategy
 
-Stoplight provided Pepipost with a single source of truth across all their developer teams with one central set of design standards, customizable validation, and collaborative tooling (i.e. Organizations, Teams, and Discussions). Stoplight’s documentation tool assisted in keeping their documentation up-to-date while providing the means for real-time changes.  Code Generation provided a method generating code snippets for different languages and ‘Send a Test Request’ provided their users with an easy-to-use tool for testing out their APIs.
+Stoplight provided Pepipost with a single source of truth across all their developer teams with one central set of design standards, customizable validation, and collaborative tooling (i.e. Organizations, Teams, and Discussions). Stoplight’s documentation tool assisted in keeping their documentation up-to-date while providing the means for real-time changes.  Code Generation provided a method generating code snippets for different languages and ‘Send a Test Request’ provided their users with an easy-to-use tool for testing out their APIs. Since Pepipost started using Stoplight, they have seen a 40% increase in API adoption rate with a 2x increase in development efficiency.
