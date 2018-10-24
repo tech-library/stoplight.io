@@ -10,7 +10,7 @@ hero:
   title: Pepipost
 info:
   employees: 11-50
-  industry: 'Information Services, Information Technology, SaaS'
+  industry: Information Services & Technology
   location: 'Dublin, Ireland'
   logo: /images/pepipost_logo.png
   name: Pepipost
