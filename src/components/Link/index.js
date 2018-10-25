@@ -16,7 +16,7 @@ export default ({ to, children, ...props }) => {
           {children}
         </a>
       );
-    } else if (stoplightNext.test(href)) {
+    } else if (typeof localStorage !== 'undefined' && stoplightNext.test(href)) {
       href += localStorage.getItem('utm') || '';
     }
   }
