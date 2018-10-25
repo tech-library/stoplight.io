@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-static';
 
+const stoplightNext = /next\.stoplight\.io/;
+
 // Make sure there aren't any trailing white spaces
 export default ({ to, children, ...props }) => {
   let href = to;
@@ -14,6 +16,8 @@ export default ({ to, children, ...props }) => {
           {children}
         </a>
       );
+    } else if (stoplightNext.test(href)) {
+      href += localStorage.getItem('utm') || '';
     }
   }
 
