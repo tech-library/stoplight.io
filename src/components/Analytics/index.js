@@ -14,6 +14,11 @@ class Analytics extends React.Component {
       this.props.history.replace(window.location.pathname.replace('/index.html', ''));
     }
 
+    // Preserve UTM params
+    if (window.location.search && /utm/.test(window.location.search)) {
+      localStorage.setItem('utm', window.location.search);
+    }
+
     if (window.Intercom) {
       window.Intercom('boot');
     }

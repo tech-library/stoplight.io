@@ -51,18 +51,6 @@ export default {
             },
           ],
         },
-        {
-          label: 'Inherited Features',
-          name: 'inheritedFeatures',
-          widget: 'list',
-          field: [
-            {
-              label: 'Title',
-              name: 'title',
-              widget: 'string',
-            },
-          ],
-        },
         button,
         {
           label: 'Price Unit',

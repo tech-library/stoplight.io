@@ -36,12 +36,13 @@ plans:
     description: For enterprises with demanding requirements.
     features:
       - Unlimited users
-      - Hosted or on-premise
-      - Single sign-on
-      - Dedicated support
-      - Unlimited projects
       - Collaboration and discussions
       - Access and role management
+      - Unlimited projects
+      - Hosted or on-premise
+      - Single sign-on
+      - Style Guide Enforcement Policy
+      - Dedicated support
     price: Contact Us
     title: Enterprise
 docPlans:
